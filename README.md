@@ -39,12 +39,12 @@ Python 3.10 or newer.
 Three dependencies and no SDKs - the LLM clients are raw `urllib`.
 
 ```sh
-uv tool install git+https://github.com/<you>/superday.git      # or:
-pipx install git+https://github.com/<you>/superday.git
+uv tool install git+https://github.com/MrDespar/superday.git      # or:
+pipx install git+https://github.com/MrDespar/superday.git
 ```
 
 Either gives you `superday` on your PATH with no clone and no virtualenv to manage.
-To try it without installing anything: `uvx --from git+https://github.com/<you>/superday.git superday`.
+To try it without installing anything: `uvx --from git+https://github.com/MrDespar/superday.git superday`.
 
 Your database, config and keys go in `~/.local/share/superday/` (`$XDG_DATA_HOME` is respected, `SUPERDAY_HOME` overrides both).
 Run it from inside a clone and it uses the clone instead, so installing the packaged build next to an existing checkout never moves your bank out from under you.
@@ -53,7 +53,7 @@ Run it from inside a clone and it uses the clone instead, so installing the pack
 <summary>From a clone, for hacking on it</summary>
 
 ```sh
-git clone https://github.com/<you>/superday.git
+git clone https://github.com/MrDespar/superday.git
 cd superday
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
