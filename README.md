@@ -214,7 +214,7 @@ Six are authored or parsed from a question-shaped source:
 
 | pack | questions | grounded in | what it covers |
 |---|---:|---|---|
-| `01-dcm-syndicate` | 103 | a third-party DCM syndicate desk handbook | bond math, new issue pricing, syndicate process, Schuldschein, hybrids, ratings, macro |
+| `01-dcm-syndicate` | 103 | authored, from the author's own desk handbook | bond math, new issue pricing, syndicate process, Schuldschein, hybrids, ratings, macro |
 | `02-deal-mechanics` | 40 | authored | locked box, completion accounts, the working capital peg, UK/German public M&A |
 | `03-ecm-europe` | 38 | Cleary Gottlieb's London ECM/DCM Execution Handbook | IPO process, free float, stabilisation, cornerstones, lock-ups |
 | `04-levfin-private-credit` | 24 | Wall Street Prep, plus authored | unitranche, AAL, liability management, private credit |

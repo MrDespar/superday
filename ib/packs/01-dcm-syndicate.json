@@ -2,7 +2,7 @@
  "title": "DCM syndicate desk question set",
  "origin": "published",
  "status": "active",
- "note": "Bond syndicate, pricing, Schuldschein, hybrids, ratings and macro. Answers are parsed from a third-party desk handbook, not distributed here; the rubrics are authored for this repo. Six items are kind=market_awareness: their answer is a dated snapshot bound to live data at drill time, not a stored fact.",
+ "note": "Bond syndicate, pricing, Schuldschein, hybrids, ratings and macro. Authored: the answers are parsed from the author's own desk handbook, where each is written as a script to say out loud, and the rubrics are written for this repo. Six items are kind=market_awareness: their answer is a dated snapshot bound to live data at drill time, not a stored fact.",
  "items": [
   {
    "q": "What is a bond?",

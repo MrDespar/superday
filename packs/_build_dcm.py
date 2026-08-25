@@ -1,15 +1,17 @@
 """Build the DCM syndicate pack from a question-shaped HTML source.
 
-The source is a bond syndicate desk handbook already laid out as questions
-with written answers, so this parses it rather than paying a model to read it
-back to us, which would be a paraphrase of something already exact.
+The source is the author's own bond syndicate desk handbook, already laid out
+as questions with written answers, so this parses it rather than paying a
+model to read it back to us, which would be a paraphrase of something already
+exact.
 
     python packs/_build_dcm.py  ~/Downloads/dcm-syndicate-handbook.html
 
-The source document is not distributed with this repository -- it is a
-third-party handbook. `packs/01-dcm-syndicate.json` is the built artefact and
-is what `ingest-pack` reads; this script is kept for provenance and because
-`clean()` carries regressions the test suite still exercises.
+The handbook itself is not distributed with this repository -- it carries the
+fit sections and the working notes that go with them, and only the technical
+answers belong in a pack. `packs/01-dcm-syndicate.json` is the built artefact
+and is what `ingest-pack` reads; this script is kept for provenance and
+because `clean()` carries regressions the test suite still exercises.
 
 Rubrics are authored here rather than lifted, because the source's answers are
 scripts to say out loud and a rubric has to be a list of things a grader can
@@ -268,8 +270,9 @@ def main(path: Path, out: Path) -> None:
         # paraphrased, against rubrics authored here.
         "status": "active",
         "note": ("Bond syndicate, pricing, Schuldschein, hybrids, ratings and "
-                 "macro. Answers are parsed from a third-party desk handbook, "
-                 "not distributed here; the rubrics are authored for this repo. "
+                 "macro. Authored: the answers are parsed from the author's own "
+                 "desk handbook, where each is written as a script to say out "
+                 "loud, and the rubrics are written for this repo. "
                  "Six items are kind=market_awareness: their answer is a dated "
                  "snapshot bound to live data at drill time, not a stored fact."),
         "items": items,
