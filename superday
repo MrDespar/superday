@@ -1,0 +1,27 @@
+#!/bin/sh
+SOURCE="$0"
+while [ -h "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  case "$SOURCE" in
+    /*) ;;
+    *) SOURCE="$DIR/$SOURCE" ;;
+  esac
+done
+DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+cd "$DIR" || exit 1
+
+# A fresh clone has no .venv, and `exec` on a missing interpreter fails with
+# "no such file or directory" naming a path the reader has never heard of.
+# Say what is actually wrong and what fixes it.
+if [ ! -x "$DIR/.venv/bin/python" ]; then
+  echo "superday: no virtualenv at $DIR/.venv" >&2
+  echo "" >&2
+  echo "  python3 -m venv .venv" >&2
+  echo "  .venv/bin/pip install -r requirements.txt" >&2
+  echo "" >&2
+  echo "Then run ./superday again. See README.md for the rest of the setup." >&2
+  exit 1
+fi
+
+exec "$DIR/.venv/bin/python" -m ib.cli "$@"

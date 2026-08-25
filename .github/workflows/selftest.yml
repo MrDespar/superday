@@ -1,0 +1,36 @@
+# What a clone actually gets, run on every push.
+#
+# This exists because of a specific failure: two migrations sat untracked in
+# the working tree for a week. Everything passed locally, where the files were
+# on disk, and a fresh clone had no `phrasing_review` table and could not run
+# `selftest` at all. A checkout is the one thing a developer never tests, so
+# it is the thing CI is for.
+#
+# The suite is self-contained -- no pytest, its own tempdir database -- so this
+# is the whole configuration. It must stay key-free: `selftest` may never need
+# a provider key, or it stops being runnable by anyone who has not got one.
+name: selftest
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # The floor the README promises, and a current release.
+        python-version: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -r requirements.txt
+      - name: selftest
+        run: python -m ib.cli selftest
+      - name: completions match the parser
+        run: python -m ib.cli completions

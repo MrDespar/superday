@@ -1,0 +1,933 @@
+"""Pack 02: deal mechanics -- how the headline price becomes cash.
+
+Authored, not extracted. Nothing in the corpus covers a locked box, a
+completion accounts true-up or a working capital peg: the bank is built on a
+US curriculum that teaches the merger model and stops at signing. In a London
+or Frankfurt mid-market process this material *is* the job, and it is what an
+MD uses to find out whether a candidate has been near a live deal.
+
+Every answer here is the mechanism, not a definition, because the questions
+are asked as "what happens if" rather than "what is".
+"""
+import json
+from pathlib import Path
+
+Q = []
+def q(text, ans, rubric, *, topic="deal_process", d=3, tags=(), trap=None, sub=None):
+    Q.append({"q": text, "a": ans, "rubric": list(rubric), "mistakes": [trap] if trap else [],
+              "topic": topic, "difficulty": d, "subtopic": sub,
+              "tags": sorted(set(list(tags))), "locator": f"DM{len(Q)+1:02d}"})
+
+# ---------------------------------------------------------------- completion mechanism
+q("What is the difference between a locked box and completion accounts?",
+  "They are two ways of fixing the price, and they differ in when the business is frozen "
+  "economically and who carries the risk between signing and completion.\n\n"
+  "Completion accounts: the parties agree a headline enterprise value and an estimated "
+  "cash, debt and working capital position at signing. After completion, accounts are drawn "
+  "up as at the completion date, the actual cash, debt and working capital are measured, and "
+  "the price is trued up in a post-closing payment either way. The buyer pays for what it "
+  "actually receives, but the price stays open and contestable for months afterwards.\n\n"
+  "Locked box: equity value is fixed by reference to a set of historical accounts at an agreed "
+  "locked box date, usually the last audited or reviewed balance sheet. From that date the "
+  "economic risk and reward of the business sit with the buyer, even though the seller still "
+  "operates it. There is no post-completion adjustment. The buyer is protected instead by a "
+  "covenant against leakage, and usually compensated for the delay by an equity ticker.\n\n"
+  "Europe, and European sponsor exits in particular, lean heavily to locked box: it gives the "
+  "seller price certainty and a clean break, and it removes the single most common source of "
+  "post-closing dispute.",
+  ["Identifies the real difference as when the business is economically frozen and who bears "
+   "signing-to-completion risk",
+   "Describes the completion accounts true-up as a two-way post-closing payment",
+   "States that a locked box fixes equity value at a historical date with no adjustment",
+   "Names leakage protection and the equity ticker as the buyer's substitutes for an adjustment",
+   "Notes locked box is the European and sponsor-market default"],
+  tags=["completion-mechanism"], d=3,
+  trap="Saying the locked box 'fixes enterprise value'. It fixes equity value; that is the point.")
+
+q("On a locked box deal, what is leakage and what is permitted leakage?",
+  "Leakage is value passing from the target to the seller or its connected persons between the "
+  "locked box date and completion, in a way that was not reflected in the fixed price. The "
+  "classic list: dividends and distributions, management fees or monitoring fees to the sponsor, "
+  "bonuses paid in connection with the transaction, waivers of amounts owed by the seller, "
+  "assets transferred out at less than value, and the seller's own transaction costs pushed "
+  "into the target.\n\n"
+  "The seller gives a covenant, usually an indemnity on a euro-for-euro basis with no basket "
+  "and no cap other than the price, that no leakage has occurred. That indemnity typically "
+  "survives for six to twelve months after completion, which is far shorter than the warranty "
+  "period, because leakage is a matter of fact rather than of judgement.\n\n"
+  "Permitted leakage is the agreed carve-out list: ordinary course salaries, contractual "
+  "management fees at existing levels, an agreed pre-completion dividend, and anything else "
+  "the parties price in. It is negotiated line by line and it belongs in a schedule, not in a "
+  "general concept, because anything not listed is by definition a claim.",
+  ["Defines leakage as value out of the target to the seller side after the locked box date",
+   "Gives at least three concrete examples, such as dividends, sponsor fees and transaction bonuses",
+   "States the remedy is a euro-for-euro indemnity, not a damages claim with a basket",
+   "Explains permitted leakage as a negotiated schedule of carve-outs"],
+  tags=["completion-mechanism"], d=3,
+  trap="Treating leakage as a warranty. It is an indemnity, uncapped below the price and paid one for one.")
+
+q("What is an equity ticker on a locked box, and how is it set?",
+  "It is interest on the fixed equity price, running from the locked box date to completion, to "
+  "compensate the seller for the fact that the buyer takes the economics of the business from the "
+  "earlier date while paying later.\n\n"
+  "Two ways to set it. A cash-profit ticker approximates the cash the business actually generates "
+  "in the gap, so the seller receives the value it created while still running the company. A "
+  "simple interest ticker is a negotiated rate on the equity price, often somewhere near the "
+  "buyer's cost of debt or a benchmark rate plus a margin, accrued daily.\n\n"
+  "The negotiation is really about who benefits from a long gap. A ticker set above the actual "
+  "cash generation gives the seller an incentive to let completion drift; set below, the buyer "
+  "gains from delay. Where the gap is long and uncertain, for instance because of a lengthy "
+  "antitrust review, the ticker is one of the more valuable points in the whole SPA.",
+  ["Explains the ticker as compensation for the gap between economic and legal transfer",
+   "Names both approaches: a cash-profit measure and a negotiated interest rate",
+   "Identifies the incentive problem: whoever gains from delay will be relaxed about the timetable",
+   "Notes it matters most where the gap is long, such as a lengthy regulatory review"],
+  tags=["completion-mechanism"], d=4,
+  trap="Treating the ticker as a formality. On a nine-month antitrust gap it is a real number.")
+
+q("Which mechanism would you recommend for a carve-out from a listed group, and why?",
+  "Completion accounts, in almost every case. A locked box needs a reliable, standalone balance "
+  "sheet at the locked box date that the buyer can price off. A carve-out business does not have "
+  "one: it has never been separately audited, its working capital has been managed as part of a "
+  "group treasury, intercompany balances have to be unwound, and shared costs have to be allocated "
+  "on assumptions the buyer has no way to verify from outside.\n\n"
+  "So the buyer will not accept a fixed price off accounts that are effectively a management "
+  "construction. Completion accounts let it measure what it actually got, on a defined "
+  "accounting policy hierarchy, once it controls the business.\n\n"
+  "The counter-case is a sponsor exit of a clean standalone company with audited accounts and a "
+  "short, predictable gap to completion. There a locked box is faster, cheaper and gives both "
+  "sides certainty.",
+  ["Recommends completion accounts and gives the reason: no reliable standalone historical balance sheet",
+   "Names specific carve-out problems such as intercompany balances, shared costs and group treasury",
+   "Explains that a locked box requires accounts the buyer can actually price off",
+   "Gives the counter-case where a locked box is right: a clean audited standalone business with a short gap"],
+  tags=["completion-mechanism"], d=4,
+  trap="Answering from the market default rather than from the quality of the target's accounts.")
+
+q("Walk me from enterprise value to the cash the seller actually receives.",
+  "Start at enterprise value, agreed as a multiple of a normalised earnings measure. Then:\n\n"
+  "Less financial debt. Not just the bank facilities: bonds, shareholder loans, finance leases, "
+  "and anything else that is genuinely borrowing.\n\n"
+  "Plus cash, but only cash that is actually free. Trapped cash in a jurisdiction you cannot "
+  "repatriate without tax, cash that is really a customer deposit, and the minimum operating "
+  "cash the business needs to run on Monday morning are all excluded by a buyer who is paying "
+  "attention.\n\n"
+  "Plus or minus the working capital adjustment against the agreed peg.\n\n"
+  "Less debt-like items. This is where the negotiation lives: unfunded pension deficits, "
+  "deferred and contingent consideration from the target's own past acquisitions, factoring "
+  "and reverse factoring, restructuring provisions, unpaid capex committed but not spent, "
+  "dilapidations, tax liabilities crystallising on the deal, and the seller's transaction costs.\n\n"
+  "That gives equity value. Then deduct anything held back: escrow, retention against a specific "
+  "risk, deferred consideration, vendor loan notes and the value of any rollover. What is left "
+  "is the cash at completion, which is the only number the seller actually cares about.",
+  ["Runs the bridge in order: EV, less debt, plus free cash, working capital adjustment, less debt-like items",
+   "Qualifies cash: excludes trapped, restricted and minimum operating cash",
+   "Gives several genuine debt-like items, such as pension deficits, factoring and committed capex",
+   "Separates equity value from cash at completion by deducting escrow, deferral, vendor notes and rollover"],
+  tags=["completion-mechanism", "ev-bridge"], d=3,
+  trap="Stopping at equity value. The seller's question is what lands in the account on completion day.")
+
+q("What does cash-free debt-free actually mean, and why do buyers and sellers argue about it?",
+  "It means the price is agreed for the business itself, on the assumption the seller strips out "
+  "all cash and settles all debt at completion. In practice nobody does that literally; the "
+  "adjustment is made in the price.\n\n"
+  "The argument is never about the bank loan or the current account balance. It is about the "
+  "grey zone. The seller says everything on the balance sheet that is not a bank borrowing is "
+  "working capital or a provision. The buyer says a list of items behave like debt because they "
+  "are obligations to pay cash for something already consumed: an unfunded pension deficit, "
+  "deferred consideration from an earlier bolt-on, a factoring facility that is funding rather "
+  "than a receivable sale, accrued but unpaid bonuses, deferred capex on an asset that must be "
+  "replaced, an onerous lease provision, and any tax that crystallises on the transaction.\n\n"
+  "Whoever writes the definition of debt-like items in the SPA wins those points. That is why "
+  "the list gets negotiated line by line and why financial due diligence spends most of its time "
+  "on it.",
+  ["Explains the assumption: price is for the business, cash and debt settle at completion",
+   "Identifies the dispute as the grey zone rather than the bank debt",
+   "Gives a working test: an obligation to pay cash for value already consumed is debt-like",
+   "Names several contested items and notes the SPA definition is what decides them"],
+  tags=["completion-mechanism"], d=3,
+  trap="Answering with the definition and no list. The list is the question.")
+
+# ---------------------------------------------------------------- working capital
+q("How do you set a normalised working capital peg?",
+  "You are trying to answer one question: what level of working capital does the buyer need to be "
+  "handed so the business can run the day after completion without the buyer having to inject cash?\n\n"
+  "The standard method is a trailing average, usually twelve monthly balance sheet positions, "
+  "sometimes twenty-four where the business is volatile. Twelve months is used because it "
+  "captures a full seasonal cycle, which a spot balance sheet does not.\n\n"
+  "Then you normalise. Strip out anything that is being counted as debt or cash so it is not "
+  "double counted. Adjust for one-off items: a large one-time order, a stock build for a product "
+  "launch, a receivable that is really a dispute. Adjust for known structural change: if payment "
+  "terms with the largest customer changed six months ago, the older months are not representative "
+  "and the average has to be recalculated on the new terms. And check consistency of accounting "
+  "policy across the period, because a change in cut-off or provisioning moves the average without "
+  "anything economic having happened.\n\n"
+  "The output is a target, and the price moves one for one with the difference between the actual "
+  "level at completion and that target.",
+  ["States the purpose: the level needed to run the business without a buyer cash injection",
+   "Uses a trailing twelve-month average of month-end positions and explains why: seasonality",
+   "Normalises for one-offs, for items counted as cash or debt, and for structural changes in terms",
+   "States the price moves one for one against the peg"],
+  tags=["working-capital-peg", "working-capital"], d=3,
+  trap="Using the spot balance sheet at the last year end. A seasonal business will be at its lowest or highest point.")
+
+q("How does a seller game a working capital peg, and how do you catch it?",
+  "By managing the balance sheet down in the weeks before completion, so the actual level at "
+  "completion is below the level that was averaged into the peg, and the buyer pays the difference.\n\n"
+  "The usual moves: chase receivables hard, offer early settlement discounts, stop paying suppliers "
+  "so payables balloon, run inventory down and do not reorder, factor receivables just before "
+  "completion, and delay capex so the cash shows up as a lower working capital need than it really is. "
+  "Every one of them makes completion working capital look lean and leaves the buyer to fund the "
+  "normalisation afterwards.\n\n"
+  "You catch it by looking at the monthly trend rather than the completion balance alone. Days "
+  "sales outstanding, days payable and inventory days plotted over twenty-four months make an "
+  "engineered final month obvious: the ratios break trend in exactly the period after the process "
+  "started. Ageing profiles of receivables and payables show the same thing. And you build defences "
+  "into the SPA: a conduct-of-business covenant requiring ordinary course working capital "
+  "management, a definition that captures factoring, and sometimes a separate check on the "
+  "supplier ageing at completion.",
+  ["Names the mechanism: run actual completion working capital below the peg so the buyer pays the gap",
+   "Gives concrete levers such as stretching payables, chasing receivables, running down inventory and factoring",
+   "Detects it with DSO, DPO and inventory days trended over the period, not the completion balance alone",
+   "Names SPA defences: an ordinary-course conduct covenant and a definition that captures factoring"],
+  tags=["working-capital-peg", "working-capital"], d=4,
+  trap="Assuming the completion balance sheet is neutral. The seller controls the business right up to completion.")
+
+q("A target has a working capital peg of 10m and delivers 7m at completion. What happens, and who was right?",
+  "Mechanically, the buyer pays 3m less. The price adjusts one for one against the peg, because the "
+  "buyer will have to put 3m of cash into the business to get working capital back to the level "
+  "the peg said it needs.\n\n"
+  "Whether the buyer is made whole is a different question. If the shortfall is genuine seasonality "
+  "and the peg was set on a full-year average, the adjustment is roughly fair: the buyer receives "
+  "less working capital and less price, and the business will build back up over the cycle.\n\n"
+  "If the shortfall is engineered, the buyer is not made whole. Stretched payables have to be "
+  "unwound, which costs more than the balance sheet gap suggests once supplier relationships are "
+  "priced in, and starved inventory means lost sales the price adjustment does not compensate. "
+  "That is why the trend analysis matters more than the arithmetic, and why the adjustment alone "
+  "is a weak protection.",
+  ["Gives the mechanical answer immediately: the price falls by 3m, one for one",
+   "Separates a genuine seasonal shortfall from an engineered one",
+   "Explains why a euro of engineered shortfall costs the buyer more than a euro to fix",
+   "Concludes the adjustment alone is not full protection"],
+  tags=["working-capital-peg"], d=3,
+  trap="Giving only the arithmetic. The interviewer is testing whether you know the adjustment can be complete and still leave the buyer worse off.")
+
+# ---------------------------------------------------------------- diligence
+q("What does a quality of earnings report find that the audited accounts do not?",
+  "An audit answers whether the accounts are free from material misstatement under the relevant "
+  "framework. A quality of earnings report answers a different question: how much of the reported "
+  "earnings is recurring, cash-generating and likely to be there next year under a new owner.\n\n"
+  "What it typically finds: revenue recognised earlier than the cash or the risk transfer would "
+  "justify; margin flattered by one-off pricing or a single large contract; costs that sit below "
+  "EBITDA in the reported accounts but are genuinely operating; related-party arrangements at "
+  "off-market terms, which is common in founder-owned businesses; owner remuneration and personal "
+  "expenses run through the P&L; capitalised costs that are really opex; provisions released into "
+  "earnings; and a proof of cash reconciling reported EBITDA to actual cash generation, which is "
+  "usually the single most useful exhibit in the report.\n\n"
+  "It also sizes the debt-like items and builds the working capital analysis the peg is set from, "
+  "which is why the same team usually does both.",
+  ["States the different question: recurring and cash-generative earnings under a new owner, not material misstatement",
+   "Names findings on both sides: revenue and margin quality, and cost items misclassified or below the line",
+   "Names owner and related-party items, which matter in founder-owned targets",
+   "Names the proof of cash reconciling EBITDA to cash, and the link into debt-like items and the working capital peg"],
+  tags=["diligence-quality", "normalization"], d=3,
+  trap="Describing a QoE as 'a more detailed audit'. It answers a different question from the audit.")
+
+q("What makes a legitimate EBITDA add-back, and what makes a hopeful one?",
+  "A legitimate add-back has three properties: the cost is genuinely non-recurring, it can be "
+  "evidenced from source documents rather than a management schedule, and the business demonstrably "
+  "runs without it going forward. Redundancy costs from a completed restructuring, the fees of a "
+  "one-off litigation now settled, the cost of a closed site, or an owner's salary above market "
+  "where the buyer will not replicate it, all qualify.\n\n"
+  "A hopeful add-back fails one of those. The most common failures: run-rate synergies from actions "
+  "not yet taken, in a business the buyer has not yet owned; a restructuring that recurs every year "
+  "under a different name, at which point it is simply a cost of doing business; pro-forma "
+  "annualisation of a contract signed in month eleven with no delivery history; costs of a growth "
+  "initiative treated as exceptional while the associated revenue is left in; and 'COVID normalisation' "
+  "or any other adjustment that removes a bad period without removing the good one.\n\n"
+  "The practical test is symmetry. If the adjustment only ever moves EBITDA in one direction, it is "
+  "a negotiating position and not a normalisation.",
+  ["Gives three tests: genuinely non-recurring, evidenced from source documents, and the business runs without it",
+   "Gives valid examples such as completed restructuring, settled litigation or above-market owner pay",
+   "Names invalid ones such as unrealised run-rate synergies and a restructuring that recurs annually",
+   "States the symmetry test: adjustments that only ever go one way are a negotiating position"],
+  tags=["diligence-quality", "normalization"], d=4,
+  trap="Accepting run-rate synergies as normalisation. The buyer is being asked to pay a multiple on a benefit it has not delivered.")
+
+q("What is vendor due diligence and why would a seller pay for it?",
+  "A report commissioned by the seller, prepared by an accounting firm on financial, and often "
+  "separately on commercial, tax and legal matters, and made available to bidders during the process. "
+  "It is usually addressed to the seller and later relied on by the buyer and its lenders under a "
+  "reliance letter, which is what gives it value.\n\n"
+  "The seller pays for it for three reasons. It preserves competitive tension, because every bidder "
+  "gets the same information at the same time and no single bidder can slow the process by running "
+  "its own full scope. It surfaces problems early, when the seller can fix them or price them, "
+  "rather than in week six of exclusivity when the only available move is a price chip. And it "
+  "shortens the timetable, which matters because a process that drags loses bidders.\n\n"
+  "Buyers still do confirmatory work on the points that matter to them, and lenders will usually "
+  "want their own scope. But a good VDD moves the process from the buyer discovering things to the "
+  "seller having already answered them.",
+  ["Defines it as a seller-commissioned report made available to bidders, relied on under a reliance letter",
+   "Names preservation of competitive tension as the main commercial reason",
+   "Names early surfacing of problems, so the seller controls the narrative rather than absorbing a price chip",
+   "Notes buyers still run confirmatory work and lenders want their own scope"],
+  tags=["diligence-quality", "deal-process"], d=3,
+  trap="Assuming VDD replaces buy-side diligence. It replaces the duplication, not the confirmation.")
+
+# ---------------------------------------------------------------- deferred consideration
+q("When would you use an earn-out, and why is EBITDA a poor trigger?",
+  "You use an earn-out when the two sides cannot agree on the value of the future rather than the "
+  "past: a founder who believes a pipeline will convert, a business whose growth is real but "
+  "unproven, or a target where a single contract renewal swings the value. The earn-out defers "
+  "part of the price and makes it contingent on that future being delivered, which bridges the "
+  "gap without either side conceding the argument.\n\n"
+  "EBITDA is a poor trigger because it is the line the buyer controls most easily after completion. "
+  "Once the buyer owns the business it can allocate group overhead into it, push through management "
+  "charges, change transfer pricing, redirect a sale to a sister company, invest in headcount that "
+  "depresses near-term earnings, or simply change accounting policy. None of that is necessarily bad "
+  "faith; it is ordinary integration. But every one of those moves reduces the earn-out, and the "
+  "seller has no control and often no visibility.\n\n"
+  "So earn-outs are better hung on something the buyer cannot easily move: revenue, gross profit, "
+  "units shipped, contracts renewed, a regulatory approval received. And whatever the metric, the "
+  "SPA needs protective covenants for the earn-out period, a stated accounting basis, information "
+  "rights, and a dispute mechanism. Earn-outs generate more litigation per euro than any other term "
+  "in the agreement.",
+  ["Explains the purpose: bridging a valuation gap about the future, not the past",
+   "Explains why EBITDA is controllable post-completion, with concrete levers such as overhead allocation and transfer pricing",
+   "Notes this does not require bad faith, just ordinary integration",
+   "Recommends metrics higher up the P&L or non-financial, plus covenants, an accounting basis and information rights"],
+  tags=["deferred-consideration"], d=4,
+  trap="Recommending an earn-out on EBITDA because it is 'the value driver'. It is also the line the buyer controls.")
+
+q("What is a vendor loan note and why would a seller accept one?",
+  "Deferred consideration documented as a loan from the seller to the buyer, sitting in the buyer's "
+  "capital structure, usually deeply subordinated to the acquisition debt, often with PIK interest "
+  "and a bullet repayment after the senior debt.\n\n"
+  "The buyer likes it because it is funding it did not have to raise: it reduces the equity cheque "
+  "and the amount of third-party debt, and it does not have to be serviced in cash. The seller "
+  "accepts it for one of three reasons. It is the only way to get the headline price it wanted, "
+  "because the buyer could not fund the whole number. It signals confidence in the business, which "
+  "matters where the seller is staying involved. Or the tax treatment of deferred consideration is "
+  "better than cash today in that jurisdiction.\n\n"
+  "The risk is entirely the seller's: it is now an unsecured, subordinated creditor of a leveraged "
+  "buyer, ranking behind the banks, with no control and often no security. If the business "
+  "underperforms, the note is the first thing that does not get paid. Sellers who understand that "
+  "negotiate for security, a shorter tenor, cash interest, or a higher headline price to compensate.",
+  ["Defines it as deferred consideration documented as subordinated debt from the seller to the buyer",
+   "Gives the buyer's motive: reduced equity cheque and third-party debt, often no cash servicing",
+   "Gives at least two seller motives, such as achieving the headline price or tax treatment",
+   "States the risk clearly: the seller becomes a subordinated unsecured creditor behind the banks"],
+  tags=["deferred-consideration", "levfin-structure"], d=3,
+  trap="Treating a vendor loan note as deferred cash. It is subordinated debt in a leveraged structure.")
+
+q("Why does a sponsor ask management to roll over equity, and how much?",
+  "To align incentives. A management team that has taken its whole stake in cash at completion has "
+  "no economic reason to work through five hard years; a team with meaningful money in the new "
+  "structure does. The sponsor also reads the rollover as a signal: a team that will not put its own "
+  "proceeds back in is telling you something about its own view of the plan.\n\n"
+  "The typical ask is that management rolls a material proportion of its net proceeds, commonly a "
+  "third to a half, and the sponsor cares much more about the proportion of what they personally have "
+  "than about the absolute number or the percentage of the cap table.\n\n"
+  "The rollover usually goes into the same instrument mix as the sponsor, or into sweet equity: "
+  "ordinary shares alongside a much larger loan note or preference strip held mostly by the sponsor. "
+  "That structure is what gives management a levered return, because the preference instrument is "
+  "repaid first and the ordinary equity takes the residual. It is also why a modest change in exit "
+  "value swings the management outcome so violently, and why the ratchet and the leaver provisions "
+  "get negotiated as hard as the price.",
+  ["Names incentive alignment as the purpose, and the rollover as a signal about management's own view",
+   "Gives the ask as a material proportion of personal net proceeds rather than a cap table percentage",
+   "Explains the sweet equity structure: ordinary shares beside a sponsor-held preference or loan note strip",
+   "Explains why that structure levers the management return and makes leaver provisions material"],
+  tags=["deferred-consideration", "lbo-returns"], d=4,
+  trap="Describing rollover as management 'keeping a stake'. The instrument mix is the whole point.")
+
+q("What is W&I insurance and why is it now standard on European sponsor deals?",
+  "Warranty and indemnity insurance transfers the risk of a warranty breach from the seller to an "
+  "insurer. The buyer takes out a buy-side policy, the warranties are given by the seller but "
+  "recourse for breach runs to the insurer rather than to the seller, and the seller's liability is "
+  "capped at a nominal amount, often one euro.\n\n"
+  "It became standard because it solves the sponsor's problem exactly. A fund exiting wants to "
+  "distribute proceeds and close the fund; it cannot leave a warranty tail open for two years, and "
+  "it will not give a meaningful cap. Before W&I that meant either an escrow, which traps money, or "
+  "a buyer accepting almost no recourse. Insurance gives the buyer a real counterparty and the "
+  "seller a clean break at a cost of roughly one percent of the insured limit, which on a competitive "
+  "auction is cheap relative to what the seller saves.\n\n"
+  "What it does not cover matters. Known issues found in diligence are excluded, as are forward-"
+  "looking statements, pension underfunding, transfer pricing and secondary tax liabilities in many "
+  "policies, and anything the buyer failed to diligence. The exclusions are why insurers require "
+  "evidence of a proper diligence process before underwriting, and why W&I raises the standard of "
+  "diligence rather than lowering it.",
+  ["Explains the mechanism: buy-side policy, recourse to the insurer, seller capped at a nominal amount",
+   "Explains why sponsors need it: a fund cannot leave a warranty tail open or trap proceeds in escrow",
+   "Gives an order-of-magnitude cost relative to the insured limit",
+   "Names key exclusions, especially known issues, and notes it raises rather than lowers the diligence standard"],
+  tags=["sale-agreement"], d=3,
+  trap="Assuming W&I means diligence matters less. Known issues are excluded, so it means the opposite.")
+
+q("What is an escrow, and when would you use one instead of relying on W&I?",
+  "Money held back from the price by a third party for a defined period, released to the seller if "
+  "no claim arises and to the buyer if one does. It is the pre-insurance answer to warranty risk and "
+  "it has not gone away.\n\n"
+  "You use it where W&I will not respond. A known issue found in diligence is excluded from the "
+  "policy by definition, so a specific indemnity backed by a specific escrow is the only way to cover "
+  "it: an open tax audit, live litigation, an environmental liability at a named site, a contract "
+  "consent that has not been obtained. You also use it where the counterparty risk is real, for "
+  "instance a private seller in a jurisdiction where enforcement is slow, and where a completion "
+  "accounts true-up could run against a seller who has already distributed the proceeds.\n\n"
+  "The cost is that the money is trapped, which is exactly what a fund seller is trying to avoid, "
+  "so the size and duration are negotiated hard and it is usually reserved for identified risks "
+  "rather than general warranty cover.",
+  ["Defines it as a third-party holdback for a defined period against defined claims",
+   "Explains the main use case: known issues excluded from W&I, backed by a specific indemnity",
+   "Names counterparty risk and the completion accounts true-up as further reasons",
+   "Names the cost: trapped proceeds, which is why funds resist it"],
+  tags=["sale-agreement", "deferred-consideration"], d=3,
+  trap="Presenting escrow and W&I as alternatives for the same risk. They cover different risks.")
+
+# ---------------------------------------------------------------- process
+q("Walk me through a sell-side auction from mandate to signing.",
+  "Preparation, six to ten weeks. Agree the equity story, prepare the information memorandum and "
+  "the teaser, build the management presentation, run vendor due diligence, set up the data room, "
+  "clean up the perimeter, and build the buyer list with the client.\n\n"
+  "Phase one. Teaser out to the approved list, NDAs signed, information memorandum released, "
+  "process letter setting the deadline and the required content. Bidders receive limited information "
+  "and submit non-binding indicative offers with a value range, funding, conditionality, approvals "
+  "needed and their timetable.\n\n"
+  "Phase two. A shortlist, typically four to six, goes to management presentations, full data room "
+  "access, vendor due diligence reports, expert sessions and site visits. The SPA is issued as a "
+  "seller-friendly draft for mark-up. Bidders submit binding offers with a marked SPA, evidence of "
+  "financing and a short conditions list.\n\n"
+  "Final. Negotiate with two or three in parallel for as long as possible, because that is where the "
+  "tension is. Then grant exclusivity, confirmatory diligence, final SPA negotiation, signing, and "
+  "then completion once conditions such as antitrust clearance are satisfied.\n\n"
+  "The whole design has one purpose: keep more than one credible bidder alive past the point where "
+  "the price is fixed. Value leaks the moment that stops being true.",
+  ["Names the four stages: preparation, non-binding phase one, binding phase two, and exclusivity to signing",
+   "Names the documents in the right places: teaser and NDA, IM and process letter, management presentation and data room, SPA mark-up",
+   "Distinguishes non-binding indicative offers from binding offers with a marked SPA and financing evidence",
+   "States the governing principle: keep competitive tension alive as long as possible"],
+  tags=["deal-process"], d=3,
+  trap="Granting exclusivity early. Exclusivity is the moment the seller's leverage ends.")
+
+q("What goes into a process letter, and why does it matter?",
+  "It is the instruction to bidders: the deadline, the format, and exactly what an offer must "
+  "contain to be considered. Typically the price and the basis on which it is expressed, the "
+  "assumed cash-free debt-free and working capital treatment, the source and status of funding "
+  "including any equity commitment and debt papers, the conditions to completion, the approvals "
+  "required and their expected timing, the remaining diligence scope, the advisers engaged, and "
+  "the internal approvals still outstanding.\n\n"
+  "It matters because it makes offers comparable. Without it a seller receives one bid quoting "
+  "enterprise value and another quoting equity value, one fully funded and one subject to committee, "
+  "one with a two-week confirmatory scope and one wanting eight. You cannot rank those, and a "
+  "banker who presents them to a board as a league table is misleading the client.\n\n"
+  "It is also the seller's main lever on process discipline. Bidders who ignore the format are "
+  "usually the ones who will be difficult later, and that is useful information at phase one.",
+  ["Names the core contents: deadline, price basis, funding, conditions, approvals, remaining diligence",
+   "States the purpose: making bids comparable on the same basis",
+   "Gives the failure mode: incomparable bids that cannot honestly be ranked for the board",
+   "Notes non-compliance with the process letter is itself a signal about the bidder"],
+  tags=["deal-process"], d=3,
+  trap="Treating the process letter as administrative. It is what turns a pile of offers into a decision.")
+
+q("How do you compare a strategic bid against a sponsor bid at the same headline price?",
+  "The headline is the least informative part. You compare on four axes.\n\n"
+  "Certainty. Is the funding committed, and what does it depend on? A sponsor with equity "
+  "commitment letters and signed debt papers may well be more certain than a strategic that needs "
+  "a board resolution and has never done a deal this size.\n\n"
+  "Conditionality and timetable. A strategic in the same market brings antitrust risk, possibly a "
+  "Phase 2 review and a remedy negotiation, and foreign investment screening. That can be a year "
+  "of hold-separate risk on a business the seller no longer controls. A sponsor usually clears "
+  "quickly.\n\n"
+  "The price basis. What multiple, off what EBITDA, with which add-backs accepted, on what debt-like "
+  "list, and how much is deferred, in escrow, in an earn-out or in vendor notes. Two bids at the "
+  "same enterprise value can be twenty percent apart in cash at completion.\n\n"
+  "Non-price terms. Warranty package, W&I, employee and management arrangements, and for a founder "
+  "seller often the future of the business and the name, which can genuinely outrank a few percent "
+  "of price.",
+  ["Compares certainty of funding rather than assuming the strategic is safer",
+   "Compares conditionality and timetable, naming antitrust and foreign investment screening risk",
+   "Decomposes the price basis: multiple, earnings measure, add-backs, debt-like items, deferred elements",
+   "Names non-price terms, including what a founder seller may value above price"],
+  tags=["deal-process"], d=4,
+  trap="Assuming a strategic always pays more because of synergies. Deliverability often dominates.")
+
+q("Why would a founder-owned business run a bilateral process instead of a broad auction?",
+  "Confidentiality first. An auction means the teaser goes to thirty parties, several of them "
+  "competitors, and the information memorandum goes to a dozen. Customers, suppliers and staff find "
+  "out, competitors learn the cost base and the customer concentration, and if the process fails the "
+  "business is damaged and the owner has to wait years to try again. For an owner whose whole net "
+  "worth and reputation sit in one company, that asymmetry is real.\n\n"
+  "Speed and burden second. An auction consumes the management team for six months. In a founder "
+  "business the management team is often three people who are also running the company, and the "
+  "trading performance during the process is itself part of the price.\n\n"
+  "And fit. Where the owner cares about the buyer's plan for the business, the staff or the name, a "
+  "process optimised purely for price is optimising for the wrong variable.\n\n"
+  "The cost is obvious: no competitive tension, so the seller relies on a credible threat to walk "
+  "away and on the adviser's read of what the market would pay. That is why bilaterals work best "
+  "with a well-prepared seller, a genuine walk-away alternative, and an adviser who has recent "
+  "comparable evidence.",
+  ["Names confidentiality and the damage from a failed public process as the first reason",
+   "Names management burden and the fact that trading through the process affects the price",
+   "Names fit on non-price terms where the owner cares about outcome as well as value",
+   "States the cost honestly: no tension, so the seller needs a real walk-away and good market evidence"],
+  tags=["deal-process"], d=3,
+  trap="Assuming an auction always maximises value. For a founder it can destroy value if it leaks or fails.")
+
+q("What is exclusivity, and what does a seller give up by granting it?",
+  "A binding undertaking not to talk to anyone else for a defined period, usually four to eight "
+  "weeks, granted to one bidder so it will spend real money on confirmatory diligence and "
+  "financing.\n\n"
+  "What the seller gives up is all of its leverage at once. Until exclusivity the seller has "
+  "alternatives and the bidder knows it; after it, the bidder is the only buyer in the room and any "
+  "issue it finds becomes a negotiation the seller can only lose. The classic outcome is the "
+  "late price chip: at week five, with the other bidders gone cold, the buyer reports a diligence "
+  "finding and reduces the price, and the seller's realistic options are to accept or to restart a "
+  "process that is now visibly damaged.\n\n"
+  "Defences: keep exclusivity short and make extension conditional; require the buyer to confirm "
+  "price and terms in writing before it starts; narrow the confirmatory scope to defined workstreams "
+  "rather than open diligence; keep the underbidder warm even though you cannot negotiate; and try "
+  "to sign the SPA on agreed terms with only the confirmatory conditions outstanding.",
+  ["Defines it as a binding no-shop for a defined period in exchange for real diligence spend",
+   "Identifies the loss precisely: the seller's alternatives disappear the moment it is granted",
+   "Names the late price chip as the predictable failure mode",
+   "Gives concrete defences: short period, confirmed price and terms up front, narrow scope, keep the underbidder warm"],
+  tags=["deal-process", "sale-agreement"], d=3,
+  trap="Treating exclusivity as a procedural step. It is the single biggest transfer of leverage in the process.")
+
+q("What is the difference between signing and completion, and what sits in between?",
+  "At signing the parties are contractually bound on agreed terms. At completion the shares "
+  "transfer and the money moves. The gap exists because things have to happen that cannot happen "
+  "before there is a binding deal.\n\n"
+  "What sits in between: antitrust clearance, foreign investment screening, other regulatory "
+  "approvals, works council information and consultation in Germany and elsewhere, third-party "
+  "consents such as change-of-control clauses in key contracts, financing drawdown, and any agreed "
+  "pre-completion reorganisation of the perimeter.\n\n"
+  "The gap is where the risk allocation in the SPA does its work. The conditions precedent say what "
+  "must happen; the conduct-of-business covenants constrain what the seller may do while it still "
+  "runs a business the buyer has bought; the long-stop date says when either side can walk; any "
+  "material adverse change clause says whether a deterioration lets the buyer out; and the "
+  "completion mechanism, locked box or completion accounts, decides who carries the economics of "
+  "the gap.\n\n"
+  "For a simple private deal signing and completion can be simultaneous, and then most of that "
+  "machinery is unnecessary.",
+  ["States the distinction: binding at signing, shares and money move at completion",
+   "Names the conditions that typically sit in the gap, including antitrust and works council consultation",
+   "Names the SPA machinery that governs the gap: conditions precedent, conduct covenants, long-stop, MAC",
+   "Connects the completion mechanism to who bears the economics of the gap"],
+  tags=["sale-agreement", "deal-process"], d=3,
+  trap="Assuming there is always a gap. Simultaneous signing and completion is common on small private deals.")
+
+q("What is a material adverse change clause, and how often does it actually work?",
+  "A condition allowing the buyer to walk away between signing and completion if something "
+  "sufficiently bad happens to the target. In practice it almost never works, and both sides know "
+  "that when they negotiate it.\n\n"
+  "It fails for two reasons. The drafting is heavily carved out: general economic conditions, "
+  "industry-wide conditions, market movements, changes in law and accounting, and anything disclosed "
+  "or foreseeable are excluded, so what remains is usually a target-specific catastrophe. And the "
+  "threshold as courts have interpreted it is very high, requiring durational significance rather "
+  "than a bad quarter, so a buyer with second thoughts about the price has no case.\n\n"
+  "Its real function is not to be exercised. It is a negotiating position for the period between "
+  "signing and completion, and its existence changes behaviour without ever being invoked. Sellers "
+  "in strong markets, especially funds, resist a MAC entirely or accept only a narrow, quantified, "
+  "target-specific trigger.\n\n"
+  "A buyer that genuinely wants protection against deterioration is better served by a short gap, "
+  "specific conditions on identified risks, or price structure such as an earn-out.",
+  ["Defines it as a walk-away right for post-signing deterioration",
+   "Explains why it rarely works: broad carve-outs plus a very high judicial threshold",
+   "Names its real function as a negotiating position rather than an exit",
+   "Gives better alternatives: a short gap, specific conditions, or price structure"],
+  tags=["sale-agreement"], d=4,
+  trap="Presenting the MAC as real downside protection. Assume you cannot use it and structure accordingly.")
+
+q("What is a disclosure letter and why does it matter as much as the warranties?",
+  "The document in which the seller discloses against the warranties. A warranty is a statement of "
+  "fact; the disclosure letter says where that statement is not true, and a properly disclosed "
+  "matter cannot found a claim.\n\n"
+  "It matters because it is where the warranty package is actually set. A seller can accept a long "
+  "list of buyer-friendly warranties and then disclose them into irrelevance, and a buyer that "
+  "negotiated hard on the warranty schedule and did not read the disclosures has won nothing. It has "
+  "two parts: general disclosures, which deem whole categories of material to be disclosed, "
+  "including in some drafts the entire data room, and specific disclosures against numbered "
+  "warranties.\n\n"
+  "The fights are over the data room sweeper, which a buyer resists because it converts a warranty "
+  "into a duty to have read forty thousand documents, and over the standard of disclosure, "
+  "typically 'fair disclosure with sufficient detail to identify the nature and scope of the matter' "
+  "rather than mere mention. Under W&I the insurer takes the same view, which is why disclosure "
+  "quality is underwritten.",
+  ["Defines it as disclosure against the warranties, with a disclosed matter barred from claim",
+   "Explains that it is where the warranty package is really set",
+   "Distinguishes general from specific disclosures",
+   "Names the data room sweeper and the fair disclosure standard as the negotiated points"],
+  tags=["sale-agreement"], d=4,
+  trap="Negotiating the warranty schedule without reading the disclosure letter. The disclosures decide what the warranties are worth.")
+
+q("A buyer finds in diligence that the target's largest customer is 40% of revenue and the contract expires in eight months. What do you do?",
+  "Size it before reacting. What is the margin on that customer as opposed to the revenue share, how "
+  "long has the relationship run, what is the history of renewal, is there a competitive tender "
+  "coming, what is the switching cost for the customer, and is there a relationship at the "
+  "customer that survives the seller's departure.\n\n"
+  "Then choose the instrument that matches the risk, and the point is that this is a structuring "
+  "problem rather than a price problem. Options in rough order of preference: make renewal a "
+  "condition precedent, which is cleanest if the timetable allows and the customer can be "
+  "approached; put a specific indemnity with an escrow behind it, sized to the margin at risk; put "
+  "part of the price in an earn-out contingent on the renewal, which also keeps the seller working "
+  "on it; or take the price down by the risk-weighted value.\n\n"
+  "A flat price chip is the weakest of those because it converts a binary, resolvable risk into a "
+  "negotiation about a number, and it usually leaves both sides feeling badly done by. What you "
+  "should not do is discover it in exclusivity: this is exactly the sort of thing vendor due "
+  "diligence exists to surface at phase one.",
+  ["Sizes the exposure first: margin rather than revenue, renewal history, switching costs, relationship ownership",
+   "Frames it as a structuring problem with several instruments, not only a price problem",
+   "Names at least three of: condition precedent on renewal, specific indemnity with escrow, earn-out, price reduction",
+   "Notes a flat price chip is the weakest response to a binary resolvable risk"],
+  tags=["deal-process", "diligence-quality"], d=4,
+  trap="Going straight to a price chip. The interviewer wants to hear the structuring toolkit.")
+
+q("What is the difference between a share sale and an asset sale, and who prefers which?",
+  "In a share sale the buyer acquires the company and everything in it, known and unknown, including "
+  "its history. In an asset sale the buyer acquires identified assets and assumes identified "
+  "liabilities, and everything else stays with the seller.\n\n"
+  "Sellers almost always prefer a share sale. It is a clean break: the liabilities go with the "
+  "company, and in many jurisdictions the tax treatment on a share disposal is materially better "
+  "than on an asset disposal followed by a distribution, which can be taxed twice.\n\n"
+  "Buyers often prefer an asset sale where they can get it. They take only what they want, leave "
+  "historical tax, litigation, environmental and employment exposure behind, and in many "
+  "jurisdictions get a step-up in the tax base of the assets acquired, which produces deductible "
+  "depreciation and amortisation and is worth real money.\n\n"
+  "In practice, share sales dominate for whole companies in Europe, because the seller usually has "
+  "the leverage and because employee transfer rules mean an asset sale does not escape employment "
+  "liability anyway. Asset sales are the norm for carve-outs of a business line that is not in its "
+  "own legal entity, and in distressed situations where the buyer specifically wants to leave the "
+  "liabilities behind.",
+  ["States the core distinction: the whole company with its history versus identified assets and liabilities",
+   "Explains the seller's preference for a share sale on clean break and tax grounds",
+   "Explains the buyer's preference for an asset sale on liability exclusion and tax base step-up",
+   "Notes share sales dominate in Europe and asset sales are typical for carve-outs and distressed deals"],
+  tags=["deal-process"], d=2,
+  trap="Missing the tax step-up, which is often the buyer's largest single reason for wanting assets.")
+
+q("What is a hive-up or pre-completion reorganisation, and why does it create risk?",
+  "Restructuring the target group before completion so the perimeter matches what is being sold: "
+  "moving a business line into a new entity, transferring assets out that are not part of the deal, "
+  "settling intercompany balances, extracting real estate the seller is keeping, or separating a "
+  "shared function.\n\n"
+  "It creates risk on several fronts. Tax, because a transfer at other than market value or without "
+  "the right relief can crystallise a charge, and any degrouping charge usually lands on the buyer's "
+  "new group. Contracts, because assignment often needs a counterparty consent that may not be given "
+  "or may be used as leverage. Employees, because transfers engage TUPE in the UK and section 613a in "
+  "Germany, with information and consultation obligations and a right to object. Licences and "
+  "permits, which frequently cannot be transferred at all and have to be reapplied for. And "
+  "operational separation, where shared IT, treasury and procurement mean the business cannot "
+  "actually stand alone on day one, which is why transitional services agreements exist.\n\n"
+  "For the buyer the practical points are: get the steps plan and the tax opinion, make the "
+  "reorganisation a condition, warrant that it has been completed as described, and negotiate the "
+  "TSA scope and duration early rather than as an afterthought.",
+  ["Defines it as restructuring the perimeter before completion so what is sold matches what was agreed",
+   "Names tax risk including degrouping charges, and contract consents",
+   "Names employee transfer obligations and non-transferable licences",
+   "Names operational separation and the role of a transitional services agreement"],
+  tags=["deal-process"], d=4,
+  trap="Treating a reorganisation as a legal formality. The tax and TSA points are where the money is.")
+
+q("A sponsor and a strategic both bid. The sponsor's number is 5% higher. What do you tell the board?",
+  "That the two numbers are not comparable until you have put them on the same basis, and then give "
+  "the board a recommendation rather than a spreadsheet.\n\n"
+  "First, restate both on a cash-at-completion basis: same earnings measure, same add-backs "
+  "accepted, same debt-like list, and the deferred elements, escrow, earn-out and vendor notes "
+  "stripped out or discounted. A 5% headline gap frequently closes or reverses at that stage.\n\n"
+  "Second, price the deliverability difference. Probability-weight each: the strategic's antitrust "
+  "risk and timetable against the sponsor's financing condition and the state of the debt market on "
+  "the day. An expected value that accounts for a fifteen percent chance of a failed deal after nine "
+  "months is a different number from the headline.\n\n"
+  "Third, put the non-price terms in front of them explicitly, because they are the board's decision "
+  "and not the adviser's: warranty package, employee commitments, and whatever the shareholders "
+  "care about beyond price.\n\n"
+  "Then recommend. Boards are entitled to a view from their adviser, and presenting three "
+  "comparably-sized numbers without one is not neutrality, it is an abdication.",
+  ["Restates both bids on a common cash-at-completion basis before comparing",
+   "Probability-weights deliverability rather than assuming either bidder is safe",
+   "Puts non-price terms to the board explicitly as their decision",
+   "Ends with a recommendation rather than a menu"],
+  tags=["deal-process"], d=4,
+  trap="Presenting the comparison and stopping. The board is asking what you would do.")
+
+# ---------------------------------------------------------------- UK public M&A
+q("Why would a bidder use a scheme of arrangement rather than a contractual offer?",
+  "A scheme is a court-sanctioned statutory procedure run by the target; a contractual offer is a "
+  "direct offer by the bidder to shareholders. On a recommended deal the scheme is now the default "
+  "in the UK.\n\n"
+  "The reason is the threshold and the outcome. A scheme needs a majority in number of the "
+  "shareholders voting, representing at least 75% in value, at a court-convened meeting, plus a "
+  "special resolution and then court sanction. If it passes, it binds 100% of the shareholders "
+  "automatically, on the day the court order is registered. There is no rump and no minority.\n\n"
+  "A contractual offer needs 90% acceptances of the shares to which the offer relates before the "
+  "bidder can compulsorily acquire the rest under the squeeze-out. Below that the bidder is left "
+  "with a minority on the register, which is unacceptable if the acquisition is debt-funded, "
+  "because the lenders want the target's assets and cash flow available for security and upstreaming.\n\n"
+  "The bidder also saves stamp duty on a scheme, which on a large deal is 0.5% of consideration and "
+  "a real number.\n\n"
+  "The critical limitation: a scheme is run by the target board, which controls the timetable and "
+  "can pull it. So a scheme is impossible for a hostile bid, and a bidder that fears the "
+  "recommendation may be withdrawn will want the right to switch to an offer.",
+  ["States the scheme thresholds: majority in number and 75% in value at the court meeting, then court sanction",
+   "States that a scheme binds 100% with no minority left on the register",
+   "Contrasts the 90% acceptance threshold for compulsory acquisition on a contractual offer",
+   "Explains why a minority is unacceptable on a debt-funded deal",
+   "Names the decisive limitation: the target runs the scheme, so it cannot be used hostile"],
+  tags=["takeover-code"], d=4,
+  trap="Giving 75% as the only threshold. The majority-in-number headcount test is separate and has defeated schemes.")
+
+q("What is a Rule 2.7 announcement and what does it commit the bidder to?",
+  "The announcement of a firm intention to make an offer under the UK Takeover Code. Before it, a "
+  "bidder is in a possible offer situation and can walk away. After it, it is committed.\n\n"
+  "What it triggers. The bidder must proceed on the announced terms and post the offer document or "
+  "scheme circular within 28 days. It can only invoke a condition to walk away where the Panel "
+  "agrees the circumstances are of material significance, which is an extremely high bar in "
+  "practice, so for most purposes the announced price is binding. The formal timetable starts. And "
+  "the announcement itself must contain the terms, the conditions, details of any irrevocables, and "
+  "a statement of the bidder's intentions for the target's business, employees and pension schemes, "
+  "which is now enforceable as a post-offer undertaking.\n\n"
+  "Crucially, the bidder's financial adviser must give a cash confirmation: a public statement that "
+  "the bidder has sufficient resources to satisfy full acceptance. That is not a formality. The "
+  "adviser is on the hook, and the Panel has required advisers to fund shortfalls. It is why the "
+  "financing has to be certain funds before 2.7, and why UK acquisition financing looks different "
+  "from a US commitment paper with wide conditionality.",
+  ["Defines it as the firm intention announcement that commits the bidder",
+   "Names the 28-day posting requirement and that walking away requires Panel consent on material significance",
+   "Names the required contents including terms, conditions, irrevocables and intention statements",
+   "Explains cash confirmation and that the adviser can be required to fund the shortfall",
+   "Draws the consequence for financing: certain funds before announcement"],
+  tags=["takeover-code"], d=4,
+  trap="Treating cash confirmation as boilerplate. It is why UK deals need certain funds financing.")
+
+q("What is put up or shut up, and how does a target use it?",
+  "Under Rule 2.6 of the Takeover Code, once a potential bidder is publicly named in a possible "
+  "offer situation, it has 28 days to either announce a firm intention to make an offer under Rule "
+  "2.7 or announce that it will not bid. If it does the latter, it is normally restricted from "
+  "bidding again for six months.\n\n"
+  "It exists because a named but uncommitted bidder is corrosive: the target's shares trade on "
+  "speculation, management is distracted, customers and staff are unsettled, and the bidder has a "
+  "free option to keep looking while the target absorbs the cost.\n\n"
+  "A target uses it as a defence by simply letting the clock run, or by declining to extend. The "
+  "deadline can be extended only with the target board's consent and the Panel's agreement, so the "
+  "board holds the pen. A board that wants to force a low-balling bidder either to commit at a "
+  "credible price or to go away just refuses the extension. Conversely a board that is negotiating "
+  "seriously will extend to allow diligence and financing to finish.\n\n"
+  "That makes the extension request itself a negotiating event, and one of the few points of "
+  "leverage a target board has in the pre-announcement phase.",
+  ["States the 28-day deadline from being publicly named, and the two ways it ends",
+   "Names the six-month restriction that follows a shut-up announcement",
+   "Explains the purpose: removing the bidder's free option at the target's expense",
+   "Explains that extension needs the board's consent, making refusal a real defence"],
+  tags=["takeover-code"], d=3,
+  trap="Thinking the deadline runs automatically from first contact. It runs from the public naming.")
+
+q("What is an irrevocable undertaking, and what are the three kinds?",
+  "A commitment from a target shareholder to accept the offer or vote for the scheme. A bidder "
+  "collects them before announcement, typically from directors and large institutions, to de-risk "
+  "the deal and to signal support.\n\n"
+  "Hard irrevocable: binds the shareholder regardless of what happens, including a higher competing "
+  "offer. Institutions almost never give these because their fiduciary duty makes locking out a "
+  "better price difficult, so they are largely confined to directors and to shareholders with a "
+  "strategic reason.\n\n"
+  "Soft irrevocable: falls away if a competing offer is announced above a stated threshold, often "
+  "a specified percentage above the original price. This is the common institutional form.\n\n"
+  "Irrevocable with a matching right: falls away on a higher competing offer, but only if the "
+  "original bidder does not match within a defined short period. It sits between the two and is "
+  "increasingly the negotiated middle ground.\n\n"
+  "There is also the letter of intent, which is a non-binding statement of support and worth "
+  "correspondingly less, though it must still be disclosed. What matters commercially is the "
+  "aggregate percentage locked up and how hard it is: 30% of hard irrevocables is a serious "
+  "deterrent to an interloper, while 30% of soft ones deters nobody.",
+  ["Defines the instrument and why a bidder collects them before announcement",
+   "Distinguishes hard, soft, and matching-rights irrevocables correctly",
+   "Explains why institutions resist hard irrevocables on fiduciary grounds",
+   "Notes what matters is the aggregate percentage and how hard it is, not the count"],
+  tags=["takeover-code"], d=4,
+  trap="Assuming an irrevocable locks up the shares. Most institutional ones fall away on a competing bid.")
+
+q("What is the mandatory offer rule, and when does Rule 9 bite?",
+  "Under Rule 9 of the Takeover Code, a person who acquires an interest in shares carrying 30% or "
+  "more of the voting rights of a Code company, or who already holds between 30% and 50% and "
+  "acquires any further interest, must make a cash offer for all the remaining shares.\n\n"
+  "The price is not negotiable: it must be at least the highest price the bidder or anyone acting in "
+  "concert with it paid in the preceding twelve months, and it must be in cash or with a cash "
+  "alternative. The offer can only be conditional on receiving acceptances taking the bidder above "
+  "50%, so almost none of the usual bidder protections are available.\n\n"
+  "The logic is that control has changed hands and minority shareholders are entitled to exit at the "
+  "price control was bought at. Thirty percent is the threshold because that is where practical "
+  "control of a listed UK company usually sits, well below an absolute majority.\n\n"
+  "The concert party analysis is where this gets dangerous in practice: shareholders acting together, "
+  "a bidder plus its financing partners, or a management team rolling over alongside a sponsor can "
+  "be aggregated without anyone intending it. Where a transaction would otherwise trigger Rule 9, "
+  "the Panel can grant a whitewash waiver, approved by a vote of independent shareholders.",
+  ["States the 30% threshold and the creeping acquisition rule between 30% and 50%",
+   "States the price rule: highest price paid in the preceding twelve months, in cash or with a cash alternative",
+   "Notes the offer can only be conditional on getting above 50%",
+   "Names the concert party risk and the whitewash waiver as the release valve"],
+  tags=["takeover-code"], d=4,
+  trap="Missing that concert parties aggregate. Rule 9 is most often triggered by accident, not by design.")
+
+q("What is Rule 21 frustrating action, and why does it make UK takeover defence different from the US?",
+  "Rule 21 of the Takeover Code prohibits the target board, once an offer is imminent or has been "
+  "made, from taking any action that could frustrate the offer without shareholder approval in "
+  "general meeting. That covers issuing shares, granting options, disposing of material assets, "
+  "entering into contracts outside the ordinary course, and anything else that would make the target "
+  "less attractive.\n\n"
+  "The difference from the US is fundamental. A Delaware board can adopt a poison pill unilaterally "
+  "and use it to block a hostile bidder more or less indefinitely, subject to fiduciary review, "
+  "which is why hostile deals in the US are fought at the board and in court. In the UK the decision "
+  "belongs to shareholders and the board cannot take it away from them. There are no poison pills, "
+  "no staggered boards used defensively, and no just-say-no defence.\n\n"
+  "What a UK board can actually do is argue: reject the offer as undervaluing the company, publish a "
+  "defence document with new information or upgraded guidance, find a white knight, lobby on public "
+  "interest grounds, and run the PUSU clock. The defence is persuasion, not obstruction, and that "
+  "shapes the entire strategy from day one.",
+  ["States the prohibition: no frustrating action without shareholder approval once an offer is imminent",
+   "Gives examples of what counts, such as share issues and material disposals",
+   "Contrasts the US position where a board can adopt a pill unilaterally",
+   "Concludes UK defence is persuasion: defence document, white knight, PUSU clock"],
+  tags=["takeover-code"], d=4,
+  trap="Suggesting a poison pill in a UK context. Rule 21 makes it unavailable.")
+
+q("What does certain funds mean, and how does UK acquisition financing differ from a US commitment letter?",
+  "Certain funds is the standard the Takeover Code imposes through the cash confirmation "
+  "requirement: at Rule 2.7 the bidder's adviser must publicly confirm that resources are available, "
+  "so the financing must be effectively unconditional at announcement.\n\n"
+  "In practice that means the facility agreement is signed before the announcement, and during the "
+  "certain funds period the lenders' ability to refuse to fund is cut back to a very short list of "
+  "major defaults: typically insolvency of the bidder, illegality, and breach of a small set of "
+  "fundamental representations. Market MAC clauses, general material adverse change, a broad "
+  "conditions list and market flex on economics that could prevent funding are all disapplied for "
+  "the period.\n\n"
+  "A US commitment letter is a different instrument. It is a commitment to provide financing subject "
+  "to conditions, and it usually retains market flex, a SunGard-style limited conditionality "
+  "construct rather than the Code's public confirmation, and an out if the syndication market moves.\n\n"
+  "The practical consequence for a bidder is that everything moves earlier. Diligence, credit "
+  "approval and full documentation have to be finished before the announcement rather than "
+  "afterwards, which is why UK public deals have a long, quiet pre-announcement phase and then move "
+  "very fast once 2.7 goes out.",
+  ["Links certain funds to the Rule 2.7 cash confirmation requirement",
+   "Describes the mechanism: signed facilities with lender outs cut back to a short list of major defaults",
+   "Names what is disapplied: market MAC, broad conditions, funding-relevant flex",
+   "Contrasts the US commitment letter and draws the timing consequence for the deal"],
+  tags=["takeover-code", "levfin-structure"], d=5,
+  trap="Describing certain funds as 'committed financing'. A US commitment letter is committed and would still fail the Code test.")
+
+# ---------------------------------------------------------------- German public M&A
+q("What is the German equivalent of the Takeover Code, and where does the mandatory offer threshold sit?",
+  "The Wertpapiererwerbs- und Ubernahmegesetz, the WpUG, supervised by BaFin rather than by a "
+  "practitioner panel. It applies to offers for companies whose voting shares are admitted to "
+  "trading on a regulated market in the EEA with a German seat.\n\n"
+  "The mandatory offer threshold is 30% of voting rights, the same headline number as the UK, and "
+  "crossing it obliges a Pflichtangebot to all remaining shareholders.\n\n"
+  "The minimum price rule is the part that differs in mechanics and is easy to get wrong. The offer "
+  "price must be at least the higher of two things: the highest consideration the bidder or a person "
+  "acting jointly with it paid or agreed to pay for target shares in the six months before the "
+  "announcement, and the volume-weighted average domestic stock exchange price of the target's "
+  "shares over the three months before the announcement. That three-month VWAP floor is not in the "
+  "UK regime and it matters: a bidder acting after a share price run cannot price off the current "
+  "market, and a bidder acting after a collapse cannot buy at the trough.\n\n"
+  "The other structural difference is the enforcement style. BaFin is a regulator applying a statute "
+  "with legal remedies; the UK Panel is a practitioner body ruling in real time on principles. The "
+  "German process is more formal and more litigable, and post-offer squeeze-out and price challenges "
+  "in the German courts are a routine feature rather than an exception.",
+  ["Names the WpUG and BaFin as supervisor",
+   "States the 30% mandatory offer threshold",
+   "States the minimum price rule as the higher of six-month prior acquisitions and the three-month VWAP",
+   "Identifies the three-month VWAP floor as the substantive difference from the UK",
+   "Contrasts BaFin's statutory enforcement with the UK Panel's real-time practitioner rulings"],
+  tags=["german-public-m-a"], d=4,
+  trap="Assuming the German rule mirrors the UK's twelve-month highest-price test. It is six months plus a three-month VWAP floor.")
+
+q("What is a domination and profit and loss transfer agreement, and why does a bidder want one?",
+  "A Beherrschungs- und Gewinnabfuhrungsvertrag, usually called a DPLTA. It is a corporate "
+  "agreement between the bidder and the German target under which the bidder acquires the right to "
+  "issue binding instructions to the target's management board, and the target transfers its entire "
+  "profit to the bidder and the bidder covers its losses.\n\n"
+  "The bidder wants it because without it a German AG is remarkably independent even of a majority "
+  "shareholder. The management board runs the company on its own responsibility under section 76 "
+  "AktG, and a controlling shareholder cannot simply direct it. More practically, without a DPLTA "
+  "the bidder cannot upstream the target's cash freely or pool it in group treasury, and cannot use "
+  "the target's cash flow to service acquisition debt. For a leveraged buyer that is decisive.\n\n"
+  "It requires a 75% majority of the share capital represented at the target's general meeting, and "
+  "it is registered in the commercial register.\n\n"
+  "The price is that it triggers statutory protections for the remaining minority: a guaranteed "
+  "annual compensation payment, the Ausgleich, and a right for minorities to have their shares "
+  "bought out at an adequate cash settlement, the Abfindung. Both are open to challenge in an "
+  "appraisal proceeding, the Spruchverfahren, which can run for years and can increase the amount "
+  "retroactively. That open-ended liability is the reason a bidder budgets for a DPLTA rather than "
+  "treating it as a formality.",
+  ["Defines the DPLTA as conferring a right to instruct the management board plus profit transfer and loss coverage",
+   "Explains why it is needed: a German AG management board is independent under section 76 AktG, and cash cannot otherwise be upstreamed",
+   "States the 75% majority requirement",
+   "Names the minority protections, guaranteed dividend and cash settlement, and the Spruchverfahren appraisal risk"],
+  tags=["german-public-m-a"], d=5,
+  trap="Assuming a majority stake is enough to control cash flows. In Germany it is not; you need the DPLTA.")
+
+q("Walk me through getting to 100% of a German listed target.",
+  "There are three squeeze-out routes and which one is available depends on the stake reached.\n\n"
+  "At 95% of the share capital, the corporate squeeze-out under sections 327a to 327f AktG: a "
+  "general meeting resolution transfers the minority shares against an adequate cash settlement, "
+  "valued by a court-appointed auditor. It is the most common route and the settlement is open to "
+  "challenge in a Spruchverfahren.\n\n"
+  "At 95%, the merger squeeze-out under the UmwG, available where the bidder is an AG and a merger "
+  "of the target into it is being effected. It is faster and the valuation basis is somewhat "
+  "different.\n\n"
+  "At 95% of the shares to which a takeover offer related, and only within three months of the end "
+  "of the acceptance period, the takeover squeeze-out under the WpUG. This one is attractive because "
+  "the consideration offered in the takeover is presumed adequate where 90% or more of the shares "
+  "covered by the offer were tendered, which largely closes off the appraisal challenge.\n\n"
+  "The practical sequence for a bidder is therefore: run the offer, aim to clear 95% within the "
+  "offer window and use the WpUG squeeze-out, because it is the only route that materially limits "
+  "appraisal risk. Failing that, put a DPLTA in place at 75% to get control of cash flow, accumulate "
+  "to 95% in the market over time, and then run the corporate squeeze-out. That second path can take "
+  "years and carries the Spruchverfahren tail, which is why German public deals so often leave a "
+  "minority in place for longer than a UK deal would.",
+  ["Names the 95% threshold for the corporate squeeze-out under the AktG",
+   "Names the takeover squeeze-out under the WpUG and its three-month window after the offer",
+   "Identifies the presumption of adequacy where 90% or more tendered as the reason to prefer the WpUG route",
+   "Gives the fallback: DPLTA at 75% for cash flow control, then accumulate to 95%",
+   "Explains why German deals more often leave a minority outstanding than UK deals"],
+  tags=["german-public-m-a"], d=5,
+  trap="Assuming a scheme-equivalent exists. Germany has no mechanism to bind 100% at 75%; you get there in stages.")
+
+q("How do works councils and co-determination change the timetable on a German deal?",
+  "They add obligations that are conditions in practice even where they are not conditions in the "
+  "SPA, and they change when you are allowed to tell people.\n\n"
+  "The Betriebsrat, the works council, has information and consultation rights under the "
+  "Betriebsverfassungsgesetz. On a share deal the obligation is comparatively light, but on an asset "
+  "deal or a carve-out the transfer engages section 613a BGB: employees must be informed in writing "
+  "of the transfer, the reason, the legal, economic and social consequences and the measures "
+  "envisaged, and each employee has a one-month right to object to the transfer of their contract. "
+  "An employee who objects stays with the seller, which can be exactly the wrong employee.\n\n"
+  "Where the transaction involves an operational change, a Betriebsanderung, the employer must "
+  "negotiate a reconciliation of interests and a social plan with the works council before "
+  "implementing it. That is a real negotiation with a real timetable and it cannot be short-circuited.\n\n"
+  "On top of that, co-determination puts employee representatives on the supervisory board, half of "
+  "it in companies above two thousand employees under the Mitbestimmungsgesetz, so the board that "
+  "approves the transaction includes the counterparties to the consultation.\n\n"
+  "The practical consequences for a banker: build consultation into the timetable rather than "
+  "treating it as a post-signing formality, expect the announcement date to be driven partly by "
+  "when the works council can be informed, and be careful with confidentiality, because the number "
+  "of people who must be told before completion is larger than in the UK.",
+  ["Names the works council's information and consultation rights and section 613a on business transfers",
+   "Names the employee right to object to the transfer of their contract, and the consequence",
+   "Names the reconciliation of interests and social plan where there is an operational change",
+   "Names supervisory board co-determination and who sits on the approving board",
+   "Draws the practical consequence for timetable, announcement timing and confidentiality"],
+  tags=["german-public-m-a"], d=4,
+  trap="Treating consultation as a post-signing formality. It drives the announcement date.")
+
+json.dump({
+  "title": "Deal mechanics: how the price is actually paid (authored)",
+  "origin": "self_authored",
+  "status": "active",
+  "note": ("Authored for the London/Frankfurt mid-market gap: nothing in the corpus "
+           "covered locked box, completion accounts, the working capital peg or the "
+           "UK/German public M&A regimes. Legal points are stated as market practice, "
+           "not advice, and thresholds should be re-checked against the current Code "
+           "and WpUeG before you rely on them in a room."),
+  "items": Q,
+}, open(Path(__file__).with_name("02-deal-mechanics.json"), "w"), indent=1, ensure_ascii=False)
+print(f"{len(Q)} items")

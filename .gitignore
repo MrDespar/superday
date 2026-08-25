@@ -1,0 +1,76 @@
+# ---------------------------------------------------------------- the database
+# ib.db is real personal progress: reviews, schedule, notes, sessions. It is
+# not a fixture and it does not belong in git. Back it up with `export`, or
+# with the .sqlite snapshot backup.py writes.
+ib.db
+ib.db-wal
+ib.db-shm
+
+# Ad-hoc safety copies taken before a risky change. Same personal data as
+# ib.db, ~5MB each, and they accumulate. Never stage these.
+ib.db.bak*
+*.sqlite
+*.db-wal
+*.db-shm
+
+# ---------------------------------------------------------------- secrets
+.env
+.env.local
+.env*.local
+config.local.json
+
+# ---------------------------------------------------------------- private
+# Packs and builders that are yours rather than the project's: a bank's own
+# handbook, or a fit pack written around your CV. `ingest-pack private/x.json`
+# lands them in your bank exactly like a shipped one, and none of it is staged.
+private/
+
+# ---------------------------------------------------------------- derived
+# Regenerate with `export --md` rather than committing it: the content is
+# derived from the corpus, and the corpus is other people's copyrighted guides.
+export/
+# The default output names of `consult --export` and `cross-audit --export`.
+# cross-audit.json is what cli.py actually writes; the entry here used to read
+# cross-audit-batch.json, which is a file the tool has never produced, so the
+# real batch was untracked-but-not-ignored and went in on the next `git add -A`.
+consult-batch.md
+cross-audit.json
+*-batch.json
+*-batch.md
+
+# Documents dropped in for ingestion. The corpus lives outside the repo.
+inbox/*
+!inbox/.gitkeep
+
+# ---------------------------------------------------------------- python
+# Wheel build leftovers. `pip install .` drops both in the repo root, and a
+# stale `build/` shadows the real tree on the next build.
+build/
+dist/
+*.egg-info/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ---------------------------------------------------------------- os
+.DS_Store
+
+# ---------------------------------------------------------------- usage log
+# What has been asked of Gemini and Claude, appended a line per call. Local
+# telemetry about a personal API key: useful to you, nobody else, and it grows
+# without bound until `usage` trims it.
+usage.jsonl
+
+# ---------------------------------------------------------------- agent instructions
+# Working notes for whichever coding agent is driving this repo. Useful
+# locally, not something to publish alongside the tool.
+CLAUDE.md
+AGENTS.md
+# Per-project agent settings, and whatever local permissions and scratch state
+# the agent writes beside them. `settings.local.json` was only ever caught by a
+# personal global excludes file, which does not travel with the repo -- so on
+# any other machine the whole directory was one `git add -A` from being staged.
+.claude/

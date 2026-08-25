@@ -1,0 +1,45 @@
+# Packaging, so that installing superday does not mean cloning it.
+#
+# `uv tool install` and `pipx install` both want one thing: a wheel with a
+# console script in it. That is all this file is. The three runtime
+# dependencies are the same three `requirements.txt` documents and are pinned
+# for the same reasons -- fsrs hardest of all, because scheduler.py stores card
+# state as opaque JSON and one major version's state is not necessarily the
+# next one's.
+#
+# Two directories live inside `ib/` rather than beside it, and this is why: an
+# installed wheel puts `ib/` in site-packages and nothing else anywhere, so
+# migrations the tool cannot find are a database it cannot open, and packs it
+# cannot find are the starter bank a fresh install exists to get.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "superday"
+version = "0.1.0"
+description = "An investment-banking interview-prep CLI with a real question bank and a real spaced-repetition schedule"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+keywords = ["interview", "spaced-repetition", "fsrs", "tui", "finance"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Education",
+]
+dependencies = [
+    "certifi>=2024.2.2",   # CA bundle; stdlib urllib has none on macOS
+    "fsrs==6.3.2",         # spaced repetition, ib/scheduler.py
+    "pypdf>=5.0.0",        # ib/ingest/pdf.py
+]
+
+[project.scripts]
+superday = "ib.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["ib", "ib.*"]
+
+[tool.setuptools.package-data]
+ib = ["migrations/*.sql", "packs/*.json"]

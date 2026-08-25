@@ -1,0 +1,2669 @@
+{
+ "title": "M&A and the merger model",
+ "origin": "published",
+ "status": "active",
+ "note": "Extracted from the Breaking Into Wall Street Merger Model Guide, a 400-question interview set and a 100-question technical guide. Questions were extracted from third-party guides with `ingest-pdf` and `ingest`, then given topic, difficulty and rubric by `enrich`, checked by a second model in `audit` and reviewed by hand. Every answer and rubric point here is the pipeline's wording, not the source's, and no source text is reproduced.",
+ "items": [
+  {
+   "q": "Why does Enterprise Value not necessarily represent the true cost to acquire a company?",
+   "a": "First, because the treatment of the seller’s existing Debt and Cash differs based on the terms of the deal. The buyer may not necessarily “repay” the seller’s Debt – it could instead refinance it and replace it with new Debt – and it may not “get” all the seller’s Cash.\n\nAlso, the buyer has to pay additional fees for the M&A advisory, accounting, and legal services, and the financing to acquire another company, and those are not reflected in its Enterprise Value.",
+   "rubric": [
+    "Explains that the treatment of the seller's existing Debt and Cash varies based on deal terms, such as refinancing instead of repaying debt.",
+    "Mentions that the buyer may not actually receive all of the seller's Cash in the transaction.",
+    "States that additional transaction fees (such as advisory, legal, accounting, and financing fees) are not reflected in Enterprise Value."
+   ],
+   "mistakes": [
+    "Assuming that the buyer always pays exactly the Enterprise Value to acquire a company.",
+    "Forgetting that transaction and financing fees add to the actual cash cost of an acquisition."
+   ],
+   "topic": "ma",
+   "subtopic": "Acquisition Metrics",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge"
+   ],
+   "locator": "MA001"
+  },
+  {
+   "q": "What is the difference between a merger and an acquisition?",
+   "a": "A merger occurs when two companies of relatively equal size combine to form a single, new legal entity, often under a new corporate name. An acquisition, on the other hand, happens when one larger company purchases a target company and absorbs its operations, with the target company ceasing to exist as an independent entity. While mergers are typically mutual agreements, acquisitions can be friendly or hostile.",
+   "rubric": [
+    "States that a merger involves two companies of relatively equal size combining to form a single, new legal entity.",
+    "States that an acquisition involves a larger company purchasing a target company and absorbing its operations.",
+    "Mentions that in an acquisition, the target company ceases to exist as an independent entity.",
+    "Notes that mergers are typically mutual agreements, whereas acquisitions can be friendly or hostile."
+   ],
+   "mistakes": [
+    "Treating the terms as completely synonymous without distinguishing the relative size of the entities.",
+    "Failing to mention that the target company ceases to exist as an independent entity in an acquisition."
+   ],
+   "topic": "ma",
+   "subtopic": "M&A Basics",
+   "difficulty": 1,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA002"
+  },
+  {
+   "q": "How do synergies play a role in M&A transactions?",
+   "a": "Synergies represent the potential financial benefit achieved through the combination of two companies, where the value of the combined entity exceeds the sum of the two separate companies. They are typically categorized into cost synergies, which involve reducing overlapping expenses like administrative staff and systems, and revenue synergies, which involve cross-selling products or expanding into new markets. Buyers use projected synergies to justify paying a premium over the target's current market value.",
+   "rubric": [
+    "Defines synergies as the combined value of two companies exceeding the sum of their individual parts.",
+    "Distinguishes between cost synergies (e.g., reducing overlapping overhead) and revenue synergies (e.g., cross-selling).",
+    "Explains that buyers use projected synergies to justify paying an acquisition premium over the target's market value."
+   ],
+   "mistakes": [
+    "Failing to distinguish between cost and revenue synergies.",
+    "Assuming revenue synergies are easier to achieve than cost synergies."
+   ],
+   "topic": "ma",
+   "subtopic": "M&A Synergies",
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "synergies"
+   ],
+   "locator": "MA003"
+  },
+  {
+   "q": "Why might an acquirer avoid paying 100% cash for an acquisition even if they have the cash?",
+   "a": "An acquiring company might avoid a 100% cash payment to preserve its liquidity for future operational needs, unexpected market downturns, or other strategic investments. Additionally, using stock as currency allows the acquirer to share the transaction's risks and rewards with the target's shareholders. Finally, a cash transaction may trigger immediate tax liabilities for the target's shareholders, whereas a stock-for-stock transaction can often be structured as a tax-deferred exchange.",
+   "rubric": [
+    "Mentions the preservation of liquidity and cash reserves for future operational needs or strategic investments.",
+    "Explains that using stock allows the acquirer to share transaction risks and rewards with the target's shareholders.",
+    "Identifies that cash transactions trigger immediate tax liabilities for target shareholders, whereas stock can be tax-deferred."
+   ],
+   "mistakes": [
+    "Focusing solely on the acquirer's balance sheet without considering the tax implications for the target's shareholders.",
+    "Ignoring the risk-sharing aspect of stock consideration."
+   ],
+   "topic": "ma",
+   "subtopic": "Acquisition Consideration",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA004"
+  },
+  {
+   "q": "Walk me through a typical sell-side M&A process.",
+   "a": "In a sell-side M&A deal, the investment bank markets the client company to potential buyers to secure the best price and terms. The process starts with creating marketing materials, such as the Executive Summary and Offering Memorandum, and identifying potential buyers. Bankers then distribute the summary, collect initial Indications of Interest (IOIs) to narrow the field, facilitate deeper due diligence for selected bidders, and ultimately negotiate the final Purchase Agreement with the winning bidder.",
+   "rubric": [
+    "Mentions creating marketing materials such as the Executive Summary and Offering Memorandum.",
+    "States that the bank identifies potential buyers and distributes the marketing materials.",
+    "Mentions collecting initial Indications of Interest (IOIs) to narrow down the field of bidders.",
+    "Mentions facilitating deeper due diligence for selected bidders and negotiating the final Purchase Agreement."
+   ],
+   "mistakes": [
+    "Confusing the sell-side process with a buy-side process.",
+    "Omitting the initial marketing materials phase.",
+    "Skipping the Indication of Interest (IOI) stage before final negotiations."
+   ],
+   "topic": "ma",
+   "subtopic": "Sell-Side Process",
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "deal-process"
+   ],
+   "locator": "MA005"
+  },
+  {
+   "q": "Would you have done this deal if you were the buyer? Why or why not?",
+   "a": "I would not have proceeded with the deal at the specified price because a higher earnout component linked to multi-year performance would have been safer. The heavy reliance on debt and stock financing also increases the risk of EPS dilution. Furthermore, the high risk of sales cannibalization and the historically difficult growth trajectory of the energy drink sector make this a highly risky acquisition.",
+   "rubric": [
+    "states a clear opinion on whether to proceed with the deal at the specified price",
+    "mentions that a higher earnout component linked to multi-year performance would have been safer",
+    "identifies the risk of EPS dilution due to heavy reliance on debt and stock financing",
+    "notes the risk of sales cannibalization and the difficult growth trajectory of the energy drink sector"
+   ],
+   "mistakes": [
+    "failing to take a definitive stance on whether to proceed with the transaction",
+    "ignoring the financing structure (debt and stock) and its impact on EPS dilution",
+    "neglecting sector-specific risks like sales cannibalization"
+   ],
+   "topic": "ma",
+   "subtopic": "deal opinion",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-discussion"
+   ],
+   "locator": "MA006"
+  },
+  {
+   "q": "Were there any unusual deal terms in this transaction?",
+   "a": "The inclusion of a $25 million earnout based on only one year of performance is unusual because it represents less than 2% of the total deal value. Such a small amount is unlikely to significantly impact the deal's internal rate of return or EPS accretion. A more effective structure would have featured a much larger earnout tied to multi-year financial targets or synergy realization.",
+   "rubric": [
+    "identifies the $25 million earnout based on only one year of performance as unusual",
+    "states that the earnout represents less than 2% of the total deal value",
+    "explains that this small earnout is unlikely to significantly impact IRR or EPS accretion",
+    "suggests a larger earnout tied to multi-year financial targets or synergy realization as a more effective structure"
+   ],
+   "mistakes": [
+    "failing to quantify the earnout relative to the total deal value",
+    "not explaining why the small earnout size is financially insignificant to IRR or EPS"
+   ],
+   "topic": "ma",
+   "subtopic": "deal terms",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-discussion",
+    "deferred-consideration"
+   ],
+   "locator": "MA007"
+  },
+  {
+   "q": "What were the main risk factors in this deal?",
+   "a": "The primary risks include paying high multiples for a company with uncertain long-term growth and the potential for sales cannibalization, given Celsius' broad audience and Alani Nu's female-focused demographic. Additionally, it is unclear if Alani Nu will successfully expand Celsius' distribution channels, as both brands already target similar retail outlets. Finally, the debt taken on to fund the deal raises the combined leverage ratio, potentially limiting future acquisitions.",
+   "rubric": [
+    "mentions paying high multiples for a company with uncertain long-term growth",
+    "identifies the potential for sales cannibalization between Celsius and Alani Nu due to demographic differences",
+    "discusses the uncertainty of expanding distribution channels given overlapping retail targets",
+    "states that debt funding raises the combined leverage ratio, potentially limiting future acquisitions"
+   ],
+   "mistakes": [
+    "focusing only on strategic risks while ignoring financial risks like leverage",
+    "failing to explain the specific demographic overlap or cannibalization risk"
+   ],
+   "topic": "ma",
+   "subtopic": "deal risks",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-discussion"
+   ],
+   "locator": "MA008"
+  },
+  {
+   "q": "What type of process did you use to find potential buyers, and why?",
+   "a": "For this transaction, we utilized a narrow sell-side process because the primary buyers approached the company directly over a year before the deal was announced. The Board opted against a broad process to avoid operational distraction, especially given that the initial offer price was reasonable. We held meetings with approximately ten other potential buyers, primarily private equity firms, but interest remained limited due to the company's declining net bookings and turnaround status.",
+   "rubric": [
+    "identifies the process as a narrow sell-side process",
+    "explains that the process was chosen because primary buyers approached the company directly",
+    "states that a broad process was avoided to prevent operational distraction",
+    "mentions meeting with approximately ten other potential buyers, primarily private equity firms",
+    "notes that buyer interest was limited due to declining net bookings or turnaround status"
+   ],
+   "mistakes": [
+    "failing to explain the strategic rationale behind choosing a narrow process over a broad one",
+    "not mentioning the level of buyer interest or the reasons for it"
+   ],
+   "topic": "ma",
+   "subtopic": "sale process",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-discussion",
+    "deal-process"
+   ],
+   "locator": "MA009"
+  },
+  {
+   "q": "Why do we create Goodwill and Other Intangible Assets on the Balance Sheet during an acquisition?",
+   "a": "When acquiring a company, you must write down the seller's equity and combine their assets and liabilities with yours. If you pay a premium above the book value of the seller's equity, the transaction will unbalance the Balance Sheet. To resolve this, you allocate the excess purchase price to identifiable intangible assets like patents, and then assign any remaining unallocated premium to Goodwill to ensure the Balance Sheet balances.",
+   "rubric": [
+    "Explains that the seller's equity must be written down and their assets and liabilities combined with the buyer's.",
+    "States that paying a premium above the book value of the seller's equity creates an unbalanced Balance Sheet.",
+    "Explains that the excess purchase price is first allocated to identifiable intangible assets (like patents) and the remaining unallocated premium is assigned to Goodwill to balance the Balance Sheet."
+   ],
+   "mistakes": [
+    "Failing to mention the write-down of the seller's equity.",
+    "Not explaining that Goodwill is the residual unallocated premium after identifying other intangible assets."
+   ],
+   "topic": "ma",
+   "subtopic": "Purchase Accounting",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "goodwill"
+   ],
+   "locator": "MA010"
+  },
+  {
+   "q": "Why might an M&A deal be accretive or dilutive?",
+   "a": "An M&A transaction is accretive when the target's net income contribution exceeds the total cost of the acquisition, which includes foregone interest on cash, interest on new debt, and the cost of issuing new shares. Conversely, if the acquisition costs exceed the target's earnings contribution, the buyer's earnings per share (EPS) will decrease, making the deal dilutive. Ultimately, the balance between the target's earnings and the buyer's funding costs determines the outcome.",
+   "rubric": [
+    "States that a deal is accretive when the target's net income contribution exceeds the total cost of the acquisition.",
+    "Identifies the components of acquisition cost: foregone interest on cash, interest on new debt, and the cost of issuing new shares.",
+    "States that a deal is dilutive when acquisition costs exceed the target's earnings contribution, decreasing the buyer's EPS."
+   ],
+   "mistakes": [
+    "Focusing only on the P/E ratio rule of thumb without explaining the underlying cost of cash, debt, and stock.",
+    "Forgetting to include foregone interest on cash as a cost of the acquisition."
+   ],
+   "topic": "ma",
+   "subtopic": "Deal dynamics",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA011"
+  },
+  {
+   "q": "How can you tell whether an M&A deal will be accretive or dilutive?",
+   "a": "You can determine this by comparing the weighted cost of the acquisition to the seller's yield at the purchase price. The weighted cost of acquisition combines the after-tax costs of cash, debt, and stock based on their respective proportions in the deal. If the seller's yield (the reciprocal of its purchase P/E multiple) is greater than this weighted cost, the deal is accretive; otherwise, it is dilutive.",
+   "rubric": [
+    "States that you compare the weighted cost of the acquisition to the seller's yield at the purchase price.",
+    "Defines the weighted cost of acquisition as combining the after-tax costs of cash, debt, and stock based on their proportions.",
+    "Defines the seller's yield as the reciprocal of its purchase P/E multiple.",
+    "States that the deal is accretive if the seller's yield is greater than the weighted cost of acquisition, and dilutive otherwise."
+   ],
+   "mistakes": [
+    "Forgetting to use the after-tax cost of debt and cash when calculating the weighted cost.",
+    "Confusing the direction of the inequality, stating a deal is accretive when the cost of acquisition exceeds the seller's yield."
+   ],
+   "topic": "ma",
+   "subtopic": "Accretion Dilution",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA012"
+  },
+  {
+   "q": "Are there any shortcuts for guesstimating whether an M&A deal will be accretive or dilutive?",
+   "a": "In an all-stock transaction, a quick shortcut is to compare the P/E multiples of the buyer and the seller at the purchase price. If the buyer has a higher P/E multiple than the seller, the transaction will be accretive. This shortcut works because the reciprocals of these P/E multiples represent the weighted cost of acquisition and the seller's yield, respectively.",
+   "rubric": [
+    "Specifies that the shortcut applies specifically to an all-stock transaction.",
+    "States that you compare the P/E multiples of the buyer and the seller at the purchase price.",
+    "Asserts that the transaction will be accretive if the buyer has a higher P/E multiple than the seller.",
+    "Explains that the shortcut works because the reciprocals of these P/E multiples represent the weighted cost of acquisition and the seller's yield."
+   ],
+   "mistakes": [
+    "Applying the P/E shortcut to deals that involve cash or debt funding.",
+    "Reversing the rule by stating that a higher seller P/E leads to accretion."
+   ],
+   "topic": "ma",
+   "subtopic": "Accretion Shortcuts",
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "multiples"
+   ],
+   "locator": "MA013"
+  },
+  {
+   "q": "How do you determine the purchase price in an M&A deal?",
+   "a": "For a public target, the purchase price is typically estimated by applying a premium (usually 10% to 30%) to its current share price, which is then cross-checked using standard valuation methodologies like DCF or public comps. For private targets, the price is typically based on standard valuation techniques and linked to a multiple of EBITDA, EBIT, or revenue. Additionally, if significant synergies are anticipated, the buyer may be willing to pay a higher premium.",
+   "rubric": [
+    "Mentions applying a premium (typically 10% to 30%) to the current share price for public targets.",
+    "Mentions cross-checking the public target's price using standard valuation methodologies like DCF or public comps.",
+    "States that private target pricing is typically based on standard valuation techniques linked to multiples of EBITDA, EBIT, or revenue.",
+    "Mentions that a higher premium may be paid if significant synergies are anticipated."
+   ],
+   "mistakes": [
+    "Failing to distinguish between the pricing methods used for public versus private targets.",
+    "Forgetting to mention the acquisition premium applied to a public target's share price."
+   ],
+   "topic": "ma",
+   "subtopic": "Deal Pricing",
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "precedents"
+   ],
+   "locator": "MA014"
+  },
+  {
+   "q": "How does an acquirer determine the mix of cash, debt, and stock to use in a deal?",
+   "a": "Acquirers generally prioritize cash first because it is the cheapest source of funding, utilizing available cash down to their minimum required balance. Debt is typically the next option, raised up to a level where the combined leverage ratio remains in line with industry peers. Stock is used as a last resort or to prevent the deal from becoming dilutive, though buyers usually avoid issuing so much stock that they risk losing control of the company.",
+   "rubric": [
+    "States that cash is prioritized first because it is the cheapest source of funding.",
+    "Mentions utilizing available cash down to the minimum required balance.",
+    "States that debt is typically the next option, raised up to a level where the combined leverage ratio remains in line with peers.",
+    "States that stock is used as a last resort or to prevent dilution, while avoiding issuing so much that control is lost."
+   ],
+   "mistakes": [
+    "Incorrectly claiming that debt is cheaper than cash as a source of funding.",
+    "Failing to mention the constraints on debt (leverage ratios/peer comparison) or stock (loss of control)."
+   ],
+   "topic": "ma",
+   "subtopic": "Deal Funding",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA015"
+  },
+  {
+   "q": "Are there cases where EPS accretion/dilution is not important? What other analyses could you look at to assess M&A deals?",
+   "a": "EPS accretion and dilution are less relevant if the buyer is a private company, has negative EPS, or is significantly larger than the target. In these scenarios, alternative metrics such as the internal rate of return (IRR) compared to the discount rate, contribution analysis, and value creation analysis are more useful. Additionally, qualitative strategic merits and the net present value of synergies can be evaluated to assess the deal's viability.",
+   "rubric": [
+    "Identifies scenarios where EPS accretion/dilution is less relevant, such as when the buyer is private, has negative EPS, or is significantly larger than the target.",
+    "Mentions comparing the internal rate of return (IRR) to the discount rate as an alternative analysis.",
+    "Mentions contribution analysis or value creation analysis as alternative quantitative metrics.",
+    "Mentions evaluating qualitative strategic merits or the net present value (NPV) of synergies."
+   ],
+   "mistakes": [
+    "Failing to identify when EPS is irrelevant, such as for private companies.",
+    "Only listing qualitative factors without mentioning quantitative alternatives like IRR or contribution analysis."
+   ],
+   "topic": "ma",
+   "subtopic": "Deal Evaluation",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "dcf"
+   ],
+   "locator": "MA016"
+  },
+  {
+   "q": "How do the assumptions for a cash-free, debt-free deal for a private seller differ from those of a standard M&A deal for a public seller?",
+   "a": "In a cash-free, debt-free transaction, the seller's existing cash and debt are wiped out at closing and replaced with new balances, with any net debt or excess cash adjusting the final proceeds to the selling shareholders. The purchase price is typically based on an enterprise value multiple rather than a share price premium because the seller is private. Furthermore, the uses side of the sources and uses schedule is driven by the purchase enterprise value rather than the equity value.",
+   "rubric": [
+    "States that existing cash and debt are wiped out at closing and replaced with new balances.",
+    "Mentions that net debt or excess cash adjusts the final proceeds to the selling shareholders.",
+    "Explains that the purchase price is based on an enterprise value multiple rather than a share price premium.",
+    "States that the uses side of the sources and uses schedule is driven by the purchase enterprise value rather than the equity value."
+   ],
+   "mistakes": [
+    "Confusing enterprise value and equity value as the starting point for the sources and uses schedule.",
+    "Assuming that private sellers are acquired using a share price premium."
+   ],
+   "topic": "ma",
+   "subtopic": "Deal Assumptions",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge"
+   ],
+   "locator": "MA017"
+  },
+  {
+   "q": "What is the purpose of a Purchase Price Allocation schedule in a merger model?",
+   "a": "The primary purpose of a purchase price allocation schedule is to calculate the amount of goodwill created in the transaction. Since the purchase equity value almost always exceeds the seller's book value of equity, this schedule helps balance the combined balance sheet by writing down the seller's equity to zero and recording asset write-ups and goodwill to plug the gap. It also accounts for other balance sheet adjustments, such as the creation of deferred tax liabilities.",
+   "rubric": [
+    "States that the primary purpose is to calculate the amount of goodwill created in the transaction.",
+    "Explains that the seller's book value of equity is written down to zero.",
+    "Mentions recording asset write-ups and goodwill to balance the combined balance sheet.",
+    "Notes that it accounts for other balance sheet adjustments like the creation of deferred tax liabilities."
+   ],
+   "mistakes": [
+    "Failing to mention that the seller's existing equity is written down to zero.",
+    "Believing that goodwill is calculated simply as purchase price minus asset write-ups, without subtracting book value of equity."
+   ],
+   "topic": "ma",
+   "subtopic": "Purchase Price Allocation",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "goodwill",
+    "merger-model",
+    "purchase-price-allocation",
+    "syndicate-process"
+   ],
+   "locator": "MA018"
+  },
+  {
+   "q": "Why are Deferred Tax Liabilities created in many M&A deals?",
+   "a": "Deferred tax liabilities (DTLs) are created because the depreciation and amortization of asset write-ups are typically not tax-deductible in a standard stock purchase. This discrepancy means the buyer will pay higher cash taxes than book taxes in the years following the transaction. As these write-ups are gradually depreciated and amortized over time, the DTL is steadily reduced until it reaches zero.",
+   "rubric": [
+    "States that depreciation and amortization of asset write-ups are typically not tax-deductible in a standard stock purchase.",
+    "Explains that the buyer will pay higher cash taxes than book taxes in the years following the transaction.",
+    "Mentions that the DTL is steadily reduced to zero as write-ups are depreciated and amortized over time."
+   ],
+   "mistakes": [
+    "Stating that asset write-ups are tax-deductible in a standard stock purchase.",
+    "Confusing Deferred Tax Liabilities with Deferred Tax Assets in the context of asset write-ups."
+   ],
+   "topic": "ma",
+   "subtopic": "Deferred Tax Liabilities",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "dta-dtl",
+    "purchase-price-allocation"
+   ],
+   "locator": "MA019"
+  },
+  {
+   "q": "How do you estimate revenue and expense synergies in an M&A deal?",
+   "a": "To estimate revenue synergies, you might assume the seller can cross-sell its products to a fraction of the buyer's customer base, calculating the incremental revenue and subtracting the associated cost of goods sold and operating expenses. For expense synergies, you look for redundancies, such as consolidating overlapping regional offices or eliminating duplicate administrative roles in HR and accounting. The resulting cost savings directly increase the combined company's pre-tax income.",
+   "rubric": [
+    "Explains estimating revenue synergies by assuming cross-selling to a fraction of the buyer's customer base.",
+    "States that incremental cost of goods sold and operating expenses must be subtracted from gross revenue synergies.",
+    "Identifies expense synergies through redundancies like consolidating overlapping offices or eliminating duplicate administrative roles.",
+    "Mentions that cost savings directly increase the combined company's pre-tax income."
+   ],
+   "mistakes": [
+    "Assuming revenue synergies flow directly to the bottom line without subtracting incremental costs.",
+    "Failing to provide concrete examples of redundant expenses like HR, accounting, or office space."
+   ],
+   "topic": "ma",
+   "subtopic": "Synergy Estimation",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "synergies"
+   ],
+   "locator": "MA020"
+  },
+  {
+   "q": "Why do many merger models tend to overstate the impact of synergies?",
+   "a": "Merger models often overstate synergies because they fail to account for the incremental costs required to generate new revenue, such as additional cost of goods sold and operating expenses. Additionally, realizing synergies takes time and occurs gradually over several years rather than immediately in the first year. Finally, there are significant upfront integration and severance costs required to achieve these savings, which are frequently omitted or underestimated.",
+   "rubric": [
+    "States that models fail to account for incremental costs required to generate new revenue.",
+    "Explains that realizing synergies takes time and occurs gradually over several years rather than immediately.",
+    "Mentions that upfront integration and severance costs are often omitted or underestimated."
+   ],
+   "mistakes": [
+    "Assuming synergies are fully realized on day one of the transaction.",
+    "Ignoring the cash outflow required for integration and severance costs."
+   ],
+   "topic": "ma",
+   "subtopic": "Synergy Realization",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "synergies"
+   ],
+   "locator": "MA021"
+  },
+  {
+   "q": "Company A has 10 shares outstanding at a share price of $25.00, and its Net Income is $10. It acquires Company B for a Purchase Equity Value of $150. Company B has a Net Income of $10 as well. Both companies have 25% tax rates. How accretive is a 100% Stock deal?",
+   "a": "In a 100% stock deal, Company A must issue 6 new shares ($150 purchase price divided by its $25 share price) to acquire Company B, bringing its total outstanding shares to 16. The combined net income of the two companies is $20 ($10 from Company A and $10 from Company B). This results in a new EPS of $1.25 ($20 divided by 16 shares), which represents a 25% accretion over Company A's standalone EPS of $1.00.",
+   "rubric": [
+    "Calculates that Company A must issue 6 new shares by dividing the $150 purchase price by the $25 share price.",
+    "States the new total outstanding share count is 16.",
+    "Calculates the combined net income as $20.",
+    "Calculates the new EPS as $1.25 by dividing $20 by 16 shares.",
+    "Concludes that the deal is 25% accretive compared to the standalone EPS of $1.00."
+   ],
+   "mistakes": [
+    "Failing to calculate the number of new shares issued correctly.",
+    "Applying the tax rate to the net income figures again, even though net income is already post-tax.",
+    "Incorrectly calculating the percentage accretion from $1.00 to $1.25."
+   ],
+   "topic": "ma",
+   "subtopic": "Accretion Dilution",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA022"
+  },
+  {
+   "q": "If a company acquires another with a 6.7% purchase yield using 100% cash with a 4% interest rate or 100% debt with a 10% interest rate at a 25% tax rate, is the deal accretive or dilutive?",
+   "a": "To determine if the deal is accretive or dilutive, compare the after-tax cost of the financing methods to the seller's purchase yield of approximately 6.7%. The after-tax cost of cash is 3% (4% multiplied by 1 minus the 25% tax rate), which is lower than the seller's yield, making a 100% cash deal accretive. Conversely, the after-tax cost of debt is 7.5% (10% multiplied by 1 minus the 25% tax rate), which exceeds the seller's yield, making a 100% debt deal dilutive.",
+   "rubric": [
+    "Calculates the after-tax cost of cash as 3.0%.",
+    "Calculates the after-tax cost of debt as 7.5%.",
+    "Compares the after-tax costs of financing to the seller's purchase yield of approximately 6.7%.",
+    "Concludes that the 100% cash deal is accretive and the 100% debt deal is dilutive."
+   ],
+   "mistakes": [
+    "Failing to tax-shield the interest rates before comparing them to the yield.",
+    "Comparing the interest rates directly to each other instead of comparing them to the seller's yield."
+   ],
+   "topic": "ma",
+   "subtopic": "Accretion dilution analysis",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA023"
+  },
+  {
+   "q": "Company A has a P/E of 11x, an 8% debt interest rate, a 4% cash interest rate, and a 25% tax rate. If it acquires Company B at a 20x P/E using 1/3 stock, 1/3 debt, and 1/3 cash, is the deal accretive?",
+   "a": "The deal will be dilutive because the weighted cost of acquisition exceeds Company B's purchase yield. Company B's purchase yield is 5% (1 divided by 20x). The weighted cost of acquisition is calculated as 6%, which is the average of the after-tax cost of stock (~9%), after-tax cost of debt (6%), and after-tax cost of cash (3%). Since the 6% cost is greater than the 5% yield, the transaction reduces the acquirer's EPS.",
+   "rubric": [
+    "Calculates Company B's purchase yield as 5%.",
+    "Calculates the after-tax cost of stock as approximately 9%.",
+    "Calculates the after-tax cost of debt as 6% and after-tax cost of cash as 3%.",
+    "Calculates the weighted average cost of acquisition as 6%.",
+    "Concludes the deal is dilutive because the 6% weighted cost exceeds the 5% yield."
+   ],
+   "mistakes": [
+    "Using pre-tax interest rates for debt and cash in the weighted cost calculation.",
+    "Forgetting to convert the target's P/E multiple into a yield for comparison."
+   ],
+   "topic": "ma",
+   "subtopic": "Weighted acquisition cost",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "multiples"
+   ],
+   "locator": "MA024"
+  },
+  {
+   "q": "Company A has a P/E of 20x and acquires Company B at a 10x P/E using 100% debt. Assuming a 25% tax rate, what pre-tax interest rate on debt would make the deal dilutive?",
+   "a": "For the deal to be dilutive, the after-tax cost of debt must exceed Company B's purchase yield of 10% (1 divided by 10x). To find the pre-tax interest rate that yields a 10% after-tax cost, divide 10% by (1 minus 25%), which equals approximately 13.3%. Therefore, an interest rate on debt above roughly 13.3% would make the transaction dilutive.",
+   "rubric": [
+    "Identifies Company B's purchase yield as 10%.",
+    "States that the deal becomes dilutive when the after-tax cost of debt exceeds the 10% yield.",
+    "Calculates the pre-tax breakeven interest rate by dividing the 10% yield by 0.75.",
+    "Concludes that a pre-tax interest rate above approximately 13.3% makes the deal dilutive."
+   ],
+   "mistakes": [
+    "Equating the pre-tax interest rate directly to the 10% yield without adjusting for taxes.",
+    "Using the acquirer's P/E of 20x instead of the target's P/E of 10x to find the threshold yield."
+   ],
+   "topic": "ma",
+   "subtopic": "Breakeven debt cost",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "multiples"
+   ],
+   "locator": "MA025"
+  },
+  {
+   "q": "Company A (Equity Value $2,000, Net Income $200) acquires Company B (Purchase Equity Value $1,200, Net Income $100) in a 100% stock deal. Assuming a 25% tax rate, how much in synergies must be realized to make the deal accretive?",
+   "a": "Without synergies, the deal is dilutive because Company A's cost of stock is 10% ($200 divided by $2,000) while Company B's purchase yield is only 8.3% ($100 divided by $1,200). To make the deal accretive, Company B's yield must rise above 10%, meaning its net income contribution must exceed $120. This requires at least $20 in after-tax synergies, which equates to approximately $27 in pre-tax synergies assuming a 25% tax rate.",
+   "rubric": [
+    "Calculates Company A's cost of stock as 10% and Company B's standalone yield as 8.3%.",
+    "Determines that Company B's net income contribution must increase to at least $120 to match the 10% cost of stock.",
+    "Identifies that at least $20 of after-tax synergies are required.",
+    "Calculates the required pre-tax synergies as approximately $27 using the 25% tax rate."
+   ],
+   "mistakes": [
+    "Confusing pre-tax and after-tax synergy requirements.",
+    "Failing to recognize that the target's yield must be lifted to match the acquirer's cost of stock."
+   ],
+   "topic": "ma",
+   "subtopic": "Required deal synergies",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "synergies"
+   ],
+   "locator": "MA026"
+  },
+  {
+   "q": "If Company A pays a 20% premium ($200) for Company B in a fixed-share stock deal, and the market wipes out the value of this premium, how does Company A's share price change if it has 200 shares outstanding at $10.00?",
+   "a": "If the market rejects the premium, the combined equity value will fall by the $200 premium, dropping from $3,200 to $3,000. Since Company B receives a fixed share count of 120 shares ($1,200 purchase value divided by Company A's $10.00 share price), the total outstanding shares will be 320. Dividing the adjusted combined equity value of $3,000 by the 320 shares results in a new share price of approximately $9.38. This represents a drop of about $0.62 per share, or 6.2%.",
+   "rubric": [
+    "Calculates the new combined equity value as $3,000 after subtracting the $200 premium.",
+    "Calculates the fixed share count issued to Company B as 120 shares.",
+    "Determines the new total share count is 320 shares.",
+    "Calculates the new share price as approximately $9.38.",
+    "Concludes that the share price drops by approximately $0.62 per share (or 6.2%)."
+   ],
+   "mistakes": [
+    "Failing to include the newly issued shares in the denominator when calculating the new share price.",
+    "Subtracting the premium from the acquirer's standalone equity value instead of the combined equity value."
+   ],
+   "topic": "ma",
+   "subtopic": "Stock price impact",
+   "difficulty": 5,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA027"
+  },
+  {
+   "q": "Would an acquirer's share price avoid falling after a poorly received premium acquisition if the deal were financed with 100% cash or debt instead of stock?",
+   "a": "No. Paying with cash or debt instead of stock does not protect the share price - it makes the drop worse.\n\nThe premium is destroyed either way: if the market decides the $200 premium bought nothing, the combined Equity Value falls by that $200 no matter how the deal was funded. Financing changes only the share count it is spread over.\n\nTake a buyer with 200 shares at $10.00 ($2,000 Equity Value) paying $1,200 for a target worth $1,000 standalone. In a stock deal it issues 120 new shares, so the $200 loss is spread over 320 shares: the price falls about $0.62, to roughly $9.38. In a cash or debt deal the share count stays at 200, so the same $200 loss is spread over 200 shares: the price falls a full $1.00, to $9.00.\n\nIssuing stock dilutes the damage as well as the ownership. That is not a reason to prefer stock - it just means the per-share loss is smaller while the total value destroyed is identical.",
+   "rubric": [
+    "States that financing with cash or debt does not protect the acquirer's share price.",
+    "Explains that the combined Equity Value falls by the destroyed premium regardless of how the deal was funded.",
+    "Explains that in a cash or debt deal the share count stays at 200 rather than rising to 320.",
+    "Calculates that the share price drops by a full $1.00 ($200 / 200 shares) in a cash or debt deal, against roughly $0.62 in the stock deal.",
+    "Concludes that issuing stock spreads the same loss over more shares, so the per-share fall is smaller while the total value destroyed is identical."
+   ],
+   "mistakes": [
+    "Believing that cash or debt financing shields the acquirer's share price from market reactions to overpayment.",
+    "Failing to keep the share count constant at 200 when evaluating the cash or debt scenario."
+   ],
+   "topic": "ma",
+   "subtopic": "Financing structure impact",
+   "difficulty": 5,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "spread-mechanics"
+   ],
+   "locator": "MA028"
+  },
+  {
+   "q": "An acquirer with an Equity Value of $500 million and an Enterprise Value of $600 million buys another company for a Purchase Equity Value of $100 million and a Purchase Enterprise Value of $150 million. What are the combined Equity Value and Enterprise Value in a 100% stock deal?",
+   "a": "In a 100% stock deal, the combined enterprise value is the sum of the buyer's enterprise value and the seller's purchase enterprise value, which equals $750 million ($600 million + $150 million). The combined equity value is calculated as the acquirer's equity value plus the value of the stock issued to the seller. This results in a combined equity value of $600 million ($500 million + $100 million).",
+   "rubric": [
+    "States that the combined Enterprise Value is $750 million",
+    "Explains that combined Enterprise Value is the sum of the acquirer's EV ($600 million) and the target's purchase EV ($150 million)",
+    "States that the combined Equity Value is $600 million",
+    "Explains that combined Equity Value is the acquirer's equity value ($500 million) plus the value of stock issued ($100 million)"
+   ],
+   "mistakes": [
+    "Adding the target's equity value directly to the acquirer's equity value without considering the stock issuance",
+    "Incorrectly adjusting Enterprise Value for the stock issuance"
+   ],
+   "topic": "ma",
+   "subtopic": "M&A math",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge",
+    "merger-model"
+   ],
+   "locator": "MA029"
+  },
+  {
+   "q": "How do the combined Equity Value and Enterprise Value change if the transaction is structured as a 50% cash and 50% stock deal instead?",
+   "a": "If the transaction is structured as a 50% cash and 50% stock deal instead of 100% stock, the combined enterprise value remains unchanged at $750 million because enterprise value is independent of financing. However, the combined equity value will decrease because only $50 million of stock is issued instead of $100 million. This results in a combined equity value of $550 million, which is the sum of the acquirer's $500 million equity value and the $50 million of new stock issued.",
+   "rubric": [
+    "States that the combined Enterprise Value remains unchanged at $750 million",
+    "Explains that Enterprise Value is independent of the financing structure",
+    "States that the combined Equity Value decreases to $550 million",
+    "Explains that only $50 million of new stock is issued and added to the acquirer's $500 million equity value"
+   ],
+   "mistakes": [
+    "Reducing the Enterprise Value by the cash portion of the deal",
+    "Failing to reduce the combined Equity Value to reflect the lower stock issuance"
+   ],
+   "topic": "ma",
+   "subtopic": "M&A math",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge"
+   ],
+   "locator": "MA030"
+  },
+  {
+   "q": "An acquirer with an Equity Value of $500 million, Enterprise Value of $600 million, Net Income of $50 million, and EBITDA of $100 million buys a target with a Purchase Equity Value of $100 million, Purchase Enterprise Value of $150 million, Net Income of $10 million, and EBITDA of $15 million. What are the combined P/E and TEV/EBITDA multiples in a 100% stock deal, assuming a 25% tax rate?",
+   "a": "In a 100% stock deal, the combined equity value is $600 million and the combined enterprise value is $750 million. Combined EBITDA is $115 million ($100 million + $15 million), and combined net income is $60 million ($50 million + $10 million), assuming no interest effects. This results in a combined P/E multiple of 10x ($600 million / $60 million) and a combined TEV/EBITDA multiple of approximately 6.5x ($750 million / $115 million).",
+   "rubric": [
+    "Calculates the combined EBITDA as $115 million and combined Net Income as $60 million",
+    "States that the combined P/E multiple is 10x",
+    "States that the combined TEV/EBITDA multiple is approximately 6.5x",
+    "Mentions that combined Net Income assumes no interest effects from the transaction"
+   ],
+   "mistakes": [
+    "Using the standalone acquirer's equity value instead of the combined equity value of $600 million to calculate the P/E multiple",
+    "Incorrectly summing the multiples directly instead of calculating the combined financial metrics first"
+   ],
+   "topic": "ma",
+   "subtopic": "Combined multiples",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge",
+    "merger-model",
+    "multiples"
+   ],
+   "locator": "MA031"
+  },
+  {
+   "q": "How do the combined multiples change if the transaction is funded with 100% debt at an 8% interest rate instead of stock?",
+   "a": "If the transaction is funded with 100% debt at an 8% interest rate instead of 100% stock, the combined TEV/EBITDA multiple remains unchanged at approximately 6.5x because enterprise value and EBITDA are unaffected by financing. The combined equity value is now just the acquirer's standalone equity value of $500 million. Combined net income decreases to $54 million after accounting for the after-tax interest expense of $6 million ($100 million debt multiplied by 8% interest and adjusted for a 25% tax rate). This yields a new combined P/E multiple of approximately 9.3x.",
+   "rubric": [
+    "States that the combined TEV/EBITDA multiple remains unchanged at approximately 6.5x",
+    "Explains that Enterprise Value and EBITDA are unaffected by the choice of debt financing",
+    "Calculates the after-tax interest expense as $6 million",
+    "Calculates the new combined Net Income as $54 million",
+    "States that the new combined P/E multiple is approximately 9.3x"
+   ],
+   "mistakes": [
+    "Failing to tax-shield the interest expense when calculating the new combined Net Income",
+    "Using the combined equity value of $600 million instead of the acquirer's standalone equity value of $500 million",
+    "Incorrectly changing the TEV/EBITDA multiple"
+   ],
+   "topic": "ma",
+   "subtopic": "Combined multiples",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge"
+   ],
+   "locator": "MA032"
+  },
+  {
+   "q": "Will the combined TEV/EBITDA and P/E multiples always fall between the acquirer's standalone multiples and the target's purchase multiples?",
+   "a": "Excluding synergies and transaction adjustments, enterprise value-based multiples like TEV/EBITDA will always fall between the standalone multiples of the acquirer and the target. Equity value-based multiples like P/E often fall within this range as well, but they do not have to because differences in capital structure and financing terms can distort the relationship. Generally, the combined multiples will skew closer to those of the larger company.",
+   "rubric": [
+    "States that enterprise value-based multiples like TEV/EBITDA will always fall between the standalone multiples of the acquirer and target, excluding synergies and adjustments",
+    "States that equity value-based multiples like P/E do not have to fall within this range",
+    "Explains that differences in capital structure and financing terms can distort the combined P/E multiple",
+    "Mentions that combined multiples will generally skew closer to those of the larger company"
+   ],
+   "mistakes": [
+    "Asserting that all multiples, including P/E, must always fall strictly between the buyer's and seller's multiples",
+    "Failing to mention that financing terms or synergies can distort the combined multiples"
+   ],
+   "topic": "ma",
+   "subtopic": "Combined multiples",
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge",
+    "merger-model",
+    "multiples"
+   ],
+   "locator": "MA033"
+  },
+  {
+   "q": "What is a Section 363 asset sale, and why might a distressed company pursue it?",
+   "a": "A Section 363 asset sale is an expedited asset divestiture process within bankruptcy that gives the debtor more control than a standard Chapter 7 liquidation. The debtor selects a 'stalking horse bidder' to set a floor price, and then conducts a court-approved auction to maximize asset value. Distressed companies pursue this route because the competitive bidding environment yields higher recovery values for creditors while allowing them to object to unfavorable sales.",
+   "rubric": [
+    "Defines a Section 363 sale as an expedited asset sale conducted inside bankruptcy.",
+    "States that it gives the debtor more control over the process than a Chapter 7 liquidation would.",
+    "Explains the stalking horse bidder: a first bidder whose agreed offer sets the floor price.",
+    "States that a court-approved auction then runs on top of that floor to maximise value.",
+    "Explains the appeal: competitive bidding produces higher recoveries, and creditors retain the right to object to an unfavourable sale."
+   ],
+   "mistakes": [
+    "Confusing a 363 sale with a Chapter 7 liquidation run by a trustee.",
+    "Missing the role of the stalking horse in setting a floor and attracting competing bids.",
+    "Forgetting that the sale requires court approval and is open to creditor objection."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-process",
+    "restructuring"
+   ],
+   "locator": "MA034"
+  },
+  {
+   "q": "How does a merger model differ for commercial banks?",
+   "a": "Merger models for commercial banks differ primarily in transaction funding, balance sheet adjustments, and evaluation metrics. Bank acquisitions are typically funded with stock due to high leverage and limited cash. Additionally, the acquirer must make unique adjustments like marking loans to market, writing down loan loss allowances, and potentially divesting deposits to comply with regulatory caps. Finally, the deal is evaluated using accretion/dilution of Book Value and Tangible Book Value per share alongside traditional EPS.",
+   "rubric": [
+    "States that bank deals are typically funded with stock, given high leverage and limited surplus cash.",
+    "Names marking the target's loan book to market as a required purchase accounting adjustment.",
+    "Names writing down or resetting the target's loan loss allowance.",
+    "Mentions potential deposit divestitures to stay within regulatory market-share caps.",
+    "States that the deal is judged on accretion/dilution of Book Value and Tangible Book Value per share alongside EPS.",
+    "Explains why book value matters here: a bank is valued on P/BV and P/TBV, so dilution to book value is a direct hit to the multiple."
+   ],
+   "mistakes": [
+    "Assuming a cash-funded deal, when a bank cannot spare the capital.",
+    "Judging the deal on EPS accretion alone and ignoring tangible book value dilution.",
+    "Forgetting the regulatory approval and deposit concentration constraints.",
+    "Omitting the credit mark on the acquired loan book, which is often the largest adjustment."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "fig",
+    "merger-model"
+   ],
+   "locator": "MA035"
+  },
+  {
+   "q": "How would you decide when to pitch the client on bringing one of its portfolio companies to the market for a sale or IPO?",
+   "a": "The decision depends on the asset's holding period, the sponsor's fundraising cycle, and current market conditions. Typically, private equity firms target a holding period of 5 to 7 years to maximize value before exiting. However, if the sponsor is preparing to raise a new fund, pitching an exit early can showcase strong realized returns to prospective investors. Finally, the strength of the current M&A and IPO markets heavily influences whether a successful exit is viable.",
+   "rubric": [
+    "Names the three inputs: how long the asset has been held, where the sponsor sits in its fundraising cycle, and current market conditions.",
+    "States the typical five-to-seven-year target holding period.",
+    "Explains the fundraising angle: a realised exit before or during a raise demonstrates returns to prospective LPs.",
+    "States that the strength of the M&A and IPO markets determines whether an exit is executable at all.",
+    "Frames the pitch around the sponsor's own incentives rather than around the asset alone."
+   ],
+   "mistakes": [
+    "Timing the pitch off the asset's performance alone and ignoring the fund's lifecycle.",
+    "Missing that an exit is often accelerated to support a fundraise rather than to maximise the asset's price.",
+    "Pitching an IPO exit without checking whether the IPO window is actually open."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-process",
+    "financial-sponsors"
+   ],
+   "locator": "MA036"
+  },
+  {
+   "q": "How do LP-led and GP-led secondaries transactions differ?",
+   "a": "In an LP-led secondary transaction, an investor purchases an existing limited partner's commitment in an entire fund, requiring analysis at both the fund level and individual asset level. In contrast, a GP-led transaction involves buying specific assets, such as one or two portfolio companies, from an existing fund. The general partner transfers these assets into a newly established continuation fund, and secondary investors provide the capital to acquire them, while existing LPs can choose to roll over their stakes.",
+   "rubric": [
+    "Defines an LP-led secondary as the purchase of an existing limited partner's stake in a whole fund.",
+    "States that an LP-led deal requires analysis at both the fund level and the individual portfolio company level.",
+    "Defines a GP-led secondary as the purchase of one or a small number of specific assets out of an existing fund.",
+    "States that the GP moves those assets into a newly formed continuation fund.",
+    "States that secondary investors provide the capital, while existing LPs may roll their stakes into the continuation vehicle rather than cash out.",
+    "Draws the distinction: LP-led changes who owns a fund stake, GP-led restructures which vehicle holds the asset."
+   ],
+   "mistakes": [
+    "Treating both as the same transaction because both are called secondaries.",
+    "Missing the conflict of interest in a GP-led deal, where the GP sits on both sides of the price.",
+    "Forgetting the LP roll-over option, which is what distinguishes a continuation fund from a plain sale."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "financial-sponsors"
+   ],
+   "locator": "MA037"
+  },
+  {
+   "q": "From a banker’s perspective, what are the differences between LP-led and GP-led secondaries transactions?",
+   "a": "GP-led transactions are structured similarly to traditional M&A deals, requiring bankers to perform valuations, draft marketing materials, and run a competitive process, which yields higher but more cyclical fees. Conversely, LP-led transactions function as a high-volume intermediary business where bankers coordinate due diligence without creating company-specific models or CIMs. While LP-led deals command lower fees, their transaction volume remains more stable across different market cycles.",
+   "rubric": [
+    "States that GP-led deals are run like traditional M&A: valuation work, marketing materials and a competitive process.",
+    "States that GP-led deals therefore earn higher fees, but that volume is more cyclical.",
+    "States that LP-led deals are a high-volume intermediary business.",
+    "Explains that in LP-led deals the banker coordinates diligence without building company-specific models or a CIM.",
+    "Concludes on the trade-off: LP-led fees are lower per deal but the volume holds up better across cycles."
+   ],
+   "mistakes": [
+    "Treating both mandates as identical banker work.",
+    "Assuming the higher-fee product is always the better business, ignoring cyclicality of volume.",
+    "Missing that LP-led work is about matching buyers and sellers rather than about valuation."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "deal-process"
+   ],
+   "locator": "MA038"
+  },
+  {
+   "q": "How might the acquisition of a private company be different from a public company deal?",
+   "a": "Private acquisitions base the purchase price on Enterprise Value multiples rather than share-price premiums, and deals are typically structured on a cash-free, debt-free basis. Buyers also frequently utilize earnouts, escrows, and management retention pools to defer payments and mitigate risk. Despite these structural differences, the core accounting mechanics of combining financial statements and calculating goodwill remain the same as in public deals.",
+   "rubric": [
+    "States that the purchase price is set off Enterprise Value multiples rather than a premium to a share price.",
+    "States that the deal is typically structured cash-free, debt-free.",
+    "Names the deferred-payment mechanisms: earnouts, escrows and management retention pools.",
+    "Explains that those exist to bridge valuation gaps and to keep the seller exposed to the outcome.",
+    "States that the underlying accounting - consolidating the statements and calculating goodwill - is identical to a public deal."
+   ],
+   "mistakes": [
+    "Looking for an acquisition premium where there is no trading price.",
+    "Assuming the headline price is what the seller receives, ignoring escrow and earnout.",
+    "Believing the purchase accounting differs, when only the pricing and structure do."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deferred-consideration",
+    "merger-model",
+    "private-company"
+   ],
+   "locator": "MA039"
+  },
+  {
+   "q": "At a high level, how do REIT M&A deals differ from deals involving normal companies?",
+   "a": "REIT M&A transactions are typically funded with stock rather than cash because REITs must distribute most of their earnings as dividends, leaving them with low cash reserves and high leverage. On the accounting side, historical depreciation is wiped out, real estate assets are written up to fair market value, and unique intangibles like in-place lease values are created. Furthermore, deal success is evaluated using FFO-per-share accretion or dilution rather than traditional EPS, alongside contribution and value creation analyses.",
+   "rubric": [
+    "States that REIT deals are typically stock-funded rather than cash-funded.",
+    "Explains why: the mandatory payout leaves little retained cash, and leverage is already high.",
+    "States that in purchase accounting the target's accumulated depreciation is wiped out and property is written up to fair value.",
+    "Names REIT-specific intangibles created in the write-up, such as in-place lease value.",
+    "States that the deal is judged on FFO-per-share accretion or dilution rather than EPS.",
+    "Notes that contribution analysis and value creation analysis are used alongside it."
+   ],
+   "mistakes": [
+    "Judging a REIT deal on EPS accretion, which the depreciation charge makes uninformative.",
+    "Assuming a cash-funded deal, when the acquirer holds almost no surplus cash.",
+    "Forgetting the fair value write-up and the intangibles it creates."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "real-estate"
+   ],
+   "locator": "MA040"
+  },
+  {
+   "q": "Why are the Contribution Analysis and Value Creation Analysis especially useful in REIT M&A Deals?",
+   "a": "Since most REIT mergers are stock-for-stock transactions, both parties are highly sensitive to their post-merger ownership stakes and the combined company's stock performance. A contribution analysis helps determine if the ownership split matches each company's financial contribution to the combined entity. A value creation analysis estimates whether the combined REIT will trade at a premium multiple due to its increased scale, helping to quantify the potential upside for shareholders.",
+   "rubric": [
+    "States that most REIT mergers are stock-for-stock, which is why both analyses matter.",
+    "Explains that in a stock deal both sides care about post-merger ownership and the combined share performance rather than a cash price.",
+    "Explains contribution analysis: testing whether the ownership split matches what each side contributes financially.",
+    "Explains value creation analysis: estimating whether the combined REIT re-rates to a premium multiple on greater scale.",
+    "States that value creation analysis is what quantifies the upside available to shareholders beyond the exchange ratio."
+   ],
+   "mistakes": [
+    "Judging a stock-for-stock REIT merger on the headline premium alone.",
+    "Confusing the two analyses: contribution tests fairness of the split, value creation tests whether the combination is worth doing.",
+    "Assuming scale automatically produces a multiple re-rating."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "real-estate"
+   ],
+   "locator": "MA041"
+  },
+  {
+   "q": "A company acquires another company for $1000 using 50% stock and 50% cash. Here’s what the other company looks like: Assets of $1000 and Liabilities of $800. Using that information, combine the companies’ financial statements and walk me through what the Balance Sheet looks like IMMEDIATELY after the acquisition.",
+   "a": "Purchase price is $1,000 for a company whose book equity is $200 ($1,000 of Assets less $800 of Liabilities), so the deal creates $800 of Goodwill. The seller's $200 of existing equity is wiped out and replaced by what the buyer paid.\n\nAssets side: add the seller's $1,000 of Assets, add $800 of new Goodwill, and subtract the $500 of cash used. Assets are up $1,300.\n\nLiabilities and Equity side: add the seller's $800 of Liabilities and the $500 of newly issued stock. Liabilities and Equity are up $1,300.\n\nBoth sides move by $1,300, so the Balance Sheet balances. Goodwill is the plug that makes it balance: without it, the assets acquired are worth less than the price paid and the statement will not tie.",
+   "rubric": [
+    "Calculates the seller's book equity as $200, being $1,000 of Assets less $800 of Liabilities.",
+    "Calculates Goodwill of $800, the $1,000 purchase price less the $200 of book equity acquired.",
+    "States that the seller's $200 of existing equity is wiped out.",
+    "Builds the Assets side: add the seller's $1,000 of Assets, add $800 of new Goodwill, subtract the $500 of cash used, for a net increase of $1,300.",
+    "Builds the Liabilities and Equity side: add the seller's $800 of Liabilities and $500 of newly issued stock, for a net increase of $1,300.",
+    "Confirms that both sides move by $1,300 so the Balance Sheet balances, and explains that Goodwill is the plug that makes it tie."
+   ],
+   "mistakes": [
+    "Omitting the $800 of Goodwill from the Assets side, which leaves the Balance Sheet out of balance by exactly that amount.",
+    "Carrying the seller's $200 of equity onto the combined Balance Sheet instead of wiping it out.",
+    "Forgetting the $500 cash outflow for the cash half of the consideration.",
+    "Calculating Goodwill off the seller's total assets rather than off its book equity."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "goodwill"
+   ],
+   "locator": "MA042"
+  },
+  {
+   "q": "Why would you buy (or merge with) another company?",
+   "a": "A company will acquire another business if it expects the return on investment to exceed the acquisition cost. Financial motivations include achieving market consolidation, expanding geographically, accelerating growth, or capitalizing on an undervalued target. Additionally, acquisitions may be driven by strategic reasons such as acquiring key intellectual property, defending against competitors, or gaining valuable talent.",
+   "rubric": [
+    "A company will acquire another business if it expects the return on investment to exceed the acquisition cost.",
+    "Financial motivations include achieving market consolidation, expanding geographically, accelerating growth, or capitalizing on an undervalued target.",
+    "Additionally, acquisitions may be driven by strategic reasons such as acquiring key intellectual property, defending against competitors, or gaining valuable talent."
+   ],
+   "mistakes": [
+    "Naming only synergies, which is the answer every candidate gives.",
+    "Failing to frame the decision as a return on investment against the price paid.",
+    "Omitting defensive and talent-driven motivations, which drive a large share of real deals."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 1,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "synergies"
+   ],
+   "locator": "MA043"
+  },
+  {
+   "q": "How Does a Merger Model Work?",
+   "a": "A merger model is a multi-step process used to analyze the financial impact of an acquisition. First, you determine the purchase price using valuation methodologies and decide on the funding mix of cash, debt, and stock. Next, you project the financial statements of both companies, combine their income statements using the buyer's tax rate, and calculate the new combined earnings per share (EPS). Finally, you combine the balance sheets, wiping out the seller's equity and creating goodwill to account for any premium paid over the seller's book value.",
+   "rubric": [
+    "A merger model is a multi-step process used to analyze the financial impact of an acquisition.",
+    "First, you determine the purchase price using valuation methodologies and decide on the funding mix of cash, debt, and stock.",
+    "Next, you project the financial statements of both companies, combine their income statements using the buyer's tax rate, and calculate the new combined earnings per share (EPS).",
+    "Finally, you combine the balance sheets, wiping out the seller's equity and creating goodwill to account for any premium paid over the seller's book value."
+   ],
+   "mistakes": [
+    "Using the seller's tax rate rather than the buyer's on the combined income statement.",
+    "Forgetting to wipe out the seller's existing equity when combining the balance sheets.",
+    "Omitting the foregone interest on cash used, or the interest on new debt raised.",
+    "Calculating goodwill off the seller's total assets rather than its book equity."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA044"
+  },
+  {
+   "q": "How does the payment method affect the deal?",
+   "a": "The payment method—cash, debt, or stock—directly impacts whether an acquisition is accretive or dilutive. Cash is the cheapest and most preferred option because its foregone interest is low and it avoids diluting ownership, though buyers are constrained by their cash reserves. Debt is more expensive than cash and is limited by the buyer's leverage capacity and ability to make interest payments. Stock is generally the most expensive option and dilutes existing shareholders, though buyers prefer issuing stock when their share price is high to minimize the number of shares required.",
+   "rubric": [
+    "The payment method—cash, debt, or stock—directly impacts whether an acquisition is accretive or dilutive.",
+    "Cash is the cheapest and most preferred option because its foregone interest is low and it avoids diluting ownership, though buyers are constrained by their cash reserves.",
+    "Debt is more expensive than cash and is limited by the buyer's leverage capacity and ability to make interest payments.",
+    "Stock is generally the most expensive option and dilutes existing shareholders, though buyers prefer issuing stock when their share price is high to minimize the number of shares required."
+   ],
+   "mistakes": [
+    "Ranking stock as cheapest because it involves no cash outflow.",
+    "Forgetting that cash carries a real cost in the foregone interest it was earning.",
+    "Ignoring the constraints - cash reserves, leverage capacity, and the willingness to dilute.",
+    "Missing that a high share price makes stock a relatively cheaper currency."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "3-statement-linkage",
+    "accretion-dilution"
+   ],
+   "locator": "MA045"
+  },
+  {
+   "q": "Why would a company want to acquire another company?",
+   "a": "A company typically acquires another to achieve a strong return on investment or boost its earnings per share. Key drivers include expanding market share by purchasing a competitor, accelerating growth, or acquiring undervalued assets. Additionally, buyers may seek to cross-sell to the seller's customer base, obtain proprietary technology, or realize cost and revenue synergies.",
+   "rubric": [
+    "A company typically acquires another to achieve a strong return on investment or boost its earnings per share.",
+    "Key drivers include expanding market share by purchasing a competitor, accelerating growth, or acquiring undervalued assets.",
+    "Additionally, buyers may seek to cross-sell to the seller's customer base, obtain proprietary technology, or realize cost and revenue synergies."
+   ],
+   "mistakes": [
+    "Giving only 'synergies' with no elaboration.",
+    "Failing to distinguish financial motivations from strategic ones.",
+    "Missing that acquiring an undervalued target is itself a complete rationale."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 1,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "synergies"
+   ],
+   "locator": "MA046"
+  },
+  {
+   "q": "Walk me through a basic merger model.",
+   "a": "A merger model evaluates the financial impact of combining two companies, specifically looking at whether the transaction increases or decreases the buyer's earnings per share (EPS). The process begins by establishing transaction assumptions, including the purchase price and the funding mix of cash, debt, and stock. Next, you project the income statements for both entities and combine them, adjusting for transaction-related items like foregone interest on cash, new interest expense on debt, and synergies. Finally, you calculate the combined net income and divide it by the new share count to determine the post-transaction EPS.",
+   "rubric": [
+    "A merger model evaluates the financial impact of combining two companies, specifically looking at whether the transaction increases or decreases the buyer's earnings per share (EPS).",
+    "The process begins by establishing transaction assumptions, including the purchase price and the funding mix of cash, debt, and stock.",
+    "Next, you project the income statements for both entities and combine them, adjusting for transaction-related items like foregone interest on cash, new interest expense on debt, and synergies.",
+    "Finally, you calculate the combined net income and divide it by the new share count to determine the post-transaction EPS."
+   ],
+   "mistakes": [
+    "Forgetting the foregone interest on cash used for the purchase.",
+    "Using the seller's tax rate on combined earnings.",
+    "Dividing combined net income by the buyer's original share count rather than the post-deal count.",
+    "Treating synergies as certain and immediate rather than phased and uncertain."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 1,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA047"
+  },
+  {
+   "q": "Why would an acquisition be dilutive?",
+   "a": "An acquisition becomes dilutive when the target's net income contribution is insufficient to cover the costs associated with the transaction. These costs typically include the foregone interest on cash used for the purchase, the interest expense on new debt raised, and the dilutive effect of issuing new shares. If these combined expenses and share count increases outweigh the target's earnings contribution, the buyer's earnings per share will decrease.",
+   "rubric": [
+    "An acquisition becomes dilutive when the target's net income contribution is insufficient to cover the costs associated with the transaction.",
+    "These costs typically include the foregone interest on cash used for the purchase, the interest expense on new debt raised, and the dilutive effect of issuing new shares.",
+    "If these combined expenses and share count increases outweigh the target's earnings contribution, the buyer's earnings per share will decrease."
+   ],
+   "mistakes": [
+    "Naming only the new share issuance and forgetting the cost of cash and debt.",
+    "Missing that cash has a cost even though no new securities are issued.",
+    "Confusing dilution of EPS with dilution of ownership percentage - they are related but not the same test."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 1,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA048"
+  },
+  {
+   "q": "Is there a rule of thumb for calculating whether an acquisition will be accretive or dilutive?",
+   "a": "Yes, you can determine this by comparing the weighted average cost of the acquisition to the seller's yield, which is the reciprocal of the seller's P/E multiple. The cost of cash is the foregone interest rate after tax, the cost of debt is the interest rate after tax, and the cost of stock is the reciprocal of the buyer's P/E multiple. If the weighted average cost of cash, debt, and stock is less than the seller's yield, the transaction will be accretive. Otherwise, the deal will be dilutive.",
+   "rubric": [
+    "Yes, you can determine this by comparing the weighted average cost of the acquisition to the seller's yield, which is the reciprocal of the seller's P/E multiple.",
+    "The cost of cash is the foregone interest rate after tax, the cost of debt is the interest rate after tax, and the cost of stock is the reciprocal of the buyer's P/E multiple.",
+    "If the weighted average cost of cash, debt, and stock is less than the seller's yield, the transaction will be accretive.",
+    "Otherwise, the deal will be dilutive."
+   ],
+   "mistakes": [
+    "Comparing pre-tax interest rates to the seller's yield without tax-affecting them.",
+    "Inverting the rule and concluding a deal is accretive when the cost exceeds the yield.",
+    "Forgetting to invert the P/E multiples to get yields before comparing.",
+    "Applying the rule where synergies or purchase accounting effects are large enough to overturn it."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "multiples"
+   ],
+   "locator": "MA049"
+  },
+  {
+   "q": "Does the rule of thumb for calculating accretion and dilution work all the time?",
+   "a": "No, this formula relies on several simplifying assumptions that rarely hold true in the real world. It assumes the buyer and seller share the same tax rate, and it ignores transaction fees, synergies, and other acquisition effects like new depreciation and amortization. Most importantly, the rule fails if you use the seller's current share price instead of the actual purchase price paid by the buyer.",
+   "rubric": [
+    "No, this formula relies on several simplifying assumptions that rarely hold true in the real world.",
+    "It assumes the buyer and seller share the same tax rate, and it ignores transaction fees, synergies, and other acquisition effects like new depreciation and amortization.",
+    "Most importantly, the rule fails if you use the seller's current share price instead of the actual purchase price paid by the buyer."
+   ],
+   "mistakes": [
+    "Treating the rule as exact rather than as a first-pass screen.",
+    "Using the seller's current share price rather than the offer price when computing its yield.",
+    "Forgetting that differing tax rates between buyer and seller break the arithmetic.",
+    "Ignoring purchase accounting effects such as new intangible amortisation, which can flip the answer."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA050"
+  },
+  {
+   "q": "A company with a higher P/E acquires one with a lower P/E – is this accretive or dilutive?",
+   "a": "You cannot determine this unless you know it is an all-stock deal. If the transaction is funded with cash or debt, the buyer's P/E multiple is irrelevant because no new stock is issued. In an all-stock deal, however, the transaction will be accretive because the buyer gets more earnings per dollar spent than it generates from its own operations.",
+   "rubric": [
+    "You cannot determine this unless you know it is an all-stock deal.",
+    "If the transaction is funded with cash or debt, the buyer's P/E multiple is irrelevant because no new stock is issued.",
+    "In an all-stock deal, however, the transaction will be accretive because the buyer gets more earnings per dollar spent than it generates from its own operations."
+   ],
+   "mistakes": [
+    "Answering accretive without establishing that the deal is all-stock.",
+    "Applying the buyer's P/E to a cash or debt funded deal, where no stock is issued.",
+    "Missing that the comparison must be against the seller's yield at the purchase price, not its current market P/E."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "multiples"
+   ],
+   "locator": "MA051"
+  },
+  {
+   "q": "Why do we focus so much on accretion / dilution, and is EPS really that important?",
+   "a": "EPS is heavily focused on because institutional investors rely on it and P/E multiples to make investment decisions. However, a merger model serves many other purposes, such as calculating the internal rate of return of an acquisition or assessing the combined financial statements. While EPS accretion and dilution is not the only metric that matters, it is highly emphasized because of its market impact.",
+   "rubric": [
+    "EPS is heavily focused on because institutional investors rely on it and P/E multiples to make investment decisions.",
+    "However, a merger model serves many other purposes, such as calculating the internal rate of return of an acquisition or assessing the combined financial statements.",
+    "While EPS accretion and dilution is not the only metric that matters, it is highly emphasized because of its market impact."
+   ],
+   "mistakes": [
+    "Defending EPS as the only measure that matters.",
+    "Dismissing EPS entirely as an accounting artefact, ignoring how the market actually reacts.",
+    "Failing to name the alternative analyses a merger model supports."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA052"
+  },
+  {
+   "q": "How do you determine the Purchase Price for the target company in an acquisition?",
+   "a": "The purchase price is determined using standard valuation methodologies like comparable companies, precedent transactions, and discounted cash flow analysis. If the target is a public company, you must also factor in a premium, typically in the fifteen to thirty percent range, over its current share price to secure shareholder approval. For private sellers, valuation relies more heavily on traditional core methodologies.",
+   "rubric": [
+    "The purchase price is determined using standard valuation methodologies like comparable companies, precedent transactions, and discounted cash flow analysis.",
+    "If the target is a public company, you must also factor in a premium, typically in the fifteen to thirty percent range, over its current share price to secure shareholder approval.",
+    "For private sellers, valuation relies more heavily on traditional core methodologies."
+   ],
+   "mistakes": [
+    "Quoting the current share price as the purchase price for a public target.",
+    "Applying a premium to a private company that has no observable share price.",
+    "Failing to cross-check the implied multiple against the valuation methodologies."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "precedents"
+   ],
+   "locator": "MA053"
+  },
+  {
+   "q": "All else being equal, which method would a company prefer to use when acquiring another company – cash, stock, or debt?",
+   "a": "Assuming unlimited resources, a buyer almost always prefers to use cash. Cash is cheaper than debt because foregone interest on cash is typically lower than the interest rate paid on new debt. It is also cheaper than stock because most companies' P/E multiples imply a cost of stock that is higher than the after-tax return on cash. Finally, cash is less risky because it avoids funding execution risks, default risks, and stock price volatility.",
+   "rubric": [
+    "Assuming unlimited resources, a buyer almost always prefers to use cash.",
+    "Cash is cheaper than debt because foregone interest on cash is typically lower than the interest rate paid on new debt.",
+    "It is also cheaper than stock because most companies' P/E multiples imply a cost of stock that is higher than the after-tax return on cash.",
+    "Finally, cash is less risky because it avoids funding execution risks, default risks, and stock price volatility."
+   ],
+   "mistakes": [
+    "Ranking stock as cheapest because it requires no cash.",
+    "Forgetting that cash carries a real cost in the interest it was earning.",
+    "Ignoring the risk dimension, and comparing only headline costs.",
+    "Missing that the ranking can invert at an unusually high buyer P/E."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA054"
+  },
+  {
+   "q": "Could there be cases where cash is actually more expensive than debt or stock?",
+   "a": "Cash is never more expensive than debt because banks do not pay higher interest on deposits than they charge for loans. However, cash can theoretically be more expensive than stock in extremely rare cases where the buyer has an exceptionally high P/E multiple, such as one hundred times. In such a scenario, the reciprocal of the P/E multiple, which is one percent, could be lower than the buyer's after-tax cost of cash.",
+   "rubric": [
+    "Cash is never more expensive than debt because banks do not pay higher interest on deposits than they charge for loans.",
+    "However, cash can theoretically be more expensive than stock in extremely rare cases where the buyer has an exceptionally high P/E multiple, such as one hundred times.",
+    "In such a scenario, the reciprocal of the P/E multiple, which is one percent, could be lower than the buyer's after-tax cost of cash."
+   ],
+   "mistakes": [
+    "Claiming cash can be more expensive than debt.",
+    "Failing to name the specific condition - an extremely high buyer P/E - under which stock becomes the cheaper currency.",
+    "Forgetting to tax-affect the cash yield before comparing it to the reciprocal of the P/E."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "multiples"
+   ],
+   "locator": "MA055"
+  },
+  {
+   "q": "If a company were capable of paying 100% in cash for another company, why would it choose NOT to do so?",
+   "a": "A company might avoid using one hundred percent cash to preserve its liquidity for future expansion, research and development, or as a safety net against business downturns. Additionally, if the buyer's stock is trading at an all-time high, it may prefer to use its highly valued stock as currency. This makes issuing stock cheaper because a high P/E multiple translates to a lower cost of stock.",
+   "rubric": [
+    "A company might avoid using one hundred percent cash to preserve its liquidity for future expansion, research and development, or as a safety net against business downturns.",
+    "Additionally, if the buyer's stock is trading at an all-time high, it may prefer to use its highly valued stock as currency.",
+    "This makes issuing stock cheaper because a high P/E multiple translates to a lower cost of stock."
+   ],
+   "mistakes": [
+    "Assuming a company with the cash will always use it.",
+    "Missing that a richly valued share price genuinely makes stock the cheaper currency.",
+    "Ignoring liquidity and balance sheet resilience as a reason to hold cash back."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA056"
+  },
+  {
+   "q": "How much debt could a company issue in a merger or acquisition?",
+   "a": "To determine debt capacity, you analyze comparable companies and precedent transactions to find the median Debt to EBITDA ratio. You then apply this ratio to the combined company's EBITDA to estimate the total debt it can support. Additionally, you can review debt comps from similar recent deals to see the types and tranches of debt typically used.",
+   "rubric": [
+    "To determine debt capacity, you analyze comparable companies and precedent transactions to find the median Debt to EBITDA ratio.",
+    "You then apply this ratio to the combined company's EBITDA to estimate the total debt it can support.",
+    "Additionally, you can review debt comps from similar recent deals to see the types and tranches of debt typically used."
+   ],
+   "mistakes": [
+    "Applying the leverage ratio to the target's EBITDA alone rather than to the combined company's.",
+    "Quoting a leverage multiple from memory with no reference to comparable deals or the current credit market.",
+    "Ignoring interest coverage, which usually binds before the leverage ratio does.",
+    "Forgetting existing debt at both companies when sizing new capacity."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "credit-stats",
+    "merger-model"
+   ],
+   "locator": "MA057"
+  },
+  {
+   "q": "When would a company be MOST likely to issue stock to acquire another company?",
+   "a": "A company is most likely to issue stock when its shares are trading at an all-time high, making stock issuance a relatively cheap method of financing. It is also common when the target company is nearly as large as the buyer, making it impossible to raise enough debt or use enough cash to fund the acquisition.",
+   "rubric": [
+    "A company is most likely to issue stock when its shares are trading at an all-time high, making stock issuance a relatively cheap method of financing.",
+    "It is also common when the target company is nearly as large as the buyer, making it impossible to raise enough debt or use enough cash to fund the acquisition."
+   ],
+   "mistakes": [
+    "Naming only the high-share-price case and missing that deal size can force a stock component.",
+    "Claiming a company issues stock when its price is low, which is the opposite of the incentive.",
+    "Missing that a merger of near-equals is almost always stock-funded regardless of price."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA058"
+  },
+  {
+   "q": "If a buyer doesn't have enough cash available to acquire the seller, how could it decide between raising debt, issuing stock, or some combination of those?",
+   "a": "The decision depends on several key factors, starting with the relative after-tax costs of debt versus stock. The buyer must also evaluate its existing debt load, as high leverage limits the ability to raise new debt. Additionally, companies try to minimize shareholder dilution from issuing stock, while also balancing future cash needs for expansion or capital expenditures.",
+   "rubric": [
+    "The decision depends on several key factors, starting with the relative after-tax costs of debt versus stock.",
+    "The buyer must also evaluate its existing debt load, as high leverage limits the ability to raise new debt.",
+    "Additionally, companies try to minimize shareholder dilution from issuing stock, while also balancing future cash needs for expansion or capital expenditures."
+   ],
+   "mistakes": [
+    "Comparing pre-tax cost of debt to the cost of stock without tax-affecting the debt.",
+    "Ignoring the existing leverage position, which caps how much new debt is available.",
+    "Treating dilution as costless because no cash leaves the business.",
+    "Forgetting the buyer's own future funding needs beyond this transaction."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "capital-structure",
+    "merger-model"
+   ],
+   "locator": "MA059"
+  },
+  {
+   "q": "If Company A buys Company B using 100% debt, where Company B has a P/E of 10x and Company A has a P/E of 15x, what interest rate is required on the debt to make the deal dilutive?",
+   "a": "For the deal to be dilutive, the after-tax cost of debt must exceed the seller's yield. Since Company B's P/E is ten times, its yield is ten percent. Assuming a forty percent tax rate, the pre-tax interest rate required to exceed a ten percent after-tax cost is calculated as ten percent divided by one minus zero point four, which equals sixteen point seven percent. Therefore, the interest rate on the debt must be above approximately seventeen percent to make the deal dilutive.",
+   "rubric": [
+    "For the deal to be dilutive, the after-tax cost of debt must exceed the seller's yield.",
+    "Since Company B's P/E is ten times, its yield is ten percent.",
+    "Assuming a forty percent tax rate, the pre-tax interest rate required to exceed a ten percent after-tax cost is calculated as ten percent divided by one minus zero point four, which equals sixteen point seven percent.",
+    "Therefore, the interest rate on the debt must be above approximately seventeen percent to make the deal dilutive."
+   ],
+   "mistakes": [
+    "Comparing the pre-tax interest rate directly to the 10% yield without grossing it up.",
+    "Using Company A's 15x P/E to derive the threshold rather than Company B's 10x.",
+    "Dividing by the tax rate instead of by one minus the tax rate."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "multiples"
+   ],
+   "locator": "MA060"
+  },
+  {
+   "q": "If Company A has a P/E of 10x (which is higher than Company B's P/E) and the interest rate on debt is 5%, should Company A use debt or stock for the most accretion in acquiring Company B?",
+   "a": "Company A should use one hundred percent debt to achieve the most accretion. The after-tax cost of debt is three percent, while the cost of stock is ten percent. Since both costs are lower than Company B's yield, which is greater than ten percent because its P/E is lower than ten times, the deal is accretive either way, but debt maximizes accretion because its cost is significantly lower.",
+   "rubric": [
+    "Concludes that Company A should use 100% debt for the most accretion.",
+    "Calculates the after-tax cost of debt as 3%, from the 5% rate.",
+    "Calculates the cost of stock as 10%, the reciprocal of Company A's 10x P/E.",
+    "Reasons that Company B's yield exceeds 10% because its P/E is below 10x.",
+    "Concludes that the deal is accretive on either funding source, since both costs sit below the seller's yield.",
+    "Explains that debt maximises accretion because its after-tax cost is the lower of the two."
+   ],
+   "mistakes": [
+    "Comparing the 5% pre-tax debt rate to the seller's yield without tax-affecting it.",
+    "Concluding that stock is accretive and debt is not, or the reverse, rather than seeing both clear the yield.",
+    "Forgetting to invert Company A's P/E to get the cost of stock."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "multiples"
+   ],
+   "locator": "MA061"
+  },
+  {
+   "q": "Given Company A has an Enterprise Value of 100, Market Cap of 80, EBITDA of 10, and Net Income of 4, and Company B has an Enterprise Value of 40, Market Cap of 40, EBITDA of 8, and Net Income of 2, what are the EV/EBITDA and P/E multiples for each?",
+   "a": "For Company A, the EV to EBITDA multiple is ten times, calculated as one hundred Enterprise Value divided by ten EBITDA, and the P/E multiple is twenty times, calculated as eighty Market Cap divided by four Net Income. For Company B, the EV to EBITDA multiple is five times, calculated as forty Enterprise Value divided by eight EBITDA, and the P/E multiple is twenty times, calculated as forty Market Cap divided by two Net Income.",
+   "rubric": [
+    "For Company A, the EV to EBITDA multiple is ten times, calculated as one hundred Enterprise Value divided by ten EBITDA, and the P/E multiple is twenty times, calculated as eighty Market Cap divided by four Net Income.",
+    "For Company B, the EV to EBITDA multiple is five times, calculated as forty Enterprise Value divided by eight EBITDA, and the P/E multiple is twenty times, calculated as forty Market Cap divided by two Net Income."
+   ],
+   "mistakes": [
+    "Pairing Enterprise Value with Net Income, or Market Cap with EBITDA.",
+    "Reading the identical 20x P/E as meaning the two companies are equally valued, when their EV/EBITDA multiples differ two-fold.",
+    "Missing what the numbers imply: Company B's Enterprise Value equals its Market Cap, so it carries no net debt."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge",
+    "multiples"
+   ],
+   "locator": "MA062"
+  },
+  {
+   "q": "Company A decides to acquire Company B using 100% cash. Company A does NOT pay any kind of premium to acquire Company B. What are the combined EBITDA and P / E multiples?",
+   "a": "When Company A acquires Company B using 100% cash with no premium, Company B's market cap is eliminated and Company A's cash decreases. The combined Enterprise Value is the sum of both individual Enterprise Values (140), and the combined EBITDA is the sum of both EBITDAs (18), yielding an EV/EBITDA multiple of 7.8x. The combined Market Cap is 80 and combined Net Income is 6, resulting in a combined P/E multiple of 13.3x.",
+   "rubric": [
+    "When Company A acquires Company B using 100% cash with no premium, Company B's market cap is eliminated and Company A's cash decreases.",
+    "The combined Enterprise Value is the sum of both individual Enterprise Values (140), and the combined EBITDA is the sum of both EBITDAs (18), yielding an EV/EBITDA multiple of 7.8x.",
+    "The combined Market Cap is 80 and combined Net Income is 6, resulting in a combined P/E multiple of 13.3x."
+   ],
+   "mistakes": [
+    "Adding the two Market Caps together, when the seller's is extinguished in the deal.",
+    "Adjusting Enterprise Value for the cash spent - the cash leaves, but so does the target's, and the combined EV is simply the sum.",
+    "Forgetting that in a real model the buyer also loses the interest income on the cash it spent, which this simplified scenario ignores."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge",
+    "multiples"
+   ],
+   "locator": "MA063"
+  },
+  {
+   "q": "Now, let’s say that Company A instead uses 100% debt, at a 10% interest rate and 25% tax rate, to acquire Company B. Again, Company A pays no premium for Company B. What are the combined multiples?",
+   "a": "If the acquisition is funded with 100% debt, the combined Enterprise Value remains 140 and the combined EBITDA remains 18, keeping the EV/EBITDA multiple at 7.8x. However, the combined Net Income decreases due to the new after-tax interest expense of 3 (40 of debt at 10% interest and a 25% tax rate). This reduces the combined Net Income to 3, which increases the combined P/E multiple to 26.7x.",
+   "rubric": [
+    "If the acquisition is funded with 100% debt, the combined Enterprise Value remains 140 and the combined EBITDA remains 18, keeping the EV/EBITDA multiple at 7.8x.",
+    "However, the combined Net Income decreases due to the new after-tax interest expense of 3 (40 of debt at 10% interest and a 25% tax rate).",
+    "This reduces the combined Net Income to 3, which increases the combined P/E multiple to 26.7x."
+   ],
+   "mistakes": [
+    "Changing the EV/EBITDA multiple because the funding changed - Enterprise Value is financing-neutral.",
+    "Using the pre-tax interest expense of 4 rather than the after-tax 3.",
+    "Adding the new debt to the combined Enterprise Value, double-counting it."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "multiples"
+   ],
+   "locator": "MA064"
+  },
+  {
+   "q": "What was the point of this scenario and these questions? What does it tell you about valuation multiples and M&A activity?",
+   "a": "This scenario illustrates that the method of financing an acquisition does not affect the combined Enterprise Value or the EV/EBITDA multiple. It also shows that the seller's book equity and market cap are always wiped out in a transaction. Finally, the combined P/E multiple will vary depending on the financing method due to interest expenses or share dilution.",
+   "rubric": [
+    "This scenario illustrates that the method of financing an acquisition does not affect the combined Enterprise Value or the EV/EBITDA multiple.",
+    "It also shows that the seller's book equity and market cap are always wiped out in a transaction.",
+    "Finally, the combined P/E multiple will vary depending on the financing method due to interest expenses or share dilution."
+   ],
+   "mistakes": [
+    "Concluding that financing affects Enterprise Value.",
+    "Missing the asymmetry: EV/EBITDA is financing-neutral while P/E is not.",
+    "Forgetting that the seller's own market capitalisation disappears in every structure."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "multiples"
+   ],
+   "locator": "MA065"
+  },
+  {
+   "q": "Why would a strategic acquirer typically be willing to pay more for a company than a private equity firm would?",
+   "a": "A strategic acquirer is typically willing to pay more because it can realize revenue and cost synergies by combining the target with its existing business. These synergies increase the overall value of the acquisition, allowing the strategic buyer to justify a higher purchase price. In contrast, private equity firms generally cannot realize these operational synergies unless they have a highly complementary portfolio company.",
+   "rubric": [
+    "A strategic acquirer is typically willing to pay more because it can realize revenue and cost synergies by combining the target with its existing business.",
+    "These synergies increase the overall value of the acquisition, allowing the strategic buyer to justify a higher purchase price.",
+    "In contrast, private equity firms generally cannot realize these operational synergies unless they have a highly complementary portfolio company."
+   ],
+   "mistakes": [
+    "Attributing the difference to strategics having more cash rather than to synergies.",
+    "Forgetting that a sponsor with a complementary platform company can capture synergies too.",
+    "Missing that the sponsor is also bound by a required return, which caps what it can pay."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "synergies"
+   ],
+   "locator": "MA066"
+  },
+  {
+   "q": "What are the effects of an acquisition?",
+   "a": "An acquisition has several key financial effects, including the loss of interest income on cash used or the addition of interest expense on new debt. If stock is used, the buyer will experience share dilution from issuing new shares. On the balance sheet, the seller's financials are consolidated with the buyer's, and Goodwill is created to represent the premium paid over the seller's book value.",
+   "rubric": [
+    "An acquisition has several key financial effects, including the loss of interest income on cash used or the addition of interest expense on new debt.",
+    "If stock is used, the buyer will experience share dilution from issuing new shares.",
+    "On the balance sheet, the seller's financials are consolidated with the buyer's, and Goodwill is created to represent the premium paid over the seller's book value."
+   ],
+   "mistakes": [
+    "Naming only the balance sheet effects and omitting the earnings impact of foregone interest or new interest expense.",
+    "Forgetting share dilution in a stock-funded deal.",
+    "Missing that the seller's existing equity is wiped out on consolidation."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA067"
+  },
+  {
+   "q": "Why do Goodwill & Other Intangibles get created in an acquisition?",
+   "a": "Goodwill and other intangible assets are created to account for the premium paid in an acquisition over the target's book value of equity. They represent the value of non-physical assets that the buyer is acquiring, such as brand recognition, intellectual property, customer relationships, and employee talent. This ensures that the balance sheet remains in balance after the transaction.",
+   "rubric": [
+    "Goodwill and other intangible assets are created to account for the premium paid in an acquisition over the target's book value of equity.",
+    "They represent the value of non-physical assets that the buyer is acquiring, such as brand recognition, intellectual property, customer relationships, and employee talent.",
+    "This ensures that the balance sheet remains in balance after the transaction."
+   ],
+   "mistakes": [
+    "Describing goodwill as an arbitrary plug with no economic meaning.",
+    "Confusing goodwill with the identifiable intangibles that are allocated before it.",
+    "Calculating the premium against the seller's total assets rather than its book equity."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "goodwill"
+   ],
+   "locator": "MA068"
+  },
+  {
+   "q": "What is the difference between Goodwill and Other Intangible Assets?",
+   "a": "The primary difference is that Goodwill is not amortized and remains on the balance sheet indefinitely unless it is written down due to impairment. Other intangible assets, such as patents or copyrights, have finite useful lives and are amortized over time. This amortization expense appears on the income statement and reduces the company's pre-tax income.",
+   "rubric": [
+    "The primary difference is that Goodwill is not amortized and remains on the balance sheet indefinitely unless it is written down due to impairment.",
+    "Other intangible assets, such as patents or copyrights, have finite useful lives and are amortized over time.",
+    "This amortization expense appears on the income statement and reduces the company's pre-tax income."
+   ],
+   "mistakes": [
+    "Claiming goodwill is amortised on a fixed schedule.",
+    "Forgetting that other intangibles have finite lives and therefore an income statement charge.",
+    "Missing that the amortisation of acquired intangibles is often not tax-deductible in a stock deal, which creates a deferred tax liability."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "goodwill"
+   ],
+   "locator": "MA069"
+  },
+  {
+   "q": "What are some more advanced acquisition effects that you might see in a merger model?",
+   "a": "Advanced merger model adjustments include writing up the value of PP&E and other fixed assets to reflect their current market values. They also involve adjusting deferred tax assets and liabilities, accounting for transaction and financing fees, and eliminating inter-company accounts receivable and payable. Additionally, the seller's deferred revenue is typically written down to reflect only the post-acquisition profit margin.",
+   "rubric": [
+    "Advanced merger model adjustments include writing up the value of PP&E and other fixed assets to reflect their current market values.",
+    "They also involve adjusting deferred tax assets and liabilities, accounting for transaction and financing fees, and eliminating inter-company accounts receivable and payable.",
+    "Additionally, the seller's deferred revenue is typically written down to reflect only the post-acquisition profit margin."
+   ],
+   "mistakes": [
+    "Naming only goodwill and stopping.",
+    "Forgetting the deferred tax liability created by asset write-ups in a stock deal.",
+    "Omitting the deferred revenue write-down, which reduces post-deal revenue relative to the standalone forecast.",
+    "Leaving inter-company receivables and payables on the combined balance sheet."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "working-capital"
+   ],
+   "locator": "MA070"
+  },
+  {
+   "q": "What are synergies, and can you provide a few examples?",
+   "a": "Synergies represent the incremental value generated by combining two companies, where the combined entity is worth more than the sum of its parts. Revenue synergies involve opportunities like cross-selling products to a broader customer base or expanding into new geographic markets. Cost synergies refer to savings achieved by consolidating offices, eliminating redundant administrative staff, and closing overlapping locations.",
+   "rubric": [
+    "Synergies represent the incremental value generated by combining two companies, where the combined entity is worth more than the sum of its parts.",
+    "Revenue synergies involve opportunities like cross-selling products to a broader customer base or expanding into new geographic markets.",
+    "Cost synergies refer to savings achieved by consolidating offices, eliminating redundant administrative staff, and closing overlapping locations."
+   ],
+   "mistakes": [
+    "Giving only cost synergies, or only revenue synergies.",
+    "Defining synergies without the more-than-the-sum-of-parts framing.",
+    "Giving vague examples such as 'efficiencies' rather than concrete ones."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 1,
+   "kind": "technical",
+   "tags": [
+    "synergies"
+   ],
+   "locator": "MA071"
+  },
+  {
+   "q": "How are synergies used in merger models?",
+   "a": "In a merger model, revenue synergies are added to the combined revenue projections, and an assumed operating margin is applied to calculate the associated costs that flow through the income statement. Cost synergies are modeled as direct reductions to combined operating expenses or cost of goods sold. These expense reductions directly increase pre-tax income, net income, and earnings per share.",
+   "rubric": [
+    "In a merger model, revenue synergies are added to the combined revenue projections, and an assumed operating margin is applied to calculate the associated costs that flow through the income statement.",
+    "Cost synergies are modeled as direct reductions to combined operating expenses or cost of goods sold.",
+    "These expense reductions directly increase pre-tax income, net income, and earnings per share."
+   ],
+   "mistakes": [
+    "Adding revenue synergies straight to the bottom line without the associated costs.",
+    "Modelling synergies as fully realised in year one rather than phasing them in.",
+    "Ignoring the integration and severance costs required to achieve cost synergies."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "synergies"
+   ],
+   "locator": "MA072"
+  },
+  {
+   "q": "Are revenue or expense synergies more important?",
+   "a": "Expense synergies are considered much more important because they are tangible, easier to calculate, and highly achievable through cost-cutting measures like layoffs and office consolidations. Revenue synergies, on the other hand, are highly speculative and difficult to predict with accuracy. Consequently, investment bankers and investors usually discount or ignore revenue synergies in their models.",
+   "rubric": [
+    "Expense synergies are considered much more important because they are tangible, easier to calculate, and highly achievable through cost-cutting measures like layoffs and office consolidations.",
+    "Revenue synergies, on the other hand, are highly speculative and difficult to predict with accuracy.",
+    "Consequently, investment bankers and investors usually discount or ignore revenue synergies in their models."
+   ],
+   "mistakes": [
+    "Arguing revenue synergies matter more because they have more upside.",
+    "Failing to say why revenue synergies are discounted, namely that they depend on customer behaviour the acquirer does not control.",
+    "Treating cost synergies as free, ignoring the upfront restructuring charge."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "synergies"
+   ],
+   "locator": "MA073"
+  },
+  {
+   "q": "Let’s say a company overpays for another company – what happens afterward?",
+   "a": "If an acquirer overpays, an excessively large amount of Goodwill and Other Intangibles will be recorded on its balance sheet. In future years, the buyer must perform impairment testing on these assets. If the actual performance of the acquired company does not justify the purchase price, the buyer will be forced to record a Goodwill impairment charge, which directly reduces net income.",
+   "rubric": [
+    "If an acquirer overpays, an excessively large amount of Goodwill and Other Intangibles will be recorded on its balance sheet.",
+    "In future years, the buyer must perform impairment testing on these assets.",
+    "If the actual performance of the acquired company does not justify the purchase price, the buyer will be forced to record a Goodwill impairment charge, which directly reduces net income."
+   ],
+   "mistakes": [
+    "Describing the impairment as a cash outflow.",
+    "Assuming the buyer can simply reverse the impairment if performance recovers - impairments are not reversible under US GAAP.",
+    "Missing that the impairment is the accounting admission of the overpayment rather than the harm itself."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "goodwill"
+   ],
+   "locator": "MA074"
+  },
+  {
+   "q": "A buyer pays $100 million for the seller in an all-stock deal, but a day later the market decides that it’s only worth $50 million. What happens?",
+   "a": "If the market value of the deal drops by half immediately after closing, the buyer's stock price will decline to reflect the $50 million loss in value. Depending on how the deal was structured, the seller may end up receiving only half of the value they originally anticipated. This scenario highlights the significant market risk associated with all-stock transactions.",
+   "rubric": [
+    "If the market value of the deal drops by half immediately after closing, the buyer's stock price will decline to reflect the $50 million loss in value.",
+    "Depending on how the deal was structured, the seller may end up receiving only half of the value they originally anticipated.",
+    "This scenario highlights the significant market risk associated with all-stock transactions."
+   ],
+   "mistakes": [
+    "Assuming the seller is insulated because the deal was already agreed.",
+    "Missing that the structure matters: a fixed exchange ratio leaves the seller exposed to the buyer's share price, a fixed value deal does not.",
+    "Treating a stock deal as equivalent to a cash deal from the seller's point of view."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA075"
+  },
+  {
+   "q": "Why do most mergers and acquisitions fail?",
+   "a": "Most mergers and acquisitions fail because integrating two distinct corporate cultures, systems, and operations is extremely difficult to execute in practice. Additionally, many deals are driven by non-financial motives, such as executive ego or pressure from shareholders, rather than sound strategic reasoning. These factors often prevent the combined company from realizing the expected synergies.",
+   "rubric": [
+    "Most mergers and acquisitions fail because integrating two distinct corporate cultures, systems, and operations is extremely difficult to execute in practice.",
+    "Additionally, many deals are driven by non-financial motives, such as executive ego or pressure from shareholders, rather than sound strategic reasoning.",
+    "These factors often prevent the combined company from realizing the expected synergies."
+   ],
+   "mistakes": [
+    "Blaming only the price paid, and ignoring integration as the dominant cause.",
+    "Omitting the human and cultural dimension, which is where most integrations actually fail.",
+    "Missing that many deals are pursued for reasons that were never financial."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "synergies"
+   ],
+   "locator": "MA076"
+  },
+  {
+   "q": "What types of sensitivities would you look at in a merger model? What variables would you analyze?",
+   "a": "In a merger model, the most common variables to analyze are the purchase price, the funding mix (percentages of cash, stock, and debt), and both revenue and expense synergies. Operating metrics like revenue growth and EBITDA margins are also evaluated, though they are often structured as distinct operating scenarios. Typically, these variables are presented in sensitivity tables that illustrate the resulting EPS accretion or dilution across various combinations of purchase price and synergies.",
+   "rubric": [
+    "In a merger model, the most common variables to analyze are the purchase price, the funding mix (percentages of cash, stock, and debt), and both revenue and expense synergies.",
+    "Operating metrics like revenue growth and EBITDA margins are also evaluated, though they are often structured as distinct operating scenarios.",
+    "Typically, these variables are presented in sensitivity tables that illustrate the resulting EPS accretion or dilution across various combinations of purchase price and synergies."
+   ],
+   "mistakes": [
+    "Sensitising only the purchase price and ignoring the funding mix.",
+    "Treating operating scenarios as sensitivity inputs rather than as separate cases.",
+    "Sensitising revenue synergies without the costs required to achieve them."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model",
+    "synergies"
+   ],
+   "locator": "MA077"
+  },
+  {
+   "q": "If the seller has existing Debt on its Balance Sheet in an M&A deal, how do you deal with it?",
+   "a": "Existing debt on the seller's balance sheet is either assumed by the buyer or refinanced and paid off during the transaction. Because most debt agreements contain change-of-control provisions requiring repayment upon acquisition, it is highly common to assume the debt is paid off. When debt is paid off, it increases the total funding required by the buyer to complete the transaction.",
+   "rubric": [
+    "Existing debt on the seller's balance sheet is either assumed by the buyer or refinanced and paid off during the transaction.",
+    "Because most debt agreements contain change-of-control provisions requiring repayment upon acquisition, it is highly common to assume the debt is paid off.",
+    "When debt is paid off, it increases the total funding required by the buyer to complete the transaction."
+   ],
+   "mistakes": [
+    "Assuming the seller's debt simply disappears at closing.",
+    "Forgetting change-of-control provisions, which usually force repayment.",
+    "Omitting the repayment from the sources and uses, so the funding required comes out too low.",
+    "Assuming the buyer can always assume the debt on its existing terms."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "sources-and-uses"
+   ],
+   "locator": "MA078"
+  },
+  {
+   "q": "Wait a minute. If you use Cash or Debt to acquire another company, it’s clear how you could use them to pay off existing Debt… but how does that work with Stock?",
+   "a": "To pay off a seller's debt using stock, the buyer can issue shares to third-party investors in the public markets to raise the necessary cash for the repayment. Alternatively, the buyer can wait until the transaction closes to issue additional shares, use its own cash on hand, or refinance the seller's debt with a new debt issuance.",
+   "rubric": [
+    "To pay off a seller's debt using stock, the buyer can issue shares to third-party investors in the public markets to raise the necessary cash for the repayment.",
+    "Alternatively, the buyer can wait until the transaction closes to issue additional shares, use its own cash on hand, or refinance the seller's debt with a new debt issuance."
+   ],
+   "mistakes": [
+    "Concluding stock cannot be used where debt must be repaid.",
+    "Missing that the buyer can raise cash by issuing shares to the market, separately from the consideration paid to the seller.",
+    "Forgetting that refinancing with new debt is usually the simplest route."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model",
+    "sources-and-uses"
+   ],
+   "locator": "MA079"
+  },
+  {
+   "q": "What’s the purpose of Purchase Price Allocation in an M&A deal? Can you explain how it works?",
+   "a": "The primary purpose of purchase price allocation is to ensure the combined company's balance sheet balances after the transaction. This process involves adjusting the seller's assets and liabilities to their fair market values, eliminating the seller's historical equity, and creating new intangible assets. Goodwill is then calculated as a plug figure to reconcile the difference between the purchase price paid and the net fair value of the acquired assets and liabilities.",
+   "rubric": [
+    "The primary purpose of purchase price allocation is to ensure the combined company's balance sheet balances after the transaction.",
+    "This process involves adjusting the seller's assets and liabilities to their fair market values, eliminating the seller's historical equity, and creating new intangible assets.",
+    "Goodwill is then calculated as a plug figure to reconcile the difference between the purchase price paid and the net fair value of the acquired assets and liabilities."
+   ],
+   "mistakes": [
+    "Describing goodwill as arbitrary rather than as the residual after fair value allocation.",
+    "Forgetting to eliminate the seller's historical equity.",
+    "Skipping the fair value step and allocating the whole premium to goodwill.",
+    "Missing the deferred tax consequences of the write-ups."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "goodwill",
+    "purchase-price-allocation",
+    "syndicate-process"
+   ],
+   "locator": "MA080"
+  },
+  {
+   "q": "Explain the complete formula for how to calculate Goodwill in an M&A deal.",
+   "a": "Goodwill is calculated by starting with the equity purchase price and subtracting the seller's book value of equity. You then add back the seller's existing goodwill (which is written down to zero) and subtract any asset write-ups. Finally, you adjust for deferred taxes by subtracting existing deferred tax liabilities, adding write-downs of existing deferred tax assets, adding newly created deferred tax liabilities, and adjusting for intercompany receivables and payables.",
+   "rubric": [
+    "Starts from the equity purchase price and subtracts the seller's book value of equity.",
+    "Adds back the seller's existing goodwill, which is written down to zero.",
+    "Subtracts any asset write-ups, since those absorb part of the premium before goodwill does.",
+    "Subtracts existing Deferred Tax Liabilities and adds write-downs of existing Deferred Tax Assets.",
+    "Adds newly created Deferred Tax Liabilities from the write-ups.",
+    "Adjusts for intercompany receivables and payables that are eliminated on consolidation."
+   ],
+   "mistakes": [
+    "Calculating goodwill off the seller's total assets rather than its book equity.",
+    "Leaving the seller's existing goodwill on the combined Balance Sheet instead of writing it off.",
+    "Forgetting that asset write-ups reduce goodwill pound for pound.",
+    "Omitting the deferred tax adjustments, which is where most of the errors in this calculation sit."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "dta-dtl",
+    "goodwill",
+    "working-capital"
+   ],
+   "locator": "MA081"
+  },
+  {
+   "q": "Why do we adjust the values of Assets such as PP&E in an M&A deal?",
+   "a": "Assets like property, plant, and equipment are adjusted because their fair market value often differs significantly from their historical book value. For example, real estate typically appreciates over time, yet accounting rules require it to be depreciated on the balance sheet. Adjusting these assets ensures the combined balance sheet accurately reflects current market realities at the time of the transaction.",
+   "rubric": [
+    "Assets like property, plant, and equipment are adjusted because their fair market value often differs significantly from their historical book value.",
+    "For example, real estate typically appreciates over time, yet accounting rules require it to be depreciated on the balance sheet.",
+    "Adjusting these assets ensures the combined balance sheet accurately reflects current market realities at the time of the transaction."
+   ],
+   "mistakes": [
+    "Assuming book value is a reasonable proxy for fair value.",
+    "Missing that the write-up creates new depreciation, and usually a deferred tax liability with it.",
+    "Believing that only intangibles are revalued in purchase accounting."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "purchase-price-allocation"
+   ],
+   "locator": "MA082"
+  },
+  {
+   "q": "How do you treat items like Preferred Stock, Noncontrolling Interests, Debt, and so on, and how do they affect Purchase Price Allocation?",
+   "a": "Items like preferred stock, debt, and noncontrolling interests can either be assumed or repaid in the transaction's sources and uses. While choosing to repay them increases the total funding required to close the deal, it does not impact the purchase price allocation process. Purchase price allocation is based strictly on the equity purchase price and the seller's common shareholders' equity, excluding these other capital components.",
+   "rubric": [
+    "Items like preferred stock, debt, and noncontrolling interests can either be assumed or repaid in the transaction's sources and uses.",
+    "While choosing to repay them increases the total funding required to close the deal, it does not impact the purchase price allocation process.",
+    "Purchase price allocation is based strictly on the equity purchase price and the seller's common shareholders' equity, excluding these other capital components."
+   ],
+   "mistakes": [
+    "Including preferred stock or debt in the purchase price allocation calculation.",
+    "Forgetting to include their repayment in the uses side of sources and uses.",
+    "Confusing what drives funding requirements with what drives goodwill."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "minority-interest",
+    "purchase-price-allocation",
+    "syndicate-process"
+   ],
+   "locator": "MA083"
+  },
+  {
+   "q": "So do you use Equity Value or Enterprise Value for the Purchase Price in a merger model?",
+   "a": "Neither metric is entirely accurate on its own for the purchase price in a merger model. The purchase price allocation is driven by the equity purchase price, whereas the actual funding needed to close the deal includes the equity purchase price plus debt refinancing and transaction fees. This total funding amount is typically referred to as the total funds required rather than enterprise value.",
+   "rubric": [
+    "Neither metric is entirely accurate on its own for the purchase price in a merger model.",
+    "The purchase price allocation is driven by the equity purchase price, whereas the actual funding needed to close the deal includes the equity purchase price plus debt refinancing and transaction fees.",
+    "This total funding amount is typically referred to as the total funds required rather than enterprise value."
+   ],
+   "mistakes": [
+    "Using Enterprise Value as the purchase price in the purchase price allocation.",
+    "Forgetting transaction and financing fees when sizing the funding required.",
+    "Treating total funds required and Enterprise Value as the same figure."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ev-bridge",
+    "merger-model"
+   ],
+   "locator": "MA084"
+  },
+  {
+   "q": "How do you reflect transaction costs, financing fees, and miscellaneous expenses in a merger model?",
+   "a": "Transaction and advisory fees are expensed immediately at the close of the deal, reducing retained earnings and cash on the balance sheet. Financing fees, however, are capitalized as an asset and amortized over the life of the associated debt. While both types of fees increase the total cash required to complete the transaction, they do not impact the purchase price allocation or the calculation of goodwill.",
+   "rubric": [
+    "Transaction and advisory fees are expensed immediately at the close of the deal, reducing retained earnings and cash on the balance sheet.",
+    "Financing fees, however, are capitalized as an asset and amortized over the life of the associated debt.",
+    "While both types of fees increase the total cash required to complete the transaction, they do not impact the purchase price allocation or the calculation of goodwill."
+   ],
+   "mistakes": [
+    "Capitalising advisory fees, or expensing financing fees - the treatment is the reverse.",
+    "Adding either type of fee into the goodwill calculation.",
+    "Forgetting that both increase the cash the buyer must raise at closing.",
+    "Missing that amortisation of capitalised financing fees hits future interest expense."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA085"
+  },
+  {
+   "q": "How would you treat Debt differently in the Sources & Uses table if it is refinanced rather than assumed?",
+   "a": "If the buyer assumes the seller's existing debt, it is listed in both the sources and uses columns of the table, resulting in a net-zero impact on the total funds required. If the debt is refinanced and paid off, it is listed only under the uses column. This treatment increases the total amount of new funding the buyer must raise to complete the transaction.",
+   "rubric": [
+    "If the buyer assumes the seller's existing debt, it is listed in both the sources and uses columns of the table, resulting in a net-zero impact on the total funds required.",
+    "If the debt is refinanced and paid off, it is listed only under the uses column.",
+    "This treatment increases the total amount of new funding the buyer must raise to complete the transaction."
+   ],
+   "mistakes": [
+    "Listing assumed debt only in uses, which overstates the funding required.",
+    "Omitting refinanced debt from uses entirely.",
+    "Forgetting that refinancing usually also triggers prepayment penalties and new financing fees."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "sources-and-uses"
+   ],
+   "locator": "MA086"
+  },
+  {
+   "q": "What are the main 3 transaction structures you could use to acquire another company?",
+   "a": "The three primary transaction structures used in acquisitions are a stock purchase, an asset purchase, and a Section 338(h)(10) election. Each structure carries distinct tax implications and legal consequences for both the buyer and the seller.",
+   "rubric": [
+    "The three primary transaction structures used in acquisitions are a stock purchase, an asset purchase, and a Section 338(h)(10) election.",
+    "Each structure carries distinct tax implications and legal consequences for both the buyer and the seller."
+   ],
+   "mistakes": [
+    "Naming only stock and asset purchases and omitting the 338(h)(10) election.",
+    "Describing the structures without any reference to their tax consequences.",
+    "Confusing the legal form of the transaction with its tax treatment - the whole point of 338(h)(10) is that they differ."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "transaction-structure"
+   ],
+   "locator": "MA087"
+  },
+  {
+   "q": "Would a seller prefer a Stock Purchase or an Asset Purchase? What about the buyer?",
+   "a": "A seller almost always prefers a Stock Purchase because it allows them to avoid double taxation and fully dispose of all liabilities. Conversely, a buyer prefers an Asset Purchase so they can selectively acquire assets and liabilities while gaining tax benefits from deducting depreciation and amortization on written-up assets. However, a Stock Purchase is often the only viable option if the seller is a large public company.",
+   "rubric": [
+    "A seller almost always prefers a Stock Purchase because it allows them to avoid double taxation and fully dispose of all liabilities.",
+    "Conversely, a buyer prefers an Asset Purchase so they can selectively acquire assets and liabilities while gaining tax benefits from deducting depreciation and amortization on written-up assets.",
+    "However, a Stock Purchase is often the only viable option if the seller is a large public company."
+   ],
+   "mistakes": [
+    "Reversing the preferences - sellers want stock purchases, buyers want asset purchases.",
+    "Forgetting the double taxation that makes an asset sale expensive for a C-corporation seller.",
+    "Missing the practical constraint: an asset purchase is rarely feasible for a large public target."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "transaction-structure"
+   ],
+   "locator": "MA088"
+  },
+  {
+   "q": "Why might a company want to use 338(h)(10) when acquiring another company?",
+   "a": "A Section 338(h)(10) election legally functions as a Stock Purchase but is treated as an Asset Purchase for tax purposes. This allows the buyer to step up the tax basis of the acquired assets and save on taxes through depreciation and amortization. Because of these tax savings, buyers are often willing to pay a higher purchase price, which helps compensate the seller for the double taxation they incur.",
+   "rubric": [
+    "A Section 338(h)(10) election legally functions as a Stock Purchase but is treated as an Asset Purchase for tax purposes.",
+    "This allows the buyer to step up the tax basis of the acquired assets and save on taxes through depreciation and amortization.",
+    "Because of these tax savings, buyers are often willing to pay a higher purchase price, which helps compensate the seller for the double taxation they incur."
+   ],
+   "mistakes": [
+    "Describing 338(h)(10) as a legal asset purchase - it is legally a stock purchase treated as an asset purchase for tax.",
+    "Forgetting that the seller bears the double tax, which is why the buyer pays up.",
+    "Missing the eligibility limits, which restrict the election to particular seller structures."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "transaction-structure"
+   ],
+   "locator": "MA089"
+  },
+  {
+   "q": "How do you take into account NOLs in an M&A deal?",
+   "a": "You apply Section 382 to determine how much of the seller's Net Operating Losses (NOLs) can be used by the combined company each year. The allowable annual NOL usage is calculated by multiplying the equity purchase price by the highest of the past three months' adjusted long-term rates. Any usable NOLs can then be applied to offset taxable income over the allowable period.",
+   "rubric": [
+    "You apply Section 382 to determine how much of the seller's Net Operating Losses (NOLs) can be used by the combined company each year.",
+    "The allowable annual NOL usage is calculated by multiplying the equity purchase price by the highest of the past three months' adjusted long-term rates.",
+    "Any usable NOLs can then be applied to offset taxable income over the allowable period."
+   ],
+   "mistakes": [
+    "Assuming the acquirer can use the full NOL balance immediately.",
+    "Applying the limitation to the Enterprise Value rather than the equity purchase price.",
+    "Ignoring Section 382 entirely, which materially overstates the value of the NOLs."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "nol"
+   ],
+   "locator": "MA090"
+  },
+  {
+   "q": "Why do deferred tax liabilities (DTLs) and deferred tax assets (DTAs) get created in M&A deals?",
+   "a": "DTLs and DTAs are created when the book values of the seller's assets are written up or down to reflect fair market value, while their tax bases remain unchanged. An asset write-up creates a DTL because the higher book depreciation reduces book taxes relative to cash taxes in the short term, representing a future tax liability. Conversely, an asset write-down results in a DTA.",
+   "rubric": [
+    "DTLs and DTAs are created when the book values of the seller's assets are written up or down to reflect fair market value, while their tax bases remain unchanged.",
+    "An asset write-up creates a DTL because the higher book depreciation reduces book taxes relative to cash taxes in the short term, representing a future tax liability.",
+    "Conversely, an asset write-down results in a DTA."
+   ],
+   "mistakes": [
+    "Concluding that an asset write-up creates a Deferred Tax Asset.",
+    "Missing when the DTL is actually created: at closing, because the asset's book basis now exceeds its tax basis.",
+    "Confusing the creation with the unwind - the excess cash tax paid in later years draws the DTL down rather than creating a DTA.",
+    "Applying the treatment to an asset purchase, where book and tax basis are stepped up together and no deferred item arises."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "dta-dtl"
+   ],
+   "locator": "MA091"
+  },
+  {
+   "q": "How do DTLs and DTAs affect the Balance Sheet Adjustments in an M&A deal?",
+   "a": "DTLs and DTAs are factored into the calculation of goodwill and other intangible assets created on the pro-forma balance sheet. A deferred tax liability is created from an asset write-up multiplied by the tax rate, while a deferred tax asset is created from an asset write-down multiplied by the tax rate. These adjustments alter the total assets and liabilities, which directly impacts the amount of goodwill needed to balance the balance sheet.",
+   "rubric": [
+    "DTLs and DTAs are factored into the calculation of goodwill and other intangible assets created on the pro-forma balance sheet.",
+    "A deferred tax liability is created from an asset write-up multiplied by the tax rate, while a deferred tax asset is created from an asset write-down multiplied by the tax rate.",
+    "These adjustments alter the total assets and liabilities, which directly impacts the amount of goodwill needed to balance the balance sheet."
+   ],
+   "mistakes": [
+    "Forgetting to include the new deferred tax items when solving for goodwill.",
+    "Applying the tax rate to the wrong base, such as the whole asset value rather than the write-up.",
+    "Getting the sign wrong, so goodwill moves the wrong way."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "dta-dtl",
+    "goodwill"
+   ],
+   "locator": "MA092"
+  },
+  {
+   "q": "Could you get DTLs or DTAs in an Asset Purchase?",
+   "a": "No, DTLs and DTAs are not created in an Asset Purchase because the book basis of the acquired assets is written up or down to match the tax basis. These deferred tax items only arise in Stock Purchases, where the book values of assets are adjusted but their tax values remain unchanged.",
+   "rubric": [
+    "No, DTLs and DTAs are not created in an Asset Purchase because the book basis of the acquired assets is written up or down to match the tax basis.",
+    "These deferred tax items only arise in Stock Purchases, where the book values of assets are adjusted but their tax values remain unchanged."
+   ],
+   "mistakes": [
+    "Claiming deferred tax items arise in every deal regardless of structure.",
+    "Missing that the step-up in an asset purchase applies to book and tax basis alike, which is what removes the difference.",
+    "Forgetting that a 338(h)(10) election gives a stock purchase the asset-purchase outcome here."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "dta-dtl"
+   ],
+   "locator": "MA093"
+  },
+  {
+   "q": "How do you factor in DTLs into forward projections in a merger model?",
+   "a": "You create a book-versus-cash tax schedule to compare the tax expense on the income statement with the actual cash taxes paid, accounting for NOLs and new depreciation and amortization. If the cash tax expense is higher than the book tax expense, the deferred tax liability on the balance sheet decreases. If the book tax expense is higher, the deferred tax liability increases.",
+   "rubric": [
+    "You create a book-versus-cash tax schedule to compare the tax expense on the income statement with the actual cash taxes paid, accounting for NOLs and new depreciation and amortization.",
+    "If the cash tax expense is higher than the book tax expense, the deferred tax liability on the balance sheet decreases.",
+    "If the book tax expense is higher, the deferred tax liability increases."
+   ],
+   "mistakes": [
+    "Getting the direction backwards, so the DTL rises when cash taxes exceed book taxes.",
+    "Building only a book tax line and never modelling cash taxes separately.",
+    "Omitting the new intangible amortisation, which is the main driver of the book-versus-cash gap after a deal."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "dta-dtl",
+    "merger-model"
+   ],
+   "locator": "MA094"
+  },
+  {
+   "q": "Can you give me an example of how you might calculate revenue synergies?",
+   "a": "To calculate revenue synergies, you can estimate the additional volume of products the combined company can cross-sell to the other's customer base, multiplied by the average selling price. For example, if Company A can sell its widgets to 20% of Company B's customers, you calculate the incremental revenue from those sales. You must also subtract the incremental costs associated with those sales to determine the net impact on operating income.",
+   "rubric": [
+    "To calculate revenue synergies, you can estimate the additional volume of products the combined company can cross-sell to the other's customer base, multiplied by the average selling price.",
+    "For example, if Company A can sell its widgets to 20% of Company B's customers, you calculate the incremental revenue from those sales.",
+    "You must also subtract the incremental costs associated with those sales to determine the net impact on operating income."
+   ],
+   "mistakes": [
+    "Adding the incremental revenue straight to operating income without the associated costs.",
+    "Assuming a cross-sell rate with no grounding in customer overlap or sales capacity.",
+    "Treating the synergy as fully realised in year one."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "synergies"
+   ],
+   "locator": "MA095"
+  },
+  {
+   "q": "Should you estimate revenue synergies based on the seller’s customers and the seller’s financials, or the buyer’s customers and the buyer’s financials?",
+   "a": "Either approach is valid, but it is most common to assume an uplift to the seller's average selling price or to cross-sell to the seller's existing customers. This method is preferred because the buyer, typically being the larger company, can make a more immediate and significant impact on the seller's business than the seller can make on the buyer's.",
+   "rubric": [
+    "Either approach is valid, but it is most common to assume an uplift to the seller's average selling price or to cross-sell to the seller's existing customers.",
+    "This method is preferred because the buyer, typically being the larger company, can make a more immediate and significant impact on the seller's business than the seller can make on the buyer's."
+   ],
+   "mistakes": [
+    "Insisting only one direction is valid.",
+    "Failing to justify the choice by relative size and market reach.",
+    "Double-counting by modelling the uplift in both directions on the same customers."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "synergies"
+   ],
+   "locator": "MA096"
+  },
+  {
+   "q": "Walk me through an example of how to calculate expense synergies.",
+   "a": "To calculate expense synergies, you identify redundant costs, such as overlapping personnel that can be eliminated post-merger. For example, if the buyer determines it can lay off a portion of the seller's SG&A staff because its own employees can handle the workload, you calculate the savings by multiplying the number of terminated employees by their average salary and benefits.",
+   "rubric": [
+    "Starts by identifying redundant costs, such as overlapping personnel that can be eliminated after the merger.",
+    "Gives a concrete example, such as laying off part of the seller's SG&A staff because the buyer's own staff can absorb the workload.",
+    "Quantifies the saving as the number of roles removed multiplied by average salary and benefits.",
+    "Uses fully loaded cost - salary plus benefits - rather than base salary alone."
+   ],
+   "mistakes": [
+    "Quoting a percentage of SG&A as the synergy without building it from headcount and cost.",
+    "Using base salary rather than the fully loaded cost of the role.",
+    "Ignoring the severance and integration cost required to realise the saving.",
+    "Assuming the full saving lands in year one rather than phasing in."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "synergies"
+   ],
+   "locator": "MA097"
+  },
+  {
+   "q": "What if there are CapEx synergies? For example, what if the buyer can reduce its CapEx spending because of certain assets the seller owns?",
+   "a": "CapEx synergies lead to a lower CapEx charge on the combined Cash Flow Statement, which subsequently reduces the Depreciation charge on the Income Statement in future years. Because reduced Depreciation only occurs after the reduced CapEx spending has taken place, these effects typically begin appearing in Year 2. This scenario is best modeled using a full PP&E schedule to adjust annual spending and depreciation.",
+   "rubric": [
+    "CapEx synergies lead to a lower CapEx charge on the combined Cash Flow Statement, which subsequently reduces the Depreciation charge on the Income Statement in future years.",
+    "Because reduced Depreciation only occurs after the reduced CapEx spending has taken place, these effects typically begin appearing in Year 2.",
+    "This scenario is best modeled using a full PP&E schedule to adjust annual spending and depreciation."
+   ],
+   "mistakes": [
+    "Modelling the depreciation reduction in the same year as the CapEx reduction.",
+    "Treating a CapEx synergy as an EBITDA synergy, when CapEx sits below EBITDA entirely.",
+    "Forgetting that the effect on EPS runs through depreciation and is therefore delayed and gradual."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "synergies"
+   ],
+   "locator": "MA098"
+  },
+  {
+   "q": "What happens when you acquire a 30% stake in a company? Can you still use an accretion / dilution analysis?",
+   "a": "A 30% stake is recorded as an 'Investment in Equity Interest' or 'Associate Company' on the Assets side of the Balance Sheet, while Cash is reduced by the purchase amount. This treatment applies to ownership stakes between 20% and 50%. An accretion/dilution analysis can still be performed, provided the buyer's new Net Income is adjusted to reflect its 30% share of the target company's Net Income.",
+   "rubric": [
+    "A 30% stake is recorded as an 'Investment in Equity Interest' or 'Associate Company' on the Assets side of the Balance Sheet, while Cash is reduced by the purchase amount.",
+    "This treatment applies to ownership stakes between 20% and 50%.",
+    "An accretion/dilution analysis can still be performed, provided the buyer's new Net Income is adjusted to reflect its 30% share of the target company's Net Income."
+   ],
+   "mistakes": [
+    "Consolidating the target's full revenue and expenses at a 30% stake.",
+    "Concluding no accretion/dilution analysis is possible.",
+    "Forgetting the foregone interest or new interest cost of funding the stake purchase.",
+    "Recording 100% of the target's net income rather than the 30% share."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA099"
+  },
+  {
+   "q": "What's the purpose of calendarization in a merger model?",
+   "a": "Calendarization ensures that both the buyer and seller's financial statements conform to the same fiscal year-end post-transaction, typically by adjusting the seller's historical quarters to match the buyer's fiscal calendar. Additionally, it helps account for 'stub periods,' which represent the combined operations from the transaction close date to the end of the buyer's current fiscal year.",
+   "rubric": [
+    "Explains that calendarization aligns the buyer's and seller's financial statements to a common fiscal year-end.",
+    "States that this is normally done by adjusting the seller's historical quarters onto the buyer's fiscal calendar.",
+    "Explains that it also supports stub periods, covering operations from the close date to the end of the buyer's current fiscal year.",
+    "Connects the point to accretion/dilution: without alignment, combined EPS mixes two different twelve-month windows."
+   ],
+   "mistakes": [
+    "Combining two companies with different year-ends without adjusting either one.",
+    "Confusing calendarization with currency conversion or with normalising for non-recurring items.",
+    "Forgetting the stub period between close and the buyer's year-end."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA100"
+  },
+  {
+   "q": "Let's say that the buyer's fiscal year ends on December 31, the seller's fiscal year ends on June 30, and the transaction closes on September 30. How would you create a merger model for this scenario?",
+   "a": "You would create quarterly financial statements for both companies for the September 30 to December 31 period and combine them to represent the first 'stub' period of the merger model. For subsequent periods, you would continue to combine their statements, adjusting the seller's historical quarters to align with the buyer's December 31 fiscal year-end. Accretion/dilution is typically calculated for the first full fiscal year rather than this initial stub period.",
+   "rubric": [
+    "You would create quarterly financial statements for both companies for the September 30 to December 31 period and combine them to represent the first 'stub' period of the merger model.",
+    "For subsequent periods, you would continue to combine their statements, adjusting the seller's historical quarters to align with the buyer's December 31 fiscal year-end.",
+    "Accretion/dilution is typically calculated for the first full fiscal year rather than this initial stub period."
+   ],
+   "mistakes": [
+    "Calculating accretion/dilution on the stub period, which covers only part of a year.",
+    "Failing to realign the seller's June year-end onto the buyer's December year-end.",
+    "Forgetting that only the post-close period of the seller's results is consolidated."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA101"
+  },
+  {
+   "q": "Does anything change if the transaction closes on March 31 instead?",
+   "a": "The primary difference is that you would model a 9-month stub period instead of a 3-month stub period. You would combine the financial statements of both companies for the last three quarters of the buyer's fiscal year, which requires gathering or constructing the corresponding quarterly data for the seller.",
+   "rubric": [
+    "The primary difference is that you would model a 9-month stub period instead of a 3-month stub period.",
+    "You would combine the financial statements of both companies for the last three quarters of the buyer's fiscal year, which requires gathering or constructing the corresponding quarterly data for the seller."
+   ],
+   "mistakes": [
+    "Assuming the stub length does not change the modelling approach.",
+    "Consolidating a full year of the seller's results when only three quarters fall after close.",
+    "Overlooking that the seller's quarterly data may need constructing from its own offset fiscal calendar."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "calendarization",
+    "merger-model"
+   ],
+   "locator": "MA102"
+  },
+  {
+   "q": "What if the deal closes on a more 'random' date, like August 17?",
+   "a": "You can estimate the financial statements at this random date by rolling them forward, such as averaging the closest quarterly Balance Sheets or prorating the Income Statement and Cash Flow Statement based on the number of days remaining in the quarter. However, because this approach introduces significant complexity and extra work, practitioners typically assume a clean, standard closing date in merger models unless absolute precision is required.",
+   "rubric": [
+    "States that the statements can be estimated at a mid-quarter date by rolling them forward.",
+    "Gives concrete methods: averaging the closest quarterly Balance Sheets, or prorating the Income Statement and Cash Flow Statement by days elapsed.",
+    "Notes that this adds significant complexity for limited gain.",
+    "States that in practice a clean, standard closing date is assumed unless precision genuinely matters."
+   ],
+   "mistakes": [
+    "Prorating a Balance Sheet as though it were a flow statement rather than interpolating between two snapshots.",
+    "Insisting on day-exact precision in a model whose other assumptions are far coarser.",
+    "Failing to say what the standard simplification actually is."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "calendarization",
+    "merger-model"
+   ],
+   "locator": "MA103"
+  },
+  {
+   "q": "What is an exchange ratio and when would companies use it in an M&A deal?",
+   "a": "An exchange ratio is a structure in stock-based M&A deals where the seller receives a fixed number of the buyer's shares for each of its own shares, rather than a fixed dollar amount. Buyers prefer this structure if they expect their stock price to decline post-transaction, as it protects them from issuing more shares. Conversely, sellers generally prefer a fixed dollar value unless they expect the buyer's stock price to rise.",
+   "rubric": [
+    "An exchange ratio is a structure in stock-based M&A deals where the seller receives a fixed number of the buyer's shares for each of its own shares, rather than a fixed dollar amount.",
+    "Buyers prefer this structure if they expect their stock price to decline post-transaction, as it protects them from issuing more shares.",
+    "Conversely, sellers generally prefer a fixed dollar value unless they expect the buyer's stock price to rise."
+   ],
+   "mistakes": [
+    "Reversing the preferences - a fixed exchange ratio protects the buyer against its own share price falling.",
+    "Confusing a fixed exchange ratio with a fixed value deal.",
+    "Missing that the seller carries the buyer's share price risk between signing and closing under a fixed ratio."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA104"
+  },
+  {
+   "q": "Isn't there still some risk with an exchange ratio? If the stock price swings wildly in one direction or the other, the effective purchase price would be very different. Is there any way to hedge against that risk?",
+   "a": "Yes, companies can hedge against this risk by using a 'collar,' which establishes a guaranteed price range based on the stock prices of the buyer and seller. For example, a collar can dictate that if the buyer's stock price falls below a certain threshold, the seller still receives a minimum guaranteed value per share, protecting them from extreme downward price swings.",
+   "rubric": [
+    "Yes, companies can hedge against this risk by using a 'collar,' which establishes a guaranteed price range based on the stock prices of the buyer and seller.",
+    "For example, a collar can dictate that if the buyer's stock price falls below a certain threshold, the seller still receives a minimum guaranteed value per share, protecting them from extreme downward price swings."
+   ],
+   "mistakes": [
+    "Concluding the risk cannot be hedged.",
+    "Describing a collar as a fixed price rather than a bounded range.",
+    "Missing that a collar protects both sides - it caps the buyer's issuance as well as flooring the seller's value.",
+    "Forgetting that outside the collar bounds the original risk returns."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA105"
+  },
+  {
+   "q": "Walk me through the most important terms of a Purchase Agreement in an M&A deal.",
+   "a": "The key terms of an M&A Purchase Agreement include the purchase price, which is stated per-share for public targets or as a total equity value for private targets, and the form of consideration, such as cash, stock, or debt. It also specifies the transaction structure, the treatment of outstanding options, and employee retention clauses like non-competes. Finally, it outlines representations and warranties made by both parties, as well as exclusivity provisions like no-shop or go-shop clauses.",
+   "rubric": [
+    "Names the purchase price, stated per share for a public target and as a total equity value for a private one.",
+    "Names the form of consideration: cash, stock, debt or a mix.",
+    "Names the transaction structure - stock purchase, asset purchase or merger.",
+    "Names the treatment of outstanding options and other dilutive securities.",
+    "Names employee retention provisions such as non-competes.",
+    "Names the representations and warranties given by both parties.",
+    "Names the exclusivity provisions: no-shop and go-shop clauses."
+   ],
+   "mistakes": [
+    "Naming only the price and stopping, when the structure and the reps drive most of the negotiation.",
+    "Confusing a no-shop (bars soliciting other bids) with a go-shop (permits it for a set window).",
+    "Omitting how options and other dilutive securities are treated, which changes the effective price."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "deal-process"
+   ],
+   "locator": "MA106"
+  },
+  {
+   "q": "What’s an Earnout and why would a buyer offer it to a seller in an M&A deal?",
+   "a": "An earnout is a form of deferred payment in an M&A transaction where a portion of the purchase price is paid out in the future, contingent on the target company achieving specific financial or operational milestones. This structure is most common with private companies and startups. Buyers use earnouts to incentivize the seller's management team to maintain high performance and remain with the company post-acquisition.",
+   "rubric": [
+    "An earnout is a form of deferred payment in an M&A transaction where a portion of the purchase price is paid out in the future, contingent on the target company achieving specific financial or operational milestones.",
+    "This structure is most common with private companies and startups.",
+    "Buyers use earnouts to incentivize the seller's management team to maintain high performance and remain with the company post-acquisition."
+   ],
+   "mistakes": [
+    "Describing an earnout as a discount to the price rather than a contingent, deferred portion of it.",
+    "Missing that it also bridges a disagreement about valuation between buyer and seller.",
+    "Forgetting that the milestones have to be measurable and are frequently disputed afterwards.",
+    "Assuming earnouts are common in large public deals, where they are rare."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "deal-process",
+    "deferred-consideration"
+   ],
+   "locator": "MA107"
+  },
+  {
+   "q": "What if Shareholders’ Equity is negative?",
+   "a": "If the target company has negative Shareholders' Equity, the core M&A accounting process remains unchanged. You still wipe out the seller's existing Shareholders' Equity during consolidation. From there, you allocate the purchase price, write up assets as appropriate, and record Goodwill to balance the transaction.",
+   "rubric": [
+    "If the target company has negative Shareholders' Equity, the core M&A accounting process remains unchanged.",
+    "You still wipe out the seller's existing Shareholders' Equity during consolidation.",
+    "From there, you allocate the purchase price, write up assets as appropriate, and record Goodwill to balance the transaction."
+   ],
+   "mistakes": [
+    "Concluding that negative equity breaks the purchase accounting.",
+    "Forgetting that wiping out a negative equity balance increases rather than decreases goodwill.",
+    "Treating negative book equity as evidence the company is worthless."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "purchase-price-allocation"
+   ],
+   "locator": "MA108"
+  },
+  {
+   "q": "How would an accretion / dilution model be different for a private seller?",
+   "a": "When modeling an acquisition of a private seller, the core mechanics remain the same, but the transaction is more likely to be structured as an Asset Purchase or a 338(h)(10) election. Additionally, because private companies do not have public shares, you only project down to Net Income rather than calculating Earnings Per Share (EPS) for the seller. Note that if the buyer is private, an accretion/dilution analysis is not applicable because private buyers do not have EPS.",
+   "rubric": [
+    "When modeling an acquisition of a private seller, the core mechanics remain the same, but the transaction is more likely to be structured as an Asset Purchase or a 338(h)(10) election.",
+    "Additionally, because private companies do not have public shares, you only project down to Net Income rather than calculating Earnings Per Share (EPS) for the seller.",
+    "Note that if the buyer is private, an accretion/dilution analysis is not applicable because private buyers do not have EPS."
+   ],
+   "mistakes": [
+    "Calculating an EPS figure for a private seller that has no public share count.",
+    "Attempting accretion/dilution where the buyer itself is private.",
+    "Forgetting that private deals are more often structured as asset purchases or with a 338(h)(10) election, which changes the tax treatment."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution"
+   ],
+   "locator": "MA109"
+  },
+  {
+   "q": "Explain what a contribution analysis is and why we might look at it in a merger model.",
+   "a": "A contribution analysis evaluates the percentage of financial metrics—such as Revenue, EBITDA, and Net Income—that the buyer and seller each contribute to the combined entity. This analysis helps determine what the relative ownership split of the combined company should be post-merger. It is most frequently utilized in \"merger of equals\" scenarios to assess if the proposed stock split fairly reflects each company's financial contribution.",
+   "rubric": [
+    "A contribution analysis evaluates the percentage of financial metrics—such as Revenue, EBITDA, and Net Income—that the buyer and seller each contribute to the combined entity.",
+    "This analysis helps determine what the relative ownership split of the combined company should be post-merger.",
+    "It is most frequently utilized in \"merger of equals\" scenarios to assess if the proposed stock split fairly reflects each company's financial contribution."
+   ],
+   "mistakes": [
+    "Confusing contribution analysis with accretion/dilution - one tests the ownership split, the other tests EPS.",
+    "Using a single metric rather than a range of them, which usually give different implied splits.",
+    "Applying it to a cash deal, where there is no ownership split to test."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA110"
+  },
+  {
+   "q": "How would I calculate “break-even synergies” in an M&A deal and what does the number mean?",
+   "a": "To calculate break-even synergies, you set the pro forma EPS accretion/dilution to zero and use Excel's Goal Seek to back-solve for the required synergy amount. This metric indicates the minimum level of cost savings or revenue synergies needed to prevent the transaction from diluting the buyer's EPS. A high break-even synergy figure suggests the deal is financially risky, as it relies heavily on aggressive operational improvements to be viable.",
+   "rubric": [
+    "To calculate break-even synergies, you set the pro forma EPS accretion/dilution to zero and use Excel's Goal Seek to back-solve for the required synergy amount.",
+    "This metric indicates the minimum level of cost savings or revenue synergies needed to prevent the transaction from diluting the buyer's EPS.",
+    "A high break-even synergy figure suggests the deal is financially risky, as it relies heavily on aggressive operational improvements to be viable."
+   ],
+   "mistakes": [
+    "Solving for the synergies that maximise accretion rather than those that bring dilution to zero.",
+    "Reporting the number without judging whether it is achievable against the target's cost base.",
+    "Missing that a high break-even figure is a warning about the price, not just about the synergies."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "synergies"
+   ],
+   "locator": "MA111"
+  },
+  {
+   "q": "Normally in an accretion / dilution model you care most about combining both companies’ Income Statements and Balance Sheets. But let’s say I want to combine all 3 financial statements – how would I do this?",
+   "a": "To combine all three financial statements in a merger model, you begin by consolidating the buyer's and seller's Balance Sheets while wiping out the seller's Shareholders' Equity. Next, you apply pro forma adjustments for cash, debt, stock, and goodwill, and project the combined Balance Sheet forward. You then combine and project the Income Statement, and finally, project the Cash Flow Statement to link all three statements together. Note that you only combine the statements for periods after the transaction closes, never for historical periods.",
+   "rubric": [
+    "To combine all three financial statements in a merger model, you begin by consolidating the buyer's and seller's Balance Sheets while wiping out the seller's Shareholders' Equity.",
+    "Next, you apply pro forma adjustments for cash, debt, stock, and goodwill, and project the combined Balance Sheet forward.",
+    "You then combine and project the Income Statement, and finally, project the Cash Flow Statement to link all three statements together.",
+    "Note that you only combine the statements for periods after the transaction closes, never for historical periods."
+   ],
+   "mistakes": [
+    "Combining the historical periods as well, when only post-close periods are consolidated.",
+    "Forgetting to wipe out the seller's Shareholders' Equity before projecting.",
+    "Building the Income Statement first and leaving the Balance Sheet unlinked.",
+    "Omitting the pro forma adjustments for cash spent, debt raised and goodwill created."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "3-statement-linkage",
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA112"
+  },
+  {
+   "q": "How do you handle options, convertible debt, and other dilutive securities in a merger model?",
+   "a": "The treatment of dilutive securities like options and convertible debt is dictated by the terms of the Purchase Agreement, which may require them to be assumed by the buyer or cashed out. If they are exercised or converted, you calculate their dilutive impact on the Equity Purchase Price. This is typically done using the Treasury Stock Method for options and the \"if-converted\" method for convertible debt.",
+   "rubric": [
+    "The treatment of dilutive securities like options and convertible debt is dictated by the terms of the Purchase Agreement, which may require them to be assumed by the buyer or cashed out.",
+    "If they are exercised or converted, you calculate their dilutive impact on the Equity Purchase Price.",
+    "This is typically done using the Treasury Stock Method for options and the \"if-converted\" method for convertible debt."
+   ],
+   "mistakes": [
+    "Applying the Treasury Stock Method to convertible debt, where the holder pays nothing to convert.",
+    "Ignoring the Purchase Agreement, which is what actually decides whether securities are assumed or cashed out.",
+    "Counting out-of-the-money securities as dilutive.",
+    "Forgetting that accelerated vesting on a change of control brings unvested securities into the count."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model",
+    "sbc"
+   ],
+   "locator": "MA113"
+  },
+  {
+   "q": "Can you explain what “Pro Forma” numbers are in a merger model?",
+   "a": "In a merger model, \"Pro Forma\" numbers typically refer to financial metrics that exclude certain non-cash expenses resulting from the acquisition. Common exclusions include the amortization of newly created intangibles, depreciation of PP&E write-ups, and the amortization of financing fees. While many companies report these adjusted figures, the practice can be inconsistent since companies often retain other non-cash charges like stock-based compensation.",
+   "rubric": [
+    "In a merger model, \"Pro Forma\" numbers typically refer to financial metrics that exclude certain non-cash expenses resulting from the acquisition.",
+    "Common exclusions include the amortization of newly created intangibles, depreciation of PP&E write-ups, and the amortization of financing fees.",
+    "While many companies report these adjusted figures, the practice can be inconsistent since companies often retain other non-cash charges like stock-based compensation."
+   ],
+   "mistakes": [
+    "Accepting pro forma figures as the truer measure without checking what was excluded.",
+    "Assuming the definition is standardised across companies, when it is not.",
+    "Missing the inconsistency that stock-based compensation is usually left in the expense base while acquisition-related amortisation is stripped out."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "merger-model"
+   ],
+   "locator": "MA114"
+  },
+  {
+   "q": "If you’re looking at a reverse merger (i.e. a private company acquires a public company), how would the merger model be different?",
+   "a": "In a reverse merger where a private company acquires a public company, the accounting mechanics of allocating the purchase price and combining the balance sheets remain similar. However, because the acquiring company is private, standard EPS accretion/dilution analysis is not meaningful. Instead, deal analysis relies more heavily on contribution analysis or calculating the internal rate of return (IRR) of the transaction.",
+   "rubric": [
+    "In a reverse merger where a private company acquires a public company, the accounting mechanics of allocating the purchase price and combining the balance sheets remain similar.",
+    "However, because the acquiring company is private, standard EPS accretion/dilution analysis is not meaningful.",
+    "Instead, deal analysis relies more heavily on contribution analysis or calculating the internal rate of return (IRR) of the transaction."
+   ],
+   "mistakes": [
+    "Calculating EPS accretion for a private acquirer that has no public share count.",
+    "Assuming the purchase accounting changes because the direction of the deal is unusual.",
+    "Forgetting that a reverse merger is often a route to a listing, which changes the strategic rationale entirely."
+   ],
+   "topic": "ma",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "merger-model"
+   ],
+   "locator": "MA115"
+  }
+ ]
+}

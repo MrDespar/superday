@@ -1,0 +1,799 @@
+{
+ "title": "European equity capital markets (Cleary handbook + authored)",
+ "origin": "published",
+ "status": "active",
+ "note": "UK and US securities law points are grounded in Cleary Gottlieb's London Capital Markets ECM and DCM Execution Handbook, April 2026. Thresholds, free float rules and fee conventions move; re-check before quoting a number in a room.",
+ "items": [
+  {
+   "q": "What are the main equity capital markets transaction types?",
+   "a": "Six, and the useful way to hold them is by what the company is doing and who is selling.\n\nIPO: the first widespread offering, listing the shares. It can be primary, new shares issued by the company raising money, secondary, existing shares sold by a shareholder, or both.\n\nFollow-on primary offering: additional new shares by an already-listed company. Marketed over one to two weeks, or done overnight.\n\nBlock trade: a shareholder sells an existing stake to institutions with no separate offering document, under a standard-form block trade agreement with the dealers, marketed by wall-crossing. If the dealers guarantee a price it is backstopped and they are on risk until it prices.\n\nRights issue: an invitation to existing shareholders to subscribe new shares pro rata at a discount, preserving their percentage. Whatever they do not take up, the rump, is placed with third parties.\n\nDirect listing: the shares are admitted to trading with no new issuance and no underwriter setting a price, so the opening price comes out of an auction. No capital is raised by the listing itself.\n\nSPAC and de-SPAC: a cash shell lists first, then acquires a target, which becomes public through the combination. IPO investors get warrants and a redemption right before the deal completes.",
+   "rubric": [
+    "Names at least five of the six and distinguishes them by issuer versus shareholder selling",
+    "Distinguishes primary from secondary shares",
+    "Describes a block trade as having no separate offering document, and names the backstop as where bank risk sits",
+    "Describes a rights issue as pro rata and pre-emptive, with a rump placement"
+   ],
+   "mistakes": [
+    "Treating 'follow-on' as one product. A marketed follow-on, an overnight ABB and a block trade are three different risk profiles."
+   ],
+   "topic": "ecm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "follow-on-products",
+    "ipo-process"
+   ],
+   "locator": "ECM01"
+  },
+  {
+   "q": "When would you recommend an accelerated bookbuild rather than a marketed follow-on or a rights issue?",
+   "a": "It is a trade between size, certainty, speed and dilution.\n\nAn ABB suits a small raise, typically inside the company's existing pre-emption authority, so up to about ten percent of issued capital in the UK, where the story needs no explaining and the shareholder register is already institutional. You launch after market close, build the book overnight and price before the open, at a discount of usually two to eight percent to the close. Almost no market risk and very low execution cost, but you cannot raise a transformational amount and existing holders are diluted unless they participate.\n\nA marketed follow-on suits a larger raise or one where the use of proceeds needs a story: an acquisition, a change of strategy, a deleveraging plan. One to two weeks of wall-crossing and public marketing gets a broader book and a tighter discount for size, at the cost of market risk over the marketing period.\n\nA rights issue is the answer when the amount is large relative to the company, typically well beyond the pre-emption authority, or when it is defensive: a rescue recapitalisation or a balance-sheet repair. It preserves every shareholder's percentage, so it can be done at a deep discount without transferring value away from existing holders. The costs are a long timetable of six to ten weeks, a shareholder vote, a prospectus and underwriting fees, and the signal that a deep-discount rights issue sends about the company's position.\n\nThe short rule: small and clean, ABB; large with a story, marketed; very large or defensive, rights issue.",
+   "rubric": [
+    "Sizes each product: ABB inside the pre-emption authority, marketed for larger raises with a story, rights issue for transformational or defensive amounts",
+    "Gives ABB mechanics: after the close, overnight book, priced before the open, at a modest discount",
+    "Explains why a rights issue can carry a deep discount without transferring value: it is pro rata",
+    "Names the rights issue costs: timetable, shareholder vote, prospectus, and the signal it sends"
+   ],
+   "mistakes": [
+    "Choosing on discount alone. The discount on a rights issue is nearly irrelevant because existing holders receive the rights."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "follow-on-products"
+   ],
+   "locator": "ECM02"
+  },
+  {
+   "q": "Walk me through a rights issue, and explain why the discount is not the cost.",
+   "a": "The company offers existing shareholders the right to subscribe new shares pro rata at a fixed price below the market, in a ratio such as one new share for every three held. Shareholders can take up their rights, sell them in the market as nil-paid rights during the trading period, or do nothing, in which case the rights lapse and the underwriters place the resulting rump, with the proceeds above the subscription price returned to those shareholders.\n\nThe key number is the theoretical ex-rights price, the TERP: the weighted average of the pre-announcement price and the subscription price across the enlarged share count. On a 1-for-3 at 60 with the shares at 100, TERP is (3 x 100 + 1 x 60) / 4 = 90. The share price will fall to roughly 90 on the ex-date, and that fall is not a loss.\n\nThat is why the discount is not the cost. A shareholder who takes up their rights ends up with four shares worth 90 having paid 60 for the fourth: exactly what they had plus what they paid. A shareholder who sells the nil-paid rights receives approximately the difference between TERP and the subscription price, which compensates for the dilution. Value only transfers away from a shareholder who does nothing and lets the rights lapse, and even then the rump proceeds go back to them.\n\nThe real costs are the underwriting and sub-underwriting fees, the adviser and legal costs, the six-to-ten-week timetable with full market risk, and the signalling. A very deep discount buys underwriting certainty, which is why rescue rights issues are struck at forty or fifty percent off: at that price the issue will be taken up almost regardless of what the market does.",
+   "rubric": [
+    "Describes the three shareholder choices: take up, sell nil-paid, or lapse into the rump",
+    "Calculates TERP correctly as the weighted average across the enlarged share count",
+    "Explains why the discount is not a cost to a participating or rights-selling shareholder",
+    "Names the real costs: fees, timetable and market risk, and signalling",
+    "Explains why a deep discount buys underwriting certainty"
+   ],
+   "mistakes": [
+    "Saying a rights issue 'destroys value through the discount'. It does not, provided the shareholder participates or sells the rights."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "follow-on-products"
+   ],
+   "locator": "ECM03"
+  },
+  {
+   "q": "What are pre-emption rights, and what are the UK authorities a listed company relies on?",
+   "a": "Pre-emption is the principle that a company issuing new shares for cash must offer them to existing shareholders first, pro rata, so nobody's percentage is diluted without their consent. In the UK it is in the Companies Act and reinforced by the Pre-Emption Group's Statement of Principles, which institutional investors enforce through their voting.\n\nA listed company disapplies it in advance at the AGM, and the routine authority institutional investors will vote for has been ten percent of issued share capital for any purpose, plus a further ten percent for an acquisition or a specified capital investment, with an additional two percent in each case for a follow-on offer to retail and existing holders. That is why UK ABBs cluster just under ten percent: it is the size that can be done without a shareholder vote.\n\nThis is the structural reason European ECM looks different from the US. A US company with a shelf registration can issue a large block of stock with no shareholder involvement at all, so ABBs and shelf takedowns dominate and rights issues are rare. A European company that wants a transformational amount has to go back to its shareholders, which means either a rights issue or a specific authority approved at a general meeting, and that in turn is why the rights issue survives in Europe and not in the US.",
+   "rubric": [
+    "Defines pre-emption as the pro rata offer to existing shareholders on a cash issue",
+    "Names the routine UK disapplication authority and its rough size",
+    "Explains why UK ABBs cluster just under the authority limit",
+    "Draws the structural contrast with the US shelf regime and explains why rights issues survive in Europe"
+   ],
+   "mistakes": [
+    "Explaining the US and Europe as a difference of taste. It is a difference in who has to approve the issuance."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "follow-on-products",
+    "free-float-index"
+   ],
+   "locator": "ECM04"
+  },
+  {
+   "q": "On a block trade, where does the bank's risk sit?",
+   "a": "It depends entirely on whether the trade is backstopped.\n\nOn a best-efforts or agency block, the bank markets the stake to institutions and takes no position. If it cannot fill the book, the deal is cut in size or pulled. The bank earns a fee and carries reputational risk, nothing more.\n\nOn a bought deal or backstopped block, the bank buys the entire stake from the seller at an agreed price, usually determined through a competitive bid among several banks, and then sells it on. From the moment it commits, it owns the stock. If it places the block above the purchase price it keeps the difference; if the market moves against it overnight or the book is thin, it wears the loss on the residual position.\n\nSo the bank's risk is a genuine principal position, sized at the whole block, over a period of hours. It manages it by wall-crossing key accounts before committing so it has an indication of where demand sits, by bidding a discount that reflects the volatility and free float of the stock and the size relative to average daily volume, and sometimes by hedging. The competitive bid process is exactly what compresses that discount, which is why sellers run one and why block trades are a low-margin, high-risk business that banks do partly to defend the relationship.",
+   "rubric": [
+    "Distinguishes agency or best-efforts from a bought or backstopped deal",
+    "States that on a bought deal the bank takes a principal position in the whole block",
+    "Names the risk drivers: size against average daily volume, volatility, free float, and the overnight window",
+    "Names the mitigants: wall-crossing before committing, discount sizing, hedging"
+   ],
+   "mistakes": [
+    "Assuming every block is underwritten. A large share are agency trades where the bank takes no position at all."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "follow-on-products",
+    "underwriting-economics"
+   ],
+   "locator": "ECM05"
+  },
+  {
+   "q": "What is a direct listing, and when does it actually make sense?",
+   "a": "The company's existing shares are admitted to trading without an underwritten offering. No new shares are sold in the listing, there is no bookbuild and no underwriter setting a price, so the opening price is discovered in an opening auction from natural buyers and sellers.\n\nIt makes sense for a narrow set of companies: those that do not need capital, because they are already well funded, that have a brand recognised enough that investors will find the stock without a roadshow, and that have a shareholder base wanting liquidity rather than a company wanting money. Spotify and Slack are the canonical examples.\n\nWhat it buys: no underwriting discount, no IPO underpricing so no money left on the table, and no lock-up, so existing holders can sell immediately.\n\nWhat it costs: no price support, no stabilisation, no controlled allocation to long-only accounts that will hold, and no book to tell you what demand looks like before you list. And for most issuers the decisive problem is that a direct listing traditionally raised no capital at all, although rule changes have since allowed a primary component. Without brand recognition and existing analyst coverage, listing without marketing is listing into silence.",
+   "rubric": [
+    "Explains the mechanism: existing shares admitted, price found in an opening auction, no underwriter",
+    "Names the conditions under which it works: no capital need, strong brand, holders wanting liquidity",
+    "Names the benefits: no underwriting discount, no underpricing, no lock-up",
+    "Names the costs: no stabilisation, no controlled allocation, no book, and historically no capital raised"
+   ],
+   "mistakes": [
+    "Presenting it as a cheaper IPO. It is a different transaction that most companies cannot use."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "follow-on-products",
+    "ipo-process"
+   ],
+   "locator": "ECM06"
+  },
+  {
+   "q": "Walk me through a UK IPO timeline.",
+   "a": "Roughly six to nine months of preparation, then a compressed public phase.\n\nPreparation and readiness. Kick-off, appoint the syndicate and the sponsor, start due diligence, build the equity story, prepare the financial track record and any pro formas, draft the prospectus, agree the research and publicity guidelines, negotiate the engagement letters, and get the company ready to be public: board composition, controls, financial reporting procedures.\n\nAnalyst presentation and pre-deal investor education. Management presents to the syndicate analysts, who then write connected research. After a blackout period, the analysts meet investors for pre-deal investor education, and that feedback is what sets the valuation range.\n\nAnnouncement. First the expected intention to float and publication of the registration document, then the intention to float announcement itself, at which point research is published and the deal is public. In parallel, cornerstone outreach and early-look meetings run under market sounding procedures.\n\nRoadshow and bookbuild, typically one to two weeks. The price range is announced, the preliminary prospectus circulates, management does the roadshow, the book builds and is read daily.\n\nPricing and publication of the final prospectus, then conditional dealings begin. Allocation, then admission and unconditional trading a few days later, then closing and settlement.\n\nStabilisation runs for up to thirty days from the start of trading, and the lock-ups run for typically 180 days for the company and management.",
+   "rubric": [
+    "Names the preparation phase and what happens in it, including the sponsor appointment and prospectus drafting",
+    "Names the analyst presentation, connected research, and pre-deal investor education as what sets the range",
+    "Distinguishes the intention to float announcement from pricing",
+    "Names conditional dealings before unconditional trading",
+    "Names the thirty-day stabilisation period and the lock-up period"
+   ],
+   "mistakes": [
+    "Skipping pre-deal investor education. In Europe that is where the price range actually comes from, not from a DCF."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "ipo-process"
+   ],
+   "locator": "ECM07"
+  },
+  {
+   "q": "What does a sponsor do in a UK IPO, and why does the role exist?",
+   "a": "A sponsor is required for admission to the equity shares (commercial companies) category of the London main market, and for reverse takeovers. It is a regulated role: the sponsor is accountable to the FCA, not just to the client.\n\nWhat it does: familiarises itself with the business and prospects in depth, advises the issuer on eligibility and on compliance with the Listing Rules, MAR and the Disclosure and Transparency Rules, coordinates the documentation and participates in drafting the prospectus, runs management due diligence, drafts the eligibility letter to the FCA, liaises with the FCA and the exchange on the issuer's behalf, reviews the working capital report and the financial position and prospects procedures report prepared by the reporting accountants, and educates the board on its ongoing obligations.\n\nThe centre of it is the sponsor's declaration to the FCA: a formal statement that the issuer has understood and complied with its responsibilities. That is what makes the role different from being a bookrunner. The sponsor is putting its own regulated status behind the statement, supported by comfort letters from the issuer and its counsel.\n\nThe role exists because the FCA cannot itself verify that every applicant is ready to be a public company. It deputises a regulated firm with the expertise and the incentive to be careful, and makes it accountable. In practice it is a real constraint: a sponsor that will not give the declaration stops the IPO.",
+   "rubric": [
+    "States it is a regulated role required for the relevant listing category, accountable to the FCA",
+    "Names concrete workstreams including the eligibility letter, working capital report and FPPP report",
+    "Identifies the sponsor's declaration to the FCA as the heart of the role",
+    "Explains why the regime exists: the FCA deputises accountability to a regulated firm"
+   ],
+   "mistakes": [
+    "Describing the sponsor as the lead bookrunner under another name. The declaration is a regulatory liability, not a commercial role."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process",
+    "underwriting-economics"
+   ],
+   "locator": "ECM08"
+  },
+  {
+   "q": "What is a cornerstone investor, and why have EMEA IPOs started using them?",
+   "a": "An investor who commits, publicly and before the bookbuild opens, to buy a fixed amount at whatever price the deal prices at, usually in exchange for a guaranteed allocation and subject to a lock-up. The commitment is disclosed in the announcement and the prospectus. It is distinct from an anchor order, which is a large early order inside the book at the investor's discretion, and not publicly guaranteed.\n\nIt is an Asian market convention that has migrated to Europe, and it has migrated because it solves the problem of a difficult market. A cornerstone tranche de-risks the deal for the issuer: a meaningful share of the book is committed before you launch, which makes it far less likely you have to pull the transaction. It creates momentum and validation, because a named institution publicly committing is a signal other investors read. And it narrows the price discussion, because the cornerstone has effectively accepted the range.\n\nThe costs are real. Guaranteed allocations reduce the shares available for genuine price discovery in the bookbuild, so exchanges and regulators care about how much of the deal is pre-allocated, and a minimum share of the offering has to go through the open bookbuild for the float to be genuine. It can cap the price, because a cornerstone that has committed at the range has no interest in the deal pricing at the top. And in a strong market a cornerstone is value given away for a risk that would not have materialised.",
+   "rubric": [
+    "Defines a cornerstone as a publicly disclosed pre-commitment at the deal price with a guaranteed allocation and lock-up",
+    "Distinguishes it from an anchor order",
+    "Names the benefits: de-risking, momentum and validation, and a narrowed price discussion",
+    "Names the costs: reduced free bookbuild for price discovery, a capped price, and value given away in a strong market"
+   ],
+   "mistakes": [
+    "Confusing a cornerstone with a large anchor order. The public, pre-priced commitment is what makes it a cornerstone."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "cornerstone",
+    "ipo-process"
+   ],
+   "locator": "ECM09"
+  },
+  {
+   "q": "What is free float, why does it matter, and what changed in the UK?",
+   "a": "Free float is the proportion of a company's shares genuinely available to trade, excluding strategic, founder, government and locked-up holdings.\n\nIt matters for three reasons. Liquidity: a thin float means wide spreads, high price impact and institutions that cannot build or exit a position, so they will not buy at all. Index eligibility: index providers apply their own free float and liquidity tests, and index membership drives passive demand, which is a large and permanent buyer. And governance: a controlling shareholder with a small float can act against minorities, which investors price.\n\nThe UK reform reduced the minimum free float for the main market from twenty-five percent to ten percent, and FTSE UK Index Series inclusion for UK-incorporated companies now works to a ten percent free float plus a liquidity test. The extension of the ten percent threshold to non-UK incorporated companies follows, subject to extra conditions: publicly acknowledged adherence to the UK Corporate Governance Code, pre-emption rights and the Takeover Code so far as practicable, and incorporation in a jurisdiction FTSE classifies as developed or low taxation.\n\nThe intent is to make London competitive for founder-led and family-controlled businesses that did not want to sell twenty-five percent. The trade-off, and the reason institutional investors were uneasy about it, is that a ten percent float gives you a listed company with a controlling shareholder and limited liquidity, and the market prices that.",
+   "rubric": [
+    "Defines free float as shares genuinely available to trade, excluding strategic and locked-up holdings",
+    "Names liquidity, index eligibility and governance as why it matters",
+    "States the UK reduction from twenty-five percent to ten percent and the FTSE conditions for non-UK companies",
+    "Names the trade-off: attracting founder-led issuers against liquidity and control concerns"
+   ],
+   "mistakes": [
+    "Treating free float as an administrative box. It determines index inclusion, and index inclusion is a permanent bid."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "free-float-index"
+   ],
+   "locator": "ECM10"
+  },
+  {
+   "q": "Why does index inclusion matter so much to an IPO candidate?",
+   "a": "Because it converts a one-off placement into a standing source of demand. Every fund tracking the index has to buy the stock in proportion to its weight, regardless of view, and holds it while the company remains in the index. Passive money is now a very large share of institutional equity assets, so that is a structurally different buyer from an active fund that can sell next quarter.\n\nIt also has second-order effects. Index membership brings analyst coverage, because sell-side research follows index constituents. It widens the eligible investor base, because many mandates are benchmarked and reference the index. And it improves liquidity, which narrows spreads and reduces the discount at which the company can do future equity issuance.\n\nPractically this shapes IPO structuring. The company will size the offering and set the free float to meet the index provider's tests, will care about the currency and the listing venue because eligibility depends on both, and will want to know whether it qualifies for fast entry at the IPO or must wait for a scheduled review. Fast entry, where a sufficiently large new listing enters the index shortly after admission rather than at the next quarterly review, is worth real money to the aftermarket, and structuring for it is a routine part of the ECM advice.",
+   "rubric": [
+    "Explains passive demand as a standing, view-independent buyer created by inclusion",
+    "Names second-order effects: analyst coverage, a wider benchmarked investor base, better liquidity",
+    "Explains how it shapes structuring: offering size, free float, currency and venue",
+    "Names fast entry versus waiting for a scheduled review"
+   ],
+   "mistakes": [
+    "Treating index inclusion as a consequence of the IPO. It is a design constraint on the IPO."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "free-float-index"
+   ],
+   "locator": "ECM11"
+  },
+  {
+   "q": "How do you read an IPO order book?",
+   "a": "Not by the coverage number alone, which is the first thing anyone quotes and the least informative.\n\nPrice sensitivity: how much of the book is limited and at what levels. A book that is three times covered at the bottom of the range and one times at the top is telling you the range is wrong. Building the demand curve, showing cumulative demand at each price point, is the single most useful exhibit.\n\nQuality: long-only institutions that will hold, versus hedge funds that will flip on day one. A book dominated by fast money prices well and trades badly.\n\nGranularity and concentration: many mid-sized orders are more robust than three enormous ones, because concentration means one investor dictates the outcome and can overhang the stock later.\n\nTiming and momentum: orders that came in early and unlimited are worth more than orders that arrived on the last afternoon at a limit. Watching the build rate over the roadshow tells you whether the story is landing.\n\nGeography and investor identity: whether the accounts you targeted, and the ones who know the sector, are actually in the book.\n\nAnd then inflation: in a hot deal investors pad orders expecting to be scaled back, so the raw book overstates true demand. Reading through that is judgement built from having seen the same accounts behave in previous deals, which is why the syndicate database matters.",
+   "rubric": [
+    "States that the coverage ratio alone is insufficient",
+    "Names price sensitivity and the demand curve at each price point as the central analysis",
+    "Distinguishes long-only quality from fast money, and names granularity and concentration",
+    "Names order timing and momentum through the roadshow",
+    "Names order inflation in hot deals and the need to read through it"
+   ],
+   "mistakes": [
+    "Quoting coverage without price sensitivity. A ten-times-covered book at the bottom of the range is a bad book."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process"
+   ],
+   "locator": "ECM12"
+  },
+  {
+   "q": "How is the IPO price range set, and how does the final price get chosen?",
+   "a": "The range is set before the roadshow from three inputs, weighted in this order.\n\nPeer trading multiples, which is the anchor. You take a comparable set on the relevant metric for the sector, apply it to the company's forecast earnings or revenue, and adjust for growth, margin and quality differences. A DCF is used as a cross-check on that anchor, not as the primary method, because the buyers are pricing against comparables.\n\nPre-deal investor education feedback, which is what actually moves it. The syndicate analysts have met investors before the range is set, and the accounts have given valuation views. That feedback is aggregated and it is usually the binding constraint: a range set above where investors said they would engage will not build a book.\n\nThe IPO discount, conventionally in the order of ten to twenty percent below where the company would trade as a seasoned listed peer, to compensate investors for buying an untested story with no trading history.\n\nThen the final price comes out of the book. You look at the cumulative demand curve, decide how much oversubscription you want at the strike, and you deliberately price below the clearing level, so that the stock trades up and the investors who committed are rewarded. How far below is the judgement: enough for a healthy aftermarket, not so far that the issuer visibly left money on the table.",
+   "rubric": [
+    "Names peer multiples as the anchor and the DCF as a cross-check, not the primary method",
+    "Names pre-deal investor education feedback as the binding constraint on the range",
+    "Names the IPO discount and gives an order of magnitude with the reason for it",
+    "Explains that the final price is deliberately set below the clearing level, and why"
+   ],
+   "mistakes": [
+    "Answering with a DCF. Nobody prices an IPO off a DCF; it is a comparables and demand exercise."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process"
+   ],
+   "locator": "ECM13"
+  },
+  {
+   "q": "Why are IPOs deliberately underpriced?",
+   "a": "Give both sides, because the honest answer is that the interests are not aligned.\n\nThe defensible case. Underpricing compensates investors for information asymmetry: they are buying a company with no trading history, on forecasts they cannot verify against a track record. It ensures the book fills, because an offering priced to perfection that fails is far more expensive to the issuer than a few percent of proceeds. It produces a first-day rise that creates positive momentum, analyst attention and a shareholder base sitting on gains, which matters because most issuers come back for a follow-on. And it reduces the underwriter's own risk.\n\nThe critique. Underpricing is a transfer from the issuer's existing shareholders to the institutions who received allocations, and the banks are choosing who receives that transfer. Since the same institutions are the banks' repeat clients, there is a conflict: the bank sits on both sides, and its long-run relationship with the buyers can outweigh a single issuer's proceeds. That is the substance of the money-left-on-the-table criticism.\n\nThe structural counter is that the issuer chooses the syndicate and could price at the clearing level if it wanted to, and that alternatives designed to eliminate underpricing, Dutch auctions and direct listings, exist and have been used very little. Revealed preference suggests issuers value certainty and aftermarket support more than the last few percent.",
+   "rubric": [
+    "Gives the defensible case: information asymmetry, book certainty, momentum, and the follow-on relationship",
+    "Gives the critique: a transfer from issuer to allocated institutions, chosen by the banks",
+    "Names the conflict explicitly: the bank's repeat buyers are on the other side of the trade",
+    "Notes alternatives exist and are little used, which is evidence about issuer preferences"
+   ],
+   "mistakes": [
+    "Giving only the bank's version. The interviewer wants to hear that you know it is contested."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process",
+    "underwriting-economics"
+   ],
+   "locator": "ECM14"
+  },
+  {
+   "q": "What is connected research, and how does it fit into a European IPO?",
+   "a": "Research written by the analysts at the banks in the syndicate. It exists because in Europe the valuation conversation with investors starts before the prospectus, and connected research is the vehicle.\n\nThe sequence: the analysts attend a formal analyst presentation from management, then there is a blackout, then the research is published at or around the intention to float announcement, then the analysts conduct pre-deal investor education, taking the valuation to investors and bringing back feedback that sets the price range. Only after that does the roadshow start.\n\nIt is heavily controlled. Research guidelines are agreed at kick-off and govern what the analysts may see, when they may publish, what they may say and to whom. There is a hard information barrier between the analysts and the deal team. The research must be consistent with the prospectus, and where it is not, it becomes a liability problem. In a Reg S/144A deal the research must not be distributed into the US, because it would be an offer.\n\nThe regime has tightened over time, in the UK partly to address the concern that connected research was effectively marketing dressed as analysis and that unconnected analysts were shut out of the process. The practical effect for a banker is that the research and publicity guidelines are a real workstream with real dates, not a compliance footnote.",
+   "rubric": [
+    "Defines connected research as research by syndicate bank analysts and explains its role in setting the range",
+    "Gives the sequence: analyst presentation, blackout, publication at ITF, pre-deal investor education, then roadshow",
+    "Names the controls: research guidelines, information barriers, consistency with the prospectus, US distribution restrictions",
+    "Notes the regime has tightened because connected research looked like marketing"
+   ],
+   "mistakes": [
+    "Assuming research is independent commentary. It is a regulated part of the offering process."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process"
+   ],
+   "locator": "ECM15"
+  },
+  {
+   "q": "What is a lock-up, who is locked, and what happens at expiry?",
+   "a": "A contractual undertaking not to sell shares for a period after the IPO. The company is typically locked for 180 days, directors and senior management for 180 days or longer, and selling and significant pre-IPO shareholders including sponsors for 180 days, sometimes stepped so a proportion releases earlier. The underwriters can waive it, and often do to allow a coordinated sell-down.\n\nThe purpose is to prevent a supply shock immediately after listing and to align insiders with the new shareholders for long enough that the aftermarket can establish a price. Without it, a founder or a sponsor could sell into the first day's liquidity and the flotation would be a distribution rather than a listing.\n\nAt expiry the market knows the date in advance, and it is disclosed in the prospectus, so it is not news. What matters is the overhang: how many shares become sellable and who holds them. A sponsor with sixty percent that is contractually free to sell is a known future supply, and the stock typically trades weakly into the expiry as investors position for it. Companies manage this by staggering releases, by pre-announcing a coordinated placing rather than letting holders drip into the market, and by negotiating longer lock-ups for the largest holders in the first place.\n\nThe point to make is that the price effect comes from the anticipated supply, not from the expiry date itself.",
+   "rubric": [
+    "Names who is locked and for roughly how long, and that underwriters can waive",
+    "Explains the purpose: preventing a supply shock and aligning insiders while the price establishes",
+    "Explains that the expiry is disclosed and anticipated, so the effect comes from the overhang",
+    "Names management techniques: staggered releases, a coordinated placing, longer lock-ups for large holders"
+   ],
+   "mistakes": [
+    "Saying the stock falls 'because insiders sell'. It usually falls before expiry, on the anticipation."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "lock-up"
+   ],
+   "locator": "ECM16"
+  },
+  {
+   "q": "Explain the greenshoe: what is the bank actually doing?",
+   "a": "The greenshoe is a short position the underwriters deliberately create so they can support the price, plus a call option that lets them close it without loss if support is not needed.\n\nMechanically: the underwriters sell the base deal plus up to about fifteen percent more, the over-allotment shares. They retain the proceeds from those extra shares. They do not have those shares, so they borrow them under a stock loan from an existing shareholder or the issuer, which leaves them short. Separately, that shareholder grants them a call option over the same number of shares, struck at the IPO price.\n\nThen two outcomes over the thirty-day stabilisation period. If the price performs, no stabilisation is needed; the underwriters exercise the call in full, typically settled by set-off with no shares actually moving, and use those shares to close the stock loan. The over-allotment shares stay with investors, the deal is fifteen percent larger and the issuer or selling shareholder receives those proceeds.\n\nIf the price falls below the offer price, the underwriters buy shares in the market, which is the support, and deliver those shares back under the stock loan. The call is left unexercised or only partly exercised, the over-allotment shares are effectively returned, and the deal is smaller.\n\nThe elegance is that the underwriters are never structurally long or short at the end: the short is always closed either by buying in the market or by exercising the option. Fees are paid only on the shares where the call is exercised.",
+   "rubric": [
+    "Describes the over-allotment sale and the stock loan that creates the short position",
+    "Names the call option from the shareholder, struck at the offer price",
+    "Gives the good-price outcome: exercise the call, deal upsized, shares stay with investors",
+    "Gives the bad-price outcome: buy in the market to support, return the borrowed shares, deal effectively smaller",
+    "Notes fees are paid only on shares where the option is exercised"
+   ],
+   "mistakes": [
+    "Describing the greenshoe as 'an option to sell more shares'. The short position created by the stock loan is what makes stabilisation possible."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "stabilisation"
+   ],
+   "locator": "ECM17"
+  },
+  {
+   "q": "What is a brownshoe, and how does it differ from a greenshoe?",
+   "a": "Same purpose, opposite option. A brownshoe uses a put rather than a call, and the shares are issued up front rather than borrowed.\n\nMechanically: the deal size is enlarged by up to about fifteen percent at initial closing, so the brownshoe shares are actually issued and sold. The underwriters retain the proceeds from them. An existing shareholder or another party grants the underwriters a put option over those shares, struck at the sum of what the underwriters pay to buy shares in the market for stabilisation plus the associated costs.\n\nIf the price performs, no stabilisation happens, the put expires, the underwriters release the retained proceeds and the full enlarged deal stays with investors. If the price falls, the underwriters buy in the market to support it and put those shares to the shareholder, so the deal size is reduced.\n\nWhy use one. A greenshoe needs a stock loan, and there are situations where nobody can lend: a privatisation where the government is legally restricted from lending shares, or a jurisdiction where the issuer cannot issue or lend into the structure quickly enough. A brownshoe avoids the loan entirely.\n\nThe fee mechanics invert with the option. On a greenshoe, fees are paid on shares where the call is exercised. On a brownshoe, the economic equivalent is fees on shares where the put is not exercised, because those are the shares that ended up with investors. The clean way to think about both is to ask which shares are in investors' hands at the end of the thirty days.",
+   "rubric": [
+    "Identifies the brownshoe as a put structure with the shares issued up front rather than borrowed",
+    "States the put strike is referenced to the market purchase price plus costs",
+    "Gives both price outcomes correctly",
+    "Names the use case: where a stock loan is unavailable, such as a privatisation",
+    "Gets the fee inversion right and gives the general test: which shares end with investors"
+   ],
+   "mistakes": [
+    "Assuming the brownshoe is just a bigger greenshoe. The option direction and the fee treatment both flip."
+   ],
+   "topic": "ecm",
+   "difficulty": 5,
+   "subtopic": null,
+   "tags": [
+    "stabilisation"
+   ],
+   "locator": "ECM18"
+  },
+  {
+   "q": "What is a stabilising manager permitted to do, and what would be market abuse?",
+   "a": "Stabilisation is an exception to the market abuse regime, and it is only an exception if you stay inside the conditions. The stabilising manager, usually the lead bookrunner, may buy shares in the market to support the price during the stabilisation period, which in the UK runs for up to thirty days from the start of trading, or from pricing where conditional dealings are permitted.\n\nThe conditions: stabilisation must be disclosed in advance in the offering documentation, it may not be executed above the offer price, it must be conducted within the defined time window, the activity must be reported to the competent authority and disclosed publicly, and adequate records must be kept. One entity is appointed to do it so responsibility is clear.\n\nWhat would be abusive is the same activity without those conditions: buying to push the price above the offer price rather than to support it, continuing after the window, doing it undisclosed, or creating a false impression of demand. The distinction is not the trading itself but whether it sits inside the safe harbour.\n\nThe economic point worth making is that stabilisation is limited by construction. The manager can only buy back what it over-allotted, so it has a defined and modest amount of firepower, and it cannot hold a price up against genuine selling pressure. It smooths the first days of trading; it does not set the price.",
+   "rubric": [
+    "Names the conditions: prior disclosure, never above the offer price, within the defined window, reported and recorded",
+    "States the UK period is up to thirty days from the start of trading",
+    "Explains that the same activity outside the safe harbour is market abuse",
+    "Makes the economic point: firepower is capped at the over-allotment, so it smooths rather than sets the price"
+   ],
+   "mistakes": [
+    "Believing stabilisation can hold a price up. It is capped at the size of the over-allotment."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "stabilisation"
+   ],
+   "locator": "ECM19"
+  },
+  {
+   "q": "What is market sounding, and what does the MAR regime require?",
+   "a": "Market sounding is any discussion with potential investors before a transaction is publicly announced. Pilot fishing, early-look meetings and pre-sounding are all market soundings, and so is wall-crossing accounts before a block trade.\n\nWhere the securities are within scope of MAR, the regime imposes formalities on both the issuer and the banks acting for it. The sequence: initial outreach asking whether the investor is willing to be sounded and to take on the resulting obligations, giving only enough to let them decide, which is sector, geography, transaction type and rough size but not the issuer's identity; the investor's confirmation; then the disclosure of the inside information itself; then cleansing.\n\nCleansing is the part people forget. The investor is restricted from trading until the information ceases to be inside information. If the deal goes ahead, the public announcement cleanses them. If it does not, cleansing happens by passage of time, called private cleansing, which is why the information shared is often limited to the fact of the transaction being contemplated, since that is what goes stale.\n\nThere are also record-keeping requirements, and each bank runs its own script and procedure. Where several banks are sounding on the same deal they do not have to use identical procedures, but they must align on the key steps, and above all on how investors get cleansed if the transaction is aborted.",
+   "rubric": [
+    "Defines market sounding to include pilot fishing, early looks and wall-crossing",
+    "Gives the sequence: outreach, consent, disclosure, cleansing",
+    "Explains cleansing, including private cleansing by passage of time if the deal is aborted",
+    "Notes multiple banks need not use identical scripts but must align on cleansing"
+   ],
+   "mistakes": [
+    "Forgetting cleansing. Leaving investors wall-crossed and unable to trade after an aborted deal is the real-world failure."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process",
+    "syndicate-process"
+   ],
+   "locator": "ECM20"
+  },
+  {
+   "q": "What is the difference between Reg S and Rule 144A, and why does it matter for a European issuer?",
+   "a": "Both are exemptions from the registration requirement in section 5 of the US Securities Act. Registration with the SEC is slow and expensive, so cross-border deals are structured to fit an exemption instead.\n\nReg S is the offshore safe harbour: securities offered and sold outside the United States do not need SEC registration. The conditions are that offers and sales are made in offshore transactions, and that there are no directed selling efforts into the US.\n\nRule 144A permits resales to qualified institutional buyers inside the US, subject to conditions including that the securities are not fungible with a US-listed class and that non-reporting issuers give purchasers an information right. It is usually paired with a Reg S tranche to make a global unregistered offering.\n\nThe distinction that matters commercially is liability. A 144A deal is subject to US liability standards under Rule 10b-5; a Reg S-only deal is not. That flows straight into the workload: a 144A tranche means a US-style disclosure standard in the offering memorandum, a full due diligence process, comfort letters and negative assurance letters, and materially higher legal cost and time.\n\nSo the decision is commercial. A European issuer adds a 144A tranche when it needs US demand for size or for a specific investor base. If US demand is marginal, Reg S only is faster, cheaper and carries less liability, which is why a typical European investment grade corporate issues Reg S only.",
+   "rubric": [
+    "Explains both as exemptions from section 5 registration",
+    "States Reg S requires offshore transactions and no directed selling efforts",
+    "States 144A permits resale to QIBs and is usually paired with Reg S",
+    "Identifies the Rule 10b-5 liability difference as the commercially decisive point",
+    "Draws the practical consequence: added disclosure, diligence and comfort workload for 144A"
+   ],
+   "mistakes": [
+    "Describing 144A as a US listing. It is a private resale exemption; the securities are still unregistered."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process",
+    "underwriting-economics"
+   ],
+   "locator": "ECM21"
+  },
+  {
+   "q": "What are the Reg S categories, and what is SUSMI?",
+   "a": "Reg S sorts offerings into three categories by how strong the connection to the US market is. The stronger the nexus, the greater the risk that securities flow back into the US after closing, and the more restrictions apply.\n\nCategory 1: no substantial US market interest in the class of securities offered, and no additional restrictions beyond the basic Reg S conditions.\n\nCategory 2: substantial US market interest exists, for example an SEC-reporting foreign issuer or certain debt issuers. Additional requirements attach: no sales to US persons even if they are outside the US, a forty-day distribution compliance period, and offering restrictions on distributors plus legends in the offering materials.\n\nCategory 3: everything else, with the strongest US nexus. The strictest transfer restrictions, purchaser certifications and compliance controls. Category 3 offerings are difficult to implement in practice and are usually avoided by structuring around them.\n\nSUSMI is substantial US market interest, the test that determines which category applies. It is a fact-specific assessment of how much of the class trades in the US and how large the US holder base is, and it is a counsel question rather than a banker one. The banker's job is to raise it at kick-off, because the answer determines the selling restrictions and the legends, and those in turn constrain how the deal can be marketed.",
+   "rubric": [
+    "Names all three categories and orders them by strength of US nexus",
+    "States the Category 2 additions: no sales to US persons, a forty-day distribution compliance period, offering restrictions and legends",
+    "Notes Category 3 is impractical and usually structured around",
+    "Defines SUSMI as the test determining the category, and identifies it as a counsel question raised early"
+   ],
+   "mistakes": [
+    "Treating Reg S as a single regime. The category drives the selling restrictions, which drive how you can market."
+   ],
+   "topic": "ecm",
+   "difficulty": 5,
+   "subtopic": null,
+   "tags": [
+    "ipo-process"
+   ],
+   "locator": "ECM22"
+  },
+  {
+   "q": "What is a comfort letter, and why do the underwriters want one?",
+   "a": "A letter from the issuer's auditors to the underwriters, delivered at pricing and again at closing, giving comfort on the financial information in the prospectus or offering memorandum.\n\nWhat it covers: a statement of the auditors' independence; acknowledgement that they audited the financial statements included and issued an opinion; negative assurance on unaudited interim financials from a review; more limited comfort on monthly management accounts; very limited comfort on the stub period between the last accounts and the cut-off date; and circle-up or tick-mark comfort, tying individual numbers in the document back to the accounting records.\n\nWhy the underwriters want it: it is a liability management tool. It evidences a reasonable investigation into the financial statements and supports the due diligence defence against a disclosure liability claim. In a Reg S/144A deal the underwriters will also sign a representation letter confirming they performed diligence substantially equivalent to an SEC-registered deal, and they will hold an auditor due diligence call alongside the letter.\n\nWhat it does not cover matters as much. Industry and market data, estimates and ranges, non-GAAP measures, and operational KPIs cannot be tied to accounting records, so they are outside the letter. Those numbers get circled up to a CFO certificate instead, which is much weaker comfort, which is why the underwriters want documentary backup from the issuer's own records for them.",
+   "rubric": [
+    "Describes it as an auditor letter to the underwriters at pricing and closing",
+    "Names the components including negative assurance on interims and circle-up comfort on individual numbers",
+    "Identifies the purpose as supporting the due diligence defence against disclosure liability",
+    "Names what is excluded: industry data, estimates, non-GAAP and operational KPIs, and notes those go to a CFO certificate"
+   ],
+   "mistakes": [
+    "Thinking the comfort letter verifies the whole prospectus. It only covers what ties to the accounting records."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process",
+    "underwriting-economics"
+   ],
+   "locator": "ECM23"
+  },
+  {
+   "q": "What is the 135-day rule and why does it drive issuance windows?",
+   "a": "Auditors can only give negative assurance on unaudited financial information as of a cut-off date less than 135 calendar days from the end of the most recent period they have audited or reviewed. Past that, the financials are stale for comfort purposes and the auditors will not give the comfort.\n\nSince the underwriters will not price without a comfort letter, and will not close without a bring-down, the rule sets a hard outer limit on when a deal can price and close off a given set of accounts. The cut-off date itself is typically three to five business days before the letter, so in practice you are managing to about day 139 for closing.\n\nThat is why it drives windows. A December year-end company has audited accounts that go stale around mid-May, so there is a window after the audit is signed and before that date. Then it needs reviewed half-year numbers, which arrive in late summer and open the autumn window. The pattern of European issuance clustering after results is not only about blackout periods and having a story to tell; it is also this.\n\nThe practical instruction is to check the financial statement dates at kick-off and to track the cut-off date as the timetable moves. A deal that slips a fortnight can cross the line and suddenly require a special-purpose review of monthly accounts, which is expensive, slow and sometimes simply unavailable.",
+   "rubric": [
+    "States the rule: negative assurance only within 135 days of the last audited or reviewed period end",
+    "Explains the consequence: no comfort letter means no pricing and no closing",
+    "Connects it to the seasonal pattern of issuance windows around results",
+    "Names the practical instruction: check financial statement dates at kick-off, track the cut-off as timing slips"
+   ],
+   "mistakes": [
+    "Explaining issuance windows purely as market conditions. Financial staleness is a hard constraint that is not about the market at all."
+   ],
+   "topic": "ecm",
+   "difficulty": 5,
+   "subtopic": null,
+   "tags": [
+    "ipo-process",
+    "underwriting-economics"
+   ],
+   "locator": "ECM24"
+  },
+  {
+   "q": "What is the difference between an engagement letter and an underwriting agreement?",
+   "a": "They govern different phases and allocate different risks.\n\nThe engagement letter is signed early, before investor outreach begins, and governs the preparatory phase up to the underwriting agreement. It appoints the banks and defines their roles on a several rather than joint basis, sets fees including base, discretionary, abort and tail fees, contains an indemnity from the issuer in favour of the banks, sets out information and access obligations, and covers clear market restrictions, publicity and confidentiality. Critically, it does not commit the banks to underwrite anything; that is expressly disclaimed. Where the letter is not ready in time, an indemnity letter goes in first, because banks will not talk to investors without an indemnity in place.\n\nThe underwriting agreement is signed at pricing and is the commercial contract for the offering itself: the price and size, the settlement mechanics, the disclosure package, the issuer's representations and warranties, covenants, the conditions to closing including delivery of comfort letters and legal opinions, termination rights, and the indemnity and contribution provisions which supersede those in the engagement letter. It is where the banks actually commit to buy or to procure buyers.\n\nThe commercial point for a banker: the fee architecture, the clear market and the tail fee are negotiated in the engagement letter, months before anyone talks about price, and they are where the economics of an aborted deal are decided.",
+   "rubric": [
+    "States the engagement letter governs the preparatory phase and expressly does not commit the banks to underwrite",
+    "Names its key contents: roles on a several basis, fee architecture including abort and tail fees, indemnity, clear market",
+    "Explains why an indemnity letter goes in first if the EL is not ready",
+    "States the underwriting agreement is signed at pricing and carries the underwriting commitment, reps, conditions and indemnity"
+   ],
+   "mistakes": [
+    "Assuming signing an engagement letter commits the bank to underwrite. It explicitly does not."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "underwriting-economics"
+   ],
+   "locator": "ECM25"
+  },
+  {
+   "q": "What is the difference between a regulated market and an MTF, and where does AIM sit?",
+   "a": "A regulated market is an exchange venue subject to the full statutory regime: in the UK, the London Stock Exchange Main Market. Admission requires an FCA-approved prospectus, the UK Listing Rules apply, the Disclosure and Transparency Rules apply in full with periodic reporting, vote holder notifications and audit committee requirements, and the UK Corporate Governance Code applies on a comply-or-explain basis.\n\nA multilateral trading facility is exchange-regulated rather than statutorily regulated. Admission is driven by the exchange's own rules rather than the Listing Rules, the full DTR regime does not apply, and the governance requirements come from the venue rather than from statute. Market abuse rules still apply.\n\nAIM is the LSE's MTF, positioned as a growth market for smaller companies. It is lighter touch: no minimum free float requirement, no minimum trading record, no shareholder vote for most acquisitions, and a nominated adviser, the Nomad, who takes on responsibility for the company's suitability rather than the FCA. Under the new UK regime AIM is a primary MTF, so admission does fall within scope of the public offers and admissions rules, which is a change from the old position.\n\nThe trade-off for an issuer is cost and speed against investor base and index eligibility. AIM is faster and cheaper; the Main Market gets you into the FTSE indices and the institutional mandates that reference them.",
+   "rubric": [
+    "Distinguishes statutory regulation of a regulated market from exchange regulation of an MTF",
+    "Names what applies on a regulated market: prospectus, Listing Rules, full DTR regime, governance code",
+    "Places AIM as the LSE's MTF and names the Nomad regime and the lighter admission requirements",
+    "States the trade-off: cost and speed against investor base and index eligibility"
+   ],
+   "mistakes": [
+    "Calling AIM 'unregulated'. Market abuse rules apply and the Nomad regime is a real gatekeeper."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "free-float-index",
+    "ipo-process"
+   ],
+   "locator": "ECM26"
+  },
+  {
+   "q": "When does a prospectus need pro forma financial information?",
+   "a": "When the issuer's own historical financials are not representative of the business being sold, which typically means it has made or committed to a material acquisition or disposal that is not yet reflected in the audited accounts.\n\nTwo regimes, and you may be in both. Under the UK rules, for an equity offering with a prospectus, the complex financial history and significant gross change provisions bite where a transaction varies one or more size indicators, generally total assets, revenue, or profit or loss, by more than twenty-five percent. Under US Regulation S-X, applied by analogy where there is a 144A tranche, three tests apply, asset, income and investment, with a significance threshold above twenty percent and additional requirements above forty percent.\n\nWhat gets required: pro forma financial information illustrating the transaction as if it had happened at the start of the period for the income statement and at the balance sheet date for the balance sheet, presented for no more than the most recent full year and any subsequent interim period. Above the significance thresholds, separate audited financial statements of the target itself, one year at twenty percent and two at forty, plus target MD&A and often separate business and risk factor disclosure.\n\nWhy a banker cares: this is a gating item on the timetable. Getting audited target financials requires the target's cooperation, which you may not have, and the pro formas need an accountant's report. Raise it at kick-off, because discovering in week eight that you need two years of audited accounts for a business you have just bought will move the deal by months.",
+   "rubric": [
+    "States the trigger: historical financials unrepresentative because of a material acquisition or disposal",
+    "Names the UK twenty-five percent significant gross change test and the US Regulation S-X twenty percent tests",
+    "States the pro forma convention: start of period for the income statement, balance sheet date for the balance sheet",
+    "Names the requirement for separate audited target financials above the thresholds",
+    "Identifies it as a timetable gating item requiring target cooperation"
+   ],
+   "mistakes": [
+    "Treating pro formas as an accounting detail. They are one of the most common reasons a capital markets timetable slips."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process"
+   ],
+   "locator": "ECM27"
+  },
+  {
+   "q": "How does an underwriting syndicate get paid, and how does it differ between the US and Europe?",
+   "a": "The gross spread is the difference between what investors pay and what the issuer receives. In the US it is conventionally split three ways: a management fee for structuring the deal, an underwriting fee for taking the risk, and a selling concession for placing the shares, with the selling concession the largest slice.\n\nThe US convention for a mid-sized IPO has been around seven percent, remarkably sticky across deals, compressing to three to five percent for very large offerings. European IPO fees are generally lower for comparable size, and structured differently: a base fee plus a discretionary incentive fee awarded by the issuer after the deal, which is a meaningful proportion of the total and is used to reward performance rather than league table position. That discretionary element changes bank behaviour during execution in a way the fixed US spread does not.\n\nRoles determine shares. The global coordinator or lead-left runs the process and takes the largest allocation; active bookrunners run the book and take a substantial share; passive bookrunners and co-managers appear on the cover and in the league table with a small economic share. Fees on greenshoe shares are paid only where the option is exercised.\n\nThe point worth making is that league table credit is often worth more than the fee on a single deal, because it drives future mandates. That is why banks accept passive roles with minimal economics, and why the number of banks on a cover has inflated over time.",
+   "rubric": [
+    "Names the three components of a US gross spread and which is largest",
+    "Gives the US convention and its compression on large deals",
+    "Names the European difference: lower headline fees plus a discretionary incentive fee",
+    "Explains role-based allocation and that greenshoe fees are paid only on exercise",
+    "Notes league table credit can be worth more than the fee, explaining passive roles"
+   ],
+   "mistakes": [
+    "Quoting seven percent as a global standard. It is a US convention and it does not travel."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "underwriting-economics"
+   ],
+   "locator": "ECM28"
+  },
+  {
+   "q": "What is the difference between firm commitment and best efforts underwriting?",
+   "a": "On a firm commitment, the underwriters buy the entire issue from the company at an agreed price and resell it. From signing, the risk of not placing the shares is theirs: if the book falls apart, they own the stock. That is what the underwriting fee compensates.\n\nOn a best efforts basis, the underwriters agree to use reasonable efforts to place the securities but do not guarantee the outcome. If the deal does not fill, it is cut in size or pulled, and the underwriters bear no financial loss beyond their costs and reputation.\n\nThe nuance that matters in practice is when the commitment attaches. On a European IPO the underwriting agreement is signed at pricing, after the book has been built, so the underwriters are committing to something they already know they can place. The genuine risk window is between pricing and closing, and it is managed by the termination rights, the closing conditions, and the force majeure or market-out clause in the agreement. That is very different from a bought deal block trade, where the bank commits before it has a book.\n\nSo describing an IPO as risky for the underwriters because it is firm commitment overstates it. The real principal risk in ECM sits in blocks, bought deals and backstopped rights issues, where the bank is on the hook before demand is known.",
+   "rubric": [
+    "Defines firm commitment as purchase and resale with the placement risk on the banks",
+    "Defines best efforts as no guarantee, with the deal cut or pulled if it does not fill",
+    "Makes the timing point: on an IPO the agreement is signed at pricing, after the book is built",
+    "Locates the real principal risk in bought deals, blocks and backstopped rights issues"
+   ],
+   "mistakes": [
+    "Describing IPO underwriting as if the bank commits before the book exists. It signs at pricing."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "underwriting-economics"
+   ],
+   "locator": "ECM29"
+  },
+  {
+   "q": "Where does an ECM desk actually take principal risk?",
+   "a": "Four places, in rough order of size.\n\nBackstopped block trades and bought deals. The bank buys a stake at a fixed price, usually after a competitive bid against other banks, and owns it until it is placed. The exposure is the full block for a window of hours, and the competitive bid process compresses the discount to the point where the margin for error is thin.\n\nUnderwritten rights issues. The bank commits to take up whatever shareholders do not, for a period of weeks. That is genuinely long-dated equity risk on a company that is often raising because it has a problem. It is laid off through sub-underwriting with institutions, but the bank is on the hook if that fails.\n\nConvertible and equity-linked bought deals, where the bank prices and commits overnight on an instrument whose value depends on volatility assumptions.\n\nAnd stabilisation, where the manager buys in the market to support a falling stock. That exposure is capped at the over-allotment size and closed out through the shoe, so it is the smallest of the four, but it is real.\n\nWhat is not principal risk: a standard IPO where the underwriting agreement is signed at pricing after the book is built, and a marketed follow-on on the same basis. There the exposure is reputational and the fee is at risk, not the balance sheet.",
+   "rubric": [
+    "Names bought deals and backstopped blocks as the largest exposure and explains why the margin is thin",
+    "Names underwritten rights issues as long-dated risk, laid off through sub-underwriting",
+    "Names equity-linked bought deals and stabilisation",
+    "Correctly excludes a standard IPO signed at pricing from real balance sheet risk"
+   ],
+   "mistakes": [
+    "Naming the IPO. The block trade desk is where an ECM franchise actually loses money."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "follow-on-products",
+    "underwriting-economics"
+   ],
+   "locator": "ECM30"
+  },
+  {
+   "q": "Why is a convertible bond not simply cheap debt?",
+   "a": "Because the low coupon is paid for, in equity, and the payment is deferred rather than avoided.\n\nA vanilla convertible decomposes into a straight bond plus an embedded call option the investor holds over the issuer's stock. The issuer is selling that option, and the proceeds of the sale are taken as a reduced coupon. So the headline saving against straight debt is exactly the value of the option given away, and the conversion premium, typically twenty-five to forty-five percent above the current share price, is where the negotiation sits.\n\nThe cost shows up on the outcome the issuer least wants to think about, which is success. If the shares perform, the bonds convert and the issuer has issued equity at the conversion price, well below the price at which it could have issued at the time of conversion. If the shares do badly, the bonds do not convert, the issuer has cheap debt but also has to refinance the principal in a worse market. The instrument is cheapest in the scenario where it is least useful.\n\nThere are genuine reasons to issue one: the coupon saving is real cash flow relief, the effective issue price for the equity is above the current market, the investor base is different and sometimes deeper than the equity market, and there is no immediate dilution or price pressure from a discounted equity placement. But calling it cheap debt is confusing the coupon with the cost of capital.",
+   "rubric": [
+    "Decomposes the instrument into a straight bond plus an embedded call written by the issuer",
+    "States the coupon saving equals the value of the option sold, and names the conversion premium",
+    "Explains that the real cost lands in the good scenario, as equity issued below the then market price",
+    "Names the genuine reasons to issue one without conceding it is cheap"
+   ],
+   "mistakes": [
+    "Comparing the coupon to straight debt and stopping. The comparison has to include the option sold."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "equity-linked"
+   ],
+   "locator": "ECM31"
+  },
+  {
+   "q": "What is a call spread overlay or a capped call, and why would an issuer buy one?",
+   "a": "Both do the same thing: raise the effective conversion price the issuer bears, so the dilution on conversion is smaller than the bond terms imply.\n\nA call spread overlay is executed as two separate trades alongside the convertible. The issuer buys a call option from a bank struck at the bond's conversion price, which offsets the option it wrote to the bondholders, and simultaneously sells a call struck higher to part-fund the purchase. Net effect: the issuer is economically hedged between the conversion price and the upper strike, and only bears dilution above the upper strike.\n\nA capped call achieves the same profile in a single instrument bought from a bank, which is simpler to document and settle.\n\nThe reason to buy one is that the issuer wants the convertible's coupon saving and access to the convertible investor base, but its board or its existing shareholders will not accept dilution at a twenty-five percent premium. Paying an upfront premium out of the issue proceeds to push the effective premium to seventy-five or a hundred percent makes the transaction acceptable.\n\nThe honest way to describe it is that the issuer is buying back part of the option it just sold, at market price, from a different counterparty. That means the coupon saving is partly given back in cash on day one, and the net economics need to be presented that way rather than as free dilution protection.",
+   "rubric": [
+    "States the purpose: raising the effective conversion price so dilution starts higher",
+    "Describes the call spread as buying a call at the conversion price and selling one higher to part-fund it",
+    "Notes a capped call achieves the same profile in a single instrument",
+    "Explains the issuer motive: convertible economics without dilution at a low premium",
+    "Makes the honest point that the issuer is buying back the option it sold, funded from proceeds"
+   ],
+   "mistakes": [
+    "Presenting it as free dilution protection. It is paid for in cash out of the issue proceeds."
+   ],
+   "topic": "ecm",
+   "difficulty": 5,
+   "subtopic": null,
+   "tags": [
+    "equity-linked"
+   ],
+   "locator": "ECM32"
+  },
+  {
+   "q": "Who buys convertible bonds, and why does that change how you price the deal?",
+   "a": "The investor base splits roughly into two, and they want different things.\n\nConvertible arbitrage funds, historically the larger share, buy the bond and short the stock against it in the ratio given by the option delta, dynamically rehedging as the share price moves. They are not expressing a view on the company. They are buying cheap volatility and credit, and the things they care about are implied versus realised volatility, the credit spread, the borrow cost and availability of the stock to short, and the liquidity of the underlying.\n\nOutright buyers, including some long-only funds and specialist convertible funds, hold the instrument unhedged for its asymmetry: equity participation with bond downside protection. They care about the credit, the equity story and the conversion premium.\n\nThis changes execution in concrete ways. If the arb bid is the majority of the book, the deal is only doable if the stock is borrowable at reasonable cost, which is why stock borrow is checked before launch and why an illiquid or heavily shorted name cannot do a convertible. The pricing conversation is conducted in volatility and credit spread terms rather than in yield terms. The arbs will short into the launch, so the underlying typically trades down on announcement, which the issuer must be prepared for. And the deal is usually launched and priced overnight, because the hedging has to be executed against a known reference price.",
+   "rubric": [
+    "Splits the base into delta-hedging arbitrage funds and outright holders",
+    "Explains the arb trade: long bond, short stock at delta, rehedged dynamically",
+    "Names what the arbs price on: implied versus realised volatility, credit spread, borrow cost and liquidity",
+    "Draws execution consequences: borrow availability gates the deal, pricing is in vol and spread terms, and the stock trades down on launch"
+   ],
+   "mistakes": [
+    "Pricing a convertible as a bond with a conversion feature. The marginal buyer is pricing volatility."
+   ],
+   "topic": "ecm",
+   "difficulty": 5,
+   "subtopic": null,
+   "tags": [
+    "equity-linked"
+   ],
+   "locator": "ECM33"
+  },
+  {
+   "q": "A client asks whether to IPO or sell. How do you frame the answer?",
+   "a": "As a set of trade-offs against what the shareholders actually want, not as a valuation comparison, because the two routes are not comparable on price alone.\n\nLiquidity and certainty. A sale is a full exit, in cash, at a known price, on one day. An IPO is a partial exit at a price set by the market, with the balance locked up and then sold down over years at prices nobody can predict. For a shareholder who wants out, that difference usually dominates everything else.\n\nPrice. A trade sale attracts a control premium and can be paid for with synergies a financial buyer cannot access. An IPO is priced at a discount to trading comparables and confers no control. So on the headline number a strategic sale often wins, and the IPO case has to be made on the value of the retained stake compounding rather than on day-one proceeds.\n\nControl and the future of the business. An IPO leaves management running the company, keeps the brand and the workforce, and gives an acquisition currency. A sale hands all of that to someone else. For a founder, that is frequently the deciding factor and it is not irrational.\n\nCost and obligation. An IPO brings reporting, governance, quarterly scrutiny and the standing risk of a share price that does not cooperate.\n\nThen the practical answer, which is often to run a dual track and let the market decide rather than the board.",
+   "rubric": [
+    "Frames it around shareholder objectives rather than a headline price comparison",
+    "Contrasts full certain exit against partial exit with a locked and unpredictable residual stake",
+    "Notes a trade sale carries a control premium and synergies while an IPO is priced at a discount with no control",
+    "Names control, the future of the business, and the ongoing cost and obligation of being public",
+    "Raises the dual track as the practical resolution"
+   ],
+   "mistakes": [
+    "Answering with 'whichever gives the higher valuation'. The shapes of the two outcomes are different, not just the numbers."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "deal-process",
+    "ipo-process"
+   ],
+   "locator": "ECM34"
+  },
+  {
+   "q": "What is a dual track, and what does it actually cost to run one?",
+   "a": "Preparing an IPO and a trade sale in parallel, keeping both live until you have real evidence on each, and then choosing. The point is leverage: a credible IPO alternative is the strongest thing a seller can bring to a negotiation with a strategic buyer, and a live auction is a useful reality check on the equity story.\n\nThe costs are real and often understated. Management time is the largest: two processes with different documents, different advisers and different audiences, running while the business still has to trade well, because both routes are priced off current performance. Money, because you pay for prospectus drafting, sponsor and reporting accountant work, vendor due diligence and an auction process, and one of those workstreams will be written off. Confidentiality, because bidders in the auction see detailed information about a business that may end up public, and IPO preparation leaks.\n\nThere is also a signalling cost. If bidders know an IPO is being prepared, some read it as a credible alternative and bid up; others read a seller who does not know what it wants and step back. And if the IPO is pulled after the auction fails, the market draws its own conclusion.\n\nSo the honest framing is that a dual track buys optionality and negotiating leverage, and pays for it in cost, management bandwidth and information risk. It is worth it where the two routes are genuinely close in value and the sponsor has the resources to run both properly. It is a bad idea as a way of avoiding a decision.",
+   "rubric": [
+    "Defines it as preparing both routes in parallel and choosing on evidence",
+    "Names the negotiating leverage as the primary benefit",
+    "Names the costs: management time, duplicated professional cost, confidentiality and leak risk",
+    "Names the signalling risk in both directions",
+    "Concludes it is worth it when the routes are close in value, and not as a substitute for deciding"
+   ],
+   "mistakes": [
+    "Presenting a dual track as free optionality. It consumes the management team you need to sell the story."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "deal-process",
+    "ipo-process"
+   ],
+   "locator": "ECM35"
+  },
+  {
+   "q": "When is a follow-on equity offering accretive rather than dilutive?",
+   "a": "The share count always rises, so dilution in the mechanical sense is automatic. The question that matters is whether earnings per share and value per share rise or fall, and that depends on what the proceeds earn.\n\nThe test: compare the return on the use of proceeds against the earnings yield at which the equity is issued. If the company issues stock at twenty times earnings, the cost of that capital in EPS terms is roughly five percent. If the proceeds fund something returning more than five percent after tax, EPS rises. If they fund a cash balance earning two percent, EPS falls.\n\nSo issuing equity at a high multiple to fund an acquisition at a low multiple is accretive, which is the whole logic of a paper deal. Issuing at a low multiple to repay debt costing less than the earnings yield is dilutive to EPS, even though it is often right for the balance sheet.\n\nAnd that is the point to make last: EPS accretion is not the same as value creation. A rescue equity raise at a deep discount is heavily dilutive on every measure and can still be the value-maximising action available, because the alternative is a restructuring in which the equity is worth nothing. Conversely an accretive raise that funds a bad acquisition destroys value while improving EPS.",
+   "rubric": [
+    "States that share count dilution is automatic and the real question is EPS and value per share",
+    "Gives the test: return on the use of proceeds against the earnings yield of the issue price",
+    "Works an example with a multiple converted to an earnings yield",
+    "Separates EPS accretion from value creation, with the rescue raise as the counterexample"
+   ],
+   "mistakes": [
+    "Equating dilution with value destruction. A deeply dilutive rescue raise can be the best available action."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "accretion-dilution",
+    "follow-on-products"
+   ],
+   "locator": "ECM36"
+  },
+  {
+   "q": "How does valuing a company for an IPO differ from valuing it for a sale?",
+   "a": "Three differences, and they compound.\n\nControl. A sale transfers control, so the price includes a control premium, typically a substantial percentage over the undisturbed trading level, reflecting what the buyer can do with the asset that current management is not doing. An IPO sells a minority stake with no control, so there is no premium.\n\nSynergies. A strategic buyer can pay for cost and revenue synergies. Public market investors cannot; they are buying the standalone company. That means the whole precedent transactions analysis, which is where an M&A valuation anchors, systematically sits above where an IPO comparables analysis lands.\n\nThe IPO discount. On top of having no control premium, an IPO prices below where the company would trade as a seasoned peer, conventionally around ten to twenty percent, to compensate investors for an unproven story and to guarantee the book fills.\n\nSo the methodologies differ too: an M&A valuation leans on precedent transactions and a DCF with synergies, an IPO valuation leans on trading comparables of listed peers with a DCF as a cross-check and pre-deal investor feedback as the binding input.\n\nThe consequence for advising a client is that an IPO will almost always show a lower day-one value than a trade sale. The IPO case has to be argued on the value of the retained stake over time, not on the headline.",
+   "rubric": [
+    "Names the absence of a control premium in an IPO",
+    "Names synergies as available to a strategic buyer and not to public market investors",
+    "Names the IPO discount as a further reduction and gives an order of magnitude",
+    "Contrasts the methodologies: precedents and synergy DCF for M&A, trading comparables and investor feedback for an IPO",
+    "Draws the advisory conclusion: the IPO case rests on the retained stake, not day-one proceeds"
+   ],
+   "mistakes": [
+    "Presenting one number as 'the valuation'. The two routes value different things."
+   ],
+   "topic": "ecm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "comps",
+    "ipo-process",
+    "precedents"
+   ],
+   "locator": "ECM37"
+  },
+  {
+   "q": "Walk me through a de-SPAC and why so many of them disappointed.",
+   "a": "A SPAC lists as a cash shell, typically at ten per unit with the units comprising a share and a fraction of a warrant, and the sponsor takes a promote of around twenty percent of the post-IPO equity for a nominal amount. The cash sits in trust. The SPAC then has a deadline, usually two years, to find a target and complete a business combination, after which the trust is returned.\n\nAt the de-SPAC, the SPAC and the target agree a valuation, shareholders vote, and critically each shareholder can redeem their shares for their share of the trust regardless of how they vote. Because redemption rates ran very high, the cash that actually arrived was often a small fraction of what the trust held, which is why a PIPE was almost always needed to make the transaction fundable.\n\nWhy the outcomes disappointed. The dilution is severe and structurally hidden: the sponsor promote, the warrants and the PIPE discount all dilute the target's shareholders, so the effective price received is well below the headline valuation. Redemptions remove the cash the valuation assumed. The projections used to market de-SPACs were far more aggressive than an IPO prospectus would permit, and regulators subsequently removed the safe harbour that had allowed them and confirmed liability for the target. And the sponsor's promote is worth a great deal even on a mediocre deal but nothing if no deal is done, which is an incentive to complete something rather than to complete the right thing.\n\nThe one-line version: it looked like a faster IPO with price certainty, and it was actually a more dilutive one with worse disclosure and an incentive problem at the sponsor.",
+   "rubric": [
+    "Describes the structure: cash shell at ten per unit, sponsor promote, trust, deadline",
+    "Names redemption rights at the vote and explains why a PIPE was usually needed",
+    "Names the dilution sources: promote, warrants and PIPE discount, so the effective price is below the headline",
+    "Names the projections issue and the removal of the safe harbour",
+    "Names the sponsor incentive to complete any deal rather than the right one"
+   ],
+   "mistakes": [
+    "Describing a SPAC as a cheap fast IPO. Once promote, warrants and redemptions are counted it is usually more expensive."
+   ],
+   "topic": "ecm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "ipo-process"
+   ],
+   "locator": "ECM38"
+  }
+ ]
+}

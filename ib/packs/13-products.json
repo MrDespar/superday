@@ -1,0 +1,878 @@
+{
+ "title": "Products: DCM, ECM and deal process",
+ "origin": "published",
+ "status": "active",
+ "note": "Extracted from a 400-question interview set. The bulk of these three topics is authored and ships as packs 01, 02 and 03. Questions were extracted from third-party guides with `ingest-pdf` and `ingest`, then given topic, difficulty and rubric by `enrich`, checked by a second model in `audit` and reviewed by hand. Every answer and rubric point here is the pipeline's wording, not the source's, and no source text is reproduced.",
+ "items": [
+  {
+   "q": "How do companies select the investment banks they work with?",
+   "a": "Companies select investment banks primarily based on long-term relationships, the banks' track records, and the strength of their pitches during competitive 'bake-off' meetings. Often, bankers advise companies informally for years before a transaction occurs. A bank's specific expertise, such as a reputation for achieving high valuation multiples in a particular sector, also heavily influences the selection process.",
+   "rubric": [
+    "Mentions the importance of long-term relationships and informal advising prior to a transaction.",
+    "References competitive pitch meetings or bake-offs.",
+    "Mentions the bank's track record or specific sector expertise such as achieving high valuation multiples."
+   ],
+   "mistakes": [
+    "Attributing the selection purely to fees or pricing.",
+    "Ignoring the long-term relationship-building aspect that happens before a deal."
+   ],
+   "topic": "deal_process",
+   "subtopic": "bank selection",
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "deal-process"
+   ],
+   "locator": "PR001"
+  },
+  {
+   "q": "Can you describe the role of an investment banker in an Initial Public Offering?",
+   "a": "In an IPO, the banker's role is to secure a favorable valuation, recruit institutional investors, and support the stock price post-listing. The process begins with gathering financial and operational data to draft the S-1 registration statement with lawyers, which is then revised based on SEC feedback. Afterward, the team conducts a roadshow to market the company to institutional investors, gathers pricing indications, and ultimately sells the shares before trading begins.",
+   "rubric": [
+    "Mentions drafting the S-1 registration statement using financial and operational data.",
+    "References revising the S-1 based on SEC feedback.",
+    "Mentions conducting a roadshow to market the company to institutional investors.",
+    "States that bankers gather pricing indications and sell shares before trading begins.",
+    "Mentions supporting the stock price post-listing."
+   ],
+   "mistakes": [
+    "Omitting the regulatory filing and SEC review process.",
+    "Failing to mention the roadshow or marketing phase to institutional investors."
+   ],
+   "topic": "ecm",
+   "subtopic": "ipo process",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-process",
+    "ecm"
+   ],
+   "locator": "PR002"
+  },
+  {
+   "q": "Walk me through a typical debt issuance process.",
+   "a": "To walk through a debt issuance, you first meet with the client to gather key financial and market information. Next, you collaborate with the Debt Capital Markets or Leveraged Finance team to build a credit model and analyze credit ratios under various scenarios. You then draft an investor memo or internal credit committee memo to secure approval or market the deal. Finally, if the debt is being syndicated, you contact potential investors to secure commitments for the issuance.",
+   "rubric": [
+    "Mentions meeting with the client to gather key financial and market information.",
+    "States that the banker collaborates with DCM or Leveraged Finance to build a credit model and analyze credit ratios.",
+    "Mentions drafting an investor memo or internal credit committee memo.",
+    "Mentions contacting potential investors to secure commitments if the debt is syndicated."
+   ],
+   "mistakes": [
+    "Failing to mention collaboration with DCM or Leveraged Finance product groups.",
+    "Omitting the credit modeling and ratio analysis step.",
+    "Forgetting the syndication or investor outreach phase."
+   ],
+   "topic": "dcm",
+   "subtopic": "Debt Capital Markets",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "dcm",
+    "deal-process"
+   ],
+   "locator": "PR003"
+  },
+  {
+   "q": "What is typically included in a pitch book?",
+   "a": "A pitch book is designed to secure an advisory mandate for a transaction like an M&A deal or debt issuance. It begins with the bank's credentials and relevant transaction history to demonstrate expertise. Next, it outlines the client's strategic options, provides a detailed valuation, and presents potential acquisition targets or buyers. It concludes with a summary of recommendations and a proposed timeline for the transaction.",
+   "rubric": [
+    "States that a pitch book is designed to secure an advisory mandate for a transaction.",
+    "Mentions including the bank's credentials and relevant transaction history.",
+    "Mentions outlining strategic options, detailed valuation, and potential targets or buyers.",
+    "Mentions concluding with recommendations and a proposed transaction timeline."
+   ],
+   "mistakes": [
+    "Focusing only on valuation and omitting bank credentials or transaction history.",
+    "Failing to state the primary purpose of a pitch book (to win a mandate)."
+   ],
+   "topic": "deal_process",
+   "subtopic": "Pitch Book Contents",
+   "difficulty": 1,
+   "kind": "technical",
+   "tags": [
+    "deal-process"
+   ],
+   "locator": "PR004"
+  },
+  {
+   "q": "How are the different groups structured at an investment bank?",
+   "a": "Investment banks are primarily divided into industry groups and product groups. Industry groups, such as Healthcare or Technology, focus on building client relationships and managing various deal types within a single sector. Product groups, such as M&A or Leveraged Finance, specialize in executing a specific transaction type across all industries.",
+   "rubric": [
+    "Distinguishes between industry groups and product groups.",
+    "Explains that industry groups (e.g., Healthcare, Tech) focus on sector relationships and cover multiple deal types.",
+    "Explains that product groups (e.g., M&A, LevFin) specialize in executing specific transaction types across all industries."
+   ],
+   "mistakes": [
+    "Confusing industry groups with product groups.",
+    "Failing to provide examples of each group type."
+   ],
+   "topic": "deal_process",
+   "subtopic": "Bank Structure",
+   "difficulty": 1,
+   "kind": "technical",
+   "tags": [
+    "deal-process"
+   ],
+   "locator": "PR005"
+  },
+  {
+   "q": "How would you advise a client looking to expand their business, and how do you add value?",
+   "a": "I would begin by clarifying the client's specific expansion goals, such as target geographies, products, or financial metrics. Next, I would evaluate their financial profile to determine whether organic growth, partnerships, or acquisitions make the most sense given their capital structure. Finally, I would add value by introducing management to strategic partners or targets, structuring the transactions, and managing the execution process to achieve the best outcome.",
+   "rubric": [
+    "States the need to clarify the client's specific expansion goals (geographies, products, metrics).",
+    "Mentions evaluating the client's financial profile and capital structure to assess growth options (organic, partnerships, acquisitions).",
+    "Explains adding value by introducing strategic partners/targets, structuring transactions, and managing execution."
+   ],
+   "mistakes": [
+    "Immediately suggesting M&A without first evaluating the client's financial profile or goals.",
+    "Failing to explain how the banker adds value (e.g., structuring, execution, introductions)."
+   ],
+   "topic": "deal_process",
+   "subtopic": "Advisory Strategy",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-process"
+   ],
+   "locator": "PR006"
+  },
+  {
+   "q": "A client is deciding between going public or selling to another company. How would you help them think through this decision?",
+   "a": "I would present the trade-offs of both options, noting that an M&A sale offers a clean break and immediate liquidity but sacrifices future upside and control. Conversely, an IPO allows the company to retain control and participate in future growth, but the process is highly time-consuming and complex. The optimal choice depends on the management team's long-term commitment and the growth potential remaining in the business.",
+   "rubric": [
+    "States that an M&A sale offers a clean break and immediate liquidity.",
+    "States that an M&A sale sacrifices future upside and control.",
+    "States that an IPO allows the company to retain control and participate in future growth.",
+    "States that an IPO is highly time-consuming and complex.",
+    "Mentions that the optimal choice depends on the management team's long-term commitment and remaining growth potential."
+   ],
+   "mistakes": [
+    "Failing to mention the trade-off regarding control and future upside.",
+    "Ignoring the complexity and time commitment required for an IPO."
+   ],
+   "topic": "deal_process",
+   "subtopic": "Strategic Alternatives",
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-process",
+    "ecm"
+   ],
+   "locator": "PR007"
+  },
+  {
+   "q": "Why might a company issue Debt rather than Equity?",
+   "a": "A company will typically choose to issue debt over equity because debt is cheaper and does not dilute existing ownership. This option is ideal for mature, stable companies with predictable cash flows that can comfortably maintain their leverage ratios within target ranges. However, if a company cannot comply with debt covenants, or if its stock is highly valued making equity exceptionally cheap, it may opt for an equity issuance instead.",
+   "rubric": [
+    "States that debt is generally preferred because it is cheaper than equity.",
+    "States that debt does not dilute existing ownership.",
+    "Explains that this suits mature, stable companies with predictable cash flows that can hold leverage within target ranges.",
+    "Names the conditions that push towards equity instead: an inability to meet debt covenants, or a share price high enough to make equity unusually cheap."
+   ],
+   "mistakes": [
+    "Arguing debt is always better without naming the covenant and cash flow constraints.",
+    "Forgetting that a richly valued stock genuinely makes equity the cheaper currency.",
+    "Failing to mention dilution, which is the cost of equity the CFO actually feels."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "capital-structure",
+    "dcm"
+   ],
+   "locator": "PR008"
+  },
+  {
+   "q": "Walk me through a Debt vs. Equity analysis to recommend the best financing for a company.",
+   "a": "To recommend the best financing option, first analyze the company's business profile, its after-tax cost of debt versus cost of equity, and the overall impact on its weighted average cost of capital (WACC). For high-growth companies or situations where equity is cheaper, an equity offering is typically preferred. For mature companies, project the financial statements under downside scenarios to ensure the company can comfortably comply with debt covenants; if it can, recommend debt, and if not, consider a hybrid option like convertible bonds.",
+   "rubric": [
+    "Starts from the company's business profile - stability, cyclicality and predictability of cash flow.",
+    "Compares the after-tax cost of debt against the cost of equity.",
+    "Assesses the effect of each option on WACC.",
+    "Recommends equity for high-growth companies, or where the share price makes equity unusually cheap.",
+    "For a mature company, projects the financial statements under downside scenarios to test covenant compliance.",
+    "Recommends debt where the covenants hold under the downside case, and a hybrid such as a convertible bond where they do not."
+   ],
+   "mistakes": [
+    "Recommending debt on the base case alone, without testing covenants under a downside scenario.",
+    "Comparing the pre-tax cost of debt against the cost of equity.",
+    "Treating the decision as purely quantitative, ignoring the company's growth stage and business profile.",
+    "Forgetting the convertible as the middle option when neither pure debt nor pure equity fits."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "wacc"
+   ],
+   "locator": "PR009"
+  },
+  {
+   "q": "You’re considering 3 companies that want to raise capital: A utility company, a railroad company, and a branded pharmaceutical company. Which company is most appropriate for 100% Equity, which is most appropriate for 50% Debt / 50% Equity, and which is most appropriate for 100% Debt?",
+   "a": "The utility company is most appropriate for 100% debt because it operates as a highly predictable local monopoly with stable, recession-resistant cash flows. The branded pharmaceutical company is best suited for 100% equity due to the high risks associated with drug development, R&D, and patent expirations. The railroad company, which is capital-intensive but subject to moderate economic cycles, is most appropriate for a balanced 50% debt and 50% equity structure.",
+   "rubric": [
+    "Assigns 100% debt to the utility, and explains it as a regulated local monopoly with stable, recession-resistant cash flow.",
+    "Assigns 100% equity to the branded pharmaceutical company.",
+    "Explains the pharma reasoning: binary drug development risk, heavy R&D, and patent expirations.",
+    "Assigns 50/50 to the railroad, as capital-intensive but exposed to moderate economic cycles.",
+    "Grounds the whole answer in cash flow predictability as the thing that determines debt capacity."
+   ],
+   "mistakes": [
+    "Assigning debt capacity by asset intensity rather than by cash flow predictability.",
+    "Giving the pharmaceutical company debt on the strength of its margins, ignoring the patent cliff.",
+    "Failing to explain the reasoning, and simply listing three pairings."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "healthcare",
+    "transport-shipping"
+   ],
+   "locator": "PR010"
+  },
+  {
+   "q": "How might you decide whether a company should raise Debt via Term Loans or Subordinated Notes?",
+   "a": "To decide between Term Loans and Subordinated Notes, start by evaluating the cheaper option, which is Term Loans. Project the company's cash flows under downside scenarios to see if it can comply with the maintenance covenants. If it cannot, consider Subordinated Notes, which lack these restrictive covenants but carry higher interest rates. Finally, consider qualitative factors, as early-stage startups cannot issue these debt instruments while mature companies can.",
+   "rubric": [
+    "Starts with Term Loans as the cheaper option to test first.",
+    "Projects cash flows under downside scenarios to check compliance with the maintenance covenants that come with them.",
+    "Moves to Subordinated Notes if the downside case breaks those covenants.",
+    "States the trade-off: Subordinated Notes avoid maintenance covenants but cost more in interest.",
+    "Adds the qualitative screen: an early-stage company cannot issue these instruments at all, while a mature one can."
+   ],
+   "mistakes": [
+    "Choosing on headline interest rate alone, ignoring whether the covenants survive a downside case.",
+    "Confusing incurrence covenants on notes with the maintenance covenants on term loans.",
+    "Testing the covenants only on the base case, which is the one that never breaks them."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "capital-structure"
+   ],
+   "locator": "PR011"
+  },
+  {
+   "q": "A company wants to reduce its cash interest expense on Debt by negotiating with lenders to get a lower coupon rate. However, the lenders want to maintain or increase their yield. What are the company’s options?",
+   "a": "To lower its coupon rate while maintaining lender yield, a company can offer alternative incentives such as issuing the debt at an Original Issue Discount (OID) or including generous call and make-whole premiums. In distressed or restructuring situations, the company might also offer equity warrants or propose a debt-for-equity swap to satisfy lenders.",
+   "rubric": [
+    "Recognises that yield and coupon are different things, so the coupon can fall while yield holds.",
+    "Names issuing at an Original Issue Discount, which raises the yield without raising the coupon.",
+    "Names generous call protection or make-whole premiums as compensation to the lender.",
+    "For a distressed or restructuring situation, names equity warrants or a debt-for-equity swap as ways to make up the return."
+   ],
+   "mistakes": [
+    "Treating coupon and yield as the same number, so the question looks impossible.",
+    "Offering only a longer maturity, which raises the lender's risk rather than its return.",
+    "Forgetting the equity kicker route, which is how this is usually solved in a distressed negotiation."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "sbc"
+   ],
+   "locator": "PR012"
+  },
+  {
+   "q": "What would cause a company's credit rating to change?",
+   "a": "A company's credit rating changes due to significant shifts in its financial metrics or qualitative risk factors. For instance, if a company's leverage ratio rises well above its peer group average, rating agencies will likely issue a downgrade. Additionally, qualitative factors such as industry downturns, new competitive threats, or a declining growth outlook can trigger a rating change even if financial ratios remain stable.",
+   "rubric": [
+    "States that ratings move on significant shifts in financial metrics or in qualitative risk.",
+    "Gives a quantitative trigger: leverage rising well above the peer group.",
+    "Gives qualitative triggers: an industry downturn, a new competitive threat, or a deteriorating growth outlook.",
+    "Notes that a qualitative change can move a rating even with financial ratios unchanged."
+   ],
+   "mistakes": [
+    "Naming only leverage, and treating ratings as a purely mechanical ratio calculation.",
+    "Ignoring the agency's forward-looking view, which is what an outlook change signals.",
+    "Missing that a large debt-funded acquisition can trigger a downgrade before any ratio has actually moved."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "credit-stats"
+   ],
+   "locator": "PR013"
+  },
+  {
+   "q": "Explain the difference between a bond’s Coupon Rate, Current Yield, and Yield to Maturity (YTM).",
+   "a": "The coupon rate is the fixed annual interest payment based on the bond's par value. The current yield is calculated by dividing the annual coupon payment by the bond's current market price. Yield to maturity (YTM) is the internal rate of return (IRR) of the bond, assuming it is held to maturity, all payments are made on schedule, and the cash flows are reinvested at the same rate.",
+   "rubric": [
+    "Defines the coupon rate as the fixed annual interest payment set against the bond's par value.",
+    "Defines current yield as the annual coupon divided by the bond's current market price.",
+    "Defines yield to maturity as the bond's IRR if held to maturity.",
+    "States the YTM assumptions: all payments made on schedule, and cash flows reinvested at the same rate.",
+    "Distinguishes the three by what each ignores: the coupon ignores price, current yield ignores the pull to par, YTM captures both."
+   ],
+   "mistakes": [
+    "Treating coupon rate and yield as interchangeable, which they are only when the bond trades at par.",
+    "Using current yield for a bond bought at a discount, missing the capital gain at maturity.",
+    "Forgetting the reinvestment assumption embedded in YTM."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "bond-math",
+    "bonds"
+   ],
+   "locator": "PR014"
+  },
+  {
+   "q": "You purchase a $100 bond at a 5% discount to par value. The bond's coupon rate is 8%, and it matures in 5 years. What is the bond's approximate YTM?",
+   "a": "The approximate YTM is 9.2%. This is calculated by taking the $8 annual interest, adding the $1 of annualized price appreciation from the $5 discount amortized over 5 years, and dividing that sum by the average bond price of $97.50.",
+   "rubric": [
+    "Identifies the annual coupon as $8, being 8% of the $100 par value.",
+    "Recognises the $5 discount as a gain realised at maturity, amortised at $1 a year over the five years.",
+    "Uses the average of the $95 purchase price and $100 par, $97.50, as the denominator.",
+    "Calculates the approximate YTM as ($8 + $1) / $97.50, or about 9.2%.",
+    "Notes that the YTM exceeds the 8% coupon because the bond was bought below par."
+   ],
+   "mistakes": [
+    "Answering 8%, the coupon rate, and ignoring the pull to par.",
+    "Dividing by the $95 purchase price or the $100 par rather than the average of the two.",
+    "Applying the whole $5 discount to a single year instead of amortising it over the five."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "bond-math",
+    "bonds"
+   ],
+   "locator": "PR015"
+  },
+  {
+   "q": "Will a 10% or 5% coupon rate bond be more sensitive to changes in the Discount Rate?",
+   "a": "A 5% coupon bond is more sensitive to discount rate changes because it pays less interest during its life, making its value highly dependent on the final principal repayment at maturity. Conversely, a 10% coupon bond returns more cash earlier through interest payments, which reduces its overall sensitivity to discount rate fluctuations.",
+   "rubric": [
+    "States that the 5% coupon bond is more sensitive to discount rate changes.",
+    "Explains that a lower coupon returns less cash during the bond's life, so more of its value sits in the principal repaid at maturity.",
+    "Explains that value concentrated further out is discounted harder by a change in rate.",
+    "States that the 10% coupon bond returns more cash earlier, which shortens its effective life and damps its sensitivity.",
+    "Connects the point to duration: the lower-coupon bond has the longer duration."
+   ],
+   "mistakes": [
+    "Choosing the 10% bond on the reasoning that a larger coupon means more to lose.",
+    "Comparing on maturity alone and missing that coupon size changes duration at the same maturity.",
+    "Failing to name duration as the underlying concept."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "dcf"
+   ],
+   "locator": "PR016"
+  },
+  {
+   "q": "Intuitively, what do a bond’s Duration and Convexity mean, and how do you use them?",
+   "a": "Duration and convexity measure a bond's price sensitivity to interest rate changes, representing the first and second derivatives of the bond's price with respect to its yield. Duration can also be understood as the weighted-average time required to recover the bond's price through its internal cash flows. Investors use these metrics to evaluate and manage interest-rate risk within their portfolios.",
+   "rubric": [
+    "States that both measure a bond's price sensitivity to interest rate changes.",
+    "Identifies duration as the first derivative of price with respect to yield, and convexity as the second.",
+    "Gives the intuitive reading of duration: the weighted-average time to recover the bond's price through its own cash flows.",
+    "Explains that convexity captures the curvature duration misses, so duration alone understates gains when rates fall and overstates losses when they rise.",
+    "States that investors use both to measure and manage interest-rate risk across a portfolio."
+   ],
+   "mistakes": [
+    "Describing duration as simply the bond's maturity.",
+    "Ignoring convexity and treating the price-yield relationship as a straight line.",
+    "Confusing Macaulay duration (a time in years) with modified duration (a percentage price change)."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "bonds",
+    "duration-convexity"
+   ],
+   "locator": "PR017"
+  },
+  {
+   "q": "Interest rates have fallen, and prevailing bond yields are now down by ~2% compared to when a company first issued an 8%, 7-year bond. This company wants to refinance and issue a new bond to the same investors with a 6% coupon rate and a 10-year maturity. Why might it not be able to do this?",
+   "a": "The company may be unable to refinance because the new 10-year bond with a lower coupon rate has a significantly higher duration, which increases interest-rate risk for investors. Even when interest rates fall, bond investors manage their portfolios based on strict duration limits. To make the refinancing viable, the company would likely need to offer a shorter maturity or enhance the yield through other mechanisms.",
+   "rubric": [
+    "Identifies duration as the obstacle, not the coupon or the credit.",
+    "Explains that a longer 10-year maturity combined with a lower 6% coupon gives the new bond a materially higher duration than the existing 7-year 8% bond.",
+    "States that higher duration means more interest-rate risk for the holder.",
+    "Explains that bond investors run to duration limits and mandates, so a fall in yields does not by itself make the new paper acceptable.",
+    "Names the fixes: shorten the maturity, or enhance the yield through other terms."
+   ],
+   "mistakes": [
+    "Assuming that because rates have fallen, existing investors will automatically roll into the new bond.",
+    "Attributing the refusal to credit quality when nothing about the issuer has changed.",
+    "Missing that maturity and coupon both push duration in the same direction here."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "market-awareness"
+   ],
+   "locator": "PR018"
+  },
+  {
+   "q": "What is the Yield to Worst (YTW), and how is it related to the Yield to Maturity (YTM)?",
+   "a": "Yield to Worst (YTW) is the lowest potential yield an investor can receive, representing the minimum of the Yield to Maturity (YTM) and the Yield to Call (YTC) across all possible call dates. For bonds trading at a discount, YTW equals YTM because early repayment increases the investor's yield. For bonds trading at a premium, YTW is typically less than or equal to YTM because early calls often reduce the overall return.",
+   "rubric": [
+    "Defines Yield to Worst as the lowest yield the investor can end up with.",
+    "States that it is the minimum of Yield to Maturity and Yield to Call across every possible call date.",
+    "States that for a bond trading at a discount, YTW equals YTM, because being called early would only accelerate the gain to par.",
+    "States that for a bond trading at a premium, YTW is at or below YTM, because an early call cuts short the above-market coupon.",
+    "Explains why it matters: a callable premium bond quoted on YTM overstates what the investor will actually earn."
+   ],
+   "mistakes": [
+    "Treating YTW as always lower than YTM, when for a discount bond the two are equal.",
+    "Calculating Yield to Call for only the first call date rather than across all of them.",
+    "Quoting YTM on a callable bond trading above par as if the call were not there."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "bond-math",
+    "bonds"
+   ],
+   "locator": "PR019"
+  },
+  {
+   "q": "What are the two different “sides” of a Restructuring deal? Do you know which one we usually advise?",
+   "a": "Restructuring deals involve two primary sides: the debtor (the troubled company) and the creditors (the lenders). Advising the debtor is comparable to sell-side M&A, where you help the company find a resolution, while advising creditors is similar to buy-side M&A, focusing on maximizing asset recovery. Although most restructuring groups advise both sides, individual investment banks often specialize in or favor one side over the other.",
+   "rubric": [
+    "Names the two sides: the debtor, being the troubled company, and the creditors, being the lenders.",
+    "Compares debtor-side work to sell-side M&A, helping the company reach a resolution.",
+    "Compares creditor-side work to buy-side M&A, focused on maximising recovery.",
+    "Notes that most restructuring groups advise both sides, though individual banks tend to be known for one."
+   ],
+   "mistakes": [
+    "Assuming restructuring only ever means advising the company.",
+    "Failing to research which side the specific bank is known for before the interview.",
+    "Missing that the two mandates have opposed objectives, which is why the conflict rules matter."
+   ],
+   "topic": "deal_process",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "deal-process",
+    "restructuring"
+   ],
+   "locator": "PR020"
+  },
+  {
+   "q": "How are stressed, distressed, and bankrupt companies different?",
+   "a": "Stressed companies can still meet their interest obligations but face an impending cash crunch or upcoming debt maturity. Distressed companies have officially defaulted by missing a payment, failing to address a maturity, or violating a financial covenant. Bankrupt companies have already entered legal proceedings under Chapter 7 or Chapter 11 to resolve their debts.",
+   "rubric": [
+    "Defines stressed as still able to meet interest obligations but facing a cash crunch or an approaching maturity.",
+    "Defines distressed as having actually defaulted - a missed payment, an unaddressed maturity, or a covenant breach.",
+    "Defines bankrupt as having entered formal legal proceedings, under Chapter 7 or Chapter 11 in the US.",
+    "Draws the line clearly: stressed is anticipated trouble, distressed is a default that has happened, bankrupt is a court process."
+   ],
+   "mistakes": [
+    "Using stressed and distressed interchangeably.",
+    "Treating a covenant breach as merely stressed, when it is an event of default.",
+    "Assuming bankruptcy always means liquidation, when Chapter 11 is a reorganisation."
+   ],
+   "topic": "deal_process",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "restructuring"
+   ],
+   "locator": "PR021"
+  },
+  {
+   "q": "OK, so what factors might cause a company to become “stressed” and then “distressed?”",
+   "a": "A company can become stressed due to macro factors like industry downturns and economic shocks, or micro factors such as poor management decisions and excessive debt. To transition from stressed to distressed, a specific catalyst is required. This catalyst is typically a missed interest payment, a covenant violation, a credit rating downgrade, or cash falling below a critical threshold.",
+   "rubric": [
+    "Names macro causes of stress: industry downturns and economic shocks.",
+    "Names micro causes: poor management decisions and an over-levered balance sheet.",
+    "States that moving from stressed to distressed requires a specific catalyst rather than gradual deterioration.",
+    "Names catalysts: a missed interest payment, a covenant violation, a rating downgrade, or cash falling through a critical threshold."
+   ],
+   "mistakes": [
+    "Describing the transition as gradual and naming no triggering event.",
+    "Listing only macro causes, ignoring capital structure decisions the company made itself.",
+    "Confusing a downgrade, which can trigger covenants and repricing, with a mere signal."
+   ],
+   "topic": "deal_process",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "restructuring"
+   ],
+   "locator": "PR022"
+  },
+  {
+   "q": "Suppose that you are advising a distressed company. What are its main options, and what are the advantages and disadvantages of each one?",
+   "a": "A distressed company has several options, starting with refinancing, which is non-disruptive but extremely difficult to execute due to investor risk aversion. It can also pursue an asset or company sale, which recovers some creditor value but usually at a heavily discounted price. Alternatively, the company can restructure its debt terms or execute a debt-for-equity swap, though getting all parties to agree is challenging. Finally, declaring bankruptcy offers a structured negotiation framework and access to new funding, but causes severe business disruption and typically wipes out common shareholders.",
+   "rubric": [
+    "Names refinancing: non-disruptive, but hard to execute precisely when the company most needs it.",
+    "Names an asset or whole-company sale: recovers value for creditors, usually at a distressed discount.",
+    "Names an out-of-court restructuring of terms or a debt-for-equity swap: avoids court, but requires agreement from parties with opposed interests.",
+    "Names bankruptcy: gives a structured negotiation framework and access to new funding, at the cost of severe disruption.",
+    "States that bankruptcy typically wipes out the common shareholders.",
+    "Gives both an advantage and a disadvantage for each option rather than just listing them."
+   ],
+   "mistakes": [
+    "Listing the options without weighing the trade-offs the question asks for.",
+    "Presenting refinancing as straightforward, when risk aversion is highest at exactly this point.",
+    "Forgetting that the equity is usually wiped out, which is what shapes management's incentives.",
+    "Overlooking the debtor-in-possession financing that makes the court route attractive."
+   ],
+   "topic": "deal_process",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "sbc"
+   ],
+   "locator": "PR023"
+  },
+  {
+   "q": "What’s the difference between a Chapter 7 and Chapter 11 bankruptcy under the U.S. tax and legal code?",
+   "a": "Chapter 7 bankruptcy is a liquidation process where a company is past saving, requiring a court-appointed trustee to sell off its assets to repay creditors. In contrast, Chapter 11 is a reorganization process where the company continues to operate while restructuring its debt. Under Chapter 11, the company renegotiates its liabilities or executes a debt-for-equity swap to repay creditors over time.",
+   "rubric": [
+    "Defines Chapter 7 as liquidation, used where the business is past saving.",
+    "States that in Chapter 7 a court-appointed trustee sells the assets and distributes proceeds to creditors.",
+    "Defines Chapter 11 as reorganisation, with the company continuing to operate.",
+    "States that in Chapter 11 the company renegotiates its liabilities or executes a debt-for-equity swap and repays over time.",
+    "Draws the distinction: Chapter 7 ends the business, Chapter 11 is designed to preserve it as a going concern."
+   ],
+   "mistakes": [
+    "Treating all bankruptcy as liquidation.",
+    "Reversing the two chapters.",
+    "Missing that the going-concern value preserved in Chapter 11 is usually higher than liquidation value, which is why creditors often prefer it."
+   ],
+   "topic": "deal_process",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "restructuring"
+   ],
+   "locator": "PR024"
+  },
+  {
+   "q": "What is debtor-in-possession (DIP) financing, and how do distressed companies use it?",
+   "a": "Debtor-in-possession (DIP) financing is specialized funding raised by a bankrupt company that holds repayment priority over all existing debt and equity claims. Distressed companies use DIP financing to maintain operations and facilitate their emergence from Chapter 11 bankruptcy. While it provides essential liquidity, some lenders use DIP terms to aggressively position themselves for a discounted takeover of the company's assets.",
+   "rubric": [
+    "Defines DIP financing as funding raised by a company already in bankruptcy.",
+    "States that it ranks ahead of all existing debt and equity claims, which is what makes it available at all.",
+    "Explains its purpose: keeping operations running and funding the path out of Chapter 11.",
+    "Notes the adversarial use: lenders sometimes write DIP terms to position for a discounted takeover of the assets, a loan-to-own strategy."
+   ],
+   "mistakes": [
+    "Missing the super-priority, which is the entire reason anyone lends to a bankrupt company.",
+    "Describing DIP financing as ordinary rescue debt available before a filing.",
+    "Ignoring the loan-to-own motive behind aggressive DIP terms."
+   ],
+   "topic": "deal_process",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "restructuring"
+   ],
+   "locator": "PR025"
+  },
+  {
+   "q": "Walk me through an IPO model for a private company that wants to go public.",
+   "a": "To build an IPO model, you start by applying forward valuation multiples from comparable public peers to the company's projected financial metrics to estimate its post-money enterprise value. From there, you calculate the post-money equity value by adjusting for cash (including net IPO proceeds) and debt. Next, you apply an IPO pricing discount (typically 10% to 20%) to determine the offering price per share and the number of primary shares to be issued. Finally, you factor in any secondary or overallotment shares to determine the final ownership split and post-deal valuation multiples.",
+   "rubric": [
+    "Applies forward multiples from comparable public peers to the company's projected metrics to estimate post-money Enterprise Value.",
+    "Bridges from Enterprise Value to post-money Equity Value by adjusting for debt and cash, including the net IPO proceeds.",
+    "Applies an IPO pricing discount, typically 10% to 20%, to reach the offering price per share.",
+    "Solves for the number of primary shares to be issued from the capital the company needs to raise.",
+    "Layers in secondary shares and the overallotment option to reach the final ownership split and post-deal multiples."
+   ],
+   "mistakes": [
+    "Omitting the IPO discount and pricing at the full peer-implied value.",
+    "Forgetting that the net proceeds land in cash, which changes the equity value bridge.",
+    "Confusing pre-money and post-money valuation.",
+    "Ignoring the greenshoe when calculating final ownership percentages."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "multiples"
+   ],
+   "locator": "PR026"
+  },
+  {
+   "q": "Can you explain Primary vs. Secondary Shares in an IPO or Follow-On Offering?",
+   "a": "Primary shares are newly created shares issued by the company to raise fresh capital, which dilutes existing shareholders but provides cash for operations or expansion. Secondary shares are existing shares sold by current shareholders to new investors, meaning no new capital is raised for the company and no dilution occurs. A healthy offering typically maintains a high proportion of primary shares, as a dominant secondary share component may signal to the market that insiders are eager to exit.",
+   "rubric": [
+    "Defines primary shares as newly created shares issued by the company, raising fresh capital.",
+    "States that primary shares dilute existing shareholders but put cash on the company's balance sheet.",
+    "Defines secondary shares as existing shares sold by current holders, raising nothing for the company.",
+    "States that secondary shares cause no dilution, since the share count does not change.",
+    "Explains the signalling point: a heavily secondary offering can read as insiders wanting out."
+   ],
+   "mistakes": [
+    "Assuming all IPO proceeds go to the company, when secondary proceeds go to the selling shareholders.",
+    "Claiming secondary shares dilute existing holders.",
+    "Missing the signalling effect of the primary/secondary mix on how the deal is received."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "ecm",
+    "follow-on-products"
+   ],
+   "locator": "PR027"
+  },
+  {
+   "q": "What's the impact of a “Greenshoe” or Overallotment provision in an IPO or FO, and when might a bank offer it?",
+   "a": "A Greenshoe or overallotment option allows underwriters to sell more shares than originally planned, typically up to an additional 15%, if there is exceptionally high investor demand. This provision helps stabilize the stock price post-IPO and allows the company to raise extra capital. Ultimately, exercising this option increases the overall deal size and results in greater public ownership of the company.",
+   "rubric": [
+    "Defines the greenshoe as an option for underwriters to sell more shares than originally offered, typically up to an additional 15%.",
+    "States that it is exercised when investor demand is exceptionally strong.",
+    "Explains the stabilisation function: the underwriters can support the price in the aftermarket by covering their short.",
+    "States that it lets the company raise extra capital and increases total deal size.",
+    "Notes that exercising it increases the public float."
+   ],
+   "mistakes": [
+    "Describing the greenshoe as an obligation rather than an option held by the underwriters.",
+    "Missing the price stabilisation purpose and treating it purely as a way to upsize.",
+    "Getting the size wrong - the market convention is 15%.",
+    "Forgetting that the underwriters go short to create the position the greenshoe covers."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ecm",
+    "stabilisation"
+   ],
+   "locator": "PR028"
+  },
+  {
+   "q": "How do you set up a Follow-On Offering model differently from an IPO model?",
+   "a": "Unlike an IPO model which relies on peer multiples to estimate an initial valuation, a follow-on offering model is driven by the company's existing market share price. The model applies a range of discounts to this current price to determine the offering price and the number of shares needed to meet the capital target. It then incorporates primary versus secondary share splits and overallotment options to calculate the net proceeds and the resulting dilution.",
+   "rubric": [
+    "States that a follow-on is driven by the company's existing market share price rather than by peer multiples.",
+    "Explains that the valuation question is already answered, because the stock trades.",
+    "Applies a range of discounts to the current price to set the offering price.",
+    "Solves for the number of shares needed to hit the capital target at that price.",
+    "Incorporates the primary/secondary split and the overallotment to calculate net proceeds and resulting dilution."
+   ],
+   "mistakes": [
+    "Running peer multiples to value a company that already has a quoted share price.",
+    "Omitting the discount to market, which is what gets a follow-on placed.",
+    "Forgetting the dilution calculation, which is what existing shareholders actually care about."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ecm",
+    "follow-on-products"
+   ],
+   "locator": "PR029"
+  },
+  {
+   "q": "Walk me through how a company might go public via a Special Purpose Acquisition Company (“SPAC”).",
+   "a": "Going public via a SPAC involves a two-step process starting with a sponsor forming a shell company, taking it public to raise capital, and retaining a promote fee (typically 20% ownership). In the second step, the SPAC identifies a private target company and executes a reverse merger, where the target's shareholders receive the majority of the combined entity's shares. The capital raised during the SPAC's initial IPO, often supplemented by PIPE financing, is then transferred to the combined company's balance sheet.",
+   "rubric": [
+    "Describes it as a two-step process rather than a single transaction.",
+    "Step one: a sponsor forms a shell company and takes it public to raise a pool of capital.",
+    "States that the sponsor retains a promote, conventionally around 20% of the shares.",
+    "Step two: the SPAC finds a private target and completes a reverse merger.",
+    "States that the target's shareholders end up holding the majority of the combined entity.",
+    "States that the IPO trust cash, often topped up with PIPE financing, moves onto the combined company's balance sheet."
+   ],
+   "mistakes": [
+    "Describing it as one transaction and missing that the shell lists before it has a target.",
+    "Forgetting the sponsor promote, which is the main source of dilution.",
+    "Omitting the PIPE, which is often what makes the deal size work after redemptions.",
+    "Ignoring redemption rights, which can drain the trust before closing."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "ecm"
+   ],
+   "locator": "PR030"
+  },
+  {
+   "q": "What are the trade-offs of a SPAC vs. an IPO for a company going public?",
+   "a": "SPAC mergers offer a faster timeline to go public with fewer regulatory hurdles and avoid the typical IPO pricing discount. However, they often result in higher dilution for existing owners due to sponsor promotes and warrants, and can carry comparable or higher fees. Additionally, the market sometimes perceives SPAC-backed companies as lower quality, which can negatively impact long-term stock performance.",
+   "rubric": [
+    "Names the advantages: a faster route to being public, fewer regulatory hurdles, and no conventional IPO pricing discount.",
+    "Names the dilution disadvantage, driven by the sponsor promote and the warrants.",
+    "Notes that all-in fees are comparable to or higher than an IPO's, despite the perception of being cheaper.",
+    "Notes the reputational point: the market has at times treated SPAC-listed companies as lower quality, weighing on aftermarket performance.",
+    "Gives both sides rather than arguing only for one route."
+   ],
+   "mistakes": [
+    "Presenting the SPAC route as simply cheaper and faster, ignoring the dilution.",
+    "Forgetting warrants as a second layer of dilution beyond the promote.",
+    "Failing to mention aftermarket performance, which is what the company lives with afterwards."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "ecm"
+   ],
+   "locator": "PR031"
+  },
+  {
+   "q": "Your co-worker is creating a Payoff Diagram for a Convertible Bond. He claims that the market price will exceed the bond’s payoff value when the company’s share price reaches the Conversion Price and that above the Conversion Price, the market price will remain above the payoff value. Is he correct, incorrect, or partially correct?",
+   "a": "The co-worker is only partially correct. While it is true that the market price of a convertible bond remains above its payoff value when the stock price exceeds the conversion price due to the downside protection it offers, the first claim is incorrect. In reality, the market price typically begins to exceed the payoff value well before the stock reaches the conversion price. This premium exists because the embedded option to convert into equity adds value even when the option is out-of-the-money.",
+   "rubric": [
+    "States that the co-worker is only partially correct.",
+    "Agrees with the second claim: above the conversion price, the market price does stay above payoff value, because of the downside protection the bond floor gives.",
+    "Rejects the first claim: the market price begins to exceed payoff value well before the share price reaches the conversion price.",
+    "Explains why: the embedded conversion option carries value even while it is out of the money.",
+    "Frames it as time value, which decays towards zero only at maturity."
+   ],
+   "mistakes": [
+    "Agreeing with the whole statement and missing that option value exists below the strike.",
+    "Rejecting both claims, when the second is right.",
+    "Treating the convertible's value as the simple maximum of bond value and conversion value, ignoring the premium over both."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "convertibles",
+    "equity-linked"
+   ],
+   "locator": "PR032"
+  },
+  {
+   "q": "Explain intuitively why a Convertible Bond is not necessarily “cheaper” than traditional Debt, even though some people claim it is.",
+   "a": "Although convertible bonds carry lower coupon rates and thus lower annual cash interest payments than traditional debt, they are not inherently cheaper. The embedded conversion option can lead to significant equity dilution if the stock price rises, which represents a substantial opportunity cost for existing shareholders. When accounting for this potential dilution alongside the interest payments, the total cost of capital can end up being higher than that of standard debt.",
+   "rubric": [
+    "Concedes the surface point: convertibles carry lower coupons and so lower annual cash interest.",
+    "Explains that the conversion option can force significant equity dilution if the share price rises.",
+    "Frames that dilution as a real opportunity cost borne by existing shareholders, not a free option.",
+    "Concludes that once the dilution is priced alongside the interest saved, the all-in cost of capital can exceed straight debt.",
+    "Makes the point that the coupon saving is what the company pays for the option it has written."
+   ],
+   "mistakes": [
+    "Comparing coupon rates alone and concluding convertibles are cheaper.",
+    "Treating the conversion option as costless because it involves no cash payment.",
+    "Missing that the dilution lands precisely in the scenario where the equity is most valuable."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 4,
+   "kind": "technical",
+   "tags": [
+    "accretion-dilution",
+    "equity-linked"
+   ],
+   "locator": "PR033"
+  },
+  {
+   "q": "Convertible Bonds seem “too good to be true” since they offer the upside potential of common shares and downside protection if the company’s stock price falls. Why would anyone purchase common shares if the company also has Convertible Bonds?",
+   "a": "Convertible bonds are not a free lunch because they require investors to pay a conversion premium, making them more expensive than purchasing the underlying common shares directly. For instance, if a bond has a 30% conversion premium, an investor is paying a significant markup for the same equity exposure. Therefore, investors who do not require downside protection will prefer common shares to avoid paying this premium and to maximize their direct equity returns.",
+   "rubric": [
+    "States that convertibles are not a free lunch, because the investor pays a conversion premium.",
+    "Explains that the premium means more is paid for the same eventual equity exposure than buying shares outright.",
+    "Gives a concrete illustration, such as a 30% conversion premium.",
+    "Concludes that an investor who does not need downside protection prefers the common shares, to avoid paying for protection they do not want.",
+    "Frames the trade cleanly: the bond floor is bought with upside given away."
+   ],
+   "mistakes": [
+    "Failing to name the conversion premium as the price of the downside protection.",
+    "Claiming convertibles are strictly better than shares, which is the premise the question is testing.",
+    "Ignoring that the coupon on a convertible is well below what straight debt would pay."
+   ],
+   "topic": "ecm",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "convertibles",
+    "equity-linked"
+   ],
+   "locator": "PR034"
+  },
+  {
+   "q": "When is the ideal time to suggest that the client review its investments and deploy its remaining committed capital?",
+   "a": "The ideal time to suggest this review is when the General Partners are preparing to raise their next fund. Limited Partners are often skeptical of committing new capital if the PE firm has substantial undeployed capital from previous funds. To address this, GPs want to demonstrate they have actively deployed prior capital, sometimes even making early investments during the fundraising period to showcase the new fund's strategy and secure commitments.",
+   "rubric": [
+    "Identifies the moment: when the General Partners are preparing to raise their next fund.",
+    "Explains that LPs are reluctant to commit fresh capital while a large amount of prior capital sits undeployed.",
+    "States that GPs therefore want to show prior funds have been actively deployed.",
+    "Notes that GPs sometimes make early investments during the fundraise itself, to demonstrate the new fund's strategy.",
+    "Frames the whole answer around dry powder as the LP's objection to overcome."
+   ],
+   "mistakes": [
+    "Timing the conversation by market conditions rather than by the fundraising cycle.",
+    "Missing dry powder as the specific concern LPs raise.",
+    "Confusing committed capital with deployed capital."
+   ],
+   "topic": "deal_process",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "deal-process",
+    "financial-sponsors"
+   ],
+   "locator": "PR035"
+  },
+  {
+   "q": "At a high level, how does a REIT decide to issue Debt or Equity to fund its operations?",
+   "a": "REITs generally prefer debt because it is cheaper than equity, but they are constrained by cash costs and strict debt covenants. To find the optimal mix, a REIT will calculate its cost of debt and equity and run scenario analyses to ensure compliance with covenants like Debt-to-EBITDA. The goal is to maximize cheaper debt financing up to the limit of covenant safety, thereby minimizing the overall Weighted Average Cost of Capital (WACC).",
+   "rubric": [
+    "States that REITs generally prefer debt because it is cheaper than equity.",
+    "Names the constraints: cash interest cost and strict debt covenants.",
+    "States that the REIT computes its cost of debt and cost of equity and runs scenario analysis against covenants such as Debt/EBITDA.",
+    "States the objective: take cheap debt up to the point where covenant headroom becomes unsafe.",
+    "Frames the goal as minimising WACC subject to that covenant constraint.",
+    "Notes the structural pressure: the 90% payout rule leaves little retained cash, so external funding is unavoidable."
+   ],
+   "mistakes": [
+    "Ignoring the covenant constraint and treating the decision as a pure cost comparison.",
+    "Forgetting that the mandatory payout leaves REITs structurally dependent on capital markets.",
+    "Testing covenant compliance only in the base case."
+   ],
+   "topic": "dcm",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "real-estate",
+    "wacc"
+   ],
+   "locator": "PR036"
+  }
+ ]
+}

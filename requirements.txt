@@ -1,0 +1,14 @@
+# superday runtime dependencies.
+#
+# Deliberately three. The LLM clients are raw urllib POSTs (see ib/llm.py's
+# docstring) rather than SDK wrappers, so no `anthropic` or
+# `google-generativeai` belongs in this file.
+#
+# fsrs is pinned hard: scheduler.py stores card state as opaque JSON so a
+# library upgrade cannot invalidate the schema, but the state written by one
+# major version is not necessarily read the same way by the next. Upgrade it
+# deliberately, against a copy of the database, never incidentally.
+
+certifi==2026.7.22   # CA bundle; stdlib urllib has none on macOS
+fsrs==6.3.2          # spaced repetition, ib/scheduler.py
+pypdf==6.16.1        # ib/ingest/pdf.py

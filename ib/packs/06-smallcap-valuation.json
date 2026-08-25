@@ -1,0 +1,346 @@
+{
+ "title": "Small-cap and private company valuation (authored)",
+ "origin": "self_authored",
+ "status": "active",
+ "note": "Authored for the mid-market gap: the bank's 171 valuation questions all assume a liquid listed peer set and a company large enough to have one.",
+ "items": [
+  {
+   "q": "How do you value a company whose only three listed comparables are twice its size and in another country?",
+   "a": "Use them, but adjust deliberately and say so, rather than pretending the set is clean.\n\nFirst, widen the set on the axis that matters least for the business. If the economics are driven by end market and margin structure, take the same sector across a wider geography. If the economics are driven by contract structure and cash conversion, take a different sector with the same profile: a regulated utility and a long-contract infrastructure services business behave more alike than either does to its own sector's outliers.\n\nSecond, adjust for what actually differs. Size, through a smaller multiple, because smaller companies trade lower and transact lower. Growth and margin, by regressing the peers' multiples against those metrics if you have enough observations, and by judgement if you do not. Country, through the cost of equity rather than through the multiple, if you are cross-checking with a DCF. And accounting basis, which is the one people forget: an HGB target against IFRS comparables needs the lease and goodwill adjustments before any multiple means anything.\n\nThird, weight the private evidence more heavily. Precedent transactions in the same sector at similar size, and any evidence you have from your own recent mandates, are closer to what this asset will actually transact at than a listed multiple is.\n\nAnd then say what the range depends on. A valuation off three imperfect comparables is a range with a stated basis, not a number, and presenting it as a number is where credibility is lost.",
+   "rubric": [
+    "Widens the peer set deliberately on the axis least relevant to the economics, and says so",
+    "Names the adjustments: size, growth and margin, country risk through the cost of equity, accounting basis",
+    "Weights private transaction evidence more heavily than listed multiples for a private target",
+    "Presents a range with a stated basis rather than a point estimate"
+   ],
+   "mistakes": [
+    "Applying the listed multiple with a hand-waved 'small-cap discount' and no stated basis."
+   ],
+   "topic": "valuation",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "comps",
+    "precedents",
+    "private-company-valuation"
+   ],
+   "locator": "SC01"
+  },
+  {
+   "q": "What is a size premium, and what is the honest defence of it?",
+   "a": "An addition to the cost of equity for smaller companies, on the empirical observation that small capitalisation stocks have historically delivered returns above what CAPM predicts from their beta alone. In practice it comes from published studies that sort the market into deciles by capitalisation and report the excess return, and it is applied as a build-up: risk free rate, plus beta times equity risk premium, plus a size premium, sometimes plus a company-specific premium.\n\nThe honest defence is not that small companies are riskier in a way beta misses, although that is the usual claim. It is that the observed excess return is compensation for illiquidity, for higher information costs, for the reality that a smaller company has fewer product lines, fewer customers and less financial flexibility, and for distress risk that a single-factor model does not capture. Those are real economic reasons and they point the same way.\n\nThe honest objections are also real and you should know them. The measured premium has been unstable across periods and has been weak or absent in some recent decades. It is sensitive to how the deciles are constructed and to survivorship in the underlying data. And the company-specific premium that often sits alongside it is essentially a plug that lets the analyst reach whatever answer they wanted.\n\nThe practical position: use it, size it from a published study rather than from intuition, disclose it as a separate line so a reader can strip it out, and do not stack it with a separately-applied illiquidity discount on the same value, because that double counts.",
+   "rubric": [
+    "Defines it as an addition to the cost of equity from empirical excess returns on small capitalisation stocks",
+    "Gives the build-up structure",
+    "Gives the economic defence: illiquidity, information costs, concentration, distress risk",
+    "Gives the objections: instability across periods, construction sensitivity, and the specific premium as a plug",
+    "Warns against double counting with a separate illiquidity discount"
+   ],
+   "mistakes": [
+    "Applying a size premium and then a marketability discount on the same value. That is the same adjustment twice."
+   ],
+   "topic": "valuation",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "capm",
+    "private-company-valuation",
+    "wacc"
+   ],
+   "locator": "SC02"
+  },
+  {
+   "q": "Distinguish a control premium, a minority discount and a discount for lack of marketability. Which stack?",
+   "a": "They are two different axes and confusing them is the classic error.\n\nThe control axis. A controlling stake is worth more per share than a minority stake, because control carries the ability to change strategy, replace management, set dividend policy, access cash flow and realise synergies. The control premium and the minority discount are the same adjustment viewed from opposite ends: a control premium is added to a minority value, a minority discount is deducted from a control value, and you apply one or the other, never both.\n\nThe marketability axis. A discount for lack of marketability reflects that the interest cannot be sold quickly at a reliable price. It applies to a private company interest regardless of whether that interest is controlling.\n\nSo they stack, but only one from each axis. A minority interest in a private company takes both a minority discount and a marketability discount. A hundred percent of a private company takes a marketability discount but no minority discount, and in practice a much smaller marketability discount, because a whole company can be sold in a process even if it takes months.\n\nThe judgement point is what your starting value already reflects. A value derived from listed trading comparables is a marketable minority value: liquid and non-controlling. A value derived from precedent M&A transactions is already a controlling value and already reflects what acquirers pay for whole companies, so adding a control premium to it is straightforwardly double counting. Getting that right is most of the work.",
+   "rubric": [
+    "Separates the control axis from the marketability axis",
+    "States the control premium and minority discount are the same adjustment from opposite directions and only one applies",
+    "States marketability applies regardless of control, and is smaller for a whole company than for a minority stake",
+    "Identifies what the starting value already reflects: trading comps give a marketable minority value, precedents give a control value",
+    "Names adding a control premium to a precedent-derived value as double counting"
+   ],
+   "mistakes": [
+    "Adding a control premium to a value already derived from precedent transactions."
+   ],
+   "topic": "valuation",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "comps",
+    "precedents",
+    "private-company-valuation"
+   ],
+   "locator": "SC03"
+  },
+  {
+   "q": "A founder pays himself 500k and market rate for the role is 200k. What do you do, and what else do you look for?",
+   "a": "Add back 300k to EBITDA, because a buyer will replace him with a manager at market rate, so the excess is not a cost of the business going forward. At an eight times multiple that single adjustment is worth 2.4 million of enterprise value, which is why owner normalisation is usually the largest adjustment on a founder-owned target and why it gets negotiated hard.\n\nBut it cuts both ways and you have to check the direction before assuming. Founders frequently pay themselves below market, taking value as dividends for tax reasons, in which case you deduct rather than add, and the seller will not like it. And a founder doing three jobs cannot be replaced by one 200k manager, so the right add-back is against the cost of the team that genuinely replaces him.\n\nWhat else to look for, and this is the real content of the question. Family members on the payroll who do not work in the business, or who do but at a rate unrelated to the role. Personal expenses running through: cars, travel, a boat, home office, private health. Property owned by the family and let to the company, where the rent is set for tax reasons rather than at market, which needs normalising to a market rent in both directions. Related-party trading with other businesses the family owns, at prices nobody negotiated. Pension contributions well above the commercial norm. And the reverse case: costs the business genuinely will incur as a public or sponsor-owned company and does not incur now, such as audit, insurance, a finance function, a board, and compliance.\n\nThe discipline is that the adjustments have to run in both directions. A schedule where every item increases EBITDA is a negotiating position, not a normalisation.",
+   "rubric": [
+    "Makes the add-back and quantifies its value at a multiple",
+    "Notes the adjustment can run the other way when a founder underpays himself",
+    "Notes a founder doing several roles needs replacing with a team, not one salary",
+    "Names other owner items: family payroll, personal expenses, related-party property rent, related-party trading",
+    "Names the standalone costs a private company does not yet bear, and insists adjustments run both ways"
+   ],
+   "mistakes": [
+    "Only ever adjusting upwards. A one-directional schedule is a negotiating position and reads as one."
+   ],
+   "topic": "valuation",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "diligence-quality",
+    "normalization",
+    "private-company-valuation"
+   ],
+   "locator": "SC04"
+  },
+  {
+   "q": "A target has 40% of revenue with one customer. Where does that show up in the valuation?",
+   "a": "In the multiple, primarily, not in the forecast, and the reason is worth stating because it is the point of the question.\n\nThe forecast is your central expectation. If you genuinely expect the customer to stay, the revenue line should show them staying; haircutting the forecast to be prudent means you are no longer forecasting, you are applying a discount in the wrong place and then applying another one on top when you set the multiple.\n\nConcentration is a risk about the distribution around that expectation, not about its centre. It raises the probability of a severe adverse outcome, and it does so in a way that is specific to this company and not diversifiable away by the buyer if the buyer is a sponsor with a concentrated fund. So it belongs in the discount rate if you are doing a DCF, and in the exit multiple you apply, both of which reflect required return for risk.\n\nIn practice on a real mandate it shows up in three places. A lower multiple than the peer set, typically a meaningful discount rather than a token one. Structure, because the buyer will want the risk shared: a condition on contract renewal, an earn-out, an indemnity with an escrow. And in the debt quantum, because lenders size against a downside case in which that customer leaves, so a concentrated business supports less leverage, which reduces what a sponsor can pay.\n\nThe one case where it does belong in the forecast is where you have specific information: the contract expires in eight months, there is a live tender, and the customer has told you they are testing the market. Then it is not a risk, it is an event, and it should be modelled.",
+   "rubric": [
+    "States it belongs in the discount rate and the multiple rather than in the central forecast",
+    "Explains the reason: concentration affects the distribution around the expectation, not the expectation",
+    "Warns against double counting by haircutting the forecast and then the multiple",
+    "Names the practical consequences: lower multiple, deal structure, and reduced debt capacity",
+    "Gives the exception: a specific known event belongs in the forecast"
+   ],
+   "mistakes": [
+    "Haircutting the revenue line and then also applying a discount to the multiple. That is the risk counted twice."
+   ],
+   "topic": "valuation",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "comps",
+    "private-company-valuation",
+    "wacc"
+   ],
+   "locator": "SC05"
+  },
+  {
+   "q": "How do you value a business with negative EBITDA?",
+   "a": "Establish first whether it is negative for a reason that ends, or negative because the business does not work. The answer differs completely.\n\nIf it is negative because of investment: growth spending, a launch, an integration, a restructuring that is under way. Then value the business as it will be, with a DCF built to a normalised year and discounted back, or by applying a multiple to a normalised or run-rate earnings figure that you can evidence. That is the standard approach, and the whole argument sits in whether the normalised number is credible, so it has to be supported by cohort economics, unit economics, or a contract book, not by a plan.\n\nIf it is negative because of a cost problem with a known fix, value it on the post-fix earnings with a probability weighting and a deduction for the cost of getting there.\n\nIf it is structurally loss-making, you fall back on other bases. Revenue multiples, which is what the market does for growth businesses, understanding that a revenue multiple is a bet on future margin and should be sanity-checked by asking what margin it implies. Asset value, either as a going concern net asset value or as an orderly liquidation value, which sets a floor for a business with real assets. Or a sum of the parts where one division is profitable and carrying the losses of another, which is common and is frequently where the value actually is.\n\nAnd for early-stage businesses, the honest answer is that a DCF is a spreadsheet expressing an opinion, and the market prices these on comparable financing rounds and on strategic value to a specific buyer rather than on intrinsic value.",
+   "rubric": [
+    "Distinguishes losses from investment, from a fixable cost problem, and from structural unprofitability",
+    "For investment losses, values on a normalised or run-rate figure and insists it be evidenced rather than planned",
+    "Names revenue multiples with the discipline of checking the implied margin",
+    "Names asset value and orderly liquidation as a floor, and sum of the parts where a division carries the losses",
+    "Is honest about the limits of a DCF for an early-stage business"
+   ],
+   "mistakes": [
+    "Going straight to a revenue multiple without asking why EBITDA is negative."
+   ],
+   "topic": "valuation",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "multiples",
+    "private-company-valuation"
+   ],
+   "locator": "SC06"
+  },
+  {
+   "q": "Why does a mid-market business trade at 6 to 8 times when the listed comparable trades at 12? Give me three reasons that are not size.",
+   "a": "Liquidity and exit. A listed share can be sold this afternoon at a known price. A private company can be sold in six to nine months, at a price nobody knows, and only if a buyer exists. That optionality is worth real money and its absence is priced.\n\nDepth of management and key person dependence. A listed company has a board, a full executive team, a finance function and succession. A mid-market business frequently has a founder who holds the customer relationships, the pricing knowledge and the supplier terms in his head, and no second line. A buyer is acquiring an earnings stream that depends on one person continuing to care, and prices that.\n\nQuality and reliability of information. A listed company has audited accounts, quarterly reporting, analyst coverage and a track record of guiding and delivering. A mid-market target may have unaudited accounts, no management information system worth the name, and a forecast that has never been tested against an outcome. Uncertainty about the number you are applying a multiple to is priced in the multiple.\n\nIf you want a fourth: capital structure and financing. A listed company can issue equity, tap the bond market and refinance opportunistically. A mid-market company is dependent on a bank relationship, which constrains its ability to fund growth and to survive a shock.\n\nAnd the meta-point: the gap is not a market inefficiency. It is compensation for real differences, which is exactly why buy-and-build strategies work, because consolidating small assets into a larger one genuinely removes several of these and the multiple arbitrage is earned rather than found.",
+   "rubric": [
+    "Names liquidity and the absence of a certain exit",
+    "Names management depth and key person dependence",
+    "Names information quality: unaudited accounts, weak MI, untested forecasts",
+    "Names capital access and financing constraint",
+    "Makes the point that the gap is compensation for real differences, which is what makes buy-and-build work"
+   ],
+   "mistakes": [
+    "Answering 'because they are smaller'. The question explicitly asks what smallness consists of."
+   ],
+   "topic": "valuation",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "comps",
+    "multiples",
+    "private-company-valuation"
+   ],
+   "locator": "SC07"
+  },
+  {
+   "q": "How does key person risk affect a valuation, and what can be done about it?",
+   "a": "It affects both the value and the structure, and a good answer covers both.\n\nOn value: it lowers the multiple, because the earnings stream is less certain and less transferable. In an extreme case it caps the buyer universe, because a financial buyer with no operating capability will not buy a business that stops working when one person leaves, which removes competitive tension from the process and lowers the price again.\n\nHow to assess it rather than assert it: who owns the customer relationships, and would the top ten customers stay if that person left. Who sets pricing and on what basis. Is technical or process knowledge documented anywhere. Is there a second line who could step up, and have they ever run anything. What are the contractual protections, meaning notice periods, non-competes and non-solicits, and are they enforceable in the relevant jurisdiction, which matters because non-competes are enforced very differently across Europe.\n\nWhat to do about it. Structurally, tie the person in: an earn-out that requires their continued involvement, rollover equity so they have a stake in the second exit, a service agreement with a long notice period, and a handover period defined in the SPA. Operationally, use the period before exit to build the second line and document the relationships, which is exactly the work a sponsor does in the first two years of a founder-led deal.\n\nThe best answer notes that the fix is worth more than the discount. Removing key person dependence is one of the most reliable sources of multiple expansion in mid-market private equity, and it costs management attention rather than capital.",
+   "rubric": [
+    "States it lowers the multiple and can narrow the buyer universe, removing competitive tension",
+    "Gives concrete diagnostics: who owns customers and pricing, documentation, second line, enforceable restrictive covenants",
+    "Names structural fixes: earn-out, rollover, service agreement, handover period",
+    "Notes that fixing it is a reliable source of multiple expansion, so it is worth more than the discount"
+   ],
+   "mistakes": [
+    "Treating it as a fixed discount. It is a fixable problem, which is why sponsors pay for the fix."
+   ],
+   "topic": "valuation",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "private-company-valuation"
+   ],
+   "locator": "SC08"
+  },
+  {
+   "q": "A Mittelstand company operates from property owned by the founder's family and pays rent. How do you handle it?",
+   "a": "This comes up on most German family-business mandates and it needs three separate decisions.\n\nFirst, normalise the rent. The rent between the company and the family entity was set for tax and family reasons, not by negotiation, so it is almost never market. If it is below market, reported EBITDA is overstated and must be reduced, because a buyer will eventually pay a market rent. If it is above market, EBITDA is understated and should be increased. Get a valuer's view on market rent rather than assuming.\n\nSecond, decide what is being sold. Sometimes the property comes with the deal, sometimes it stays with the family and the buyer takes a long lease, and sometimes the family wants to sell the business and keep the property as a retirement income. Each produces a different transaction and a different price, and it must be established early, because a buyer who assumed the property was included and finds out otherwise in week six will reprice.\n\nThird, if the property is included, value it separately rather than through the operating multiple. Property is a different asset class with a different required return, and folding it into an EBITDA multiple undervalues it, sometimes badly, because German industrial property carried at 1980s cost is often worth a large fraction of the whole enterprise value. So value the operating business on normalised EBITDA at a market rent, and add the property at a yield-based or comparable-based value.\n\nAnd flag the lease terms as a diligence item: length, break rights, indexation, and repair obligations. A twenty-year lease at above-market rent with full repairing obligations is a liability the buyer is assuming, whatever the headline price says.",
+   "rubric": [
+    "Normalises the rent to market in whichever direction, and gets a valuer's view",
+    "Establishes early whether the property is in or out of the perimeter, and notes repricing risk if not",
+    "Values the property separately at a property yield rather than through the operating multiple",
+    "Notes German industrial property at historic cost can be a large fraction of enterprise value",
+    "Flags the lease terms as a diligence item where the property stays out"
+   ],
+   "mistakes": [
+    "Valuing the whole thing on one EBITDA multiple. The property is a different asset class with a different required return."
+   ],
+   "topic": "valuation",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "german-accounting",
+    "private-company-valuation",
+    "sum-of-the-parts"
+   ],
+   "locator": "SC09"
+  },
+  {
+   "q": "How do you build a cost of equity for a private company with no beta?",
+   "a": "You cannot regress a share price that does not exist, so you build it up.\n\nStart with the risk free rate: a long-dated government bond yield in the currency of the cash flows, matched roughly to the duration of the forecast. For a euro business that is the Bund, for sterling the gilt.\n\nTake beta from listed comparables. Collect the levered betas of the peer group, unlever each at its own capital structure and tax rate, take a median rather than a mean because the sample is small and outliers dominate, and relever at the target's own capital structure. If the target is going to be levered up in an LBO, relever at the post-transaction structure, not the current one.\n\nApply an equity risk premium: a published long-run estimate for the relevant market, and be consistent about whether it is historical or forward-looking.\n\nAdd a size premium from a published decile study, disclosed as its own line.\n\nAdd a country risk premium if the cash flows are exposed to a market with meaningful sovereign or transfer risk, usually built off a sovereign spread adjusted for relative equity volatility.\n\nThen decide whether to add a company-specific premium for key person risk, customer concentration or information quality, and be honest that this is the most subjective input in the whole exercise and the one most often used to reach a predetermined answer. My preference is to reflect those risks in explicit scenarios on the cash flows where possible, and to keep the specific premium small and disclosed, rather than to bury a large judgement in a single number.\n\nAnd sanity check the result. A cost of equity that comes out at nine percent for an unlevered founder-run business with one customer is wrong regardless of how carefully it was built.",
+   "rubric": [
+    "Builds up from a duration-matched risk free rate in the right currency",
+    "Unlevers peer betas individually and relevers at the target's post-transaction structure, using a median",
+    "Names the equity risk premium, size premium and country risk premium as separate disclosed components",
+    "Treats the company-specific premium as the most subjective input and prefers scenarios where possible",
+    "Sanity-checks the output against intuition"
+   ],
+   "mistakes": [
+    "Using the target's current capital structure to relever when the deal will change it."
+   ],
+   "topic": "valuation",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "beta",
+    "capm",
+    "private-company-valuation",
+    "wacc"
+   ],
+   "locator": "SC10"
+  },
+  {
+   "q": "Should you use EV/EBITDA or EV/EBIT on a European industrial target?",
+   "a": "EV/EBIT more often than a US-trained candidate expects, and the reason is a real one.\n\nEBITDA ignores depreciation, which is the only way it can be compared across companies with different asset ages and different depreciation policies. But that is also its weakness: for a capital-intensive business, depreciation is a real proxy for the capex needed to sustain the earnings, and ignoring it flatters a company that has under-invested. Two industrial companies at the same EV/EBITDA can be very different investments if one has a modern asset base and the other has deferred capex for a decade.\n\nIn continental Europe there are two further reasons EBIT is used more than in the US. Depreciation policies genuinely differ between companies and between HGB and IFRS reporters, so EBITDA is not as comparable as it looks. And the German mid-market convention has historically leaned on EBIT multiples, so a German seller and their adviser will often be talking in EBIT terms while a US or UK buyer is talking in EBITDA terms, and a good part of the early negotiation is people using different metrics without realising it.\n\nThe practical answer: use both, check that they tell the same story, and if they diverge find out why, because the divergence is the interesting fact. And after IFRS 16, be explicit about whether the EBITDA is pre or post lease capitalisation, because that alone moves the multiple materially on a lease-intensive business.\n\nFor the capital-intensive case specifically, EBITDA less capex against enterprise value is often more informative than either, because it is the closest simple proxy for what the business actually generates.",
+   "rubric": [
+    "Explains the trade-off: EBITDA is comparable across asset ages, EBIT captures the capital intensity",
+    "Notes EBITDA flatters an under-invested asset base",
+    "Names the European reasons: differing depreciation policies across frameworks, and the German EBIT convention",
+    "Recommends using both and investigating divergence",
+    "Names the IFRS 16 basis question and suggests EBITDA less capex for capital-intensive businesses"
+   ],
+   "mistakes": [
+    "Defaulting to EV/EBITDA. On a German industrial mandate the seller may well be quoting EBIT."
+   ],
+   "topic": "valuation",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "multiples",
+    "private-company-valuation"
+   ],
+   "locator": "SC11"
+  },
+  {
+   "q": "The target has no reliable forecast beyond next year. How do you run a DCF?",
+   "a": "You can, but you have to be honest about where the value is coming from, and the honest answer changes the approach.\n\nIn a normal DCF with a five-year forecast and a terminal value, the terminal value is already seventy percent or more of the total. With a one-year forecast it is essentially all of it, which means the DCF is not a discounted cash flow analysis at all, it is an exit multiple assumption wearing a spreadsheet. Presenting that as an intrinsic valuation is misleading.\n\nSo either do not use a DCF as the primary method, and lead with comparables and precedents where the evidence actually is, or build the forecast yourself from the bottom up and own it. Bottom up means: contracted revenue and the renewal profile, the customer cohort behaviour if you have the data, capacity and utilisation, price and volume separately rather than a growth percentage, and a cost base split into fixed and variable so the operating leverage is visible. That is real work and it produces a forecast you can defend, but it takes the diligence you would do on a mandate, not the two hours you would spend in an interview.\n\nWhichever route, run the sensitivity and present it as the answer. Show the value across a grid of terminal growth or exit multiple against discount rate, and state plainly which assumption the answer depends on. A range of forty to sixty million driven mostly by the exit multiple is a more useful output than a point estimate of forty-nine.\n\nAnd use scenarios rather than a single case, because with a weak forecast the distribution is the information.",
+   "rubric": [
+    "Identifies that with a one-year forecast the terminal value is effectively the entire answer",
+    "Concludes the DCF is an exit multiple assumption, and says so rather than presenting it as intrinsic value",
+    "Offers the two honest routes: lead with market evidence, or build the forecast bottom up",
+    "Describes what bottom up actually means: contracted revenue, renewal, price and volume, fixed and variable costs",
+    "Presents the output as a sensitised range with the driving assumption named"
+   ],
+   "mistakes": [
+    "Running a five-year forecast that is just next year grown at a constant rate, and presenting the output as intrinsic value."
+   ],
+   "topic": "dcf",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcf",
+    "private-company-valuation",
+    "terminal-value"
+   ],
+   "locator": "SC12"
+  },
+  {
+   "q": "What is IDW S1, and why would it come up on a German mandate?",
+   "a": "IDW S1 is the valuation standard issued by the Institut der Wirtschaftsprufer, the German institute of public auditors. It sets out how a company valuation should be performed for German purposes, and on many mandates it is not optional.\n\nWhere it binds: valuations for statutory purposes. Squeeze-out compensation, the compensation and settlement payable to minorities under a domination and profit and loss transfer agreement, mergers, and any valuation that may end up in an appraisal proceeding before a German court. The court-appointed auditor will apply it, and a valuation on any other basis will not survive.\n\nWhat it prescribes in practice: an income approach, either a capitalised earnings method, the Ertragswertverfahren, or a DCF, as the primary method, with substance or liquidation value as a floor; a specific treatment of the discount rate built from a risk free rate derived from the Svensson yield curve as published by the Bundesbank, a market risk premium in a range recommended by the IDW's technical committee, and a beta from a peer group; and explicit treatment of personal taxes in certain valuation occasions, which is unusual by international standards.\n\nWhy a banker should know it exists: a fairness opinion or a bankers' valuation for a negotiated transaction is not an IDW S1 valuation, and the two can produce materially different numbers on the same company. On a German public deal you will encounter both, and the difference between the negotiated price and the IDW S1 compensation is precisely what minority shareholders litigate about in a Spruchverfahren. Knowing which document is which, and why they differ, is what stops you being confused in that conversation.",
+   "rubric": [
+    "Identifies IDW S1 as the German professional valuation standard and names where it binds",
+    "Names statutory occasions: squeeze-out, DPLTA compensation, mergers, appraisal proceedings",
+    "Names its prescriptions: income approach primary, substance value as a floor, a specific discount rate construction",
+    "Explains why it matters to a banker: it differs from a negotiated fairness opinion, and the gap is what gets litigated"
+   ],
+   "mistakes": [
+    "Assuming a banker's valuation and a statutory German valuation are the same exercise. They are not, and the gap is litigated."
+   ],
+   "topic": "valuation",
+   "difficulty": 5,
+   "subtopic": null,
+   "tags": [
+    "dcf",
+    "german-public-m-a",
+    "private-company-valuation"
+   ],
+   "locator": "SC13"
+  },
+  {
+   "q": "A family owns three businesses through one holding company. How do you value it?",
+   "a": "Sum of the parts, and then take the holding structure seriously rather than treating it as a wrapper.\n\nValue each business separately on its own basis: its own comparable set, its own multiple, its own capital structure. Three businesses in different sectors do not share a multiple and averaging them destroys information.\n\nThen work down to equity at the holding level. Deduct holding company net debt and any debt pushed down to the operating companies, taking care not to double count, and deduct the capitalised value of unallocated central costs, because head office costs that would not survive a break-up are a real drag on the consolidated value.\n\nThen the structural adjustments that are specific to this shape. A conglomerate or holding company discount, because the market pays less for a bundle than for the parts, reflecting opacity, cross-subsidy and the absence of investor choice. Tax leakage on a break-up, because selling the businesses separately may crystallise gains that a share sale of the holdco would not, and that difference can be a large number. Any intercompany trading between the businesses that would have to be repriced or would disappear on separation. And shared functions, IT, treasury, procurement, that cannot simply be divided.\n\nThen ask what is actually being sold, because that determines which of those adjustments applies. A sale of the whole holdco to one buyer takes the conglomerate discount but avoids the tax leakage. Three separate sales capture the parts but pay the tax and lose the shared costs. The gap between those two numbers is usually the most useful thing in the analysis, and it is the advice, not the valuation.",
+   "rubric": [
+    "Values each business separately with its own comparable set and multiple",
+    "Works down to equity, deducting holding company debt and capitalising unallocated central costs",
+    "Names the conglomerate discount and its causes",
+    "Names tax leakage on a break-up, intercompany trading and shared functions",
+    "Concludes by comparing the whole-holdco sale against separate sales, and identifies that gap as the advice"
+   ],
+   "mistakes": [
+    "Presenting the sum of the parts as the answer. The gap between that and a whole-company sale is the advice."
+   ],
+   "topic": "valuation",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "private-company-valuation",
+    "sum-of-the-parts"
+   ],
+   "locator": "SC14"
+  },
+  {
+   "q": "How would you sanity check a valuation you have just produced?",
+   "a": "Five checks, and I would do them before showing anyone the number.\n\nCross-method. Does the DCF land inside the range implied by trading comparables and precedent transactions? If the DCF is fifty percent above the comps, either the forecast is heroic or the discount rate is too low, and the honest thing is to find out which rather than to present three bars on a football field and let the reader average them.\n\nImplied multiples. Take the DCF output and back out the implied EV/EBITDA and implied exit multiple. If the terminal value implies an exit at twelve times for a business whose sector transacts at seven, the terminal value is the answer and it is wrong.\n\nImplied growth and margin. Take the terminal value and back out the perpetuity growth rate. If it exceeds long-run nominal GDP, you are assuming the company eventually becomes the economy. Do the same for the terminal margin against the best margin anyone in the sector has achieved.\n\nThe buyer's arithmetic. Can a sponsor pay this price, fund it with available debt, and hit a twenty percent IRR on a defensible exit? If not, and no strategic is paying for synergies, then the price is not achievable regardless of what the model says.\n\nAnd the market test: has anything like this actually transacted at this multiple recently. If the answer is no, the burden is on the valuation, not on the market.\n\nThe general discipline is that every valuation should be checked against something derived a different way, because a model can be internally consistent and completely wrong.",
+   "rubric": [
+    "Cross-checks the DCF against comparables and precedents and investigates rather than averaging",
+    "Backs out implied multiples from the DCF output, including the implied exit multiple",
+    "Backs out the implied perpetuity growth and terminal margin and tests them against GDP and sector bests",
+    "Runs the buyer's arithmetic: can a sponsor fund it and make a return",
+    "Applies the market test of recent comparable transactions"
+   ],
+   "mistakes": [
+    "Presenting a football field with three bars and no view. If the methods disagree, the disagreement is the finding."
+   ],
+   "topic": "valuation",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcf",
+    "multiples",
+    "private-company-valuation"
+   ],
+   "locator": "SC15"
+  }
+ ]
+}

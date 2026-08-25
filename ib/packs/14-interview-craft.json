@@ -1,0 +1,564 @@
+{
+ "title": "Fit, and how the interview itself works",
+ "origin": "published",
+ "status": "active",
+ "note": "Extracted from a 400-question interview set and a set of interview and assessment centre session notes. These are the standard fit questions with a guide's advice on how to answer them; the answer that matters is your own, so treat the rubric as a shape to fill rather than a script. Questions were extracted from third-party guides with `ingest-pdf` and `ingest`, then given topic, difficulty and rubric by `enrich`, checked by a second model in `audit` and reviewed by hand. Every answer and rubric point here is the pipeline's wording, not the source's, and no source text is reproduced.",
+ "items": [
+  {
+   "q": "Walk me through your resume.",
+   "a": "An effective response should be structured chronologically into four key parts. Begin with your initial background, such as your university and hometown, followed by the specific 'spark' or event that interested you in finance. Next, detail your growing interest by highlighting relevant internships and skills you developed. Conclude by explaining why you are interviewing at this specific firm today and how it aligns with your future career plans.",
+   "rubric": [
+    "Structures the response chronologically into four key parts.",
+    "Begins with initial background, such as university and hometown.",
+    "Identifies a specific spark or event that generated interest in finance.",
+    "Highlights relevant internships and skills developed to show growing interest.",
+    "Concludes by explaining why they are interviewing at this specific firm today."
+   ],
+   "mistakes": [
+    "Failing to structure the response chronologically.",
+    "Omitting the specific spark or event that led to an interest in finance.",
+    "Not connecting the final part of the response to the specific firm being interviewed at."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Resume Walkthrough",
+   "difficulty": 1,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural"
+   ],
+   "locator": "IN001"
+  },
+  {
+   "q": "Why investment banking?",
+   "a": "The best response is to explain that you want to work on transactions from start to finish, a depth of experience that only investment banking offers. Contrast this with previous roles where you may have only been exposed to isolated parts of a deal. Emphasize that you want to gain extensive transaction experience by working on many different deals over time.",
+   "rubric": [
+    "States the desire to work on transactions from start to finish.",
+    "Contrasts investment banking with previous roles where they only saw isolated parts of a deal.",
+    "Emphasizes the goal of gaining extensive transaction experience by working on many different deals over time."
+   ],
+   "mistakes": [
+    "Giving generic answers about learning or financial modeling without mentioning transaction depth.",
+    "Failing to contrast the role with previous experiences or isolated deal parts."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Career Motivation",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural"
+   ],
+   "locator": "IN002"
+  },
+  {
+   "q": "Why our bank?",
+   "a": "Your answer should show that you have actively networked with professionals at the firm and are familiar with their recent transactions. Mention specific bankers you have spoken with and reference a recent deal or market strategy that genuinely interests you. Avoid generic reasons like firm culture or client interaction, which could apply to any competitor.",
+   "rubric": [
+    "Mentions specific bankers at the firm they have spoken or networked with.",
+    "References a recent transaction or market strategy of the firm.",
+    "Avoids generic reasons such as firm culture or client interaction."
+   ],
+   "mistakes": [
+    "Using generic reasons like culture or people that could apply to any competitor.",
+    "Failing to mention specific networking contacts or recent deals."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Firm Fit",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "why-this-firm"
+   ],
+   "locator": "IN003"
+  },
+  {
+   "q": "What are your strengths and weaknesses?",
+   "a": "Present two to three strengths, such as work ethic and quantitative skills, backed by a brief story of delivering under pressure. For weaknesses, share genuine traits like taking too long to make decisions or hesitating to speak up, illustrated by a concise example of a past setback. Close each weakness with the concrete step you are taking to address it, which is what turns an admission into evidence of self-awareness. Keep the whole answer under a minute.",
+   "rubric": [
+    "Presents two to three strengths, such as work ethic and quantitative skills.",
+    "Backs up strengths with a brief story of delivering under pressure.",
+    "Shares genuine weaknesses, such as taking too long to make decisions or hesitating to speak up.",
+    "Illustrates weaknesses with a concise example of a past setback.",
+    "Closes each weakness with the concrete step being taken to address it.",
+    "Keeps the whole answer under a minute."
+   ],
+   "mistakes": [
+    "Giving fake weaknesses like being a perfectionist.",
+    "Naming a weakness with no remedy attached, or dwelling on the fix until it crowds out the rest of the answer.",
+    "Failing to provide a brief story of delivering under pressure for strengths."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Personal Attributes",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "strengths-weaknesses"
+   ],
+   "locator": "IN004"
+  },
+  {
+   "q": "Why didn't you get into investment banking right out of undergraduate?",
+   "a": "Address this by explaining that you became interested in investment banking too late in your college career to secure the necessary sequence of internships. Describe how you strategically chose post-graduation roles in related fields, like accounting or valuation, to build relevant skills. Conclude by showing how these experiences have prepared you to successfully transition into banking now.",
+   "rubric": [
+    "Explains that interest in investment banking developed too late to secure the necessary sequence of internships.",
+    "Describes strategically choosing post-graduation roles in related fields like accounting or valuation.",
+    "Highlights how these related roles built relevant skills.",
+    "Concludes by showing how these experiences prepare them to transition into banking now."
+   ],
+   "mistakes": [
+    "Sounding defensive or making excuses for not getting into banking earlier.",
+    "Failing to frame post-graduation roles as strategic choices to build relevant skills."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Resume Gap",
+   "difficulty": 3,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "red-flag-defence",
+    "why-banking"
+   ],
+   "locator": "IN005"
+  },
+  {
+   "q": "Tell me about a time you worked on a team project.",
+   "a": "Describe a successful team project using the STAR framework: Situation, Task, Action, and Result. Detail a scenario where you collaborated with others, took initiative to handle a heavy workload under a tight deadline, and achieved a positive, measurable outcome. Keep the response under sixty seconds by focusing only on key details.",
+   "rubric": [
+    "Uses the STAR framework (Situation, Task, Action, Result) to structure the response.",
+    "Describes a scenario involving collaboration with others under a tight deadline.",
+    "Highlights taking initiative to handle a heavy workload.",
+    "Quantifies a positive, measurable outcome of the project.",
+    "Keeps the response concise and under sixty seconds."
+   ],
+   "mistakes": [
+    "Failing to structure the story using the STAR framework.",
+    "Speaking for too long without focusing on key details.",
+    "Failing to mention a clear, measurable outcome."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Teamwork experience",
+   "difficulty": 1,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural"
+   ],
+   "locator": "IN006"
+  },
+  {
+   "q": "Describe a time when a team you were on did not work as intended.",
+   "a": "Discuss a genuine failure, such as an attempt to expand a project or business that failed due to management constraints. Explain the difficulty of balancing execution with oversight and motivating part-time team members. Conclude with the key lesson you learned, such as the importance of partnering with others to share management responsibilities.",
+   "rubric": [
+    "Discusses a genuine failure rather than a disguised success.",
+    "Explains the specific difficulties faced, such as balancing execution with oversight or motivating team members.",
+    "Concludes with a clear, actionable lesson learned from the experience.",
+    "Mentions the importance of partnering with others to share management responsibilities."
+   ],
+   "mistakes": [
+    "Sharing a fake failure where the candidate was not actually at fault.",
+    "Blaming other team members without taking personal responsibility.",
+    "Failing to articulate a clear lesson learned from the failure."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Team failure",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "failure-setback",
+    "teamwork"
+   ],
+   "locator": "IN007"
+  },
+  {
+   "q": "Tell me about a time you faced an ethical dilemma.",
+   "a": "Describe a situation where a team member suggested taking an unethical shortcut, such as copying another group's work for a competition. Explain how you voiced your concerns, lobbied for an honest approach, and offered to take on extra work to ensure the project was completed ethically. Emphasize that maintaining integrity was more important than taking the easy way out.",
+   "rubric": [
+    "Describes a specific situation involving an unethical shortcut proposed by a team member.",
+    "Explains how they voiced concerns and lobbied for an honest approach.",
+    "Offers to take on extra work to ensure the project was completed ethically.",
+    "Emphasizes that maintaining integrity was more important than taking the easy way out."
+   ],
+   "mistakes": [
+    "Describing a situation that does not actually involve an ethical dilemma.",
+    "Sounding overly preachy or self-righteous when describing the conflict.",
+    "Failing to show active steps taken to resolve the issue ethically."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Ethical dilemma",
+   "difficulty": 3,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural"
+   ],
+   "locator": "IN008"
+  },
+  {
+   "q": "What was the most difficult situation you faced as a leader, and how did you respond?",
+   "a": "To answer this, describe a specific leadership challenge where you had to guide a team through a difficult situation or conflict. Focus on the actions you took to resolve the issue, motivate the team, and successfully navigate the obstacles to achieve the project's goals.",
+   "rubric": [
+    "Describes a specific leadership challenge involving team guidance or conflict.",
+    "Details the concrete actions taken to resolve the issue or conflict.",
+    "Explains how they motivated the team during the difficult situation.",
+    "States the final outcome and how the project's goals were achieved."
+   ],
+   "mistakes": [
+    "Focusing too much on the problem rather than the actions taken to resolve it.",
+    "Failing to demonstrate actual leadership or motivation of others."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Leadership challenge",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "leadership"
+   ],
+   "locator": "IN009"
+  },
+  {
+   "q": "Where do you see yourself in 5 to 10 years, and are you committed to investment banking?",
+   "a": "At the analyst level, the best approach is to express a strong interest in working on deals within a specific industry over the medium term. While keeping future options open, you should emphasize a desire to remain in a finance-related role connected to that sector. For associate roles, you must state a complete commitment to building a long-term career within investment banking.",
+   "rubric": [
+    "Expresses a strong interest in working on deals within a specific industry over the medium term (for analyst level).",
+    "Emphasizes a desire to remain in a finance-related role connected to that sector while keeping future options open.",
+    "States a complete commitment to building a long-term career within investment banking (for associate roles)."
+   ],
+   "mistakes": [
+    "Explicitly stating a desire to exit to private equity or hedge funds within two years.",
+    "Failing to differentiate the response based on the level (analyst vs. associate) they are applying for."
+   ],
+   "topic": "behavioural",
+   "subtopic": "Career Goals",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "market-awareness"
+   ],
+   "locator": "IN010"
+  },
+  {
+   "q": "Tell me something interesting about you that is not listed on your resume.",
+   "a": "A great approach is to share a unique experience from your childhood or early education that highlights your adaptability and background, such as traveling or unique family activities. For example, you could discuss participating in a program where you lived in all 50 U.S. states over five years during elementary school. This demonstrates a unique personal history and adaptability without sharing inappropriate personal details.",
+   "rubric": [
+    "shares a unique personal experience or background detail not found on the resume",
+    "explains how this experience demonstrates adaptability or a positive personal trait",
+    "avoids sharing inappropriate, overly sensitive, or unprofessional personal details"
+   ],
+   "mistakes": [
+    "repeating an experience or bullet point that is already clearly listed on the resume",
+    "sharing over-disclosing or highly unprofessional personal information"
+   ],
+   "topic": "behavioural",
+   "subtopic": "personal background",
+   "difficulty": 1,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "curveball"
+   ],
+   "locator": "IN011"
+  },
+  {
+   "q": "You have $1 million, but you are not allowed to invest it or use it to make more money. How would you spend the money?",
+   "a": "You should answer by allocating a small portion of the money to a personal luxury, like a high-end vacation or a nicer home, and spending the rest on a hobby or interest that benefits others. For instance, you could use the remaining funds to open a community gym in a rural area that lacks fitness facilities. This approach demonstrates both personal passion and a desire to make a positive social impact.",
+   "rubric": [
+    "allocates a small portion of the money to a personal luxury or hobby",
+    "allocates the majority of the funds to a project or initiative that benefits others",
+    "explicitly avoids any investment, business venture, or action designed to generate a financial return"
+   ],
+   "mistakes": [
+    "violating the prompt's constraint by investing the money or starting a for-profit business",
+    "spending the entire sum purely on selfish luxuries without showing any broader interest or social impact"
+   ],
+   "topic": "behavioural",
+   "subtopic": "creative thinking",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "curveball"
+   ],
+   "locator": "IN012"
+  },
+  {
+   "q": "What is your personal Beta?",
+   "a": "Your personal Beta should be described as slightly above 1.0, indicating that you are ambitious and willing to take calculated risks to achieve more, but are not reckless. For example, you might say your Beta is about 1.2 because you embrace challenging career opportunities rather than playing it safe, yet you balance this by working at established companies. This shows a healthy risk appetite coupled with practical judgment.",
+   "rubric": [
+    "states a specific numerical value for their personal Beta, ideally slightly above 1.0",
+    "explains how this value represents a willingness to take calculated risks and pursue ambitious goals",
+    "balances the risk-taking aspect by mentioning a grounding factor, such as working at established institutions"
+   ],
+   "mistakes": [
+    "stating a Beta below 1.0, which implies being overly risk-averse and lacking ambition",
+    "stating an extremely high Beta without explaining how they mitigate or balance that risk"
+   ],
+   "topic": "behavioural",
+   "subtopic": "risk profile",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "beta"
+   ],
+   "locator": "IN013"
+  },
+  {
+   "q": "In 30 years, your name turns up on the front page of a major newspaper. What would the headline be, and what would the story be about?",
+   "a": "The headline should reflect high ambition and analytical skills, such as funding a major scientific or space exploration mission, without being completely unrealistic. For example, a headline like 'First Manned Mission to Jupiter Returns Intact' could lead into a story about how you used your career success to fund deep-space exploration. This highlights long-term vision, unique interests, and high-reaching goals.",
+   "rubric": [
+    "provides a specific, creative newspaper headline reflecting high ambition",
+    "describes a story where career success is leveraged to fund or achieve a major, positive long-term goal",
+    "keeps the scenario ambitious yet grounded enough to be plausible rather than entirely fantastical"
+   ],
+   "mistakes": [
+    "giving a generic or uninspired headline like 'Local Banker Retires'",
+    "describing a purely self-serving achievement without broader impact or vision"
+   ],
+   "topic": "behavioural",
+   "subtopic": "long term vision",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "career-goals",
+    "curveball"
+   ],
+   "locator": "IN014"
+  },
+  {
+   "q": "If you were an animal, which one would you be?",
+   "a": "This question is an opportunity to show your personality and humor while subtly connecting back to traits useful for banking. For instance, choosing a dolphin works well because they are social, love group activities, and have brains that never fully sleep. This light-hearted response demonstrates teamwork and high energy levels.",
+   "rubric": [
+    "selects a specific animal and explains the choice with humor or personality",
+    "connects the animal's traits to professional qualities useful in investment banking, such as teamwork or high energy",
+    "avoids cliché or aggressive animals that might imply a difficult working style"
+   ],
+   "mistakes": [
+    "choosing an animal like a sloth or koala that implies laziness or low energy",
+    "choosing an overly aggressive animal like a shark, which can signal a lack of teamwork"
+   ],
+   "topic": "behavioural",
+   "subtopic": "personality fit",
+   "difficulty": 1,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "curveball"
+   ],
+   "locator": "IN015"
+  },
+  {
+   "q": "Can you walk me through a deal you worked on during your internship?",
+   "a": "To answer this effectively, select a closed M&A or restructuring deal where you made a significant personal contribution and can easily explain the financial metrics and strategic rationale. You should structure your response by outlining the company backgrounds, the motivation behind the transaction, your specific analytical tasks, and the current status of the deal. For example, you could discuss Blackstone and Vista Equity's $8.4 billion buyout of Smartsheet to demonstrate your hands-on experience.",
+   "rubric": [
+    "outlines the background of the companies involved in the transaction",
+    "explains the strategic motivation behind the transaction",
+    "details specific analytical tasks or personal contributions made during the deal",
+    "states the financial metrics, such as deal value, and the current status of the deal"
+   ],
+   "mistakes": [
+    "failing to specify their personal contribution to the deal",
+    "not providing concrete financial metrics or deal value"
+   ],
+   "topic": "behavioural",
+   "subtopic": "deal experience",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "deal-discussion"
+   ],
+   "locator": "IN016"
+  },
+  {
+   "q": "What is the status of this deal? Has it closed?",
+   "a": "Following shareholder approval, the transaction successfully closed earlier this year. The acquisition was fully funded using $3.2 billion of Senior Debt and $4.8 billion of Equity.",
+   "rubric": [
+    "states that the transaction successfully closed earlier this year",
+    "mentions that the deal closed following shareholder approval",
+    "specifies that the acquisition was funded using $3.2 billion of Senior Debt and $4.8 billion of Equity"
+   ],
+   "mistakes": [
+    "failing to state the exact debt and equity breakdown used to fund the transaction",
+    "not knowing whether the deal has officially closed or is still pending"
+   ],
+   "topic": "behavioural",
+   "subtopic": "deal status",
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "deal-discussion"
+   ],
+   "locator": "IN017"
+  },
+  {
+   "q": "Why Restructuring?",
+   "a": "Restructuring is highly appealing because it requires a diverse set of skills, including M&A, valuation, credit analysis, and legal interpretation. Unlike standard M&A deals with binary outcomes, restructuring offers a wide variety of potential results and more complex technical challenges. Additionally, the work is highly engaging as it focuses primarily on live deals with intense negotiations. Finally, advising both debtors and creditors provides a well-rounded perspective on distressed businesses.",
+   "rubric": [
+    "Names the breadth of skills required: M&A, valuation, credit analysis and legal interpretation together.",
+    "Contrasts the binary outcome of a standard M&A process with the wider range of possible outcomes in a restructuring.",
+    "Mentions that the work is live-deal driven with intense negotiation rather than pitch-heavy.",
+    "Notes that advising both debtors and creditors gives a rounded view of a distressed business."
+   ],
+   "mistakes": [
+    "Giving reasons that would apply equally to any product group, with nothing specific to restructuring.",
+    "Framing the appeal as counter-cyclicality alone, which reads as wanting a job rather than the work.",
+    "Failing to mention the credit and legal dimension that distinguishes it from M&A."
+   ],
+   "topic": "behavioural",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "restructuring",
+    "why-banking"
+   ],
+   "locator": "IN018"
+  },
+  {
+   "q": "Can you explain how industrials is different from other groups and what the main verticals are?",
+   "a": "Industrials companies produce, transport, or service heavy physical goods, primarily serving corporate or government clients rather than consumers. This makes the sector highly sensitive to macroeconomic factors like interest rates, credit availability, and trade policies. The sector is generally divided into three main verticals: capital goods, transportation, and commercial/professional services.",
+   "rubric": [
+    "Defines industrials as companies producing, transporting or servicing heavy physical goods.",
+    "States that the customers are corporates and governments rather than consumers.",
+    "Explains that this makes the sector highly sensitive to interest rates, credit availability and trade policy.",
+    "Names the three main verticals: capital goods, transportation, and commercial and professional services."
+   ],
+   "mistakes": [
+    "Treating industrials as a single homogeneous sector rather than three quite different verticals.",
+    "Missing the macro sensitivity, which is what drives the cyclicality of the multiples.",
+    "Confusing industrials with consumer discretionary because both are cyclical."
+   ],
+   "topic": "general",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "technical",
+   "tags": [
+    "industrials"
+   ],
+   "locator": "IN019"
+  },
+  {
+   "q": "How many petrol stations are there in the UK?",
+   "a": "To estimate this, we can start with the UK population of approximately 67 million people. Assuming an average household size of 2.5, there are about 27 million households, with roughly 80% owning at least one car, resulting in about 22 million cars. If each car refuels once every 10 days, there are 2.2 million refuels per day; assuming an average petrol station serves 250 cars daily, we estimate there are roughly 8,800 petrol stations in the UK.",
+   "rubric": [
+    "To estimate this, we can start with the UK population of approximately 67 million people.",
+    "Assuming an average household size of 2.5, there are about 27 million households, with roughly 80% owning at least one car, resulting in about 22 million cars.",
+    "If each car refuels once every 10 days, there are 2.2 million refuels per day; assuming an average petrol station serves 250 cars daily, we estimate there are roughly 8,800 petrol stations in the UK."
+   ],
+   "mistakes": [
+    "Guessing a number with no visible chain of assumptions.",
+    "Failing to state each assumption explicitly so the interviewer can challenge one.",
+    "Losing an order of magnitude in the arithmetic and not sanity-checking the result.",
+    "Refusing to commit to a final number after building the estimate."
+   ],
+   "topic": "general",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "market-sizing"
+   ],
+   "locator": "IN020"
+  },
+  {
+   "q": "How much revenue does Harrods bring in per year?",
+   "a": "We can estimate Harrods' revenue by analyzing its retail space and sales per square foot. Assuming Harrods has about 1 million square feet of selling space and generates approximately £800 to £1,000 in sales per square foot annually, the estimated annual revenue would be between £800 million and £1 billion. This aligns with its status as one of the world's highest-performing luxury department stores.",
+   "rubric": [
+    "We can estimate Harrods' revenue by analyzing its retail space and sales per square foot.",
+    "Assuming Harrods has about 1 million square feet of selling space and generates approximately £800 to £1,000 in sales per square foot annually, the estimated annual revenue would be between £800 million and £1 billion.",
+    "This aligns with its status as one of the world's highest-performing luxury department stores."
+   ],
+   "mistakes": [
+    "Producing a figure without a stated method behind it.",
+    "Confusing total floor area with sellable retail space, which is a fraction of it.",
+    "Using a general department store sales-per-square-foot figure for a luxury flagship, where it is far higher.",
+    "Failing to sanity-check the result against any known reference point for a store of this profile."
+   ],
+   "topic": "general",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "market-sizing"
+   ],
+   "locator": "IN021"
+  },
+  {
+   "q": "What does an investment banking analyst do on a day-to-day basis?",
+   "a": "An investment banking analyst's day-to-day work largely consists of supporting senior bankers with tasks like financial modeling, preparing pitch books, and conducting market research. Attention to detail and auditability are crucial, as analysts must ensure all data is flawless before it reaches clients. Additionally, the role involves managing administrative tasks, coordinating with different teams, and carefully managing workload to meet tight deadlines.",
+   "rubric": [
+    "An investment banking analyst's day-to-day work largely consists of supporting senior bankers with tasks like financial modeling, preparing pitch books, and conducting market research.",
+    "Attention to detail and auditability are crucial, as analysts must ensure all data is flawless before it reaches clients.",
+    "Additionally, the role involves managing administrative tasks, coordinating with different teams, and carefully managing workload to meet tight deadlines."
+   ],
+   "mistakes": [
+    "Describing only the glamorous parts and omitting the administrative and formatting work.",
+    "Overstating the analyst's autonomy or client exposure.",
+    "Missing that accuracy and auditability, not speed alone, are what the job is judged on."
+   ],
+   "topic": "behavioural",
+   "subtopic": null,
+   "difficulty": 2,
+   "kind": "behavioural",
+   "tags": [
+    "behavioural",
+    "deal-process",
+    "why-banking"
+   ],
+   "locator": "IN022"
+  },
+  {
+   "q": "A company loses a key supplier of components, essential for making its product. What can the company do to continue operations and remain profitable?",
+   "a": "To mitigate the loss of a key supplier, the company should immediately assess its existing inventory levels to determine how long it can sustain operations. Simultaneously, management must identify and qualify alternative suppliers, potentially diversifying the supply chain to avoid future single-point-of-failure risks. In the short term, the company can also explore renegotiating terms with secondary suppliers or temporarily adjusting its product mix to focus on goods that do not rely on the missing component.",
+   "rubric": [
+    "To mitigate the loss of a key supplier, the company should immediately assess its existing inventory levels to determine how long it can sustain operations.",
+    "Simultaneously, management must identify and qualify alternative suppliers, potentially diversifying the supply chain to avoid future single-point-of-failure risks.",
+    "In the short term, the company can also explore renegotiating terms with secondary suppliers or temporarily adjusting its product mix to focus on goods that do not rely on the missing component."
+   ],
+   "mistakes": [
+    "Jumping straight to finding a new supplier without first establishing how much runway the inventory gives.",
+    "Ignoring the qualification and lead time a new supplier requires.",
+    "Treating it purely as a procurement problem and missing the working capital and customer commitments at stake.",
+    "Failing to address the structural fix, namely reducing single-source dependency."
+   ],
+   "topic": "general",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "business-case"
+   ],
+   "locator": "IN023"
+  },
+  {
+   "q": "Imagine you had £100,000 to invest. Where would you put it?",
+   "a": "If I had £100,000 to invest, I would first establish my risk tolerance and investment horizon. For a balanced, long-term portfolio, I would allocate 60% to a diversified global equity index fund to capture market growth, 30% to fixed-income securities or high-yield savings for capital preservation, and reserve the remaining 10% for high-conviction individual stocks or alternative assets. This strategy ensures broad diversification while allowing for targeted exposure to high-growth sectors.",
+   "rubric": [
+    "Establishes risk tolerance and investment horizon before allocating anything.",
+    "Puts the bulk, around 60%, into a diversified global equity index fund for long-run market exposure.",
+    "Allocates around 30% to fixed income or cash-like instruments for capital preservation.",
+    "Reserves a small slice, around 10%, for high-conviction individual positions or alternatives.",
+    "Explains the reasoning: broad diversification as the core, with a bounded allocation for active views.",
+    "Gives a specific allocation with numbers rather than generalities about diversification."
+   ],
+   "mistakes": [
+    "Answering with an asset class and no allocation, or an allocation with no reasoning behind it.",
+    "Putting the whole sum into individual stock picks, which reads as an untested punt rather than a strategy.",
+    "Skipping risk tolerance and time horizon, which are what make any allocation defensible.",
+    "Naming a single hot sector or stock without acknowledging the concentration risk."
+   ],
+   "topic": "general",
+   "subtopic": null,
+   "difficulty": 3,
+   "kind": "technical",
+   "tags": [
+    "curveball",
+    "market-awareness"
+   ],
+   "locator": "IN024"
+  }
+ ]
+}

@@ -1,0 +1,2164 @@
+{
+ "title": "DCM syndicate desk question set",
+ "origin": "published",
+ "status": "active",
+ "note": "Bond syndicate, pricing, Schuldschein, hybrids, ratings and macro. Answers are parsed from a third-party desk handbook, not distributed here; the rubrics are authored for this repo. Six items are kind=market_awareness: their answer is a dated snapshot bound to live data at drill time, not a stored fact.",
+ "items": [
+  {
+   "q": "What is a bond?",
+   "a": "\"A securitised loan: the issuer raises principal today, pays coupons over the life and repays at 100 at\nmaturity. The components are nominal, coupon and payment frequency, tenor or maturity, rank in the capital\nstructure, and anything optional - call rights, step-ups, change-of-control put.\"",
+   "rubric": [
+    "Names nominal, coupon and frequency, tenor, rank, and optionality",
+    "Says the issuer raises principal today and repays at 100 at maturity",
+    "Names tradability as what separates a bond from a loan"
+   ],
+   "mistakes": [
+    "Describing a bond as 'a loan' with no mention of the transferable claim."
+   ],
+   "topic": "dcm",
+   "difficulty": 1,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "B1"
+  },
+  {
+   "q": "Why do bond prices fall when rates rise?",
+   "a": "\"Because the coupon is fixed. If the market pays 4% today for the same risk and my bond has a 3% coupon,\nnobody buys it at 100. The price has to fall until the yield to maturity matches 4% again. Mathematically: the\nprice is the present value of fixed payments - if the discount rate rises, the present value falls.\"",
+   "rubric": [
+    "States that the coupon is fixed while the market rate moves",
+    "Says the price falls until the yield to maturity matches the market rate",
+    "Reaches for the present-value framing unprompted"
+   ],
+   "mistakes": [
+    "Giving only the intuition and never naming discounting."
+   ],
+   "topic": "dcm",
+   "difficulty": 1,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "B2"
+  },
+  {
+   "q": "How do you price a bond?",
+   "a": "\"Present value of all cash flows: P = Σ C/(1+y)^t + N/(1+y)^T. Cleaner would be to discount\neach cash flow at the matching zero rate off the curve rather than at a single YTM - the YTM is a simplification\nthat assumes the curve is flat and that you can reinvest all coupons at y.\"\nWorked example if he wants one: 5 years, 3% annual coupon, market yield 4%. Price ≈ 3 × annuity\nfactor(4%, 5y) + 100/(1.04)^5 = 3 × 4.4518 + 82.19 ≈ 95.55. So a discount bond, because coupon < yield.",
+   "rubric": [
+    "Gives the present value formula: sum of coupons plus principal, discounted",
+    "Notes that discounting each cash flow at the matching zero rate is cleaner than one YTM",
+    "States the YTM assumes a flat curve and reinvestment at y"
+   ],
+   "mistakes": [
+    "Saying 'I would have to calculate that' instead of using the annuity shortcut."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "B3"
+  },
+  {
+   "q": "Clean vs dirty price?",
+   "a": "\"The clean price is the quoted price excluding accrued interest; the dirty price is what actually gets\npaid - clean plus interest accrued since the last coupon date. You quote clean because otherwise the dirty price\nsawtooths upward between coupon dates and drops on the coupon date, which would make price comparisons useless.\"",
+   "rubric": [
+    "Clean price excludes accrued interest, dirty price is what is actually paid",
+    "Explains why: the dirty price sawtooths between coupon dates, ruining comparison",
+    "Knows the EUR corporate convention is ACT/ACT (ICMA), annual"
+   ],
+   "mistakes": [
+    "Giving the definitions without the 'why quote clean'."
+   ],
+   "topic": "dcm",
+   "difficulty": 1,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "B4"
+  },
+  {
+   "q": "Coupon vs current yield vs YTM?",
+   "a": "\"The coupon is the fixed payment on the nominal. Current yield is coupon divided by current price - it\nignores capital gain or loss to maturity. The YTM is the internal rate of return of all cash flows, so it's the\nonly one of the three that combines coupon, time and price movement.\"\nOrdering for a discount bond: coupon < current yield < YTM. For a premium bond, exactly the reverse.",
+   "rubric": [
+    "Coupon is fixed on nominal; current yield is coupon over price; YTM is the IRR of all cash flows",
+    "Says only the YTM combines coupon, time and price movement",
+    "Gives the ordering: for a discount bond coupon < current yield < YTM, reversed for a premium bond"
+   ],
+   "mistakes": [
+    "Getting the ordering backwards. Derive it: a discount bond has a capital gain to come, so YTM is highest."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "B5"
+  },
+  {
+   "q": "What are the flaws of YTM?",
+   "a": "\"Two assumptions: it assumes all coupons are reinvested at the YTM, and that the bond is held to\nmaturity. Neither is usually true - reinvestment risk is real, and for a callable bond the relevant measure is\nyield-to-call or yield-to-worst.\"",
+   "rubric": [
+    "Names the reinvestment-at-YTM assumption",
+    "Names the hold-to-maturity assumption",
+    "Names yield-to-worst as the measure actually quoted for callable paper"
+   ],
+   "mistakes": [
+    "Listing the assumptions without naming yield-to-worst."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "B6"
+  },
+  {
+   "q": "Duration: Macaulay vs modified?",
+   "a": "\"Macaulay duration is the average, present-value-weighted time to receipt of cash flows, in years.\nModified duration is Macaulay divided by (1+y) and measures price sensitivity: ΔP/P ≈ −D_mod × Δy.\nIn practice 'duration' almost always means modified duration.\"\nExample: D_mod = 7, yield rises 50bp → price falls roughly 3.5%.",
+   "rubric": [
+    "Macaulay is the PV-weighted average time to receipt, in years",
+    "Modified is Macaulay divided by (1+y) and measures price sensitivity",
+    "Gives the relation dP/P is approximately minus modified duration times dy, with a worked number"
+   ],
+   "mistakes": [
+    "Knowing the formula but having no worked number ready."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "duration-convexity"
+   ],
+   "locator": "B7"
+  },
+  {
+   "q": "What drives duration?",
+   "a": "\"Three drivers. Longer maturity → higher duration. Lower coupon → higher duration, because more present\nvalue sits at the end. Lower yield → higher duration, because late cash flows are discounted less heavily. The\nextreme case is the zero coupon bond: there Macaulay duration equals the remaining maturity exactly.\"",
+   "rubric": [
+    "Longer maturity raises duration",
+    "Lower coupon raises duration, because more present value sits at the end",
+    "Lower yield raises duration",
+    "Uses the zero-coupon case, where Macaulay duration equals maturity, as the proof"
+   ],
+   "mistakes": [
+    "Reciting three rules with no mechanism behind them."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "duration-convexity"
+   ],
+   "locator": "B8"
+  },
+  {
+   "q": "What is DV01?",
+   "a": "\"The price change in currency terms for a one basis point move in yield.\nDV01 ≈ D_mod × price × 0.0001. Duration is the percentage view, DV01 the absolute one - on a trading\ndesk you work with DV01 because you hedge positions in euros per basis point, not in percent.\"",
+   "rubric": [
+    "Defines DV01 as the currency price change for a one basis point yield move",
+    "Gives DV01 as approximately modified duration times price times 0.0001",
+    "Explains why a desk uses it: hedging is in euros per basis point, not percent"
+   ],
+   "mistakes": [
+    "Conflating DV01 with duration rather than naming it as the absolute view."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "duration-convexity"
+   ],
+   "locator": "B9"
+  },
+  {
+   "q": "What is convexity and why is it valuable?",
+   "a": "\"Convexity is the second derivative of price with respect to yield - the curvature of the price-yield\nrelationship. Duration alone is a straight line and understates the price in both directions.\nIt's valuable because it works asymmetrically: when yields fall the price rises more than duration predicts,\nand when yields rise it falls less. So positive convexity is a free advantage - and that's why the investor pays\nfor it in the form of a slightly lower yield. For callable bonds convexity can turn negative, because the call\ncaps the price upside.\"",
+   "rubric": [
+    "Defines convexity as the curvature of the price-yield relationship, the second derivative",
+    "States the asymmetry: prices rise more than duration predicts and fall less",
+    "Says positive convexity is paid for through a slightly lower yield",
+    "Notes convexity turns negative for callable bonds because the call caps upside"
+   ],
+   "mistakes": [
+    "Missing the negative convexity on callables, which is what separates an intermediate answer."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "duration-convexity"
+   ],
+   "locator": "B10"
+  },
+  {
+   "q": "What types of bonds are there?",
+   "a": "\"By coupon: fixed, floaters against Euribor, zero coupon, inflation-linked. By optionality: callable,\nputtable, convertible. By rank: senior unsecured, senior secured, subordinated, and corporate hybrids as a\nperpetual subordinated structure. By format: benchmark bond, private placement, Schuldschein - though strictly\nspeaking that isn't a bond at all, it's a loan.\"",
+   "rubric": [
+    "Classifies by coupon (fixed, floater, zero, linker)",
+    "Classifies by optionality (callable, puttable, convertible)",
+    "Classifies by rank (senior unsecured, secured, subordinated, hybrid)",
+    "Notes the Schuldschein is not strictly a bond at all"
+   ],
+   "mistakes": [
+    "A flat list with no organising axis."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "B11"
+  },
+  {
+   "q": "How does a floating rate note work?",
+   "a": "\"The coupon resets periodically, typically 3M or 6M Euribor plus a fixed margin. That makes the\ninterest rate duration very short - it only runs to the next fixing - but the spread duration runs over the full\nlife. Which means: a floater protects against interest rate moves, not against spread widening.\"\nThe relevant yield measure is the discount margin, not the YTM.",
+   "rubric": [
+    "Coupon resets against 3M or 6M Euribor plus a fixed margin",
+    "Interest rate duration is short, running only to the next fixing",
+    "Spread duration runs over the full life, so a floater does not protect against spread widening",
+    "Names the discount margin as the relevant yield measure"
+   ],
+   "mistakes": [
+    "Saying a floater 'has no duration'. It has no rate duration; it has full spread duration."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate",
+    "spread-mechanics"
+   ],
+   "locator": "B12"
+  },
+  {
+   "q": "What does the yield curve tell you?",
+   "a": "\"It shows yields across maturities. Normally upward sloping means the market demands a premium for\ncommitting longer and expects no rate cuts. Flat means uncertainty about the path. Inverted usually means the\nmarket is pricing rate cuts - historically often a recession signal.\nFor the issuer the steepness is directly relevant: a steep curve makes short maturities cheap and pushes\nissuance to the front end; a flat curve makes it almost free to issue long.\"",
+   "rubric": [
+    "Reads upward-sloping, flat and inverted correctly",
+    "Names the inversion as pricing rate cuts and historically a recession signal",
+    "Lands on the issuer implication: a steep curve pushes issuance to the front end"
+   ],
+   "mistakes": [
+    "A macro-class answer that never reaches the issuance decision."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "spread-mechanics"
+   ],
+   "locator": "B13"
+  },
+  {
+   "q": "What exactly is the mid-swap rate?",
+   "a": "\"The midpoint of bid and offer for the fixed leg of an interest rate swap of the corresponding\nmaturity - in the EUR market conventionally against 6M Euribor. It's the reference point because it represents a\ntenor-matched, liquid and largely credit-risk-free rate against which spreads can be compared cleanly.\"",
+   "rubric": [
+    "Defines it as the mid of bid and offer on the fixed leg of a matched-maturity swap",
+    "Notes the EUR convention is against 6M Euribor",
+    "Explains why it is the reference: tenor-matched, liquid and largely credit-risk-free"
+   ],
+   "mistakes": [
+    "Confusing the mid-swap reference for bond pricing with the OIS/ESTR discounting curve."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "spread-mechanics"
+   ],
+   "locator": "B14"
+  },
+  {
+   "q": "Why price over mid-swaps rather than Bunds?",
+   "a": "\"Three reasons. First, the swap curve is continuously available for every maturity, whereas there are\nonly a limited number of Bund benchmarks. Second, the Bund is no longer a neutral reference point - it trades with\nits own scarcity premium, or depending on the market phase with a concession because of issuance volume. And third,\nmost institutional investors hedge and fund against Euribor, not against Bunds - so the swap is closer to their\nactual funding.\nThat's why a pricing update usually shows both: the level against swaps and against Bunds, because the swap\nspread itself moves.\"",
+   "rubric": [
+    "Swap curve is continuously available at every maturity; Bund benchmarks are few",
+    "Bund is not neutral: it carries its own scarcity premium or supply concession",
+    "Investors hedge and fund against Euribor, not against Bunds",
+    "Notes a pricing update shows both, because the swap spread itself moves"
+   ],
+   "mistakes": [
+    "Giving only the availability argument and missing that the Bund is not a neutral reference."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "spread-mechanics"
+   ],
+   "locator": "B15"
+  },
+  {
+   "q": "How is the coupon of a new issue fixed?",
+   "a": "\"At pricing the spread is fixed first. The yield then follows from the mid-swap rate for that maturity\nat the moment of fixing, plus the final spread. The coupon is then rounded - usually to an eighth or a quarter of a\npercent - so that the bond is issued at or just below 100.\"",
+   "rubric": [
+    "The spread is fixed first at pricing",
+    "The yield follows from the mid-swap rate at the moment of fixing plus the final spread",
+    "The coupon is a rounded output, set so the bond prices at or just below par"
+   ],
+   "mistakes": [
+    "Treating the coupon as the input. It is the output, and it is rounded."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing"
+   ],
+   "locator": "B16"
+  },
+  {
+   "q": "Why buy 10y over 5y?",
+   "a": "\"Because of the term premium and the duration. With an upward-sloping curve he gets more yield for\nwaiting, and if he's positioning for falling rates the higher duration gives him more leverage. On top of that\nthere's a structural reason for insurers and pension funds: they have to duration-match long-dated liabilities,\nand there simply isn't suitable material at the short end.\"",
+   "rubric": [
+    "Names the term premium on an upward-sloping curve",
+    "Names higher duration as leverage on a view that rates fall",
+    "Names the structural bid: insurers and pension funds duration-matching long liabilities"
+   ],
+   "mistakes": [
+    "Giving only the yield-pickup answer and missing liability matching."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "B17"
+  },
+  {
+   "q": "What makes up the yield of a corporate bond?",
+   "a": "\"From the bottom up: the risk-free or reference rate for the tenor - in the EUR market the mid-swap\nrate. On top of that the credit spread, which compensates for probability of default and expected loss given\ndefault. Embedded in that is effectively a liquidity premium too - a small, rarely traded bond yields more than a\nliquid benchmark of the same issuer. And finally, where applicable, an option premium for call rights.\nFor a new issue, the new issue premium comes on top of all that.\"",
+   "rubric": [
+    "Reference rate for the tenor, in EUR the mid-swap rate",
+    "Credit spread for probability of default and loss given default",
+    "Liquidity premium as a separate layer",
+    "Option premium where there are call rights, plus the new issue premium on top for a new deal"
+   ],
+   "mistakes": [
+    "Giving two layers and stopping. Naming liquidity separately is what lets you argue a new benchmark prices inside a stale line."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "spread-mechanics"
+   ],
+   "locator": "C1"
+  },
+  {
+   "q": "Spread measures compared?",
+   "a": "G-spread: yield minus the yield of the nearest-maturity government bond. Crude, because the\nmaturities rarely match exactly.\nI-spread: yield minus the interpolated swap rate of the same maturity. Simple and widely used in practice.\nZ-spread: the constant add-on to the entire zero swap curve at which the present value of all cash flows\nequals the market price. Cleaner than the I-spread because it accounts for the shape of the curve rather than just\none point.\nASW (asset swap spread): the spread over Euribor an investor earns by buying the fixed-coupon bond and\nswapping the fixed rate into floating. That's the standard measure for secondary comparison.\nOAS: z-spread adjusted for the value of embedded options - relevant for callable bonds and hybrids.",
+   "rubric": [
+    "G-spread is against the nearest government bond and is crude on maturity mismatch",
+    "I-spread is against the interpolated swap rate at the same maturity",
+    "Z-spread is the constant add-on to the whole zero curve that reprices the bond",
+    "ASW is the spread over Euribor from buying fixed and swapping to floating; OAS is z-spread adjusted for options"
+   ],
+   "mistakes": [
+    "Treating z-spread and ASW as interchangeable. They converge near par and diverge away from it."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "spread-mechanics"
+   ],
+   "locator": "C2"
+  },
+  {
+   "q": "Walk me through pricing a new issue.",
+   "a": "Six steps, about a minute in total:\n1. Build the issuer's own curve. Take the outstanding bonds, pull ASW or z-spread levels, plot them by\nmaturity. What matters is that the levels are tradeable and not merely quoted.\n2. Interpolate to the target tenor. Usually the issuer has no bond at exactly that point. So interpolate\nbetween the two nearest points and account for the steepness of the credit curve.\n3. Build a comparables set. Same rating band, same sector, similar leverage and tenor. The peers matter\nmore the thinner, more illiquid or more stale the issuer's own curve is. Also look at where the peers priced their\nmost recent new issues and how those traded afterwards.\n4. Derive fair value. The interpolated level, adjusted for liquidity - a large new benchmark should trade\ntighter than a small old line - and for anything that has changed in the credit since those bonds last traded.\n5. Add the new issue premium. The concession over fair value that gets investors to participate.\n6. Set IPTs above the target and tighten through guidance steps until book size and price line up.\"",
+   "rubric": [
+    "Builds the issuer's own curve first from outstanding bonds on ASW or z-spread",
+    "Interpolates to the target tenor and allows for credit curve steepness",
+    "Builds a comparable set second, weighted more heavily the thinner the issuer's own curve",
+    "Derives fair value adjusted for liquidity, then adds the new issue premium, then sets IPTs above and tightens"
+   ],
+   "mistakes": [
+    "Starting with comps. That is what you do when there is no issuer curve, which is the exception."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing",
+    "spread-mechanics"
+   ],
+   "locator": "C3"
+  },
+  {
+   "q": "How do you select a peer group?",
+   "a": "\"Primarily three axes: rating or credit quality, sector and tenor. Then secondarily:\nsize and leverage, currency and format of issuance, and how current the levels are - a bond that hasn't traded in\nthree weeks is worth little as a reference.\nAnd I'd always filter on issuance date: a bond issued two years ago in a completely different rate environment,\ntrading well below par today, has a different buyer profile than a new issue at par. That distorts the\ncomparison.\"",
+   "rubric": [
+    "Primary axes: rating or credit quality, sector, tenor",
+    "Secondary: size and leverage, currency and format, and how current the levels are",
+    "Filters on issuance date, because a low-coupon legacy bond at a deep discount has a different buyer profile"
+   ],
+   "mistakes": [
+    "Omitting issuance date. Legacy discount paper attracts technical buyers and its spread is not a clean read."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing"
+   ],
+   "locator": "C4"
+  },
+  {
+   "q": "Thin peer group with high beta - what then?",
+   "a": "\"Then I'd separate two things: the level and the sensitivity.\nOn the level I'd widen the net - either the same sector abroad, or the same rating in an adjacent sector\nwith a similar cash flow profile. The important thing is to make that step deliberately and to say so openly,\nrather than pretending I have a clean comparable set.\nOn the beta: if the few peers have a high beta, that means their spreads move disproportionately to the\noverall market. Then the current point value tells you less than the question of where we are in the market cycle.\nIn a tight market, high-beta names look artificially good; so I'd look at an average over a longer window, or at\nthe ratio to the index, rather than at yesterday's close.\nAnd in practice that would change the case too: a high beta increases the uncertainty around fair value, and\nyou pay for uncertainty with a higher new issue premium.\"",
+   "rubric": [
+    "Separates the level question from the sensitivity question",
+    "Widens the net deliberately and says so, rather than pretending the comp set is clean",
+    "Says a high beta means the current point value matters less than where the market cycle is",
+    "Connects uncertainty in fair value to a higher new issue premium"
+   ],
+   "mistakes": [
+    "Not making the last link: uncertainty is paid for in the NIP, which turns pricing into a risk decision rather than arithmetic."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing"
+   ],
+   "locator": "C5"
+  },
+  {
+   "q": "What is the new issue premium and where is it now?",
+   "a": "Definition: \"The concession the issuer pays over the fair value of its own secondary curve to get\ninvestors into the new issue. Economically it compensates the investor for absorbing new paper, taking on duration\nand bearing the risk that the bond trades worse - plus simply the incentive to write an order at all.\"\nMeasurement: \"Ex post you calculate it as the final reoffer spread minus fair value on the same curve at\nthe moment of pricing.\"\nCurrently: \"In the first half of the year concessions in EUR IG were very tight - in places low single\ndigits. But in July they rose to the highest level of the year, because the Middle East situation and rate\nvolatility have made investors more price sensitive and the books have thinned out.\"",
+   "rubric": [
+    "Defines it as the concession over fair value on the issuer's own secondary curve",
+    "Explains what it compensates: absorbing new paper, duration, trading risk, and the incentive to order at all",
+    "Measures it ex post as final reoffer spread minus fair value at the moment of pricing",
+    "Can say where it currently sits and in which direction it has moved"
+   ],
+   "mistakes": [
+    "Quoting a stale level. NIPs move; check before quoting one."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing"
+   ],
+   "locator": "C6"
+  },
+  {
+   "q": "Why should a new benchmark price inside an existing line?",
+   "a": "\"Because of the liquidity premium. A new benchmark of €500m or more is index-eligible, actively quoted\nby sales and tradeable. An old line of €300m, half of which sits in buy-and-hold portfolios, barely trades - and\nthe investor demands compensation for that.\nWhich means: fair value isn't simply the observed secondary spread, it's the secondary spread corrected for that\nliquidity difference. In practice that pulls fair value somewhat tighter relative to an illiquid legacy bond.\"",
+   "rubric": [
+    "Names the liquidity premium as the reason",
+    "A new benchmark is index-eligible, quoted and tradeable; an old small line barely trades",
+    "Concludes fair value is the observed secondary spread corrected for the liquidity difference"
+   ],
+   "mistakes": [
+    "Treating the observed secondary spread as fair value without the liquidity correction. This is the most common way a naive fair value goes wrong."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing"
+   ],
+   "locator": "C7"
+  },
+  {
+   "q": "How do you set IPTs?",
+   "a": "\"You set IPTs deliberately generously relative to the expected landing point - in EUR IG typically with\naround 20 to 35 basis points of tightening room, depending on volatility and how well known the name is. The\npurpose is to build a broad, honest book before you tighten.\nThe calculus is asymmetric: start too generous and you lose a few basis points of negotiating position, but you\ncan still tighten. Start too tight and the book doesn't come together - and a deal that doesn't cover or has to be\npulled costs the issuer far more than a few basis points, because he comes back more expensively next time.\"",
+   "rubric": [
+    "IPTs are set deliberately generously relative to the expected landing point",
+    "Gives the tightening room as a conditional range, wider when volatility is high",
+    "Gives the asymmetry: too generous costs basis points, too tight risks a deal that does not cover"
+   ],
+   "mistakes": [
+    "Presenting the range as a fixed rule rather than conditional on volatility and how well known the name is."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing"
+   ],
+   "locator": "C8"
+  },
+  {
+   "q": "How do you tighten, and how do you know when you've gone too far?",
+   "a": "\"You tighten in steps and watch two things: how much book is lost at each step, and who leaves. A book\nthat shrinks from 3.5x to 2.8x is normal. One that halves, or where the large real money orders drop out, tells me\nthe last step went too far.\nThe second piece of information is the price limits: if a large share of orders has a limit exactly at the\ncurrent level, the next tightening is expensive.\nAnd the real test only comes afterwards - how the bond trades the next day. If it trades meaningfully wider than\nreoffer, the last step was too aggressive, regardless of how the book looked.\"",
+   "rubric": [
+    "Watches how much book is lost at each step and, more importantly, who leaves",
+    "Distinguishes losing fast money (fine) from losing large real money orders (a warning)",
+    "Reads the price limits: a book full of limits at the current level makes the next step expensive",
+    "Names next-day secondary performance as the real test"
+   ],
+   "mistakes": [
+    "Watching only the coverage ratio. Who leaves matters more than how much."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing",
+    "syndicate-process"
+   ],
+   "locator": "C9"
+  },
+  {
+   "q": "What drives credit spreads?",
+   "a": "\"I'd separate it into four blocks. Macro and risk appetite - in a risk-off move spreads widen\nbecause investors rotate into government bonds. Fundamentals - leverage, earnings, rating actions,\nsector-specific shocks like energy prices. Technicals - primary market supply, fund flows into credit, and\nwho has dropped out as a buyer. Rate volatility - that's a driver in its own right, because high rate\nvolatility makes investors more price sensitive generally, independent of the credit.\nRight now the last one is the most relevant: spreads are tight, but rate volatility is high, and that's exactly\nwhy new issue premiums are rising even though secondary spreads haven't widened.\"",
+   "rubric": [
+    "Macro and risk appetite",
+    "Fundamentals: leverage, earnings, rating actions, sector shocks",
+    "Technicals: primary supply, fund flows, who has stopped buying",
+    "Rate volatility as a driver in its own right, independent of the credit"
+   ],
+   "mistakes": [
+    "Missing rate volatility as a separate driver. It is why NIPs can rise while secondary spreads stay tight."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "spread-mechanics"
+   ],
+   "locator": "C10"
+  },
+  {
+   "q": "Rate duration vs spread duration?",
+   "a": "\"Rate duration measures the price response to a shift in the risk-free curve; spread duration the\nresponse to a change in the credit spread. For a fixed-coupon bond the two are numerically almost identical. For a\nfloater they diverge: rate duration is effectively zero until the next fixing, spread duration runs over the full\nlife.\nPractically that means: an investor who wants to avoid rate risk but keep credit risk buys a floater - or asset\nswaps a fixed-coupon bond.\"",
+   "rubric": [
+    "Rate duration is sensitivity to the risk-free curve; spread duration to the credit spread",
+    "Notes they are numerically almost identical for a fixed-coupon bullet",
+    "Notes they diverge for a floater: rate duration near zero, spread duration full life",
+    "Draws the practical conclusion: buy a floater or asset swap to keep credit and drop rate risk"
+   ],
+   "mistakes": [
+    "Assuming the two are always the same because they usually are."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "duration-convexity",
+    "spread-mechanics"
+   ],
+   "locator": "C11"
+  },
+  {
+   "q": "What is the swap spread and why does it move?",
+   "a": "\"The difference between the swap rate and the yield of the matched-maturity Bund. It moves because each\nleg has its own drivers: the Bund responds to supply and to safe-haven demand, the swap to bank credit risk and to\nhedging flows.\nIt matters for us because an issuer who prices over mid-swaps but evaluates the outcome in Bund terms feels a\nshift in the swap spread directly. That's why a pricing update usually shows both levels.\nRight now the driver is mainly German issuance volume - Germany is funding infrastructure and defence through\nrecord issuance while the ECB no longer reinvests. More Bund supply with fewer price-insensitive buyers pushes the\nBund price down, lifts its yield, and thereby compresses the swap spread.\"",
+   "rubric": [
+    "Defines it as swap rate minus matched-maturity Bund yield",
+    "Names the separate drivers on each leg: Bund supply and safe-haven demand versus bank credit and hedging flows",
+    "Explains why it matters: an issuer pricing over swaps but judging in Bund terms feels the move directly"
+   ],
+   "mistakes": [
+    "Getting the sign wrong on the supply mechanics. If unsure, give the definition and the drivers and stop."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "spread-mechanics"
+   ],
+   "locator": "C12"
+  },
+  {
+   "q": "No comparables at the target tenor - what do you do?",
+   "a": "\"Interpolate and justify the premium. I'd take the 10-year and 15-year points of the issuer's own curve,\ninterpolate to 12 years and allow for the fact that credit curves usually flatten between 10 and 15 years. Then I'd\nsanity-check against peers who have actually issued at the long end, to see how much the market has recently\ndemanded for the extra years.\nAnd I'd play the question back: if there is no liquid market there, the honest answer may be that 12 years is\nthe wrong format - and that a Schuldschein or a private placement delivers that tenor more cheaply than a benchmark\nbond for which you'd first have to create the market.\"",
+   "rubric": [
+    "Interpolates between the surrounding points on the issuer's own curve",
+    "Allows for credit curves flattening at the long end",
+    "Sanity-checks against peers who have actually printed at that tenor",
+    "Plays the question back: if there is no market at that tenor, a Schuldschein or private placement may be the right product"
+   ],
+   "mistakes": [
+    "Guessing harder instead of asking whether the format is wrong."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing"
+   ],
+   "locator": "C13"
+  },
+  {
+   "q": "What is a greenium?",
+   "a": "\"The - usually small - pricing advantage an issuer gets on a green bond relative to a comparable\nconventional bond on the same curve, often in the range of a few basis points. It comes from demand: there are\nmandated ESG funds that have to buy green paper, while supply is limited.\nHonestly, the effect is contested and varies a lot - in tight markets it shrinks to essentially nothing, because\nthen everything is oversubscribed anyway. The more robust benefit is usually not the spread but the diversification\nof the investor base and a better-supported book in difficult market phases.\"",
+   "rubric": [
+    "Defines it as the pricing advantage of a green bond over a comparable conventional bond",
+    "Explains the source: mandated ESG demand against limited supply",
+    "Is appropriately sceptical: the effect is contested, small, and shrinks in tight markets",
+    "Names the more robust benefit as investor base diversification and book resilience"
+   ],
+   "mistakes": [
+    "Either dismissing the greenium entirely or overclaiming it. Both read as unfamiliarity."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing"
+   ],
+   "locator": "C14"
+  },
+  {
+   "q": "Origination vs syndicate?",
+   "a": "\"Origination is the issuer side: the relationship with the treasurer and CFO, capital structure and\nfunding advice, pitches, rating advisory, preparing documentation. Syndicate is the investor side and the market\nside: where is the window, what is fair value, what does demand look like, how do we execute, how do we allocate.\nPut differently: origination brings the transaction to the table, syndicate takes it through the market. And\nbecause syndicate speaks to investors daily, it has the more current information on price levels - which is why the\nprice recommendation comes from syndicate, even though the relationship sits with origination.\"",
+   "rubric": [
+    "Origination is the issuer side: relationship, capital structure and funding advice, pitching",
+    "Syndicate is the investor and market side: window, fair value, execution, allocation",
+    "Explains the reason for the split: syndicate talks to investors daily, so the price recommendation sits there"
+   ],
+   "mistakes": [
+    "Describing the org chart without the reason for the split. Also: do not caricature origination."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D1"
+  },
+  {
+   "q": "Who else is involved in a deal?",
+   "a": "\"On our side: origination as the client interface, syndicate for price and execution, DCM sales for\nthe investor dialogue, the trading desk for secondary market and market making after pricing, legal and\ndocumentation for the prospectus or programme, compliance for insider lists and wall crossing, and\ndepending on the case rating advisory and corporate treasury solutions for hedging.\nOn the other side: the issuer - usually treasury - its lawyers, the rating agencies, the paying agent and the\nexchange for the listing.\"",
+   "rubric": [
+    "Names origination, syndicate, DCM sales, and the trading desk as separate functions",
+    "Names legal/documentation and compliance",
+    "Names the issuer side: treasury, its counsel, rating agencies, paying agent, exchange"
+   ],
+   "mistakes": [
+    "Saying syndicate 'manages secondary trading'. It does not. The trading desk makes the market; syndicate monitors performance."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D2"
+  },
+  {
+   "q": "Walk me through the deal timeline.",
+   "a": "\"Roughly four phases:\nPreparation, weeks to months ahead: mandating, documentation - either a drawdown under the EMTN programme\nor a standalone issue - the rating process if needed, and ongoing market monitoring with pricing updates.\nPre-marketing, days ahead: depending on how well known the name is, investor calls or a short roadshow,\nsometimes pre-sounding under wall crossing.\nExecution day: announcement in the morning, usually around 8:30-9:00 CET; IPTs out, books open; the book\nbuilds through the morning; guidance with a first tightening, often together with a size indication; 'books\nsubject'; then launch with final size and final spread; pricing in the afternoon with the coupon fixed against the\nmid-swap rate.\nAfter pricing: allocation, free to trade, settlement usually T+5 in the EUR market, listing, and\nmonitoring of secondary performance.\"",
+   "rubric": [
+    "Preparation: mandate, documentation (EMTN drawdown or standalone), rating, pricing updates",
+    "Pre-marketing: investor calls or a short roadshow, sometimes pre-sounding under wall crossing",
+    "Execution day: announcement with IPTs in the morning, guidance, books subject, launch, pricing in the afternoon",
+    "After pricing: allocation, free to trade, settlement, listing, secondary monitoring"
+   ],
+   "mistakes": [
+    "Describing a multi-week process. Most EUR benchmark deals are same-day intraday executions."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D3"
+  },
+  {
+   "q": "What are the syndicate roles on a deal?",
+   "a": "\"Global coordinator - coordinates structure, process and documentation, usually the bank with the\nclosest relationship. Active bookrunner - actively runs the book, speaks to investors, makes the price\nrecommendation, holds allocation authority together with the issuer. Passive bookrunner - appears on the\nticket and in the league table but isn't operationally involved in price leadership. Co-lead or co-manager - \na small role, often mandated for relationship reasons, for instance because the bank is a lender.\nFor execution what matters most is how many active bookrunners there are - too many make price discovery\nsluggish, because more houses have to agree.\"",
+   "rubric": [
+    "Global coordinator coordinates structure, process and documentation",
+    "Active bookrunner runs the book, makes the price recommendation, holds allocation authority",
+    "Passive bookrunner appears on the ticket and in the league table but does not lead price",
+    "Notes too many actives slow price discovery"
+   ],
+   "mistakes": [
+    "Not knowing the active versus passive distinction, which is genuinely load-bearing."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D4"
+  },
+  {
+   "q": "Why mandate several banks?",
+   "a": "\"Three reasons. Distribution - different houses have different investor relationships, more banks\nmeans a broader book. Relationship economics - the banks that provide the issuer's credit lines expect fee\nbusiness in return; a mandate is that consideration. And insurance - several opinions on price and on the\nwindow reduce the risk of getting it wrong.\nThe price of that is coordination effort and shared fees.\"",
+   "rubric": [
+    "Distribution: different houses reach different investors",
+    "Relationship economics: lending banks are rewarded with fee business",
+    "Insurance: several opinions on price and window reduce the risk of getting it wrong",
+    "Names the cost: coordination effort and shared fees"
+   ],
+   "mistakes": [
+    "Missing relationship economics, which is how the market actually works."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D5"
+  },
+  {
+   "q": "Pot deal vs retention?",
+   "a": "\"In a pot deal all orders go into a common book that all bookrunners can see; allocation is\ndecided by the issuer together with the leads, and investor names are transparent. That's the standard in the\nEuropean IG market.\nUnder retention, each bank receives a fixed allotment to place itself. That's more common for retail\ntranches or in certain local markets.\nThe advantage of the pot process is transparency: the issuer sees who is really buying and can deliberately\nfavour real money.\"",
+   "rubric": [
+    "Pot deal: one common book visible to all bookrunners, allocation decided by issuer with the leads",
+    "Retention: each bank gets a fixed allotment to place itself",
+    "Names the pot as European IG standard and transparency as its advantage"
+   ],
+   "mistakes": [
+    "Not knowing which is standard in European IG."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D6"
+  },
+  {
+   "q": "How does the bank make money on a bond deal?",
+   "a": "\"Through the issuance fee, which is retained from the proceeds - for European IG corporates typically in\nthe order of roughly 15 to 35 basis points of the volume, depending on tenor, format and credit quality; materially\nmore for hybrids and high yield. The fee is split among the banks by role, with active bookrunners taking the\nlargest share.\nOn top of that, indirectly: secondary trading, hedging business, and the league table credit, which in turn\nattracts mandates.\"",
+   "rubric": [
+    "Names the issuance fee retained from proceeds and gives it as a range, flagged as a range",
+    "Notes the fee is split by role with active bookrunners taking the largest share",
+    "Names the indirect economics: secondary trading, hedging, and league table credit driving future mandates"
+   ],
+   "mistakes": [
+    "Quoting a precise fee figure. These vary and are not public; a confident wrong number is worse than a range."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process",
+    "underwriting-economics"
+   ],
+   "locator": "D7"
+  },
+  {
+   "q": "What's in the announcement?",
+   "a": "\"Issuer, rating, format and rank, tenor or maturity, expected size - often just 'benchmark' - the bank\ngroup with roles, and the IPTs. Plus references to selling restrictions, so Reg S, and whether it's a green or\nsustainability-linked format.\nAfter that the books open, sales approaches investors, and we watch how fast and with what quality the orders\ncome in. The first ninety minutes often already tell you whether the deal is going well.\"",
+   "rubric": [
+    "Names issuer, rating, format and rank, tenor, expected size, bank group with roles, and IPTs",
+    "Notes selling restrictions and any green or sustainability-linked format",
+    "Says 'benchmark' is often used instead of a size, preserving the issuer's optionality"
+   ],
+   "mistakes": [
+    "Committing to a size in the announcement when the book has not told you what is achievable."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D8"
+  },
+  {
+   "q": "How do you read an orderbook?",
+   "a": "\"Six things, and size is not the most important one:\nCoverage ratio - book size divided by deal size. Three to four times is healthy on a benchmark. Ten times\nusually means it was launched too cheap.\nGranularity - many mid-sized orders are more robust than three large ones. Concentration means one\ninvestor can dictate the outcome or dump the paper later.\nPrice sensitivity - how many orders have a limit and where it sits. A book that looks large but is full of\nlimits at IPT level isn't really large.\nInvestor quality - real money versus fast money. Asset managers, insurers and pension funds hold; hedge\nfunds and some bank books flip on day one.\nAttrition - the difference between peak book and final book. Heavy attrition on tightening means the last\nstep went too far.\nAnchor orders - a large early commitment gives the deal credibility and lets the rest of the book build\naround it.\"",
+   "rubric": [
+    "Opens by saying size is not the most important thing",
+    "Coverage ratio, with a sense of what is healthy and what signals it was launched too cheap",
+    "Granularity, price sensitivity and where limits sit",
+    "Investor quality (real money versus fast money), attrition, and anchor orders"
+   ],
+   "mistakes": [
+    "Reading only the coverage ratio. A book full of limits at IPT level is not really large."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D9"
+  },
+  {
+   "q": "What does 'books subject' mean?",
+   "a": "\"That's the announcement that the books are only open subject to further price revision - in practice\nthe last opportunity for investors to confirm or withdraw their order before the final spread is set. It forces the\nbook to be honest: whoever isn't there at that level drops out now rather than at allocation.\"",
+   "rubric": [
+    "Defines it as books open only subject to further price revision",
+    "Notes it is the last chance for investors to confirm or withdraw before the final spread",
+    "Explains the function: it forces the book to be honest before allocation"
+   ],
+   "mistakes": [
+    "Not being able to define it at all. It comes up naturally in any bookbuild description."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D10"
+  },
+  {
+   "q": "How do you allocate?",
+   "a": "\"Not pro rata, but on quality. Preference goes to investors who ordered early and without a limit, who\nhold the name long term, who are also there in difficult market phases, and who are strategically important to the\nissuer - for instance because he needs them as an anchor in future transactions.\nDisadvantaged are orders that are clearly aiming to flip, and inflated orders speculating on a scaleback.\nFormally the issuer decides, in practice on syndicate's recommendation - because we know who behaved how. That\nis exactly what the desk maintains the investor database for.\"",
+   "rubric": [
+    "Allocation is on quality, not pro rata",
+    "Favours early, unlimited orders, long-term holders, and strategically important accounts",
+    "Penalises likely flippers and inflated orders speculating on a scaleback",
+    "Notes the issuer formally decides on syndicate's recommendation, informed by the investor database"
+   ],
+   "mistakes": [
+    "Saying allocation is pro rata. It is a judgement about behaviour."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D11"
+  },
+  {
+   "q": "What's a good break performance?",
+   "a": "\"A few basis points tighter than reoffer. Enough that investors are rewarded and order again next time\n - but not so much that the issuer visibly left money on the table.\nIf the bond trades meaningfully wider, the pricing was too aggressive and the issuer pays for it next time. If it\ntrades ten basis points tighter, the concession was too generous. Both are mistakes, just with different victims.\"",
+   "rubric": [
+    "A few basis points tighter than reoffer",
+    "Explains why: investors are rewarded and order again, without the issuer visibly leaving money behind",
+    "Names both failure modes: trading wider means pricing was too aggressive, ten tighter means the concession was too generous"
+   ],
+   "mistakes": [
+    "Treating a big tightening on the break as an unambiguous success. It means the issuer overpaid."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D12"
+  },
+  {
+   "q": "The deal breaks wide - what now?",
+   "a": "\"First, understand whether it's the deal or the market. If the whole index widened that day, it isn't a\npricing error. If only our bond trades worse, it is.\nThen look for the cause in the book: was it concentration, was there too much fast money, was the tightening too\nfar too late. That insight goes into the investor database and into the next allocation.\nAnd be honest with the issuer. A treasurer who gets a straight assessment after a poor issue mandates again. One\nwho gets it sugar-coated doesn't.\"",
+   "rubric": [
+    "First separates a market move from a deal-specific move by checking the index",
+    "Looks for the cause in the book: concentration, too much fast money, tightening too far too late",
+    "Feeds the finding into the investor database and the next allocation",
+    "Is honest with the issuer"
+   ],
+   "mistakes": [
+    "Saying 'we stabilise'. There is no formal price stabilisation in corporate bond syndication the way there is in ECM."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D13"
+  },
+  {
+   "q": "What is pre-sounding / wall crossing?",
+   "a": "\"A confidential advance contact with a small number of selected investors, to test appetite for a\nformat or a size before announcing publicly. The investors involved are brought over the wall - they receive inside\ninformation, are placed on an insider list, and are restricted from trading the name until announcement.\nThat's regulatorily sensitive, runs through compliance, and is therefore used sparingly - typically for difficult\nstructures like hybrids, for debut issuers, or for unusually large volumes.\"",
+   "rubric": [
+    "Confidential advance contact with a small number of selected investors to test appetite",
+    "The investors receive inside information, go on an insider list, and are restricted from trading",
+    "Notes it runs through compliance and is used sparingly: hybrids, debut issuers, unusually large size"
+   ],
+   "mistakes": [
+    "Describing it as a marketing call. The trading restriction is the cost and the whole compliance point."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D14"
+  },
+  {
+   "q": "What makes a good issuance window?",
+   "a": "\"Four conditions: the issuer isn't in a blackout period, i.e. after results; there's no major data\nrelease or central bank meeting that day; rate volatility is manageable; and the market isn't overloaded with\nsupply in the same sector.\nIn practice that means: Tuesday to Thursday, European morning, not on the day of US CPI or an ECB meeting, and\nideally in a week where three comparable names aren't bringing the same format.\nAnd seasonally: January and September are the densest months, August is effectively dead, and from late November\nthe market shuts.\"",
+   "rubric": [
+    "Issuer not in blackout after results",
+    "No major data release or central bank meeting that day",
+    "Manageable rate volatility and no supply pile-up in the same sector",
+    "Names the seasonality: January and September densest, August dead, market shuts from late November"
+   ],
+   "mistakes": [
+    "Naming only 'good market conditions' with no specific conditions behind it."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D15"
+  },
+  {
+   "q": "Why do a dual- or triple-tranche deal?",
+   "a": "\"To serve different investor bases in one go and to smooth the maturity profile. At the short end bank\nbooks and money-market-adjacent investors buy, at the long end insurers and pension funds. Anyone trying to place\n€1.5bn in a single maturity has to stretch the market a long way; spread across three maturities the same amount is\neasier and often cheaper to place overall.\nThe downside is execution complexity: you run three books in parallel and have to balance between tranches when\none goes better than another.\"",
+   "rubric": [
+    "Serves different investor bases in one go: short end to bank books, long end to insurers",
+    "Smooths the maturity profile",
+    "Explains why it is often cheaper than stretching one maturity for the full size",
+    "Names the cost: parallel books and balancing between tranches"
+   ],
+   "mistakes": [
+    "Missing that this is the same logic as Schuldschein tranching."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D16"
+  },
+  {
+   "q": "What is liability management?",
+   "a": "\"Active management of existing liabilities rather than only issuing new debt. The three usual tools:\ntender offer - buying back outstanding bonds for cash, usually alongside a new issue, to extend the maturity\nprofile. Exchange offer - swapping old bonds into new ones. And make-whole call - early redemption at\na price that compensates the investor for the forgone cash flows, discounted at a narrow spread over the government\nyield.\nThe typical trigger is an approaching maturity wall or a coupon that no longer fits the new rate environment.\"",
+   "rubric": [
+    "Names tender offer: buying back outstanding bonds for cash, usually alongside a new issue",
+    "Names exchange offer: swapping old bonds into new ones",
+    "Names make-whole call and defines the discount rate as government yield plus a narrow spread",
+    "Names the trigger: a maturity wall or a coupon that no longer fits the rate environment"
+   ],
+   "mistakes": [
+    "Defining make-whole without the discount rate, which is what makes early calls expensive and why par call periods exist."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "liability-management"
+   ],
+   "locator": "D17"
+  },
+  {
+   "q": "EMTN programme vs standalone?",
+   "a": "\"An EMTN programme is framework documentation under which an issuer can draw repeatedly and very\nquickly - the base prospectus is in place, all you need are final terms. That reduces time and cost per transaction\nsubstantially and enables opportunistic issuance, including in small sizes via reverse enquiry.\nA standalone issue is documented for a single transaction. That makes sense for infrequent issuers for whom the\nannual update of a programme doesn't pay off.\"",
+   "rubric": [
+    "EMTN is framework documentation: base prospectus in place, only final terms needed per drawdown",
+    "Explains the benefit: speed and cost per transaction, enabling opportunistic and small issuance",
+    "Standalone is documented for a single transaction, suiting infrequent issuers"
+   ],
+   "mistakes": [
+    "Missing the speed point, which is why programmes exist: decision to announcement in hours."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D18"
+  },
+  {
+   "q": "Reg S vs 144A?",
+   "a": "\"Both are exemptions from US securities law. Reg S means: distribution exclusively outside the\nUS, no SEC registration, and correspondingly lower disclosure and liability requirements. 144A additionally\npermits distribution to qualified institutional buyers in the US, but requires substantially more disclosure, often\nUS GAAP reconciliations, and brings US liability risk with it.\nA typical European IG corporate issues Reg S only, because US demand doesn't justify the extra work. But as soon\nas you need size in USD or a broad US investor base, 144A/Reg S becomes the format - and for emerging-markets\nissuers in EUR, Reg S only is the norm.\"",
+   "rubric": [
+    "Both are exemptions from US registration",
+    "Reg S: distribution outside the US only, lower disclosure and liability",
+    "144A: adds distribution to QIBs in the US, with more disclosure and US liability risk",
+    "Notes a typical European IG corporate issues Reg S only"
+   ],
+   "mistakes": [
+    "Describing 144A as 'a US listing'. It is a private resale exemption, not registration."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D19"
+  },
+  {
+   "q": "How would you build a pricing update?",
+   "a": "\"Top down. First, market context: where are mid-swaps across the relevant maturities, where is\nthe 10-year Bund, how has the credit index - say iTraxx Main - moved since the last update, what was the week's\nprimary volume.\nSecond, the issuer's own curve: all outstanding bonds with maturity, coupon, size, ASW and z-spread levels,\nand the change from the prior week.\nThird, the comparables set: the same fields for the peers, grouped by rating, plus their most recent new\nissues with reoffer spread and current level, so you can see how those traded.\nFourth, the derivation: interpolated fair value for the relevant target tenors and an indicative range for\na new issue spread.\nAnd formally important: identical layout in every edition, so changes jump out - and every number with a source\nand a timestamp.\"",
+   "rubric": [
+    "Market context first: mid-swaps across maturities, the 10y Bund, the credit index, weekly primary volume",
+    "The issuer's own curve: every outstanding bond with maturity, coupon, size, ASW and z-spread, and the weekly change",
+    "The comparable set with the same fields, plus peers' recent new issues and how they traded",
+    "Derivation: interpolated fair value and an indicative new issue range",
+    "Identical layout every edition, every number with a source and a timestamp"
+   ],
+   "mistakes": [
+    "Producing a different layout each week. Changes are supposed to jump out."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing",
+    "syndicate-process"
+   ],
+   "locator": "D20"
+  },
+  {
+   "q": "What would you analyse in an orderbook review?",
+   "a": "\"Five cuts: by investor type - asset managers, insurers and pension funds, banks, hedge funds,\ncentral banks; by geography; by order size, to make concentration visible; by price sensitivity,\ni.e. the share of limited orders and where the limits sat; and attrition across the guidance steps, i.e. who\ndropped out at which level.\nAnd then the comparison: the same metrics for comparable transactions in the same sector and rating over recent\nmonths. A book in isolation says little - it becomes interesting in comparison.\"",
+   "rubric": [
+    "Cuts by investor type, geography, order size, and price sensitivity",
+    "Analyses attrition across the guidance steps: who dropped out at which level",
+    "Compares against similar transactions in the same sector and rating"
+   ],
+   "mistakes": [
+    "Presenting the book in isolation. It only becomes an analysis in comparison."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "D21"
+  },
+  {
+   "q": "What is reverse enquiry?",
+   "a": "\"The reverse route: rather than the bank proposing a transaction to the issuer, an investor comes with\na specific requirement - a particular size, tenor or structure - and the issuer draws it privately under its MTN\nprogramme. No bookbuild, no public announcement, no league table entry.\nFor the issuer it's opportunistic funding between public transactions, often on attractive terms because the\ninvestor has a specific need. For the bank it's intermediation rather than execution.\"",
+   "rubric": [
+    "Investor-initiated: a specific size, tenor or structure comes to the issuer",
+    "Drawn privately under the MTN programme, with no bookbuild or public announcement",
+    "Notes there is no league table credit",
+    "Frames it as opportunistic funding between public transactions"
+   ],
+   "mistakes": [
+    "Not knowing that it produces no league table entry, which is why it is invisible from the outside."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein",
+    "syndicate-process"
+   ],
+   "locator": "D22"
+  },
+  {
+   "q": "What is a Schuldschein?",
+   "a": "\"Legally it is a loan under German law, not a security - the Schuldschein itself is only the\nevidencing certificate. It is transferred by assignment, not through a clearing system. Economically, though, it\nbehaves like a bond: standardised documentation, an arranging bookrunner, a broad institutional investor base and\nan orderly placement process.\nThe shortest description I find accurate: a loan with capital-markets-style distribution.\"",
+   "rubric": [
+    "States it is legally a loan under German law, not a security",
+    "Notes transfer is by assignment, not through a clearing system",
+    "Notes it behaves economically like a bond: standardised docs, an arranger, institutional distribution"
+   ],
+   "mistakes": [
+    "Calling it 'a private bond'. The legal characterisation is the foundation of the accounting, the absence of a prospectus and the absence of a secondary market."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E1"
+  },
+  {
+   "q": "SSD vs bond - the key differences?",
+   "a": "- Schuldschein | Benchmark bond\n- Legal nature | loan (German law) | security\n- Rating | usually none required | effectively required\n- Documentation | c. 20-30 pages | prospectus, several hundred pages\n- Size | from c. €20m, typically €50-200m | benchmark from €500m\n- Tenors | typically 3-10 years, several in parallel | one per tranche\n- Format | fixed and floating in parallel | one variant per tranche\n- Process | several weeks | intraday\n- Investor accounting | amortised cost (HGB) | mark to market\n- Secondary market | effectively none | liquid\n- Publicity | discreet | public",
+   "rubric": [
+    "Legal nature: loan versus security",
+    "Rating usually not required versus effectively required",
+    "Documentation of 20-30 pages versus a full prospectus",
+    "Size from about 20m versus benchmark from 500m, and weeks of process versus intraday",
+    "Investor accounting at amortised cost versus mark to market"
+   ],
+   "mistakes": [
+    "Getting the size and process rows the wrong way round."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E2"
+  },
+  {
+   "q": "Why do investors buy Schuldscheine?",
+   "a": "\"The decisive point is the accounting. Because the Schuldschein is a loan and not a security,\nGerman investors - particularly savings banks, cooperative banks and insurers - carry it at amortised cost under\nHGB rather than at market value. Which means: spread widening doesn't flow through the P&L.\nTwo things follow. First, the investor is structurally a holder, not a trader. And second, the market is far less\nsensitive to daily volatility - in a week when nobody can print a benchmark bond, Schuldschein processes simply\ncontinue.\nIn exchange the investor accepts illiquidity and the absence of a rating, and gets paid for it in the spread.\"",
+   "rubric": [
+    "Names the accounting as the decisive point: amortised cost under HGB, not market value",
+    "Concludes spread widening does not flow through the investor's P&L",
+    "Draws the two consequences: the investor is structurally a holder, and the market is insensitive to daily volatility",
+    "Notes the investor is paid for illiquidity and the absence of a rating"
+   ],
+   "mistakes": [
+    "Answering 'for the yield'. The accounting treatment explains the entire market."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E3"
+  },
+  {
+   "q": "Who is the SSD investor base?",
+   "a": "\"The core is German savings banks and cooperative banks, plus Landesbanken. Beyond that insurers and\npension vehicles, some asset managers, and for larger, better-known names increasingly Asian banks looking for\nEuropean corporate credit risk.\nWhat they have in common is that they do their own credit analysis and don't need an external rating - and that\nthey want to hold.\"",
+   "rubric": [
+    "Core is German savings banks, cooperative banks and Landesbanken",
+    "Adds insurers, pension vehicles and some asset managers",
+    "Notes Asian banks for larger names",
+    "Names the common feature: they do their own credit work and want to hold"
+   ],
+   "mistakes": [
+    "Describing it as a fund investor base. It is largely a bank investor base."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E4"
+  },
+  {
+   "q": "How does the SSD process work?",
+   "a": "\"Much slower and paced completely differently from a bond. Roughly: preparation with the issuer - \ndocumentation, financials, credit story, a structure proposal with tenors and formats. Then launch, sending\nthe materials to a broad investor list with an indicative spread range per tranche.\nAfter that a marketing phase over several weeks, during which investors do their own credit analysis and\ncome back with questions. There's a subscription period rather than an intraday book. If demand is strong the\nspread is tightened or the volume increased - that's called upsizing.\nFinally allocation, documentation and drawdown.\nSo the core difference is: on a bond the binding constraint is the market window; on a Schuldschein it's the\ninvestors' credit analysis. Which is why timing risk on a Schuldschein is far lower.\"",
+   "rubric": [
+    "Preparation with the issuer: documentation, financials, credit story, structure proposal",
+    "Launch to a broad investor list with an indicative spread range per tranche",
+    "A marketing and subscription phase over weeks, not an intraday book, with upsizing if demand is strong",
+    "Names the core contrast: a bond's binding constraint is the market window, an SSD's is the investors' credit analysis"
+   ],
+   "mistakes": [
+    "Describing it as a slow bookbuild. The constraint is different in kind, not just in speed."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E5"
+  },
+  {
+   "q": "Why is an SSD tranched?",
+   "a": "\"Because the investor base is heterogeneous and you want to serve it in one process. A typical\nSchuldschein comes with several tenors in parallel - say 3, 5, 7 and 10 years - each in a fixed and a floating\nversion against 6M Euribor. The investor self-selects whatever fits its book.\nFor the issuer that means: it smooths its maturity profile in a single transaction and mixes fixed and floating\nwithout having to swap separately. A bond gives it exactly one tenor and one format per tranche.\nIn the current environment, with high rate volatility, the floating portion is a genuine argument.\"",
+   "rubric": [
+    "Serves a heterogeneous investor base in one process",
+    "Several tenors in parallel, each in fixed and floating against 6M Euribor, with investors self-selecting",
+    "For the issuer: smooths the maturity profile and mixes fixed and floating without a separate swap"
+   ],
+   "mistakes": [
+    "Not connecting it to the floater logic: investors who do not want rate risk take the floating tranche."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E6"
+  },
+  {
+   "q": "SSD documentation and covenants?",
+   "a": "\"Short and standardised - usually twenty to thirty pages, mostly German law, sometimes English. No\nprospectus, no prospectus liability, no exchange listing.\nThe covenant package is light: pari passu, negative pledge, change of control, occasionally a financial covenant\nsuch as a leverage cap - the latter more for weaker credit profiles. Cross-default is standard.\nThe advantage for the issuer is time and cost; the price is that it serves an investor base that has to do the\ncredit analysis itself and needs information and time for that.\"",
+   "rubric": [
+    "Twenty to thirty pages, mostly German law, no prospectus and no prospectus liability, no listing",
+    "Light covenant package: pari passu, negative pledge, change of control, cross-default",
+    "Occasionally a financial covenant such as a leverage cap, more for weaker credits",
+    "Names the trade: time and cost for the issuer, against an investor base that needs information and time"
+   ],
+   "mistakes": [
+    "Assuming an SSD is more restrictive than a bond. An IG bond's package is lighter still; the SSD is more negotiable, not tighter."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "covenants",
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E7"
+  },
+  {
+   "q": "When SSD, when bond?",
+   "a": "\"I'd frame it as a decision tree, not a preference.\nSchuldschein when: the issuer has no rating or doesn't want one; the size needed is below benchmark scale;\ndiscretion and light documentation matter; several tenors and both formats are needed in one go; or it's a\nfirst-time issuer stepping out of the classic bank loan market for the first time.\nBond when: the issuer is rated and achieves a lower all-in cost through size; it wants a visible, liquid\ncurve as a reference for future issuance; it needs €500m or more; or it intends to be a repeat issuer and wants to\ncultivate a broad institutional investor base.\nAnd the nuance: it isn't either-or. Large corporates use both - bonds for size and curve, Schuldschein for\ntenor flexibility, investor diversification and less timing risk. On this desk both sit at one table, which is\nexactly why the role interests me.\"",
+   "rubric": [
+    "Frames it as a decision tree, not a preference",
+    "SSD when: no rating or no wish for one, sub-benchmark size, discretion, multiple tenors and formats, first-time issuer",
+    "Bond when: rated, needs size, wants a visible liquid curve, intends to be a repeat issuer",
+    "Notes it is not either-or: large corporates use both"
+   ],
+   "mistakes": [
+    "Presenting it as a ranking of products rather than a fit to the issuer's situation."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E8"
+  },
+  {
+   "q": "How do you price an SSD without a rating?",
+   "a": "\"Through a shadow rating and through comparable transactions. The arranger does an internal credit\nanalysis and places the issuer in a rating band - say 'BBB-like'. Then you look at where Schuldscheine of comparable\nissuers have priced over recent months, by credit quality, sector, size and tenor.\nWhat the issuer pays in the bank loan market often serves as the floor, and what a rated bond would cost as the\nceiling - the Schuldschein typically sits in between, with a premium for illiquidity and the absence of a rating.\nAnd the process itself generates information: you start with a range per tranche and see during the subscription\nphase where demand actually is. That's slower but more honest price discovery than an intraday book.\"",
+   "rubric": [
+    "Uses a shadow rating from the arranger's internal credit analysis",
+    "Looks at where comparable SSDs have priced by credit quality, sector, size and tenor",
+    "Brackets it: the bank loan market as the floor, a rated bond as the ceiling",
+    "Notes the subscription phase itself generates price discovery, slower but more honest than an intraday book"
+   ],
+   "mistakes": [
+    "Claiming it cannot be priced without a rating."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "ratings",
+    "schuldschein"
+   ],
+   "locator": "E9"
+  },
+  {
+   "q": "What is a registered bond (Namensschuldverschreibung)?",
+   "a": "\"A note issued in the name of the holder rather than to bearer - it doesn't sit in clearing and isn't\nfreely tradeable, but is transferred by assignment.\nThe natural buyers are insurers and pension funds: again because of amortised cost accounting, and because the\ninstrument fits their regulatory investment framework. Typically very long tenors, because that's exactly where the\ninsurers' need is and where the public market delivers little.\nFor the issuer it is therefore a tool for long maturities in sizes that don't justify a benchmark.\"",
+   "rubric": [
+    "A note issued in the holder's name, not to bearer, outside clearing, transferred by assignment",
+    "Names insurers and pension funds as the natural buyers, again for amortised cost and regulatory fit",
+    "Notes typically very long tenors, where the public market delivers little"
+   ],
+   "mistakes": [
+    "Confusing it with a Schuldschein. Both are non-securities, but the NSV is aimed at very long insurer money."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E10"
+  },
+  {
+   "q": "What is an MTN private placement?",
+   "a": "\"A bespoke drawdown under an issuer's EMTN programme, usually driven by reverse enquiry: an investor\ncomes with a specific size, tenor or structure, and the issuer prices it privately. No bookbuild, no public\nannouncement, no league table headline.\nFast, quiet, and the way issuers pick up opportunistic funding between public transactions. In practice it's the\ntool you reach for when a client needs €80m for eleven years - a size and tenor no benchmark bond can serve.\"",
+   "rubric": [
+    "A bespoke drawdown under the issuer's EMTN programme",
+    "Usually driven by reverse enquiry from an investor with a specific need",
+    "No bookbuild, no public announcement, no league table headline",
+    "Names the use case: a size and tenor no benchmark bond can serve"
+   ],
+   "mistakes": [
+    "Confusing it with a Schuldschein. The MTN PP is a security under a programme; the SSD is a loan."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E11"
+  },
+  {
+   "q": "How big is the SSD market?",
+   "a": "\"In 2025 new volume was around €25bn - the fifth-highest year in the market's history and above the prior\nyear, across more than a hundred transactions with an average size in the region of €200m. Issuers from around\ntwelve sectors and eleven countries.\nFor 2026 the houses' forecasts point to a similar order of magnitude again, driven mainly by refinancing from\nunrated issuers - rated companies continue to enjoy a cost advantage in the public bond market.\nESG-linked Schuldscheine run at around a tenth of volume, though the sustainability link is rarely fixed\ncontractually - it feeds more into the credit analysis.\"",
+   "rubric": [
+    "Gives annual new volume in the right order of magnitude",
+    "Notes the driver is refinancing from unrated issuers, since rated names have a cost advantage in the public market",
+    "Notes ESG-linked SSDs are a modest share and the link is rarely fixed contractually"
+   ],
+   "mistakes": [
+    "Quoting a volume figure without a year attached."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E12"
+  },
+  {
+   "q": "What are the drawbacks of an SSD?",
+   "a": "\"For the issuer: no visible curve, so no reference price for later transactions; limited scalability,\nbecause the investor base is narrower than in the public market; and the process takes weeks, which is a\ndisadvantage if funding need is acute.\nFor the investor: no liquidity - anyone who wants to sell has a problem - no external rating, so the full\nanalytical burden, and less transparency in ongoing monitoring.\nAnd a structural point: in a credit crisis, a market where nobody marks to market and nobody can sell is very\nquiet - until it isn't. Prices adjust with a lag.\"",
+   "rubric": [
+    "For the issuer: no visible curve, limited scalability, a process that takes weeks",
+    "For the investor: no liquidity, no external rating, less transparency in monitoring",
+    "Makes the structural point: amortised cost suppresses reported volatility, not actual credit risk"
+   ],
+   "mistakes": [
+    "Listing only issuer drawbacks and missing that prices adjust with a lag in a credit crisis."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "schuldschein"
+   ],
+   "locator": "E13"
+  },
+  {
+   "q": "What is a corporate hybrid?",
+   "a": "\"A deeply subordinated, generally perpetual bond issued by a non-financial company that combines debt\nand equity features. Typical characteristics: no fixed maturity date, ranking only just above equity, an issuer call\nright after typically five or seven years, a coupon reset at the call date, and the issuer's right to defer the\ncoupon - usually cumulatively, so it has to be paid later.\nThe point of the structure is that rating agencies grant it partial equity character.\"",
+   "rubric": [
+    "Deeply subordinated, generally perpetual, issued by a non-financial company",
+    "Names the features: no fixed maturity, ranks just above equity, issuer call after typically 5 or 7 years",
+    "Names the coupon reset at call and the right to defer coupons, usually cumulatively",
+    "States the point of the structure: partial equity treatment from the rating agencies"
+   ],
+   "mistakes": [
+    "Confusing a corporate hybrid with a bank AT1. The bank instrument has a write-down or conversion trigger; the corporate one does not."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "hybrids"
+   ],
+   "locator": "F1"
+  },
+  {
+   "q": "Equity credit - why issue a hybrid?",
+   "a": "\"Rating agencies count a correctly structured hybrid - at S&P generally 50% - as equity. Which means:\nof a €500m issue, only €250m feeds into the leverage metrics.\nThe benefit to the issuer is therefore clear: it strengthens its credit metrics and defends its rating\nwithout diluting existing shareholders. Typical triggers are a large acquisition, a capex programme - for\ninstance at utilities and grid operators - or pressure from a rating agency.\nThe price is a materially higher coupon than senior unsecured, because the investor bears subordination,\ndeferral risk and extension risk. You are buying rating capital, and it costs.\"",
+   "rubric": [
+    "Rating agencies count a correctly structured hybrid as part equity, typically 50% at S&P",
+    "Works the arithmetic: half of the issue does not feed the leverage metrics",
+    "Names the benefit: defends the rating without diluting shareholders",
+    "Names the price: a materially higher coupon for subordination, deferral and extension risk"
+   ],
+   "mistakes": [
+    "Missing the dilution point, which is the reason a CFO picks a hybrid over an equity raise."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "hybrids",
+    "ratings"
+   ],
+   "locator": "F2"
+  },
+  {
+   "q": "Explain the hybrid structure.",
+   "a": "\"Typically 'NC5' or 'NC7' - non-callable for five or seven years respectively. At the first call date the\nissuer has the right to call at par. If it doesn't call, the coupon resets, usually as the mid-swap rate for the\nreset period plus the original margin.\nOn top of that come step-ups: a small one - often 25 basis points - after around ten years, and a larger one - \noften 75 basis points - after around twenty or twenty-five. They are deliberately calibrated to create an economic\nincentive to call without giving the bond a legal fixed maturity, which would destroy the equity character.\nThat's why the market calculates and trades hybrids to the first call, not to perpetuity: yield is\nyield-to-call, duration is duration to call.\"",
+   "rubric": [
+    "NC5 or NC7: non-callable for five or seven years, then callable at par",
+    "At the call date the coupon resets to mid-swaps for the reset period plus the original margin",
+    "Names the step-ups and their sizes and timing",
+    "Explains the design logic: big enough to incentivise a call, small enough not to be a legal maturity that would destroy equity credit",
+    "Notes the market trades hybrids to first call: yield-to-call and duration-to-call"
+   ],
+   "mistakes": [
+    "Treating the perpetual maturity as real. The market prices to first call."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "hybrids"
+   ],
+   "locator": "F3"
+  },
+  {
+   "q": "What is extension risk?",
+   "a": "\"The risk that the issuer doesn't call at the first call date. The market prices hybrids as though they\nwill be called - if that isn't confirmed, the effective maturity extends abruptly, duration jumps, and the price\nfalls accordingly.\nEconomically an issuer doesn't call when refinancing would be more expensive than the reset coupon. That was a\nreal issue during the period of sharply rising rates.\nIn practice, though, reputation matters a great deal: an issuer who fails to call once pays permanently more on\nits next hybrid and may find no market at all. Which is why most investment grade issuers call even when it's\nmarginal on pure arithmetic.\"",
+   "rubric": [
+    "The risk that the issuer does not call at the first call date",
+    "Explains the price effect: effective maturity extends abruptly, duration jumps, price falls",
+    "Gives the economic condition: an issuer does not call when refinancing costs more than the reset coupon",
+    "Names the reputational constraint that makes most IG issuers call anyway"
+   ],
+   "mistakes": [
+    "Giving only the arithmetic. The repeated-game reputational cost is why marginal calls still happen."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "hybrids"
+   ],
+   "locator": "F4"
+  },
+  {
+   "q": "How do you price a hybrid?",
+   "a": "\"The starting point is the same issuer's senior curve at the tenor to the first call. On top of that\ncomes a subordination premium, which depending on the issuer and the market phase can be a multiple of the senior\nspread - often broadly in the region of two to three times, but it varies a lot.\nYou sanity-check that against other hybrids: the issuer's own outstanding hybrids and hybrids of comparable\nnames, each measured as the premium over their own senior curve. That premium is the actual comparison metric, not\nthe absolute spread.\nAnd the new issue premium on hybrids is systematically higher than on senior - the structure is more complex and\nthe investor base narrower.\"",
+   "rubric": [
+    "Starts from the issuer's own senior curve at the tenor to first call",
+    "Adds a subordination premium, given as a rough range and flagged as variable",
+    "Sanity-checks against other hybrids measured as the premium over their own senior curve, not the absolute spread",
+    "Notes the new issue premium on hybrids is systematically higher than on senior"
+   ],
+   "mistakes": [
+    "Comparing absolute hybrid spreads across issuers. The premium over each issuer's own senior curve is the comparable."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "hybrids",
+    "new-issue-pricing"
+   ],
+   "locator": "F5"
+  },
+  {
+   "q": "How do rating agencies treat a hybrid?",
+   "a": "\"Two effects. First the equity credit on the metrics side - at S&P typically 50%, provided the\nstructure meets the criteria: sufficient subordination, deferral capability, adequate effective maturity.\nSecond the instrument rating itself: the hybrid is notched down from the issuer rating - usually by two notches\nfor an investment grade issuer, more for weaker profiles. That reflects subordination and deferral risk.\nAnd the equity credit isn't necessarily permanent: if the structure no longer meets the criteria it can fall\naway - which removes the entire purpose of the issue for the issuer and can itself be grounds for a call.\"",
+   "rubric": [
+    "Equity credit on the metrics side, typically 50% at S&P, subject to structural criteria",
+    "Instrument notching: usually two notches below the issuer rating for an IG name, more for weaker profiles",
+    "Notes equity credit is not permanent and can fall away if criteria change",
+    "Knows a rating methodology event call exists for exactly that case"
+   ],
+   "mistakes": [
+    "Conflating the equity credit with the instrument rating. They are two separate effects."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "hybrids",
+    "ratings"
+   ],
+   "locator": "F6"
+  },
+  {
+   "q": "Who buys hybrids?",
+   "a": "\"Mainly specialist funds - hybrid and subordinated debt funds - insurers reaching for yield, and\ncrossover investors: investment grade houses that get a high-yield-like coupon through the hybrid of a solid IG\nissuer, but with credit risk they already know.\nThat's precisely the appeal and the risk at once: you're buying the credit risk of an A or BBB name, but with the\nprice volatility of a subordinated instrument.\"",
+   "rubric": [
+    "Specialist hybrid and subordinated debt funds",
+    "Insurers reaching for yield",
+    "Crossover buyers: IG accounts taking a high-yield-like coupon on credit they already know",
+    "Names the framing: IG credit risk with subordinated price behaviour"
+   ],
+   "mistakes": [
+    "Missing why hybrids sell off harder than their credit quality suggests in a risk-off move."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "hybrids"
+   ],
+   "locator": "F7"
+  },
+  {
+   "q": "Give me the rating scale.",
+   "a": "- S&P / Fitch | Moody's\n- AAA | Aaa | Investment Grade\n- AA+ / AA / AA− | Aa1 / Aa2 / Aa3\n- A+ / A / A− | A1 / A2 / A3\n- BBB+ / BBB / BBB− | Baa1 / Baa2 / Baa3\n- BB+ / BB / BB− | Ba1 / Ba2 / Ba3 | High Yield\n- B+ / B / B− | B1 / B2 / B3\n- CCC+ / CCC / CCC− | Caa1 / Caa2 / Caa3\n- CC / C / D | Ca / C\n\nThe line: BBB− / Baa3 is the lowest investment grade notch; BB+ / Ba1 is the highest high yield notch.",
+   "rubric": [
+    "Gives the S&P/Fitch and Moody's scales side by side down to at least CCC",
+    "Names BBB- / Baa3 as the lowest investment grade notch and BB+ / Ba1 as the highest high yield notch",
+    "Knows the modifier convention: +/- for S&P and Fitch, 1/2/3 for Moody's, with 1 strongest"
+   ],
+   "mistakes": [
+    "Getting Moody's modifier direction wrong, or putting a modifier on AAA."
+   ],
+   "topic": "dcm",
+   "difficulty": 1,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "ratings"
+   ],
+   "locator": "G1"
+  },
+  {
+   "q": "Why does the IG/HY line matter so much?",
+   "a": "\"Because it's a demand cliff, not a gradual deterioration. A great many institutional mandates - \ninsurers, pension funds, index funds - may only hold investment grade. If an issuer falls from BBB− to BB+, those\ninvestors have to sell regardless of what they think of the credit. That's called a fallen angel.\nThe consequence is a spread jump far larger than the single notch justifies economically. In reverse there's the\nrising star.\nFor the issuer that means: defending the BBB− is one of the most important funding decisions there is - and one\nof the main reasons hybrids get issued.\"",
+   "rubric": [
+    "Explains it as a demand cliff, not a gradual deterioration",
+    "Names the mandate constraint: many institutional mandates may only hold investment grade",
+    "Names the fallen angel and the forced selling that follows",
+    "Notes the spread jump is far larger than one notch justifies, and loops to why hybrids get issued"
+   ],
+   "mistakes": [
+    "Treating the boundary as one more notch. It is a discontinuity in the buyer base."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "ratings"
+   ],
+   "locator": "G2"
+  },
+  {
+   "q": "Outlook vs watchlist?",
+   "a": "\"An outlook is the medium-term directional assessment - positive, stable or negative - over\ntypically one to two years. A CreditWatch or review is short-term and event-driven: the agency signals that\nit will decide within roughly ninety days, usually triggered by an acquisition, a disposal or an event.\nPractically that means: a watch moves spreads much more than an outlook change, because concrete action is in\nsight.\"",
+   "rubric": [
+    "Outlook is a medium-term directional view over one to two years",
+    "CreditWatch or review is short-term and event-driven, with a decision expected in about ninety days",
+    "Notes a watch moves spreads much more than an outlook change, because action is in sight"
+   ],
+   "mistakes": [
+    "Treating the two as interchangeable degrees of the same signal."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "ratings"
+   ],
+   "locator": "G3"
+  },
+  {
+   "q": "Which credit metrics do you look at?",
+   "a": "\"I'd structure it in four blocks:\nLeverage: net debt to EBITDA. As a rough orientation, investment grade often sits below 3x, but that's\nheavily sector-dependent - a regulated utility carries 5x comfortably, a cyclical is already stretched at 3x.\nCoverage: EBITDA or EBIT to interest expense. The higher the safer; in IG typically above 4x to 5x. That\nmetric has become more important in the current rate environment, because refinancing happens at materially higher\ncoupons.\nCash flow: free cash flow and FFO to net debt - S&P works heavily with FFO/debt. That matters more to\nme than EBITDA, because it accounts for working capital and capex.\nMaturity profile and liquidity: what falls due when, which facilities are committed and undrawn, how much\ncash is on hand.\"",
+   "rubric": [
+    "Leverage: net debt to EBITDA, with an explicit sector caveat rather than a hard threshold",
+    "Coverage: EBITDA or EBIT to interest, and why it matters more at higher refinancing coupons",
+    "Cash flow: free cash flow and FFO to debt, naming FFO/debt as S&P's anchor",
+    "Maturity profile and liquidity: what falls due when, committed undrawn facilities, cash on hand"
+   ],
+   "mistakes": [
+    "Quoting 'below 3.0x for IG' as a hard rule. It invites an immediate counterexample from a regulated utility."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "credit-stats",
+    "dcm-syndicate",
+    "ratings"
+   ],
+   "locator": "G4"
+  },
+  {
+   "q": "Why can EBITDA mislead?",
+   "a": "\"Because it excludes capex, working capital, interest and tax - in other words practically everything\ndebt is actually serviced from. A capital-intensive company with high EBITDA can still have persistently negative\nfree cash flow.\nOn top of that, 'adjusted EBITDA' is definition-dependent. On my waste management mandate we did exactly that: we\nisolated three opex lines to justify the normalisation. It was methodologically well grounded - but it also shows\nhow much latitude sits in the metric.\nFor a bondholder, free cash flow after capex is therefore the more honest measure.\"",
+   "rubric": [
+    "EBITDA excludes capex, working capital, interest and tax, which is what debt is serviced from",
+    "Gives the case: a capital-intensive company with high EBITDA and persistently negative free cash flow",
+    "Notes adjusted EBITDA is definition-dependent and shows how much latitude sits in the add-backs",
+    "Concludes free cash flow after capex is the more honest bondholder measure"
+   ],
+   "mistakes": [
+    "Criticising EBITDA in the abstract with no concrete case where it misleads."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "credit-stats",
+    "dcm-syndicate"
+   ],
+   "locator": "G5"
+  },
+  {
+   "q": "Incurrence vs maintenance covenants?",
+   "a": "\"A maintenance covenant has to be complied with on an ongoing basis - typically tested quarterly,\nfor instance a leverage cap. A breach gives a termination right even if the company hasn't done anything. That's\nclassic bank loan logic.\nAn incurrence covenant only bites when the company actively does something - takes on new debt, pays\ndividends, sells assets. That's bond logic, particularly in high yield.\nInvestment grade bonds generally have no financial covenants at all - there the investor relies on the rating and\non negative pledge, pari passu and a change-of-control put. That's the price of credit quality: a BBB issuer gets\nlight documentation, a B issuer doesn't.\"",
+   "rubric": [
+    "Maintenance: tested on an ongoing basis, typically quarterly; a breach gives a termination right without any action by the company",
+    "Incurrence: bites only when the company does something, such as raising debt, paying dividends or selling assets",
+    "Gives the three-tier picture: bank loan, then high yield bond, then IG bond with no financial covenants at all",
+    "Notes the IG investor relies on the rating, negative pledge, pari passu and a change-of-control put"
+   ],
+   "mistakes": [
+    "Listing the two definitions without connecting covenant strength to credit quality."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "covenants",
+    "dcm-syndicate"
+   ],
+   "locator": "G6"
+  },
+  {
+   "q": "Negative pledge? Structural subordination?",
+   "a": "\"Negative pledge: the issuer's undertaking not to grant security over assets to other creditors\nwithout treating bondholders equally. It protects unsecured creditors from being subordinated after the fact to\nnewly secured ones.\nStructural subordination: if the bond is issued by the holding company but the assets and operating cash\nflow sit in subsidiaries, the holdco creditor ranks behind all creditors of the subsidiary in insolvency. He only\ngets what flows up as a dividend after the subsidiary level has been served.\nThe remedy is guarantees from the operating subsidiaries - which is why 'who is the issuer and who guarantees' is\none of the first questions on any transaction.\"",
+   "rubric": [
+    "Negative pledge: an undertaking not to grant security to others without equal treatment of bondholders",
+    "Structural subordination: a holdco creditor ranks behind all creditors of the operating subsidiaries",
+    "Explains the mechanism: the holdco only gets what flows up as a dividend after the subsidiary level is served",
+    "Names the remedy: guarantees from the operating subsidiaries"
+   ],
+   "mistakes": [
+    "Confusing structural with contractual subordination. Structural comes from where the assets sit, not from the documents."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "covenants",
+    "dcm-syndicate",
+    "levfin-structure"
+   ],
+   "locator": "G7"
+  },
+  {
+   "q": "How would you assess a company as a credit analyst?",
+   "a": "\"Top down, and with the opposite sign to equity analysis.\nBusiness risk: how stable and predictable is the cash flow? How cyclical is the sector? How strong is the\nmarket position, how good is pricing power? Regulated or contracted revenues are worth more to me than growth.\nFinancial risk: leverage, coverage, cash generation, maturity profile, liquidity reserves. S&P combines\nexactly those two axes in a matrix to get the anchor rating.\nModifiers: financial policy - what has management historically done with surplus cash? Shareholder\nstructure, M&A appetite, commitment to the rating.\nAnd the downside question: what happens in a bad scenario? If revenue falls twenty percent, does interest\ncoverage become critical? As a bondholder my upside is capped at coupon and principal - so what interests me isn't\nthe best case, it's the worst case that is still plausible.\"",
+   "rubric": [
+    "Business risk: cash flow stability and predictability, cyclicality, market position, pricing power",
+    "Financial risk: leverage, coverage, cash generation, maturity profile, liquidity",
+    "Names the agency matrix that combines the two into an anchor rating",
+    "Modifiers: financial policy, shareholder structure, M&A appetite, commitment to the rating",
+    "Ends on the downside question, because the bondholder's upside is capped"
+   ],
+   "mistakes": [
+    "Running an equity analysis with the sign flipped. Growth is worth less to a creditor than contracted revenue."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "credit-stats",
+    "dcm-syndicate",
+    "ratings"
+   ],
+   "locator": "G8"
+  },
+  {
+   "q": "Good for equity, bad for credit - how?",
+   "a": "\"Very often, in fact. A debt-funded share buyback is good for the shareholder - fewer shares, higher\nearnings per share - and bad for the bondholder: more debt on the same cash flow.\nThe same goes for a large debt-funded acquisition, for aggressive dividend policy, or for a spin-off that\nseparates the stable part of the business out of the credit group.\nThe underlying conflict is always the same: the shareholder has unlimited upside and benefits from risk, the\ncreditor doesn't. That's why covenants exist - and why the change-of-control put is so widespread in bonds.\"",
+   "rubric": [
+    "Gives the debt-funded buyback as the cleanest case: good for EPS, bad for leverage on the same cash flow",
+    "Adds debt-funded acquisitions, aggressive dividends, and spin-offs that remove stable cash flow from the credit group",
+    "Names the underlying conflict: the shareholder has unlimited upside and benefits from risk, the creditor does not",
+    "Connects it to why covenants and change-of-control puts exist"
+   ],
+   "mistakes": [
+    "Not having a concrete case ready. This question tests whether the valuation instinct has actually been reoriented."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "credit-stats",
+    "dcm-syndicate"
+   ],
+   "locator": "G9"
+  },
+  {
+   "q": "Where are ECB rates?",
+   "a": "\"Deposit facility 2.25%, main refinancing operations 2.40%, marginal lending 2.65%.\nThe ECB hiked by 25 basis points on 11 June - the first increase in almost three years - and\nheld on 23 July. The Council remains explicitly data-dependent and won't commit to a rate path. APP and PEPP\ncontinue to run down, with no reinvestment of maturing principal.\"",
+   "rubric": [
+    "Gives the deposit facility rate, the main refinancing rate and the marginal lending rate",
+    "States the direction and date of the most recent decision",
+    "Notes whether the Council is committing to a path or staying data-dependent"
+   ],
+   "mistakes": [
+    "Quoting a rate without knowing when it was last changed."
+   ],
+   "topic": "markets",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness"
+   ],
+   "locator": "H1",
+   "kind": "market_awareness"
+  },
+  {
+   "q": "Why did the ECB hike?",
+   "a": "\"Because of energy, not demand. The Middle East conflict and the disruption around the Strait of Hormuz\npushed oil and gas sharply higher. The market then repriced inflation risk far more than growth risk.\nIn July the ECB made clear that energy prices remain highly volatile, sit above pre-conflict levels, and that the\nfull inflationary impact of the energy shock has yet to play out. What it is watching particularly are second-round\neffects - that is, whether the energy shock embeds itself in wages and services prices.\"",
+   "rubric": [
+    "Identifies the driver as a supply-side energy shock rather than demand",
+    "Names second-round effects into wages and services as the actual policy question",
+    "Explains why a supply shock is the worst case: inflation up and growth down at once"
+   ],
+   "mistakes": [
+    "Explaining a hike with demand-side reasoning when the driver was energy."
+   ],
+   "topic": "markets",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness"
+   ],
+   "locator": "H2"
+  },
+  {
+   "q": "Where is inflation?",
+   "a": "\"The euro area was at 2.9% in July, up from 2.8% in June - so rising again, and above target since\nthe spring.\nThe composition is what matters: energy up 10.0% against 8.5% in June, services 3.3%, non-energy\nindustrial goods only 0.9%, food 1.2%. Excluding energy the rate is 2.2%.\nWhich means: the upward pressure comes almost entirely from energy. The core is close to target - but services\ninflation at 3.3% is the number that keeps the ECB awake, because that's where second-round effects would show.\"",
+   "rubric": [
+    "Gives the headline euro area rate and the direction of travel",
+    "Breaks it into energy, services, non-energy industrial goods and food",
+    "Identifies services inflation as the number that matters for second-round effects"
+   ],
+   "mistakes": [
+    "Quoting a 'core' figure without saying which definition, since core definitions vary."
+   ],
+   "topic": "markets",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness"
+   ],
+   "locator": "H3",
+   "kind": "market_awareness"
+  },
+  {
+   "q": "Where is the 10y Bund?",
+   "a": "\"Around 3.16%, as of yesterday. In July it was briefly above 3.2%, the highest in about fifteen\nyears; it has come back slightly since, because there's been some movement at the negotiating table on the Strait of\nHormuz. Roughly 40 basis points higher than a year ago.\nTwo drivers: inflation and rate expectations, and - very substantially - supply. Germany is running record\nissuance to fund infrastructure and defence, while the ECB no longer reinvests - so private investors have to\nabsorb a record net volume.\"",
+   "rubric": [
+    "Gives the 10y Bund level and how it has moved over the month and year",
+    "Names the two drivers: inflation and rate expectations, and supply",
+    "Explains the supply side: record German issuance while the ECB no longer reinvests"
+   ],
+   "mistakes": [
+    "Quoting a level from memory that is a week old. This moves daily."
+   ],
+   "topic": "markets",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness"
+   ],
+   "locator": "H4",
+   "kind": "market_awareness"
+  },
+  {
+   "q": "What is the Fed doing?",
+   "a": "\"The Fed held on 29 July, with a target range of 3.50% to 3.75% - with several dissents; it\nwas a contested meeting. The chair since this year is Kevin Warsh, who succeeded Jerome Powell.\nWarsh has visibly stepped back from forward guidance and set up several internal task forces, including on\ncommunications, the balance sheet and the inflation framework. The market expectation is that the Fed pauses for the\nrest of the year.\nThat matters for the EUR market because the rate differential and the cross-currency basis determine whether an\nissuer funds more cheaply in EUR or USD.\"",
+   "rubric": [
+    "Gives the target range and the date and outcome of the most recent meeting",
+    "Names the current chair",
+    "Explains why it matters for EUR: the rate differential and cross-currency basis drive EUR versus USD issuance"
+   ],
+   "mistakes": [
+    "Treating the Fed as background. The divergence is what drives the issuance arbitrage."
+   ],
+   "topic": "markets",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness"
+   ],
+   "locator": "H5",
+   "kind": "market_awareness"
+  },
+  {
+   "q": "How is the Middle East conflict affecting bonds?",
+   "a": "\"Through three channels.\nEnergy and inflation: the disruption around the Strait of Hormuz has pushed oil sharply higher - Brent is\naround a third above where it was a year ago and has traded above $100 at points. That drives inflation, pushes\ncentral banks towards tightening and therefore lifts the whole level of yields. That's the most important channel,\nand it works against bonds, not for them.\nRisk aversion: in acute escalations there is a flight to quality - Bunds and Treasuries bid, credit\nspreads wider. European IG spreads widened noticeably in the spring for that reason and have largely retraced since.\nVolatility and issuance windows: that's the channel that affects us most directly. High rate volatility\nmakes investors more price sensitive, books get thinner, new issue premiums rise - in July to the highest level of\nthe year - and windows narrow. Issuers are currently accepting the higher premium rather than waiting.\nThe interesting point is that secondary spreads don't reflect any of this: they're historically tight. The stress\nshows up in the primary market, not in the secondary market.\"",
+   "rubric": [
+    "Channel one, energy and inflation: higher oil lifts the whole level of yields and works against bonds",
+    "Channel two, risk aversion: flight to quality bids govvies and widens credit spreads",
+    "Channel three, volatility and windows: thinner books, higher new issue premiums, narrower windows",
+    "States explicitly that the inflation channel dominates the flight-to-quality channel",
+    "Notes the stress shows up in the primary market, not in secondary spreads"
+   ],
+   "mistakes": [
+    "The naive answer: 'conflict means flight to quality means bonds rally'. The rate channel dominates."
+   ],
+   "topic": "markets",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness",
+    "spread-mechanics"
+   ],
+   "locator": "H6"
+  },
+  {
+   "q": "Oil and the transmission to a corporate bond?",
+   "a": "\"Brent is around $88 to $89, comfortably a third above a year ago, with very high volatility - above $100\nat points, then back below $85, depending on the state of negotiations.\nThe chain through to a corporate bond: oil up → inflation up → central bank tightens or pauses for longer →\nreference rate up → bond price falls, regardless of the credit. That's the dominant effect.\nOn top of that a credit channel, but a differentiated one: for energy-intensive industry, chemicals and transport\ninput costs rise and margins come under pressure - spreads widen there. For oil and gas producers it's the reverse.\nFor regulated utilities it's largely passed through.\nAnd the third effect is on issuance activity itself: higher volatility, thinner books, higher premiums.\"",
+   "rubric": [
+    "Gives the oil level and the year-on-year move",
+    "Runs the chain: oil up, inflation up, central bank tighter, reference rate up, bond price down regardless of credit",
+    "Differentiates the credit channel by sector: energy-intensive industry hurt, producers helped, regulated utilities pass through",
+    "Names the third effect on issuance activity itself"
+   ],
+   "mistakes": [
+    "Saying 'spreads widen' undifferentiated. The sector split is what makes it an analyst answer."
+   ],
+   "topic": "markets",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness"
+   ],
+   "locator": "H7",
+   "kind": "market_awareness"
+  },
+  {
+   "q": "What does ECB QT mean for spreads?",
+   "a": "\"APP and PEPP continue to run down, with no reinvestment of redemptions. That structurally removes a very\nlarge, price-insensitive buyer from the market - the ECB also bought corporate bonds under the CSPP.\nTwo consequences. First, the private sector has to absorb a materially higher net volume, in both government and\ncorporate bonds. Second - and I think this matters more - the market is now more sensitive again to supply and to\nflows, because the buffer is gone. A supply pile-up in one week feeds through to premiums more strongly today than\nit did during the purchase programmes.\"",
+   "rubric": [
+    "Names the runoff of APP and PEPP with no reinvestment of redemptions",
+    "Identifies the key concept: a large price-insensitive buyer has been removed",
+    "Consequence one: the private sector absorbs a higher net volume",
+    "Consequence two, and the more important one: the market is more sensitive to supply and flows, so a supply pile-up feeds through to premiums"
+   ],
+   "mistakes": [
+    "Framing QT purely as volume. It was that the ECB bought regardless of price."
+   ],
+   "topic": "markets",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness",
+    "spread-mechanics"
+   ],
+   "locator": "H8"
+  },
+  {
+   "q": "What are primary market conditions like right now?",
+   "a": "\"Two-tier, and that's the interesting part.\nSecondary, spreads are historically tight. The European high yield index is around 260 basis points and has\ntightened further recently; IG correspondingly tight. Measured against its own history, credit is expensive.\nPrimary is less comfortable. Average new issue premiums rose in July to the highest level of the year,\nbooks have thinned, and investors are visibly more price sensitive - driven by rate volatility and the Middle East\nsituation, not by credit concerns.\nMy reading would be: the investor is currently being paid by the rate, not by the credit risk premium. All-in\nyields are attractive, spreads are not. And that's why execution is more demanding even though the index levels look\ngood.\nSeasonally, August is dead anyway; the second half starts in September and then runs hard into late November.\"",
+   "rubric": [
+    "Describes the market as two-tier",
+    "Secondary: spreads historically tight, credit expensive against its own history",
+    "Primary: new issue premiums up, books thinner, investors more price sensitive, driven by rate volatility not credit",
+    "Draws the conclusion: the investor is paid by the rate, not by the credit risk premium"
+   ],
+   "mistakes": [
+    "Reading the tight index level as an easy market. Execution is where the stress is."
+   ],
+   "topic": "markets",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness",
+    "new-issue-pricing"
+   ],
+   "locator": "H9",
+   "kind": "market_awareness"
+  },
+  {
+   "q": "What's the biggest risk to the market right now?",
+   "a": "\"I'd name two, and I think the second is underrated.\nFirst, a renewed escalation around the Strait of Hormuz. Negotiations are running but they're stalling. A\nfailure would mean oil materially higher, inflation expectations higher, central banks more restrictive - and this\ntime without the buffer that a low level of yields used to provide.\nSecond, valuation in credit itself. Spreads are tight, measured against their own history very tight, and\nthey price in little tolerance for error. If a shock came - macro or idiosyncratic - the path down is longer than\nthe path up. That's not a forecast, but it is an asymmetry.\nWhat I don't see as an acute risk is credit quality itself: the stress at the moment is in execution and in\npremiums, not in defaults or downgrades.\"",
+   "rubric": [
+    "Names an identifiable macro escalation risk with the transmission spelled out",
+    "Names credit valuation itself: tight spreads price in little tolerance for error",
+    "Frames it as an asymmetry rather than a forecast",
+    "Distinguishes what is stressed (execution, concessions) from what is not (defaults, downgrades)"
+   ],
+   "mistakes": [
+    "Forecasting. 'That is not a prediction, it is an asymmetry' is the right register for a candidate."
+   ],
+   "topic": "markets",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "market-awareness"
+   ],
+   "locator": "H10"
+  },
+  {
+   "q": "Why does November matter?",
+   "a": "\"Because the second half of the year is compressed in the primary market. August is seasonally\neffectively dead - many investors aren't staffed and nobody wants to issue into a thin book. From September the\nmarket reopens and then runs very densely until late November, because after that the year-end comes: from December\ninvestors' books close, balance sheet dates approach, and nobody issues unless they have to.\nWhich means: anyone who still wants to fund in Q4 has to do it in October and November.\"",
+   "rubric": [
+    "August is seasonally dead: investors unstaffed, nobody issues into a thin book",
+    "September reopens and the market runs densely until late November",
+    "From December books close and balance sheet dates approach",
+    "Concludes anyone funding in Q4 has to do it in October and November"
+   ],
+   "mistakes": [
+    "Not knowing the calendar of the job you are applying to."
+   ],
+   "topic": "markets",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "H11"
+  },
+  {
+   "q": "Who issues EM EUR, and why euro?",
+   "a": "\"Typically companies from central and eastern Europe - Poland, Czechia, Hungary, Romania, Slovakia - \nplus Turkish and occasionally Middle Eastern names choosing euros over dollars.\nThe reasons: natural currency matching, because a large part of revenues, cost base or acquisition targets\nis in euros; a European investor base that knows the region; and depending on the cross-currency basis,\nsimply cheaper all-in cost than in dollars.\"",
+   "rubric": [
+    "Names CEE corporates, plus Turkish and occasionally Middle Eastern issuers",
+    "Currency matching: revenues, cost base or acquisition targets in euros",
+    "A European investor base that knows the region",
+    "Cross-currency basis can make EUR cheaper all-in than USD"
+   ],
+   "mistakes": [
+    "Assuming EM issuance in EUR is only about diversification. Currency matching usually comes first."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "I1"
+  },
+  {
+   "q": "How does EM execution differ?",
+   "a": "\"In five respects. Format - usually Reg S only, to avoid the disclosure and liability burden of a\nUS distribution; that limits the buyer base to Europe and Asia. Investor base - dedicated EM credit funds\nplus crossover buyers, i.e. European IG accounts reaching for yield in BBB and BB names. Price - wider\nspreads and systematically higher new issue premiums. Book - more price sensitive, less granular, more\ndependent on a few large accounts. Windows - narrower, because EM issuance reacts far more strongly to risk\nsentiment and rate volatility.\nAnd structurally: the sovereign rating usually caps the corporate rating, which anchors the pricing conversation\nfrom the outset.\"",
+   "rubric": [
+    "Format: usually Reg S only, which limits the buyer base to Europe and Asia",
+    "Investor base: dedicated EM credit funds plus crossover buyers reaching for yield",
+    "Price: wider spreads and systematically higher new issue premiums",
+    "Book: more price sensitive, less granular, dependent on a few large accounts",
+    "Names the sovereign ceiling as the structural anchor on the rating and therefore the pricing"
+   ],
+   "mistakes": [
+    "Missing the sovereign ceiling, which anchors the pricing conversation from the outset."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "ratings",
+    "syndicate-process"
+   ],
+   "locator": "I2"
+  },
+  {
+   "q": "Why is a bank with a regional branch network well placed in EM DCM?",
+   "a": "\"Because of the on-the-ground presence. A group with banks in the region is house bank to many of\nthese issuers - a lending relationship, the payments business and local credit knowledge - which means access\ncomes out of an existing relationship rather than out of a pitch from outside.\nThat also explains why a syndicate desk at such a house sees EM flow a purely domestic competitor does not.\"",
+   "rubric": [
+    "Argues from structure: banks on the ground and house-bank relationships in the region",
+    "Notes access comes out of an existing lending relationship rather than a cold pitch",
+    "Explains the consequence: the desk sees EM flow a purely domestic house would not"
+   ],
+   "mistakes": [
+    "Arguing from adjectives rather than from structure."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "I3"
+  },
+  {
+   "q": "Explain a bond to a 12-year-old.",
+   "a": "\"Imagine a company wants to build a new factory today and doesn't have the money. It asks a lot of people\nto each lend it a bit. As a thank you it pays interest every year and gives the money back at the end.\nThe difference from a normal loan is: my claim is a kind of voucher that I can sell on. And because other people\ncan buy it, it has a price every day - and that price rises when the company is doing well, or when rates fall.\"",
+   "rubric": [
+    "Explains lending to a company for interest and repayment, in plain language",
+    "Includes the tradability point, which is what makes it a bond",
+    "Resists adding technical detail once started"
+   ],
+   "mistakes": [
+    "Adding jargon halfway through. The discipline of staying simple is the test."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "bond-math",
+    "dcm-syndicate"
+   ],
+   "locator": "K1"
+  },
+  {
+   "q": "Duration of 6, rates +75bp - what happens?",
+   "a": "\"Roughly a 4.5% price loss - 6 times 0.75. Two refinements: because of positive convexity the actual loss\nis slightly smaller than that linear approximation. And if the credit spread moves at the same time, that effect\ncomes on top via spread duration.\"",
+   "rubric": [
+    "Gives the arithmetic first: roughly a 4.5% price loss, 6 times 0.75",
+    "Refines: positive convexity means the actual loss is slightly smaller than the linear approximation",
+    "Refines: a simultaneous spread move adds on top via spread duration"
+   ],
+   "mistakes": [
+    "Leading with the caveats. It sounds evasive; lead with the number, then refine."
+   ],
+   "topic": "dcm",
+   "difficulty": 2,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "duration-convexity"
+   ],
+   "locator": "K2"
+  },
+  {
+   "q": "5y at MS+80, 10y at MS+110 - what does that tell you?",
+   "a": "\"That the credit curve is normally upward sloping, at 30 basis points over five years - the market\ndemands a premium for the additional tenor risk, which is plausible for a solid issuer.\nFor a new issue at seven years I'd interpolate linearly to roughly +92, then adjust slightly downwards because\ncredit curves typically flatten as tenor extends. So fair value somewhere around +90 to +92, plus new issue premium.\nAnd I'd check whether both levels are actually tradeable - if the ten-year is a small, illiquid line, part of that\npremium is liquidity and not credit curve.\"",
+   "rubric": [
+    "Reads the curve: 30bp over five years is a normal upward-sloping credit curve",
+    "Interpolates to the target tenor and states the number",
+    "Adjusts downwards for credit curves flattening as tenor extends",
+    "Questions the data: checks whether both levels are actually tradeable, since an illiquid long line carries a liquidity premium not a credit premium"
+   ],
+   "mistakes": [
+    "Interpolating and stopping. Questioning the data quality is what a desk person does automatically."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing",
+    "spread-mechanics"
+   ],
+   "locator": "K3"
+  },
+  {
+   "q": "The book is 6x covered at IPTs - what now?",
+   "a": "\"First: that's a signal it was launched too generously. I'd tighten substantially - considerably more\nthan a normal step - while watching two things: how much book is lost, and whether the large real money orders stay.\nAnd I'd discuss size with the issuer: a six-times-covered book is also an opportunity to increase the volume\nrather than pulling the whole advantage into the spread. Which is better depends on whether the issuer is optimising\nfor money or for price.\nWhat I wouldn't do is go to the last basis point. If the bond trades worse the next day, it was expensively\nbought.\"",
+   "rubric": [
+    "Reads a 6x book at IPTs as a signal the deal was launched too generously",
+    "Tightens substantially, watching how much book is lost and whether large real money stays",
+    "Raises the upsize option and asks what the issuer is optimising for, money or price",
+    "Declines to go to the last basis point, because a worse break is expensively bought"
+   ],
+   "mistakes": [
+    "Only tightening. A heavily covered book is an opportunity on two axes, size as well as spread."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "new-issue-pricing",
+    "syndicate-process"
+   ],
+   "locator": "K4"
+  },
+  {
+   "q": "Issuer wants to print today into a shaky market.",
+   "a": "\"I'd break the question in two: does he have to today, or does he want to today? If a maturity is due or\nan acquisition has to be funded, waiting isn't an option and the only question left is how to reduce the risk in\nexecution - more conservative IPTs, a more generous premium, possibly a shorter tenor or smaller size, and an anchor\ninvestor to carry the book.\nIf he's issuing opportunistically, I'd advise waiting - but with one condition: you have to be able to say what\nyou're waiting for. 'For better conditions' isn't a plan. 'Until after the ECB meeting on Thursday' is.\nAnd honestly: in the current environment many issuers would rather accept the higher premium than wait for a\nwindow that may not come.\"",
+   "rubric": [
+    "Splits the question: does the issuer have to print today, or want to",
+    "If it must: reduces execution risk with conservative IPTs, a more generous premium, possibly shorter tenor or smaller size, and an anchor order",
+    "If opportunistic: advises waiting, but only on condition you can name what you are waiting for",
+    "Notes 'for better conditions' is not a plan; 'until after Thursday's ECB meeting' is"
+   ],
+   "mistakes": [
+    "Advising to wait with no named event to wait for."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "K5"
+  },
+  {
+   "q": "Tell me about a recent deal you followed.",
+   "a": "You need to be able to answer this with a concrete deal. Structure:\n\"Issuer X, rating, sector. They issued a [tenor] bond of [size]. IPTs were at mid-swaps plus [X], it priced at\nplus [Y] - so [X−Y] basis points of tightening. The book was around [Z] times covered. What I found interesting was\n[one concrete point: the premium relative to the environment / the tenor / the investor distribution / how it traded\nthe next day].\"",
+   "rubric": [
+    "Names a specific issuer, rating, sector, tenor and size",
+    "Gives IPT, final spread and therefore the tightening",
+    "Gives the book size or coverage",
+    "Adds one concrete observation: the premium relative to the environment, the investor distribution, or how it traded"
+   ],
+   "mistakes": [
+    "A deal you cannot give numbers for. Without IPT and final spread it is not a deal you followed."
+   ],
+   "topic": "dcm",
+   "difficulty": 3,
+   "subtopic": null,
+   "tags": [
+    "dcm-syndicate",
+    "syndicate-process"
+   ],
+   "locator": "K6"
+  },
+  {
+   "q": "If you had €1m, what bond would you buy?",
+   "a": "\"I'd break the question into two decisions: rates and credit.\nOn rates I'm currently cautious on long duration. The ECB has just hiked, the energy shock hasn't fully\nworked through, and Bund supply is at record levels. I'd position more in the middle of the curve, five to seven\nyears.\nOn credit I'd say: spreads are tight, I'm not being paid particularly well for credit risk. So I'd take\nquality - a solid BBB or A in a defensive sector with stable, ideally regulated cash flows - and take my return from\nthe all-in yield rather than from the spread.\nSo: mid part of the curve, high credit quality, return coming from the rate rather than the spread. And that's an\nopinion, not a recommendation - I have no track record in fixed income.\"",
+   "rubric": [
+    "Splits the answer into a rates decision and a credit decision",
+    "Takes a position on duration with a reason",
+    "Takes a position on credit quality with a reason, connected to where spreads are",
+    "Closes with an honest caveat about the absence of a track record"
+   ],
+   "mistakes": [
+    "Naming a security. The structure is the answer, not the bond."
+   ],
+   "topic": "dcm",
+   "difficulty": 4,
+   "subtopic": null,
+   "tags": [
+    "credit-stats",
+    "dcm-syndicate",
+    "market-awareness"
+   ],
+   "locator": "K7"
+  }
+ ]
+}
