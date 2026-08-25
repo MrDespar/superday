@@ -3273,7 +3273,13 @@ def _q_sources(rec: dict, w: int) -> list[str]:
         line = lead + ui.truncate(title, room - (ui.vlen(loc) + 1 if loc else 0))
         out.append(ui.truncate(line + (" " + dim(loc) if loc else ""), w))
         if src["verbatim_text"]:
-            quoted = '"' + src["verbatim_text"][:400] + '"'
+            # Quote marks the excerpt as somebody else's words, so text that
+            # already arrives quoted must not get a second pair: the DCM
+            # handbook writes its answers as scripts to say out loud, and
+            # `pack.load` falls back to the pack's own answer for provenance,
+            # which rendered every one of them as `""..."" `.
+            body = src["verbatim_text"][:400].strip()
+            quoted = body if body.startswith('"') else '"' + body + '"'
             out += [dim(x) for x in ui.body(quoted, "      ", w - 8).split("\n")]
         out.append("")
     return out

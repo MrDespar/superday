@@ -6111,6 +6111,56 @@ def test_prose_after_a_table_is_not_swallowed_by_the_last_row() -> None:
           f"the sentence after the table was folded into a row: {rendered!r}")
 
 
+def _dcm_script():
+    import importlib.util
+    path = Path(__file__).resolve().parent.parent / "packs" / "_build_dcm.py"
+    if not path.exists():
+        return None
+    spec = importlib.util.spec_from_file_location("_build_dcm", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.script
+
+
+def test_a_spoken_script_loses_its_quote_marks() -> None:
+    """The whole field is the answer, so the marks are noise -- and the SOURCES
+    pane quotes what it shows, which turned them into `""..."" `."""
+    script = _dcm_script()
+    if script is None:
+        return
+    check(script('"A securitised loan: it repays at 100."')
+          == "A securitised loan: it repays at 100.",
+          "the wrapping quotes survived")
+
+
+def test_a_note_after_the_script_becomes_its_own_paragraph() -> None:
+    """Four answers carry a worked example after the closing quote, addressed
+    to the reader rather than to the interviewer. The quote marks were the only
+    thing dividing the two registers, and ui.body folds a bare line into the
+    paragraph above it -- so taking them off without promoting the remainder
+    runs a coaching aside onto the end of the spoken answer."""
+    script = _dcm_script()
+    if script is None:
+        return
+    out = script('"The YTM assumes a flat curve."\nWorked example if he wants one: 3% coupon.')
+    check(out == "The YTM assumes a flat curve.\n\nWorked example if he wants one: 3% coupon.",
+          f"the note was not split off: {out!r}")
+    rendered = [ln for ln in ui.body(out).split("\n") if ln.strip()]
+    check(any(ln.strip().startswith("Worked example") for ln in rendered),
+          f"the note was folded back into the script: {rendered!r}")
+
+
+def test_a_quote_inside_prose_is_left_alone() -> None:
+    """C6 and K6 quote a script *inside* a sentence that introduces it, where
+    the marks carry the meaning rather than wrapping the field."""
+    script = _dcm_script()
+    if script is None:
+        return
+    for text in ('Definition: "The concession the issuer pays."',
+                 'Structure:\n"Issuer X, rating, sector."'):
+        check(script(text) == text, f"prose with an inner quote was rewritten: {text!r}")
+
+
 # ---------------------------------------------------------------- answer card
 
 
@@ -7464,11 +7514,42 @@ def test_no_shipped_pack_reproduces_its_source_verbatim() -> None:
     """`verbatim` held up to 600 characters of the source handbook's own
     wording per item. Nothing downstream reads it once a pack has landed, and
     123 items of it was the one field in this repo that republished a
-    third-party document rather than describing it."""
+    third-party document rather than describing it.
+
+    Dropping the field was only half of it, and the test name promised the half
+    it did not check: `a` is where an answer actually lives.
+    """
     for name, pack in _shipped_packs():
         n = sum(1 for i in pack["items"] if i.get("verbatim"))
         check(n == 0, f"{name} carries {n} verbatim source excerpts")
         check(pack.get("note"), f"{name} has no note saying what it is grounded in")
+
+
+def test_no_shipped_answer_is_wrapped_in_quotation_marks() -> None:
+    """The DCM handbook writes each answer as a script to say out loud, and
+    quotes the script. Parsed rather than extracted, 97 of its 103 answers
+    reached the pack still wearing that pair of quote marks, and the whole
+    field being the answer is exactly what makes them noise: `drill` and
+    `show` reveal `a` under a heading that already says what it is.
+
+    They were not free noise either. `pack.load` falls back to the pack's own
+    answer for provenance, and the SOURCES pane quotes what it shows -- so an
+    answer that arrived quoted rendered as `""A securitised loan: ...""`.
+
+    Four of them carried a second register after the closing quote: a worked
+    example or a coaching aside that is not part of the spoken answer. The
+    quote marks were the only thing separating the two, and `ui.body` reflows
+    a bare line into the paragraph above it, so on screen they merged anyway.
+    Stripping the quotes therefore has to promote that remainder to its own
+    paragraph, which is a separation the renderer actually honours.
+    """
+    for name, pack in _shipped_packs():
+        for item in pack["items"]:
+            a = (item.get("a") or "").strip()
+            if a.startswith('"') and a.endswith('"') and a.count('"') == 2:
+                check(False, f"{name} wraps a whole answer in quotation marks, "
+                             f"which renders as stray punctuation and doubles up "
+                             f"in the SOURCES pane: {item['q'][:50]!r}")
 
 
 def test_the_sec_contact_does_not_default_to_a_real_address() -> None:

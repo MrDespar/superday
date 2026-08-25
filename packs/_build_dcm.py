@@ -147,6 +147,36 @@ META.update({
 })
 
 
+def script(a: str) -> str:
+    """Take the quote marks off an answer, keeping what they separated.
+
+    The handbook writes each answer as a script to say out loud and quotes it.
+    In a pack the whole field is the answer -- `drill` and `show` reveal it
+    under a heading that already says so -- and the quotes are noise the
+    SOURCES pane then doubles, because it quotes what it displays.
+
+    Some answers carry a second register after the closing quote: a worked
+    example, or an aside to the reader rather than to the interviewer ("worked
+    example if he wants one"). The quote marks were the only thing dividing
+    the two, and `ui.body` folds a bare line into the paragraph above it, so
+    dropping them without doing anything else would run a coaching note onto
+    the end of the spoken answer. The remainder becomes its own paragraph,
+    which is a break the renderer honours.
+
+    An answer that does not open with a quote is left exactly as it is: the
+    sectioned ones (C6) and the template ones (K6) quote a script *inside*
+    prose, where the marks are doing real work.
+    """
+    s = a.strip()
+    if not s.startswith('"'):
+        return a
+    close = s.find('"', 1)
+    if close == -1:
+        return a
+    spoken, rest = s[1:close].strip(), s[close + 1:].strip()
+    return f"{spoken}\n\n{rest}" if rest else spoken
+
+
 def clean(x: str) -> str:
     x = re.sub(r"(?s)<(script|style).*?</\1>", " ", x)
     x = re.sub(r"(?i)<br\s*/?>", "\n", x)
@@ -216,7 +246,7 @@ def main(path: Path, out: Path) -> None:
         # half of. `q_de` / `a_de` are still parsed, so restoring the bilingual
         # form is a one-line change rather than a re-parse.
         items.append({
-            "q": q, "a": b["a_en"],
+            "q": q, "a": script(b["a_en"]),
             "rubric": rubric,
             "mistakes": [trap],
             "topic": topic, "difficulty": diff,
