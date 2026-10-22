@@ -1,6 +1,6 @@
 """Build the DCM syndicate pack from a question-shaped HTML source.
 
-The source is the author's own bond syndicate desk handbook, already laid out
+The source is a bond syndicate handbook, already laid out
 as questions with written answers, so this parses it rather than paying a
 model to read it back to us, which would be a paraphrase of something already
 exact.
@@ -270,8 +270,8 @@ def main(path: Path, out: Path) -> None:
         # paraphrased, against rubrics authored here.
         "status": "active",
         "note": ("Bond syndicate, pricing, Schuldschein, hybrids, ratings and "
-                 "macro. Authored: the answers are parsed from the author's own "
-                 "desk handbook, where each is written as a script to say out "
+                 "macro. Authored: the answers are parsed from a prepared "
+                 "handbook, where each is written as a script to say out "
                  "loud, and the rubrics are written for this repo. "
                  "Six items are kind=market_awareness: their answer is a dated "
                  "snapshot bound to live data at drill time, not a stored fact."),
